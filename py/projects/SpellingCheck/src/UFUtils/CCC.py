@@ -27,17 +27,8 @@ class Model:
             padding="valid",
             activation=tf.nn.relu)
 
-        # Conv #2
-        conv2 = tf.layers.conv1d(
-            inputs=conv1,
-            filters=64,
-            kernel_size=3,
-            padding="valid",
-            activation=tf.nn.relu)
-        pool2 = tf.layers.max_pooling1d(inputs=conv2, pool_size=2, strides=2)
-
         # Dense Layer
-        output_layer = tf.layers.dense(inputs=pool2, units=768, activation=tf.nn.relu) #modificar valor
+        output_layer = tf.layers.dense(inputs=conv1, units=768, activation=tf.nn.relu) #modificar valor
 
         print(">>>>>>>>>>>>>>>>>>>>>>>>", output_layer)
 
