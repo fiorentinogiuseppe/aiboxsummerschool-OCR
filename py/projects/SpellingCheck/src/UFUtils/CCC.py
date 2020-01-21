@@ -30,9 +30,6 @@ class Model:
         # Dense Layer
         output_layer = tf.layers.dense(inputs=conv1, units=768, activation=tf.nn.relu) #modificar valor
 
-        print(">>>>>>>>>>>>>>>>>>>>>>>>", output_layer)
-
-
         embedding = model.get_embedding_table()
 
         with tf.variable_scope('cls/predictions'):
