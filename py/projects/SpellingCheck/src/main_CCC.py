@@ -6,7 +6,7 @@ deprecation._PRINT_DEPRECATION_WARNINGS = False
 
 from UFUtils.utils import load_data, get_tokenizer, generate_ids
 from UFUtils.spell_corrector import SpellCorrector
-from UFUtils.model import Model
+from UFUtils.CCC import Model
 from enchant import DictWithPWL
 from enchant.checker import SpellChecker
 from copy import deepcopy
@@ -39,6 +39,8 @@ def correct(possible_states, text_mask):
         ids.extend(input_ids[i])
     masked_padded = tf.keras.preprocessing.sequence.pad_sequences(ids, padding='post')
     preds = sess.run(tf.nn.log_softmax(model.logits), feed_dict={model.X: masked_padded})
+
+    print(preds)
 
     indices = np.array(indices)
     scores = []

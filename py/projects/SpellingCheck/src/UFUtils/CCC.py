@@ -8,9 +8,7 @@ bert_config = modeling.BertConfig.from_json_file(BERT_CONFIG)
 
 
 class Model:
-    def __init__(
-            self,
-    ):
+    def __init__(self):
         self.X = tf.placeholder(tf.int32, [None, None])
 
         model = modeling.BertModel(
@@ -20,6 +18,29 @@ class Model:
             use_one_hot_embeddings=False)
 
         output_layer = model.get_sequence_output()
+
+        # Conv #1
+        conv1 = tf.layers.conv1d(
+            inputs=output_layer,
+            filters=64,
+            kernel_size=3,
+            padding="valid",
+            activation=tf.nn.relu)
+
+        # Conv #2
+        conv2 = tf.layers.conv1d(
+            inputs=conv1,
+            filters=64,
+            kernel_size=3,
+            padding="valid",
+            activation=tf.nn.relu)
+        pool2 = tf.layers.max_pooling1d(inputs=conv2, pool_size=2, strides=2)
+
+        # Dense Layer
+        output_layer = tf.layers.dense(inputs=pool2, units=768, activation=tf.nn.relu) #modificar valor
+
+        print(">>>>>>>>>>>>>>>>>>>>>>>>", output_layer)
+
 
         embedding = model.get_embedding_table()
 
