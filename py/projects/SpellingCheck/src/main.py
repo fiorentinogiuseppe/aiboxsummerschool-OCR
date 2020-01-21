@@ -16,9 +16,6 @@ import numpy as np
 
 def correct(possible_states, text_mask):
     tokenizer, BERT_INIT_CHKPNT = get_tokenizer()
-
-    print(text_mask)
-
     ops.reset_default_graph()
     sess = tf.InteractiveSession()
     model = Model()
@@ -69,7 +66,6 @@ def main(text):
     for error in my_checker:
         err = error.word
         possible_states = corrector.edit_candidates(err)
-        print(possible_states)
         mask = text_mask.replace(err, '**mask**')
         correted_letter = correct(possible_states, mask)
         text_mask = deepcopy(mask.replace("**mask**", correted_letter))
@@ -77,7 +73,7 @@ def main(text):
 
 
 if __name__ == '__main__':
-    text = "This is simp sample txt with erors."
+    text = "This is simple semple txt with erors."
     correct_text = main(text)
     print(">>>>>>>>>> BEFORE: ", text)
     print(">>>>>>>>>> AFTER: ", correct_text)
