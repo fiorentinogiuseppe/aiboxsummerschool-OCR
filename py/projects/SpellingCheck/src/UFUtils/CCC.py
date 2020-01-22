@@ -28,8 +28,8 @@ class Model:
             activation=tf.nn.relu)
 
         # Dense Layer
-        output_layer = tf.layers.dense(inputs=conv1, units=768, activation=tf.nn.relu) #modificar valor
-
+        dense = tf.layers.dense(inputs=conv1, units=768, activation=tf.nn.relu) #modificar valor
+        output_layer = tf.layers.dropout(dense, rate=0.25)
         embedding = model.get_embedding_table()
 
         with tf.variable_scope('cls/predictions'):
@@ -37,7 +37,7 @@ class Model:
                 input_tensor = tf.layers.dense(
                     output_layer,
                     units=bert_config.hidden_size,
-                    activation=modeling.get_activation(bert_config.hidden_act),
+                    activation=modeling.get_activation(bert_config.hidden_act), #era gelu agr relu
                     kernel_initializer=modeling.create_initializer(
                         bert_config.initializer_range
                     ),

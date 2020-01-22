@@ -1,23 +1,28 @@
 # -*- coding: utf-8 -*-
 import os
+from copy import deepcopy
+
+import numpy as np
 import tensorflow as tf
+from enchant import DictWithPWL
+from nltk import tokenize
+from enchant.checker import SpellChecker
+from tensorflow.python.framework import ops
 from tensorflow.python.util import deprecation
+
+from UFUtils.CCC import Model
+from UFUtils.spell_corrector import SpellCorrector
+from UFUtils.utils import generate_ids, get_tokenizer, load_data
+
 deprecation._PRINT_DEPRECATION_WARNINGS = False
 
-from UFUtils.utils import load_data, get_tokenizer, generate_ids
-from UFUtils.spell_corrector import SpellCorrector
-from UFUtils.model import Model
-from enchant import DictWithPWL
-from enchant.checker import SpellChecker
-from copy import deepcopy
-from tensorflow.python.framework import ops
-import numpy as np
-import os
-os.environ["CUDA_VISIBLE_DEVICES"]="0"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+BERT_VOCAB = '/home/giuseppe/PycharmProjects/SpellingCheck/model/vocab.txt'
+BERT_INIT_CHKPNT = '../model/bert_model.ckpt'
 
 
 def correct(possible_states, text_mask):
-    tokenizer, BERT_INIT_CHKPNT = get_tokenizer()
+    tokenizer = get_tokenizer(BERT_VOCAB, BERT_INIT_CHKPNT)
     ops.reset_default_graph()
     sess = tf.InteractiveSession()
     model = Model()
@@ -45,14 +50,34 @@ def correct(possible_states, text_mask):
 
     for i in range(len(tokens)):
         filter_preds = preds[indices == i]
-        total = np.sum([filter_preds[k, k + 1, x] for k, x in enumerate(tokens_ids[i])])
-        scores.append(total)
+        total = []
+        for k, x in enumerate(tokens_ids[i]):
+            try:
+                total.append(filter_preds[k, k + 1, x])
+            except:
+                total.append(filter_preds[k, k, x])
+        scores.append(np.sum(total))
 
     prob_scores = np.array(scores) / np.sum(scores)
     probs = list(zip(possible_states, prob_scores))
     probs.sort(key=lambda x: x[1])
 
     return probs[0][0]
+
+
+def replace_erros(dic, text):
+    for k, v in dic.items():
+        if has_lower(k):
+            v = v.title()
+        text = text.replace(k, v)
+    return text
+
+
+def has_lower(s):
+    for c in s:
+        if not c.islower():
+            return True
+    return False
 
 
 def main(text):
@@ -64,19 +89,25 @@ def main(text):
     my_checker = SpellChecker(my_dict)
 
     my_checker.set_text(text)
-    text_mask = deepcopy(text)
+    text_tmp = deepcopy(text)
+    corrected = {}
     for error in my_checker:
         err = error.word
-        possible_states = corrector.edit_candidates(err)
-        mask = text_mask.replace(err, '**mask**')
+        print(err)
+        possible_states = corrector.edit_candidates(err.lower())
+        mask = text_tmp.replace(err, '**mask**')
         correted_letter = correct(possible_states, mask)
-        text_mask = deepcopy(mask.replace("**mask**", correted_letter))
-    return text_mask
+        corrected.update({err: correted_letter})
+    return replace_erros(corrected, text)
 
 
 if __name__ == '__main__':
-    text = "This is simple semple txt with erors."
-    correct_text = main(text)
-    print(">>>>>>>>>> BEFORE: ", text)
-    print(">>>>>>>>>> AFTER: ", correct_text)
-
+    text = "Smiarter Shopping. Bettar Livingt."
+    sentences = tokenize.sent_tokenize(text)
+    all_senteces = []
+    for sentece in sentences:
+        correct_sentece = main(sentece)
+        all_senteces.append(correct_sentece)
+    correct_sentece = ' '.join(all_senteces)
+    print(">>>>>>>>>> BEFORE: ", sentece)
+    print(">>>>>>>>>> AFTER: ", correct_sentece)

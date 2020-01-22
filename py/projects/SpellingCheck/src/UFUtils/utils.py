@@ -1,15 +1,11 @@
 from bert import tokenization
 
-def get_tokenizer():
-    BERT_VOCAB = '/home/giuseppe/PycharmProjects/SpellingCheck/model/vocab.txt' #modificar para um relativo
-    BERT_INIT_CHKPNT = '../model/bert_model.ckpt'
-    tokenization.validate_case_matches_checkpoint(True, BERT_INIT_CHKPNT)
-    # load_vocab int bert modified
-    # before -> with tf.gfile.GFile(vocab_file, "r") as reader:
-    # now ->    with tf.io.gfile.GFile(vocab_file, "r") as reader:
+
+def get_tokenizer(vocab, chkpnt):
+    tokenization.validate_case_matches_checkpoint(True, chkpnt)
     tokenizer = tokenization.FullTokenizer(
-        vocab_file=BERT_VOCAB, do_lower_case=True)
-    return tokenizer, BERT_INIT_CHKPNT
+        vocab_file=vocab, do_lower_case=True)
+    return tokenizer
 
 
 def generate_ids(mask, tokenizer):
