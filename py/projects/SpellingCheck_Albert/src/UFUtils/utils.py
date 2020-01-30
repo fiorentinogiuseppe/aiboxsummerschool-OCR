@@ -42,7 +42,7 @@ def predict_word(text_original, predictions, maskids, tokenizer, suggestedwords)
                 if s is not None and s > simmax:
                     simmax = s
                     predicted_token = word1
-        text_original = text_original.replace('[MASK]', predicted_token, 1)
+        text_original = text_original.replace('[MASK]', '<mark>'+re.sub('[^a-zA-Z0-9]+', '', predicted_token)+'</mark>', 1)
     return text_original
 
 
@@ -110,5 +110,4 @@ def correct_spell(text):
     last_hidden_states = predictions[0]
 
     text_original = utils.predict_word(text_original, last_hidden_states, MASKIDS, tokenizer, suggestedwords)
-    text_original = re.sub('[^a-zA-Z0-9]+', ' ', text_original)
     return text_original
