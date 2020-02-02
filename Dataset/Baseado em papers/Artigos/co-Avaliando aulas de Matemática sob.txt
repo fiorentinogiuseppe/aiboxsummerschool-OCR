@@ -1,0 +1,434 @@
+Zerobot e Emoti-SAM: Avaliando aulas de Matemática sob
+o contexto do Pensamento Computacional e Robô
+Programável
+Yuri Souza Padua1
+, Siovani Cintra Felipussi1
+1Departamento de Computação de Sorocaba – Universidade Federal de São Carlos
+CEP 18052-780 – Sorocaba – SP – Brasil
+yuripadua@gmail.com, siovani@ufscar.br
+Abstract. This work presents the analysis performed between evaluations of
+classes-activities and the possible relation with the algorithms elaborated by
+students of the 5th year of elementary school using visual programming. The
+activities were developed with the use of a programmable robot and the
+application that controls it. The evaluations were collected through the EmotiSAM applied at the end of each class and the algorithms created by the students
+were registered in the LOG of the application. Computational Thinking is used
+as a means to solve the proposed exercises. The paper describes the
+bibliographical references, the methodology, the analyzes and the conclusion.
+Resumo. Este trabalho apresenta a análise realizada entre avaliações de aulasatividades e a possível relação com os algoritmos elaborados por estudantes do
+5º ano do ensino fundamental utilizando programação visual. As atividades
+foram desenvolvidas com o emprego de um robô programável e o aplicativo
+que o controla. As avaliações foram coletadas através do Emoti-SAM aplicado
+ao final de cada aula e os algoritmos criados pelos alunos foram registrados
+no LOG do aplicativo. O Pensamento Computacional é utilizado como meio
+para a resolução dos exercícios propostos. O texto descreve as referências
+bibliográficas, a metodologia, as análises e a conclusão.
+1. Introdução
+Os desafios do ensino no Brasil são consideráveis devido as condições adversas que
+enfrenta e/ou pelas deficiências no sistema. Analisando o histórico de alguns indicadores,
+(PISA, 2016), (UNESCO, 2011), a educação brasileira está muitas posições abaixo da
+média mundial e os países que utilizam a Ciência da Computação e/ou o Pensamento
+Computacional na educação pré-universitária têm melhor classificação nos mesmos
+indicadores e dentre os quais podemos citar: Finlândia, Austrália, Alemanha, Portugal,
+Nova Zelândia e Reino Unido (PAIVA, et al., 2018), (GROVER e PEA, 2013),
+(LOCKWOOD e MOONEY, 2017), (SBC, 2017).
+Em 2017, foi publicada a versão final da Base Nacional Comum Curricular -
+BNCC (BNCC - MEC, 2017) referente ao ensino infantil e fundamental. Este novo
+documento estabelece e padroniza os conteúdos que devem ser ensinados em todo
+território nacional e sob esse contexto as competências digitais presentes na BNCC ainda
+precisam de atenção (PAIVA, et al., 2018).
+DOI: 10.5753/cbie.sbie.2019.119 119
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Jeannette M. Wing (WING, 2006) caracterizou Pensamento Computacional – PC
+– como um conjunto de habilidades, para resolução de problemas, desenvolvidas ao
+estudar conteúdos da Computação e também defende o seu ensino desde a educação
+infantil (WING, 2006). Muitos países tem inserido os conceitos do PC na educação básica
+(MESTRE, et al., 2015) e (RAABE, et al., 2017) e em aderência a estes a Sociedade
+Brasileira de Computação publicou texto denominado “Referências de Formação em
+Computação: Educação Básica” defendendo a implantação da computação desde a
+educação infantil até o ensino médio e assevera ser “estratégico para o Brasil que
+conteúdos de Computação sejam ministrados na Educação Básica” (SBC, 2017).
+Para auxiliar na inserção do PC no ensino fundamental, este trabalho objetiva
+realizar uma avaliação em atividades que auxiliem no ensino da matemática apoiadas por
+conceitos do Pensamento Computacional e uso de um robô. O público alvo do estudo são
+alunos do ensino fundamental I, sendo importante ressaltar que o objeto de estudo da
+avaliação são as atividades em si e as análises realizadas com base nas opiniões dos alunos
+coletadas através do Emoti-Sam (HAYASHI, et al., 2016). Também são sumarizados os
+exercícios acessados e/ou corretos e o tempo médio por atividade.
+O presente trabalho está organizado da seguinte forma: a Seção 2 apresenta
+algumas fundamentações teóricas e a revisão da literatura. A Seção 3 descreve o objetivo
+e os materiais utilizados nos experimentos. A Seção 4 relata a metodologia. A Seção 5
+aborda o planejamento, execução das atividades e coleta de dados. A Seção 6 detalha a
+análise realizada e a Seção 7 apresenta os resultados e a conclusão.
+2. Fundamentações e Trabalhos Relacionados
+Em conformidade com Wing, convencionadas pela CSTA e ISTE (CSTA e ISTE, 2011)
+as terminologias e definições adotadas no presente trabalho se baseiam nas habilidades:
+Abstração - é a capacidade de focar apenas nas informações relevantes do problema;
+Raciocínio Lógico - é a capacidade de explicar a corretude de determinada situação
+(porque algo é do jeito que é); Decomposição e Generalização - é capacidade de dividir
+um problema grande e complexo em diversos problemas de menor ordem e a capacidade
+de criar uma solução que possa ser aplicada a mais de uma situação nas mesmas
+condições, respectivamente; Reconhecimento de Padrões - é capacidade de identificar
+os processos, partes ou situações que se repetem, que possuem um padrão; Paralelismo
+- é a capacidade de realizar uma tarefa por mais de um meio e simultaneamente, buscando
+um objetivo comum; Manipulação de Dados - é a capacidade de capturar e analisar
+informações de forma lógica e Algoritmos - é a capacidade de criar sequencias de passos
+para se resolver determinado problema.
+A Base Nacional Comum Curricular - BNCC (BNCC - MEC, 2017), é uma
+normativa do governo federal padronizando os conteúdos a serem ensinados em cada ano
+da educação básica, com implementação obrigatória a partir de 2020. Em sua 5ª
+competência geral, define que os alunos devem “compreender, utilizar e criar tecnologias
+digitais de informação e comunicação...” (BNCC - MEC, 2017). Sob o contexto da
+matemática, o texto explicita a importância da tecnologia, do Pensamento Computacional
+e dos algoritmos e assim, apresentando aderência com o presente projeto.
+Através de busca nos Anais CBIE, Elsevier, Sage, ACM, Google Scholar e SnowBalling, foram encontradas diversas pesquisas sobre Pensamento Computacional e sua
+influência na educação básica dentre as quais, (RODRIGUES, et al., 2015) evidencia que
+120
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+o desenvolvimento das habilidades e conceitos do PC, durante o ensino fundamental e
+médio, podem influenciar positivamente o desempenho dos estudantes em outras
+disciplinas. Tal análise foi realizada comparando as habilidades de programação dos
+estudantes com suas notas do ENEM, identificando uma correlação moderada entre estas.
+Outros estudos também apresentaram resultados semelhantes com graduandos
+(OLIVEIRA e LUIZ, 2012) e com alunos do ensino fundamental (OLIVEIRA, et al.,
+2014), os autores aplicaram testes baseados na máquina de turing, buscando aferir a
+capacidade de “computar” dos participantes. Em ambos os casos obtiveram considerável
+correlação entre os bons resultados nos testes aplicados e as notas em outras disciplinas.
+Estudos relacionando a matemática aos conceitos do Pensamento Computacional
+foram conduzidos por (MESTRE, et al., 2015) e (COSTA, et al., 2016). Ambos
+analisaram questões de matemática das provas do PISA na primeira pesquisa e questões
+enviadas por docentes de matemática no segundo estudo. Nos dois casos os autores
+concluíram que todas as questões possuíam alguma relação com os conceitos do PC.
+Em se tratando de experiências nas quais o Pensamento Computacional é
+considerado uma disciplina independente, (RAABE, et al., 2017) relata os resultados
+preliminares sobre o estudo com alunos do 6º ano do EF ao 3º ano do EM. Os autores
+descrevem algumas percepções do primeiro ano da disciplina em que foram utilizados o
+scratch1
+, computação desplugada entre outros. Na França, os autores (CHIPRIANOV e
+GALLON, 2016) relatam os primeiros passos e resultados de uma política nacional na
+implementação do Pensamento Computacional como padrão no sistema de ensino
+francês. O projeto piloto foi realizado entre a University of Pau em parceria com 2 escolas
+primárias e o Ministério da Educação francês.
+Integrando o PC a outras disciplinas, (ALMEIDA, 2015) pesquisou a influência
+da robótica educacional aplicada a alunos do 4º ano da educação básica através de oficinas
+com kits Lego Mindstorms® e concluiu que as aulas cooperaram para alcançar as metas
+relacionadas às disciplinas de Ciências, Matemática e Português. Usando os mesmo kits
+Lego (ZANATTA, 2013) relata sua experiência em oficinas de robótica abordando os
+conceitos básicos da 2º Lei de Newton para o 9º ano do ensino fundamental e concluiu
+que os resultados se mostraram promissores limitados ao escopo estudado. Focando em
+proporcionalidade de figuras geométricas, (NASCIMENTO, 2012) relatou as
+potencialidades da robótica educacional. A pesquisa foi realizada com crianças do 6º ano
+através de oficinas e há relatos de dificuldades na execução das atividades. Na Espanha,
+(GARCÍA-PEÑALVO, et al., 2016) pontua manifestações de entidades nacionais sobre
+a necessidade de políticas públicas que favoreçam a implantação da Computação e do PC
+na educação básica, além de relatar diversos projetos europeus de destaque na inserção
+pré-universitária destes temas, dentre os quais há exemplos de interdisciplinaridade entre
+PC e ética, física, farmácia, artes e ciências naturais.
+Nas Revisões Sistemáticas da Literatura estão consolidas diversas pesquisas sobre
+o PC na educação básica. O trabalho de (ARAÚJO, et al., 2016) identificou forte
+crescimento de publicações sobre PC no Brasil quando comparado a anos anteriores a
+2015 e a maioria das publicações focavam em programação ou atividades desplugadas.
+Entre as suas sugestões de trabalho futuros estão os estudos que abordem contextos reais
+de sala de aula. No trabalho de (AVILA, et al., 2016), também foi analisado o panorama
+1
+Scratch - https://scratch.mit.edu/
+121
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+nacional através de 45 artigos, sendo identificadas 23 experiências de ensino dentre as
+quais 7 são do ensino fundamental. As principais abordagens eram o scratch ou atividades
+desplugadas e não há relatos de robôs. Em outro texto, (AVILA, et al., 2017) provê uma
+revisão de artigos unindo a robótica educacional e PC, esse estudo não foi limitado ao
+Brasil e destaca 4 textos que apontam a interdisciplinaridade e a predominância de kit
+Lego Mindstorms®. É relevante citar o trabalho realizado por Laís Minchillo
+(MINCHILLO, 2018), que descreve a criação e os primeiros testes do Zerobot. Essa
+pesquisa concentrou-se no ensino algoritmos e programação em blocos.
+Convém detalhar que o presente trabalho diferencia-se dos demais como segue:
+1. O conteúdo das atividades será a matemática (RODRIGUES, et al., 2015),
+(OLIVEIRA, et al., 2014), (MESTRE, et al., 2015) e (COSTA, et al.,
+2016)) e não somente o Pensamento Computacional (RAABE, et al.,
+2017) e (CHIPRIANOV e GALLON, 2016);
+2. Será realizado em ambiente real durante as aulas regulares da disciplina de
+matemática (recomendação de (ARAÚJO, et al., 2016) e (AVILA, et al.,
+2017)) e não no formato de oficinas (ALMEIDA, 2015), (ZANATTA,
+2013) e (NASCIMENTO, 2012);
+3. A utilização de robôs em aulas cujo conteúdo programático não aborda
+especificamente robótica e/ou programação (BENITTI, 2012).
+3. Objetivo e Materiais
+O objetivo deste artigo é analisar as avaliações realizadas por 89 alunos do 5º ano do
+ensino fundamental sobre as aulas-atividade de matemática apoiadas por conceitos do PC
+e uso de um robô. Serão apresentados os resultados das avaliações das atividades, a
+quantidade de exercícios corretos e o tempo de desenvolvimento.
+Para a execução deste projeto, as principais ferramentas foram o robô Zerobot2
+e
+seu aplicativo ZerobotAPP denominado “Plataforma Zerobot”, cujo desenvolvimento
+iniciou-se na Unicamp (MINCHILLO, 2018), sob o apoio da empresa Tecsinapse3
+. O
+aplicativo ZerobotAPP foi desenvolvido exclusivamente para controlar o robô através de
+programação em blocos (ou visual), usando a API do GoogleBlockly (GOOGLE
+DEVELOPERS, 2019). No aplicativo, há o “modo livre”, ou seja, sem objetivo definido
+e “modo aula” pelo qual as atividades planejadas são inseridas. Existe a separação de
+temas/disciplinas em 3 níveis: disciplinas, conteúdo e exercícios. Outro diferencial é a
+gravação de Logs enviados ao robô. Assim, é possível analisar se o algoritmo está correto,
+quanto tempo o usuário demorou para construir a solução do problema e outras análises.
+4. Metodologia
+A metodologia utilizada neste trabalho está dividida em 4 fases como mostra a Figura 1.
+No Planejamento foram confeccionados os robôs, elaborados alguns planos de
+2 Zerobot - https://zerobot.com.br/
+3 Tecsinapse - https://www.tecsinapse.com.br/
+122
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+ensino, contato com escolas buscando autorização para a execução do projeto e os ajustes
+nas aulas (ou criação de novas), adequando-as ao planejamento de cada professor.
+A fase seguinte é a Execução onde as aulas-atividades são aplicadas aos alunos.
+Também é efetuada a coleta de dados por meio do levantamento de perfil dos discentes,
+algoritmos registrados pelo aplicativo e avaliação sobre as aulas.
+Na terceira fase, ou seja, da Análise, é realizada a preparação dos dados e a
+sumarização por meio de variados agrupamentos.
+A fase final é a apresentação dos Resultados, pelas quais as informações obtidas
+na última etapa são descritas junto aos feedbacks dos alunos e observações do pesquisador
+5. Planejamento, Execução e Coleta de dados
+O público alvo selecionado para a execução da atividade foi o 5º ano do ensino
+fundamental pois são crianças mais experientes nesta faixa etária e potencialmente com
+maior capacidade de abstração, ademais possuem apenas um professor o que facilita o
+planejamento. A disciplina de matemática foi selecionada em razão da aderência ao PC
+(BARCELOS, et al., 2015), (MESTRE, et al., 2015) e (COSTA, et al., 2016). Convém
+ressaltar que 48.3% e 51.7% correspondiam aos participantes do sexo feminino e
+masculino, respectivamente. Em relação a idade, 21.3% das crianças possuíam 10 anos,
+64% 11 anos, 5.6% 12 anos e 9% não responderam ao questionário devido a faltas.
+Na sequência, foram contatados os professores de 5º ano para planejar as aulasatividades, definiu-se o tema frações dada a sua complexidade e a aplicação foi
+estabelecida em conformidade com os calendários dos professores.
+Para realização das atividades e devido a limitação de 5 robôs, ficou acordado que
+as 3 turmas de aproximadamente 30 alunos seriam divididas em 6 turmas de 15 discentes,
+possibilitando o trabalho em duplas ou trios. Dessa forma, enquanto metade da turma
+participava das aulas regulares com o professor, a outra parte se dirigia ao espaço
+reservado para as atividades com o pesquisador utilizando a Plataforma Zerobot. Foram
+aplicadas 4 aulas-atividades de aproximadamente 1h30 para cada uma das 6 turmas, sendo
+a primeira para introdução à Plataforma e a programação em blocos, e as seguintes
+referentes a frações.
+Na Execução, os alunos resolveram exercícios e utilizaram os tablets (Figura 2)
+para programar os robôs para ações que atingissem o objetivo proposto. Um exemplo de
+atividade é: “Crie um algoritmo para que o Zerobot marque um ponto que represente a
+fração (4/5) na reta de tamanho 10”, ou seja, os estudantes deveriam realizar o cálculo
+para identificar quantos passos a fração representa (8 neste exemplo), desenvolver o
+algoritmo para que o robô se desloque o número de passos encontrados e marcar um ponto
+no final. Na introdução de cada aula o pesquisador revisou os conteúdos da disciplina
+necessários para a realização das atividades e abordou conceitos do PC (raciocínio lógico,
+1 - Planejamento
+➢ Confecção dos robôs
+➢ Elaboração de planos de
+aula
+➢ Contato com escola
+➢ Ajuste nos Planos de Aula
+2 - Execução
+➢ Aplicar Aulas
+➢ Coletar Dados
+3 - Análise
+➢ Preparar os Dados
+➢ Sumarizar Dados
+➢ Extração de informações
+4 - Resultados
+➢ Informações Cruzadas
+➢ Feedbacks dos
+participantes
+➢ Perspectivas
+Figura 1 - Metodologia
+123
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+generalização e decomposição, algoritmos, abstração, entre outros) como estratégias para
+resolver os problemas propostos como por exemplo: dividir o enunciado do exercício em
+partes menores, atentar-se apenas às informações importantes e resolver trecho a trecho
+(entender o problema, realizar a cálculo, programar e validar a solução).
+A coleta de dados ocorreu através de anotações, fotos, LOG de cada algoritmo
+enviado ao robô através do aplicativo e questionário Emoti-SAM (HAYASHI, et al.,
+2016) aplicado aos alunos no final de cada aula.
+6. Análises
+O intuito das análises é detalhar a avaliação de cada aula realizada pelos alunos
+através do Emoti-SAM, associado ao número de exercícios corretos e o tempo necessário
+até a provisão da solução. Para esta verificação um script em Python foi elaborado, o qual
+comparava cada algoritmo enviado ao robô com uma lista de soluções. Esta abordagem
+foi utilizada devido às limitações do aplicativo que não possui verificação em tempo real.
+Foram 48 exercícios disponibilizados aos alunos nas 4 aulas, dos quais 34 foram
+visualizados em média (Tabela 1). O percentual de acerto total relaciona o número de
+exercícios corretos do grupo em relação aos 48 disponíveis e o relativo relaciona o
+número de acerto do grupo em relação a quantidade de exercícios visualizados, resultando
+em uma média de 51% de acerto relativo. Este valor mostra que para aulas de 1h30, o
+número de exercícios disponibilizados pode ser reduzido.
+Também é possível observar que alguns grupos se empenhavam em resolver
+corretamente (com maior assertividade) o exercício que avançar sem critérios, os grupos
+G17, G10 e G9 ilustram esse comportamento ao acessarem menos exercícios que a média.
+Figura 2 – ZerobotAPP exibindo
+blocos de código
+Figura 3 - Estudante em aula com a
+Plataforma Zerobot
+Tabela 1 – Exercícios Visualizados VS Exercícios Corretos
+124
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+A Figura 4 apresenta o número de acertos de cada grupo (barras) relacionado ao
+tempo médio total do grupo (linha rosa) e o tempo médio de desenvolvimento até a
+solução correta (linha azul claro). A linha horizontal azul representa a média de acertos
+(17) e a vermelha o tempo médio até a elaboração do algoritmo correto (4min e 18s).
+Como pode ser observado na Figura 4 e na Tabela 1, há 12 grupos dentre os 28
+que estão acima da média com relação ao número de exercícios corretos. Os grupos G23,
+G27 e G16 evidenciam a dificuldade em efetuar os cálculos ou elaborar os algoritmos e
+são descritas pela variável tempo cujos valores são superiores a média dos demais grupos
+(Figura 4). A distância entre as linhas rosa e azul claro representam o tempo empregado
+pelo grupo entre a elaboração da primeira solução correta e a finalização da atividade.
+Considerando o conteúdo proposto, explicações, a utilização do aplicativo e do
+robô, a Figura 6 apresenta as avaliações realizadas pelos estudantes sobre a aulasatividades utilizando o Emoti-SAM. As opções de resposta do questionário utilizaram os
+ícones sugeridos por (HAYASHI, et al., 2016), conforme Figura 5.
+Analisando as respostas, é possível identificar que a primeira aula obteve a melhor
+avaliação, possivelmente influenciado pela sensação de “novidade” que a Plataforma
+suscitou para sala de aula. Nas aulas seguintes, pode-se observar que as opções “Muito
+feliz” e “Feliz” obtiveram aproximadamente 90% e assim indicando que as aulas foram
+prazerosas para os estudantes.
+Figura 4 - Número de acerto VS Tempo
+Figura 5 - Avaliação Emoti-SAM por aula
+Emoti-SAM
+Figura 6 - Opções de resposta
+Emoti-SAM
+125
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Quanto aos sentimentos de Controle e Excitação (Euforia), as duas respostas mais
+positivas (índices 4 e 5 na escala) têm avaliação superior a 80% quando somadas. A aula
+de frações 3, apresenta excitação acima da média (92%) em virtude de seu dinamismo
+que envolveu maior movimentação das crianças e do robô.
+7. Resultados e Conclusão
+Este trabalho objetivou investigar as avalições sobre aulas-atividades de matemática
+coletadas por meio do questionário Emoti-SAM por estudantes do 5º ano do ensino
+fundamental utilizando a Plataforma Zerobot (robô + aplicativo).
+No referencial teórico não há trabalhos em campo executados no período regular
+de aula utilizando um robô programável para a solução de exercícios de matemática, com
+aderência ao planejamento dos professores efetivos e utilizando o Pensamento
+Computacional como abordagem para resolução das atividades. O presente trabalho foi
+desenvolvido em uma escola pública municipal nos períodos regulares, com diversos
+exercícios de matemática, atendendo o planejamento dos professores e utilizando o
+Pensamento Computacional como ferramenta para a solução das atividades. Para a
+análise, dados foram coletados por meio do LOG do app e através de questionários EmotiSAM ao final de cada aula. Os detalhes encontram-se na Seção 6 - Análises.
+Considerando todas as avaliações efetuadas pelas crianças sobre seus sentimentos
+durante a realização das atividades, o somatório dos discentes que se consideram “Muito
+Feliz” ou “Feliz” resultaram em 93%. Sobre o sentimento de excitação, os que opinaram
+por sentirem-se “Muito Animado” ou “Animado” foram 88%. Quanto ao controle,
+totalizou-se 85% os que julgaram “Totalmente no Controle” ou “No controle”. Esses
+resultados evidenciam que avaliação das crianças sobre a abordagem da matemática por
+meio da Plataforma Zerobot foi positiva, promovendo a satisfação e excitação,
+envolvendo-as com a resolução dos problemas e sensação de controle da situação
+enquanto realizavam os exercícios.
+Outro ponto de destaque são as médias gerais das taxas de acerto total e relativa
+de soluções, 35% e 51%, respectivamente. Quando as aulas foram elaboradas
+(considerando tempo de execução de 1h30 cada) não havia parâmetros para previsão da
+quantidade de exercícios e/ou tempo necessário para resolução. Com estas médias é
+possível considerar que o número de atividades propostas é elevado, visto que um terço
+não foi visualizado e apenas um 35% estavam corretos.
+Diversos alunos resolveram exercícios inadvertidamente, ou seja, quando havia
+erro na solução e ao contrário de corrigir o código para executá-lo novamente desde o
+início, apagavam o algoritmo incorreto e elaboravam um novo que solucionava o
+problema a partir do erro. Tais ocorrências justificam-se por dois motivos principais: 1-
+não era possível validar cada execução dos grupos devido ao volume de solicitações dos
+estudantes ao pesquisador durante a execução das atividade, 2 – Em alguns casos o
+pesquisador permitiu execuções deste modo para que os alunos que apresentaram elevada
+dificuldade no desenvolvimento tivessem a oportunidade de evoluir e realizar mais
+exercícios, considerando o escopo que a disciplina de matemática previa. Estas soluções
+“parciais” foram consideradas incorretas.
+Também é válido enfatizar que este trabalho objetiva avaliar as atividades
+baseadas nos sentimentos dos estudantes enquanto utilizavam a Plataforma Zerobot. Os
+conceitos do PC foram utilizados como ferramentas para solução dos problemas
+126
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+propostos e, mesmo que abordados em todas as aulas, não houve o intuito de aferir a
+absorção destes conceitos pelos alunos.
+Concluindo, este trabalho é parte integrante de um projeto de mestrado ainda em
+andamento. As experiências adquiridas serão incorporadas aos próximos experimentos e
+espera-se obter resultados mais robustos ao final do segundo ciclo de atividades, tais
+como: a) uma relação direta entre quantos exercícios foram solucionados e a avaliação
+sobre a aula-atividade; b) alguma forma de aferir a absorção dos conceitos de PC; c) a
+apreciação dos professores sobre as aulas. Por ora, é possível constatar que a proposta de
+utilizar robôs programáveis em aulas regulares, dissociadas às disciplinas de robótica,
+tem se mostrado promissora para as crianças e espera-se que este trabalho contribua para
+outros projetos com escopos similares.
+O presente trabalho foi realizado com apoio da Coordenação de Aperfeiçoamento
+de Pessoal de Nível Superior - Brasil (CAPES) - Código de financiamento 001 e também
+da empresa TecSinapse.
+Referências
+ALMEIDA, C. M. D. S. A importância da aprendizagem da robótica no desenvolvimento do
+pensamento computacional: um estudo com alunos do 4ano. [S.l.], p. 108. 2015.
+ARAÚJO, A. L. S. O.; ANDRADE, W. L.; GUERRERO, D. D. S. Um Mapeamento Sistemático
+sobre a Avaliação do Pensamento Computacional no Brasil. Anais dos Workshops do
+Congresso Brasileiro de Informática na Educação, v. 5, p. 1147, 2016. ISSN: 2316-8889
+AVILA, C. et al. Desdobramentos do Pensamento Computacional no Brasil. Simpósio Brasileiro
+de Informática na Educação-SBIE, v. 27, p. 200, 2016. ISSN: 2316-6533.
+AVILA, C. et al. O Pensamento Computacional por meio da Robótica no Ensino Básico - Uma
+Revisão Sistemática. Simpósio Brasileiro de Informática na Educação - SBIE, v. 28, p. 82,
+out. 2017. ISSN: 2316-6533.
+BARCELOS, T. et al. Relações entre o pensamento computacional e a matemática: uma revisão
+sistemática da literatura. Anais dos Workshops do Congresso Brasileiro de Informática na
+Educação. out. 2015. p. 1369.
+BENITTI, F. B. V. Exploring the educational potential of robotics in schools: A systematic
+review. Computers and Education, v. 58, p. 978-988, abr. 2012. ISSN: 03601315. Disponivel
+em: <https://www.sciencedirect.com/science/article/pii/S0360131511002508>.
+BNCC - MEC. Base Nacional Comum Curricular - MES, 2017. Disponivel em:
+<http://basenacionalcomum.mec.gov.br/>.
+CHIPRIANOV, V.; GALLON, L. Introducing Computational Thinking to K-5 in a French
+Context. Proceedings of the 2016 ACM Conf. on Innovation and Technology in Computer
+Science Education - ITiCSE '16. NY, NY, USA: ACM Press. 2016. p. 112-117.
+COSTA, E. J. F.; CAMPOS, L. M. R. S.; GUERRERO, D. D. S. Pensamento Computacional na
+Educação Básica: Uma Análise da Relação de Questões de Matemática com as Competências
+do Pensamento Computacional. Anais dos Workshops do Congresso Brasileiro de Informática
+na Educação. nov. 2016. p. 1060.
+CSTA; ISTE. Computational Thinking - teacher resources. [S.l.]. 2011.
+GARCÍA-PEÑALVO, F. J. et al. Computational thinking in pre-university education.
+Proceedings of the Fourth International Conf. on Technological Ecosystems for Enhancing
+Multiculturality. NY, NY, USA: ACM Press. 2016. p. 13-17.
+127
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+GOOGLE DEVELOPERS. Google Blockly, 2019. Disponivel em:
+<https://developers.google.com/blockly/>.
+GROVER, S.; PEA, R. Computational Thinking in K-12: A Review of the State of the Field.
+Educational Researcher, v. 42, p. 38-43, jan. 2013. ISSN: 0013-189X.
+HAYASHI, E. C. S. et al. Exploring new formats of the Self-Assessment Manikin in the design
+with children. Proceedings of the 15th Brazilian Symposium on Human Factors in Computer
+Systems - IHC '16, p. 1-10, 2016. ISSN: 1573-3602 (Electronic).
+LOCKWOOD, J.; MOONEY, A. Computational Thinking in Education: Where does it fit? A
+systematic literary review. A systematic literary review. arXiv preprint, mar. 2017.
+MESTRE, P. et al. Pensamento Computacional: Um estudo empírico sobre as questoes de
+matemática do PISA. Anais dos Workshops do Congresso Brasileiro de Informática na
+Educação. out. 2015. p. 1281.
+MINCHILLO, L. V. Towards better tools and methodologies to teach computational thinking to
+children: Na direção de melhores ferramentas e metodologias para o ensino de pensamento
+computacional para crianças, 2018.
+NASCIMENTO, G. M. Uso da Robótica no Ensino de Proporção aos Alunos do Ensino
+Fundamental II, 2012. Disponivel em:
+<https://repositorio.pgsskroton.com.br/bitstream/123456789/3563/1/GILENO MOURA DO
+NASCIMENTO.pdf>.
+OLIVEIRA, O. L.; LUIZ, O. Statistical evidence of the correlation between mental ability to
+compute and student performance in undergraduate courses. Proceedings of the 17th ACM
+annual Conf. on Innovation and technology in computer science education - ITiCSE '12. NY,
+NY, USA: ACM Press. 2012. p. 111.
+OLIVEIRA, O. L.; NICOLETTI, M. C.; VAL CURA, L. M. Quantitative correlation between
+ability to compute and student performance in a primary school. Proceedings of the 45th ACM
+technical symposium on Computer science education - SIGCSE '14. NY, NY, USA: ACM
+Press. 2014. p. 505-510.
+PAIVA, D. D. L. et al. A Identificação das Competências Digitais na Base Nacional Comum
+Curricular para o Uso das Tecnologias da Informação e Comunicação na Educação Básica.
+CIET: EnPED, maio 2018. Disponivel em:
+<http://cietenped.ufscar.br/submissao/index.php/2018/article/view/381>.
+PISA. PISA 2015 - Brasil Resultados principais. [S.l.]. 2016.
+RAABE, A. et al. A Experiência de Implantação de uma Disciplina Obrigatória de Pensamento
+Computacional em um Colégio de Educação Básica. Anais dos Workshops do Congresso
+Brasileiro de Informática na Educação. out. 2017. p. 1182.
+RODRIGUES, R. S. et al. Análise dos efeitos do Pensamento Computacional nas habilidades de
+estudantes no ensino básico: um estudo sob a perspectiva da programação de computadores.
+Simpósio Brasileiro de Informática na Educação-SBIE. out. 2015. p. 121.
+SBC, S. B. D. C.-. Referenciais de Formação em Computação: Educação Básica. [S.l.]. 2017.
+UNESCO. The Education For All Development Index. [S.l.]. 2011.
+WING, J. M. Computational Thinking - The begening. Communications of the ACM, v. 24, p.
+33, mar. 2006. ISSN ISSN: 00010782.
+ZANATTA, R. P. P. A robótica educacional como ferramenta metodológica no processo ensinoaprendizagem: uma experiência com a segunda lei de Newton na série final do ensino
+fundamental. Universidade Tecnológica Federal do Paraná. [S.l.]. 2013.

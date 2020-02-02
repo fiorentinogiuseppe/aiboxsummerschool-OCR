@@ -1,0 +1,144 @@
+Objetos Digitais de Aprendizagem de Cienciasˆ Biologicas´ no Ensino Fundamental e Medio:´ Uma Revisao˜ Sistematica´ da Literatura Brasileira
+
+Nicolas Melo1, Franciane Lima1, Claudiene Sousa1, Ariel Teles1;2,
+Davi Viana2, Eville Ribeiro-Novaes1, Francisco Silva2
+Abstract. On the search for new teaching methodologies, the implementation of technologies as digital learning objects (DLOs) has shown to be an interesting resource for the improvement and qualification of the teaching-learning process. The objective of this study is to analyze academic papers by performing a litera-ture systematic review to understand the current scenario of the use of DLOs in the teaching of Biological Sciences (BS) at the elementary and high school. Ar-ticles were obtained through the search in digital libraries of important national journals and conferences, returning a total of 318 papers, of which 18 ones met the selection criteria. Although the results allow to identify that there is not a consolidated set of publications in the Brazilian literature, the analyzed articles showed that the use of DLOs for BS has been significantly positive. In addition, it has been reported that proposed technologies are effective in motivating and improving student learning.
+
+Resumo. Na busca por novas metodologias de ensino, a implementac¸ao˜ de tecnologias como objetos digitais de aprendizagem (ODAs) tem se mos-trado um interessante recurso para a melhoria e qualificac¸ao˜ do processo de ensino-aprendizagem. Este estudo tem como objetivo a analise´ de trabalhos academicos,ˆ atraves´ da realizac¸ao˜ de uma revisao˜ sistematica´ da literatura, com o intuito de compreender o atual cenario´ do uso de ODAs no ensino de Cienciasˆ Biologicas´ (CB) nas etapas de ensino fundamental e medio´. Os artigos foram obtidos atraves´ da busca em bibliotecas digitais de importantes revistas e conferenciasˆ nacionais, retornando um total de 318 trabalhos, dos quais 18 atenderam os criterios´ de selec¸ao˜. Apesar dos resultados permitirem identificar que nao˜ ha´ um conjunto consolidado de publicac¸oes˜ na literatura brasileira, os artigos analisados mostraram que o uso de ODAs para CB tem sido significati-vamente positivo. Alem´ disso, as tecnologias propostas possuem efetividade em motivar e melhorar o aprendizado dos alunos.
+
+1. Introduc¸ao˜
+
+As possibilidades de utilizac¸ao˜ das tecnologias de comunicac¸ao˜ e informac¸ao˜ (TICs) sao˜ amplas, principalmente no que diz respeito ao desenvolvimento de materiais didaticos´ e estrategias´ que favorecem os processos de ensino e aprendizagem. A literatura tem am-pliado e proporcionado reflexoes˜ e discussoes˜ sobre a utilizac¸ao˜ de tecnologias digitais no ensino de Cienciasˆ Biologicas´ (CB) de forma que pode-se verificar o potencial destas ferramentas digitais, em particular, os benef´ıcios de incorpora´-las em sala de aula para de-
+
+´
+sencadear a participac¸ao˜ ativa do aluno. E poss´ıvel verificar uma variedade de aplicac¸oes˜ no ensino e aprendizagem de CB em varios´ contextos, envolvendo diferentes espac¸os, ta-refas e modos de interac¸ao˜ [Reis et al. 2017b, Campos 2018]. Com isso, observa-se uma necessidade de compreender o estado da arte das pesquisas brasileiras em relac¸ao˜ ao uso de TICs no ensino de CB.
+
+Para compreender o estado da arte em determinado topico´ de pesquisa, re-visoes˜ sistematicas´ da literatura (RSLs) temˆ sido conduzidas [Dermeval et al. 2019]. Em [Reis et al. 2017b] os autores realizaram uma RSL sobre a apropriac¸ao˜ das TICs no ensino de Ciencias,ˆ dando foco para uma analise´ das estrategias,´ contribuic¸oes˜ e limitac¸oes˜ do uso das mesmas. Em [Campos 2018] e´ revisada sistematica-mente a utilizac¸ao˜ de jogos no ensino de cienciasˆ naturais e biologia. Os autores em [Azevedo and Scarpa 2017] apresentam uma RSL sobre as concepc¸oes˜ de natureza da cienciaˆ no ensino de Cienciasˆ. Diversos recursos digitais podem ser utilizados para apoiar o processo de ensino e aprendizagem, esses recursos sao˜ conhecidos como obje-tos digitais de aprendizagem (ODAs) [Tarouco et al. 2014]. No ensino de CB, os ODAS podem oferecer atividades interativas, favorecendo a compreensao˜ de conceitos que na maioria das vezes sao˜ considerados complexos.
+
+Diferentemente destas RSLs ja´ realizadas, este trabalho visa revisar sistematica-mente a literatura brasileira sobre o uso de ODAs para o ensino e aprendizagem de CB, especificamente nas etapas de ensino fundamental e medio´. Desta forma, a contribuic¸ao˜ deste trabalho e´ a realizac¸ao˜ de uma analise´ e discussao˜ do uso de ODAs no contexto brasileiro. Adicionalmente, esta RSL dedicou-se em buscar metodologias voltadas para alunos das etapas de ensino fundamental e medio´. Atraves´ dos resultados desta RSL, e´ poss´ıvel conhecer as propostas de ODAs e entender os metodos´ de ensino que as utilizam no ambiente educacional.
+
+O restante deste artigo e´ dividido como segue. A Sec¸ao˜ 2 descreve os procedi-mentos metodologicos´ utilizados para a conduc¸ao˜ desta pesquisa. A Sec¸ao˜ 3 reporta a conduc¸ao˜ da RSL e os resultados obtidos, enquanto a Sec¸ao˜ 4 apresenta as analises´ e discussoes˜. Por fim, a Sec¸ao˜ 5 dedica-se a` conclusao˜ do trabalho e descric¸ao˜ de possibi-lidades de trabalhos futuros.
+
+2. Metodologia
+
+Para nortear esta RSL foi utilizada as diretrizes e bases estabelecidas por Kitche-nham e Charters [Kitchenham and Charters 2007] e diretrizes definidas em Dermeval et al [Dermeval et al. 2019]. Para auxiliar na construc¸ao˜ desta revisao˜ foi utilizada a ferra-menta Parsifal1, que fornece uma maneira de documentar todo o processo da revisao,˜ pas-sando pelas tresˆ fases da metodologia [Kitchenham and Charters 2007]: planejamento, conduc¸ao,˜ e elaborac¸ao˜ do relatorio´.
+
+2.1. Objetivo e Questoes˜ de Pesquisa
+
+O objetivo principal desta revisao˜ sistematica´ foi analisar o uso de ODAs como tecnolo-gias digitais para o ensino e aprendizagem de Cienciasˆ Biologicas,´ bem como entender as metodologias utilizadas para a aplicac¸ao˜ dessas tecnologias no ambiente educacio-nal. Dessa forma, esta RSL e´ importante para compreender o uso das TICs no ensino de Cienciasˆ Biologicas´. Para o atendimento desse objetivo, Foram definidas as seguintes questoes˜ de pesquisa (QP):
+
+(QP1): Como os ODAs temˆ auxiliado no ensino de CB?
+
+(QP2): Quais ODAs sao˜ utilizadas no ensino de CB especificamente para ensino fundamental e medio?´
+
+(QP3): Quais metodologias sao˜ utilizadas para a aplicac¸ao˜ destes ODAs?
+
+(QP4): Qual a frequenciaˆ de publicac¸ao˜ das pesquisas envolvendo ODAs?
+
+2.2. Estrategia´ de Busca
+
+A estrategia´ de pesquisa foi utilizar uma string de busca abrangente com o intuito de que os sistemas de busca das bases de artigos retornassem o maior numero´ de artigos poss´ıveis referentes ao assunto tratado nesta RSL. A string de busca definida para a realizac¸ao˜ da busca foi: “biologia OR biology OR cienciasˆ OR sciences”. De forma simi-lar, considerou-se os termos tanto em portuguesˆ como inglesˆ com o proposito´ de maximi-zar os resultados. As bibliotecas digitais das seguintes revistas e eventos cient´ıficos brasi-leiros foram pesquisadas: Anais dos Workshops do Congresso Brasileiro de Informatica´ na Educac¸ao˜ (CBIE); Workshop de Informatica´ na Escola (WIE); Simposio´ Brasileiro de Informatica´ na Educac¸ao˜ (SBIE); Simposio´ Brasileiro sobre Fatores Humanos em Sis-temas Computacionais (IHC); Revista Brasileira de Informatica´ na Educac¸ao˜ (RBIE); e Revista Novas Tecnologias na Educac¸ao˜ (RENOTE). Incluiu-se somente ve´ıculos brasi-leiros de publicac¸oes˜ cient´ıficas que possuem artigos fortemente relacionados ao objetivo desta RSL. Dois pesquisadores realizaram a busca no mesmo dia (07/05/2019) para con-firmar os mesmos resultados.
+
+2.3. Criterios´ de Selec¸ao˜
+
+Os criterios´ de selec¸ao˜ apresentados na Tabela 1 foram utilizados.
+
+Dois pesquisadores realizaram a analise´ dos criterios´ de selec¸ao˜. Inicialmente, o primeiro filtro foi realizado pela leitura de t´ıtulos e resumos, os criterios´ CI1-4 e CE1-4 foram aplicados aos artigos retornados pelas bibliotecas digitais. Como normalmente as analises´ realizadas podem possuir vies,´ o qual introduz desconfianc¸a, buscou-se aplicar o Kappa de Cohen [Cohen 1968] para analisar o grau de concordanciaˆ dos pesquisadores em relac¸ao˜ aos resultados obtidos no primeiro filtro dos artigos. Os artigos que obtive-ram resultados divergentes nesta fase foram examinados por outros dois revisores. Dessa forma, todos conflitos foram resolvidos. Em seguida, com a leitura completa dos artigos resultantes do primeiro filtro, o criterio´ CE5 foi aplicado.
+
+2.4. Avaliac¸ao˜ de Qualidade
+
+A qualidade de cada artigo selecionado foi avaliada seguindo a metodologia utilizada por esta RSL [Kitchenham and Charters 2007]. A pontuac¸ao˜ das questoes˜ de avaliac¸ao˜ de qualidade (AQ) de acordo com as tresˆ poss´ıveis respostas foi a seguinte: S (Sim) = 1, P (parcialmente) = 0,5, e N (nao)˜ = 0, para AQ1 e AQ2, e somente Sim ou Nao˜ para as questoes˜ de AQ3 a AQ6. Nesta RSL utilizou-se seis AQs:
+
+(AQ1): Ha´ uma definic¸ao˜ espec´ıfica dos objetivos da pesquisa?
+
+(AQ2): Existe uma descric¸ao˜ detalhada da metodologia que a pesquisa foi reali-zada?
+
+(AQ3): O estudo apresenta uma comparac¸ao˜ com outras metodologias existentes na area´ de CB?
+
+(AQ4): O estudo avaliado apresenta o acesso (e.g., URL ou link para loja de aplicativos) na Internet onde o ODA utilizado esteja dispon´ıvel para uso ou copia´ (download)?
+(AQ5): O estudo avaliado foi aplicado em alguma instituic¸ao˜ de ensino?
+
+(AQ6): As questoes˜ eticas´ foram levadas em considerac¸ao?˜
+
+2.5. Extrac¸ao˜ de Dados
+
+Com a finalidade de responder as questoes˜ de pesquisa, os seguintes dados de cada ar-tigo selecionado foram extra´ıdos e tabulados: t´ıtulo do artigo, fonte (i.e., nome revista, conferenciaˆ ou workshop), ano de publicac¸ao,˜ tipos de tecnologias utilizadas, metodolo-gia utilizada, etapas de ensino que as tecnologias foram focadas, tamanho da amostra, e principais achados.
+
+3. Conduc¸ao˜ e Resultados
+
+A Figura 1 apresenta o diagrama de fluxo do processo de revisao˜. A pesquisa inicial a partir da aplicac¸ao˜ da string de busca nas bases de dados selecionadas resultou em um total de 318 artigos, dos quais 19 atenderam aos criterios´ CI1-4 e CE1-4. O grau de concordanciaˆ (i.e., Kappa de Cohen) dos pesquisadores em relac¸ao˜ aos resultados obtidos no primeiro filtro dos artigos foi 0,5, o qual indica uma concordanciaˆ mode-rada [Viera and Garrett 2005]. Apos´ a fase de consenso feita com a participac¸ao˜ de mais dois pesquisadores, o criterio´ CE5 foi aplicado com a leitura completa dos artigos, fa-zendo com que essa RSL obtivesse o numero´ total de 18 estudos analisados.
+
+A Tabela 2 apresenta, em ordem cronologica´ de publicac¸ao,˜ as referenciasˆ e os ODAs dos 18 estudos selecionados. Em seguida, a Tabela 3 apresenta a etapa de ensino2 das amostras e as metodologias de pesquisa utilizadas. Ja´ a Figura 2 apresenta a pontuac¸ao˜ dos artigos na avaliac¸ao˜ de qualidade.
+4. Discussao˜
+
+A questao˜ de pesquisa (QP1) investigou como os ODAs auxiliam no ensino e aprendiza-gem de CB. Verificou-se a partir dos dezoito artigos inclu´ıdos que a maioria dos autores afirmam que os ODAs utilizados tornam o processo de ensino-aprendizagem de CB mais colaborativo. Portanto, um complemento a mais para o conhecimento, uma ferramenta eficaz e mediadora na divulgac¸ao˜ dos conteudos´ abordados em sala de aula, um suporte para a manifestac¸ao˜ das ideias dos estudantes, permitindo maior envolvimento com a ati-vidade, trazendo mais entusiasmo. Parte destes benef´ıcios trazidos com o uso dos ODAs para CB e´ preciso que seja de autoria do professor, que deve se apropriar dessas novas tecnologias, buscando sempre a melhoria no ensino.
+
+A questao˜ de pesquisa (QP2) teve por objetivo identificar quais ODAs estao˜ sendo utilizados para o ensino de CB nas etapas de escolaridade fundamental e medio´. Dentre os artigos analisados, foi poss´ıvel observar uma variedade significativa de tecnologias digitais implementadas no ambiente escolar, tais como: jogos, animac¸oes,˜ simulac¸oes,˜ plataformas digitais, quiz e v´ıdeos.
+
+Como visto, a Tabela 3 apresenta as metodologias de pesquisas utilizadas pelos es-tudos (QP3). A maioria dos trabalhos realizaram avaliac¸oes˜ com o uso de questionarios´. Nesse caso, nove estudos aplicaram um ODA para ser utilizado pelos participantes e, antes e/ou depois dos experimentos, coletaram informac¸oes˜ a partir de questionarios´. Em 5 pes-quisas os ODAs utilizados foram desenvolvidos pelos pesquisadores, em que duas delas sao˜ tambem´ propostas de avaliac¸ao,˜ onde foram defendidas a aplicabilidade e poss´ıveis benef´ıcios. Tambem´ verificou-se em 3 trabalhos a utilizac¸ao˜ de entrevistas para coleta de informac¸oes˜ e em dois trabalhos a utilizac¸ao˜ de avaliac¸ao˜ e diagnostico´ a partir do uso do ODA apresentado. Em tresˆ publicac¸oes˜ foi utilizado o debate e dialogo´ sobre o ODA estudado.
+
+A Figura 3 apresenta a frequenciaˆ dos anos dos artigos (QP4), os quais foram publicados de 2012 a 2018. Percebe-se uma maior quantidade de publicac¸oes˜ no ano de 2017.
+
+Em relac¸ao˜ a avaliac¸ao˜ de qualidade, os estudos inclu´ıdos mostraram que tinham uma definic¸ao˜ espec´ıfica dos objetivos da pesquisa (AQ1) e que tinham uma descric¸ao˜ detalhada da metodologia em dezesseis dos artigos analisados (AQ2). Ja´ a comparac¸ao˜ com outras metodologias relacionadas existentes na area´ de CB foi considerada adequada em dez estudos (AQ3), e treze estudos apresentaram URL ou link para loja de aplicativos na Internet onde o ODA utilizado esteja dispon´ıvel para uso ou para download (AQ4). Quatorze dos estudos foram aplicados em uma instituic¸ao˜ de ensino (AQ5) e em apenas dois dos dezoito estudos as questoes˜ eticas´ foram levadas em considerac¸ao˜ (AQ6). Pode-se observar que cinco estudos obtiveram a pontuac¸ao˜ maxima´ de cinco pontos.
+
+5. Conclusao˜
+
+Este artigo teve como objetivo realizar uma RSL referente ao uso de ODAs para o ensino e aprendizagem de CB focadas no ensino fundamental e medio,´ entre os anos de 2010 ate´ 2019. Foram encontrados inicialmente 318 artigos e, apos´ triagem, 18 foram inclu´ıdos para extrac¸ao˜ dos dados. Durante a pesquisa foram encontradas algumas dificuldades re-ferentes aos termos de busca, pois em meio a gama de resultados obtidos atraves´ da string de busca, poucos atendiam aos criterios´ da proposta do estudo. Embora os resultados da RSL permitam identificar que nao˜ ha´ um conjunto consolidado de publicac¸oes˜ na li-teratura brasileira sobre ODAs voltados especificamente para CB, os artigos analisados mostraram que o uso dos ODAs tem sido significativamente positivo. Foi relatado ainda que as tecnologias utilizadas possuem efetividade em seu proposito´ de motivar e melhorar o aprendizado dos alunos nas disciplinas de CB para as etapas de ensino fundamental e medio´.
+
+Agradecimentos
+
+Os autores gostariam de agradecer a Fundac¸ao˜ de Amparo a` Pesquisa e ao Desenvolvi-mento Cient´ıfico e Tecnologico´ do Maranhao˜ (FAPEMA) pelo apoio financeiro dado a seus projetos de pesquisa e ao Instituto Federal de Educac¸ao,˜ Cienciaˆ e Tecnologia do Maranhao˜ pela ajuda financeira para participac¸ao˜ de um autor no SBIE 2019.
+Referenciasˆ
+
+Adolfo, M., Machado, D., and Warpechowski, M. (2017). Ensino e aprendizagem de biologia no ensino medio´ atraves´ da informatica´ educativa. In Anais do WIE, pages 608–617. SBC.
+
+Albuquerque, I., Coelho, J., Antunes, J., do Nascimento, C., Lima, D., Costa, R., and Rodrigues, N. (2015). Construc¸ao˜ de um dicionario´ virtual para incremento do apren-dizado de biologia no ensino propedeuticoˆ. RBIE, 23.
+´
+Alisson Schleich, Filho, J., and Lahm, R. (2015). Construc¸ao˜ de conhecimentos sobre meio ambiente, utilizando geotecnologias. RENOTE, 13(1).
+
+Almeida, C. and Lopes, P. (2014). Pratica´ educativa usando a plataforma siena para o ensino de ecologia no 6o ano do ensino fundamental. RENOTE, 12(1).
+
+Araujo, L., Xavier, E., Vasconcelos, P., Machado, M., and Tavares, T. (2017). Doctorbio: Um estudo de caso sobre a utilizac¸ao˜ de recursos de realidade aumentada no ensino de cienciasˆ biologicas´. In Anais do WIE, pages 294–302. SBC.
+
+Azevedo, N. and Scarpa, D. (2017). Revisao˜ sistematica´ de trabalhos sobre concepc¸oes˜ de natureza da cienciaˆ no ensino de cienciasˆ. Revista Brasileira de Pesquisa em Educac¸ao˜ em Cienciasˆ, 17:579–619.
+
+Campos, T. R. (2018). O uso de jogos digitais no ensino de cienciasˆ naturais e biologia: uma revisao˜ sistematica´. Master’s thesis, Universidade Federal de Santa Catarina. Centro de Cienciasˆ Biologicas´.
+
+Cohen, J. (1968). Weighted kappa: nominal scale agreement with provision for scaled disagreement or partial credit. Psychological bulletin, 70(4).
+
+Cruz, B., Bittencourt, A., Neto, M., Stahl, N., and Luna, F. (2017). Students’ perceptions about a multimedia learning laboratory: an experience in teaching biology classes. RENOTE, 15(1).
+
+Dermeval, D., Coelho, J., and Bittencourt, I. (2019). Mapeamento sistematico´ e revisao˜ sistematica´ da literatura em informatica´ na educac¸ao˜. In Jaques, P. A., Pimentel, M., Siqueira, S., and Bittencourt, I., editors, Metodologia de Pesquisa em Informatica´ na Educac¸ao:˜ Abordagem Quantitativa de Pesquisa., volume 2. SBC.
+
+Figueiredo, J., Werneck, V., and da Costa, R. (2013). Simulando a dinamicaˆ populacional de uma colmeia para o ensino de biologia. RBIE, 21:1–15.
+
+Filho, C. and Filho, J. (2016). Aprendizagem colaborativa mediada pelo squeak. In Anais dos Workshops do CBIE, pages 781–790. SBC.
+
+Kitchenham, B. and Charters, S. (2007). Guidelines for performing systematic litera-ture reviews in software engineering. Technical report, Keele University and Durham University Joint Report.
+
+Machado, C. and Carvalho, A. (2018). Avaliac¸ao˜ do serious game immuno rush sobre imunologia. RENOTE, 16(1).
+
+Machado, E., Miquelin, A., and Gonc¸alves, M. (2017). A modelagem molecular como mediadora da aprendizagem da estrutura e da func¸ao˜ da molecula´ de dna. RENOTE, 15(2).
+Minussi, M. and Wyse, A. (2016). Web-game educacional para ensino e aprendizagem de cienciasˆ. RENOTE, 14(1).
+
+Nascimento, L. and Garcia, L. (2014). Promovendo o protagonismo juvenil por meio de blogs e outras redes sociais no ensino de biologia. RENOTE, 12(1).
+
+Reis, C., Rodriguez, R., Bonifacio,´ B., Passos, O., and Elias Net and, P. F. (2017a). Fabrica´ de reciclagem: Uma abordagem para o auxiliar no ensino e conscientizac¸ao˜ sobre coleta seletiva. In Anais dos Workshops do Congresso Brasileiro de Informatica´ na Educac¸ao˜, pages 132–137. SBC.
+
+Reis, R., Leite, B., and Leao,˜ M. (2017b). Apropriac¸ao˜ das tecnologias da informac¸ao˜ e comunicac¸ao˜ no ensino de ciencias:ˆ uma revisao˜ sistematica´ da ultima´ decada´ (2007-2016). RENOTE, 15(2):1–10.
+
+Rocha, J., Demuner, L., Nobre, I., Nunes, V., Machado, C., and Carvalho, A. (2018). ´
+
+Tic no ensino-aprendizagem do ciclo da Agua: Uma proposta transacional no ensino medio´. RENOTE, 16(1).
+
+Santos, A., Nicolete, P., Mattiola, N., and Silva, J. (2017). Ensino h´ıbrido: Relato de experienciaˆ sobre o uso de avea em uma proposta de sala de aula invertida para o ensino medio´. RENOTE, 15(2).
+
+Santos, V., Silva, F., and Acioli, M. (2012). Produc¸ao˜ de historias´ em quadrinhos na abordagem interdisciplinar de biologia e qu´ımica. RENOTE, 10(3).
+
+Sobreira, E., Viveiro, A., and ao D’Abreu, J. (2016). Do paper circuit a` programac¸ao˜ de arduino com scratch: uma sequenciaˆ didatica´ para aprendizagem do conteudo´ de energia nos anos iniciais do ensino fundamental. In Anais do WIE, pages 456–465. SBC.
+
+Tarouco, L., Costa, V., Avila, B., Bez, M., and Santos, E. (2014). Objetos de aprendiza-gem : teoria e pratica´. UFRGS/CINTED, Porto Alegre.
+
+Vidotto, K., Lopes, L., Pozzebon, E., and Frigo, L. (2017). Ambiente inteligente de aprendizagem mazk com alunos do ensino fundamental ii na disciplina de cienciasˆ. In Anais do SBIE, pages 1367–1376. SBC.
+
+Viera, A. and Garrett, J. (2005). Understanding interobserver agreement: the kappa sta-tistic. Family medicine, 37(5):360–363.

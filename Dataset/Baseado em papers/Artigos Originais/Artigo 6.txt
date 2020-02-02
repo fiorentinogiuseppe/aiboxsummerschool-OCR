@@ -1,0 +1,167 @@
+Fatores que influenciam a aprendizagem assistida em mapas conceituais
+
+
+Rodrigo Ruy Boguski1, Davidson Cury1
+
+1Departamento de Informática – Universidade Federal do Espírito Santo (UFES)
+Vitória – ES – Brasil
+Abstract. There are many factors capable of altering the cognitive process, either positively or negatively, directly influencing learning outcomes. Even with technological developments, a still open question is the need to provide the use of different pedagogical strategies of teaching that consider them, in order to make the learning process less mechanical and more flexible to the different cognitive profiles of students. In this article some of these learning factors are raised and how they can be attached to a conceptual framework in order to optimize assisted learning.
+
+Resumo. Existem muitos fatores capazes de alterar o processo cognitivo, quer seja positivamente ou negativamente, influenciando diretamente os resultados de aprendizagem. Mesmo com a evolução tecnológica, uma questão ainda em aberto é a necessidade de proporcionar a utilização de diferentes estratégias pedagógicas de ensino que os considere, a fim de tornar o processo de aprendizagem menos mecânico e mais flexível aos diferentes perfis cognitivos de alunos. Neste artigo são levantados alguns desses fatores de aprendizagem e como podem ser anexados a um arcabouço conceitual a fim de otimizar a aprendizagem assistida.
+
+1. Introdução
+
+Mesmo com a evolução tecnológica, uma questão ainda em aberto é a necessidade de proporcionar a utilização de diferentes estratégias pedagógicas de ensino, a fim de tornar o processo de aprendizagem menos mecânico e mais flexível aos diferentes perfis cognitivos de alunos. Satisfazer essa demanda visa permitir que a evolução da aprendizagem alcance não só patamares metodológicos, mas seja aliada a mudanças na abordagem pedagógica e promovam conjuntamente avanços que reflitam a mudança de paradigma, não só estrutural, mas comportamental e contribuam para a evolução da teoria e prática educacionais.
+
+A aplicação de uma estratégia pedagógica necessita de entendimento da forma como estruturamos nosso arcabouço cognitivo e quais são os fatores que impactam diretamente a sua construção, quer positivamente ou negativamente.
+
+Sob essa perspectiva, desenvolvemos um arcabouço conceitual que considera alguns desses fatores de aprendizagem e os aplica num plano de ensino diretivo, gerado a partir de regras de associação da mineração de dados, e que compreende aspectos individuais do aprendiz. Objetivando verificar sua efetividade, aplicamos esse plano numa atividade de aprendizagem a partir da interação de alunos com sistema tutores inteligentes sobre um tema específico de estudo.
+
+Na próxima seções abordaremos alguns esses fatores de aprendizagem sob a ótica da aprendizagem significativa, como se relacionam com o processo construtivista de conhecimento e como foram integrados ao nosso arcabouço a fim de potencializar o processo de aprendizagem.
+
+Este trabalho está organizado da seguinte forma: na seção 2 é apresentada a aprendizagem significativa e a construção do conhecimento; na seção 3 discorremos sobre alguns fatores que influenciam a construção do conhecimento; na seção 4 apresentamos o modelo conceitual e na seção 5 as considerações finais.
+
+2. A aprendizagem significativa e a construção do conhecimento
+
+Sempre que novos conceitos são apresentados é necessário que, para serem aprendidos e consolidados, sejam anexados às estruturas cognitivas já existentes da mente do aprendiz [Ausubel D. P. 1963], obedecendo assim, a uma ligação semântica em relação aos demais.
+
+Esse processo de adesão ocorre ligando-se esse novo conceito a outros que possuam relações de aproximação com os elementos conceituais dessa estrutura. Assim, esse novo elemento conceitual se liga a um elemento preexistente dessa estrutura que referencia a outro e assim por diante, estabelecendo uma relação de continuidade, formando uma grande teia de conceitos, que de forma conjunta, representa o conhecimento do aprendiz acerca de um determinado tema e assuntos relacionados.
+
+Por vezes é necessário que esta estrutura seja rearranjada para que a introdução do novo conceito possa ser aderente a conceitos que possuam relação de dependência transitiva, ou ainda, para que essa inextricável rede, como um todo, produza sentido completo para esse novo arcabouço conceitual. Dessa forma, conceitos sobre um determinado tema geralmente ficam próximos, ocupando um lugar que delimita uma região semântica pela associação de seus conceitos e assuntos relacionados [Boguski & Cury 2018].
+
+Uma abordagem para essa característica pode ser realizada a partir da teoria de aprendizagem significativa de David Ausubel [Ausubel D. P. 1963] e [Ausubel D. P., 1968], corroborando com teóricos construtivistas e sua defesa de que o conhecimento não
+
+é	absorvido [Jones & Brader-Araje 2002], [Sjøberg 2007] mas construído nos meandros da mente do aprendiz, por ele mesmo, de dentro pra fora, de forma absolutamente singular.
+
+A aprendizagem significativa é o processo pelo qual uma nova informação se relaciona com a estrutura cognitiva do aprendiz e a ela é anexada. Um importante princípio é que essa adesão ao arcabouço cognitivo, não é feita de qualquer forma mas, de maneira não arbitrária e substantiva (não literal). A não arbitrariedade diz respeito ao critério com que o material potencialmente significativo se relaciona com o conhecimento já existente na mente do aprendiz, conhecimento esse, chamado de subsunçor. Dessa forma, esse conhecimento funciona como matriz ideacional e serve de âncora para a nova informação emergente. A substantividade significa que o material a ser anexado à estrutura cognitiva é a substância ou teor do novo conhecimento em si e não a palavra ou proposição que o representa. Esses dois conceitos são fundamentais para a aprendizagem significativa, assim como a existência de conhecimento prévio ou subsunçores e quando eles não existem, a aprendizagem torna-se mecânica ou automática.
+
+Essas perspectivas de aprendizagens nos remetem a uma estrutura cognitiva hierárquica que, para Ausubel, são classificadas em termos de níveis de abstração, generalidade e inclusividade. Assim, conceitos mais específicos são subsumidos por conceitos mais genéricos, nos quais são ancorados, estabelecendo uma estrutura cognitiva em níveis. Essas perspectivas são interessantes pois permitem não só construir um entendimento de uma arquitetura cognitiva de relacionamento entre conceitos mas também estabelecer, com critério, pré-requisitos que satisfaçam a aprendizagem significativa.
+
+As teorias da aprendizagem dizem respeito à forma como construímos o arcabouço conceitual sem, no entanto, apresentar as estratégias pedagógicas de ensino para que isso ocorra. Na próxima seção trataremos dessas estratégias e como podem ser utilizadas considerando os aspectos teóricos mencionados.
+
+3. Fatores que influenciam a construção do conhecimento
+
+Orquestrar o processo de ensino considerando a forma como construímos a estrutura conceitual em nossas mentes é uma tarefa difícil. A apresentação de conteúdo flexível e aderente às necessidades do aprendiz é uma das tarefas inerentes desse processo, sendo necessária uma visão não só externa, mas sob a sua ótica. Ela deve ser feita buscando-se ponderar e entender os fatores que influenciam a aprendizagem significativa. A seguir apresentaremos alguns desses fatores e como influenciam o processo cognitivo.
+
+3.1.Nível de abstração
+
+Uma estratégia de ensino que realiza uma tentativa de flexibilização da apresentação de conteúdo aos estudantes, é a exposição de conteúdo com diferentes níveis de abstração [Hirashima 2018], visando permitir que fossem utilizados distintos estilos de aprendizagem, de forma a extrapolar o modelo clássico de ensino. A apresentação de processos e informações a partir de múltiplas perspectivas e níveis de abstração, objetiva que os alunos apreciem o poder das diferentes formas de conceituar um problema [Richard R. Burton 1988]. Essa uma estratégia que aparece repetidamente no contexto de aprendizagem e permite a formulação conceitual a partir das próprias conclusões do aluno na busca para solução de uma questão, é uma poderosa técnica pedagógica a ser utilizada.
+
+Ausubel [Ausubel D. P. 1968] se refere à essa questão com a apresentação dos princípios programáticos do conteúdo da diferenciação progressiva e da reconciliação integrativa. A diferenciação progressiva é o princípio no qual as ideias mais gerais e inclusivas são apresentadas no início da instrução e são progressivamente diferenciadas em nível de detalhes e a reconciliação integrativa refere-se ao processo de encontrar similaridades e relações entre conceitos reconciliando as discrepâncias reais ou aparente entre eles.
+
+Hirashima [Hirashima 2018] apresenta um método que utiliza níveis hierárquicos de abstração para o entendimento de um modelo de problema e a utilização de estratégias para sua resolução. Sua proposta é que a preocupação principal durante o processo de aprendizagem, não deve ser a apresentação dos conceitos deficientes ao aluno, mas a obtenção da certeza de entendimento do problema por parte dele, a fim de que possa escolher os métodos de solução que ele já conhece e sejam adequados para a situação. Ele propõe o entendimento do problema a partir da decodificação dos índices (ou construtos) captados no próprio problema, como, por exemplo, valores de variáveis, sentenças ou estabelecimento de relações entre conceitos. Assim, a solução de uma questão, quer seja a resolução de um problema matemático ou estabelecimento de associações semânticas entre conceitos é recuperada quando ocorrer uma correspondência entre os construtos obtidos do problema e um dos métodos de solução conhecido pelo aprendiz.
+
+3.2.Recurso Cognitivo
+
+Segundo Hirashima, a solução do problema sempre demanda gasto de energia do aprendiz. Quando o esforço para entendimento do problema é superior em relação ao esforço para seleção de sua solução, ocorre prejuízo ou gasto da capacidade cognitiva. Isso é definido em termos dos conceitos de recurso e foco. Recurso é a reserva intelectual inerente a cada organismo para resolução de problemas e está relacionado a um valor psicológico. Assim, quando o recurso acaba, também acaba a inclinação e motivação para resolução de problemas. Por outro lado, quando o caminho de raciocínio é promissor, o valor do recurso aumenta a partir da potencialização do foco dado pelo aprendiz, esse fenômeno é definido como efeito de focagem [Hirashima 2018].
+
+Se o aprendiz consegue resolver problemas e estabelecer ligações semânticas entre conceitos com maior nível de abstração, consome maior quantidade de recursos, uma vez que é fornecido menor número de construtos para resolver uma questão ou associar um significado. Por outro lado, um menor nível de abstração consome menor quantidade de recursos uma vez que possui maior número de construtos, permitindo maior possibilidade para recuperação de uma solução do problema ou estabelecimento de relações entre conceitos. Mesmo que seja difícil estimar a quantidade de recurso de um indivíduo, uma inferência nos permite estabelecer a seguinte relação entre os conceitos de recurso, foco e abstração.
+∝             çã  
+
+
+Esses conceitos devem ser considerados para que se disponha de estratégias eficientes de ensino-aprendizagem, com a minimização da utilização de recurso e aumento de foco, apresentando construtos que catalisem o processor cognitivo para entendimento do problema e a seleção da melhor solução.
+
+3.3.Carga cognitiva e fragmentação de conteúdo
+
+Um conceito importante a mencionar quando tratamos da catalisação do processo cognitivo com economia de recursos é o de chuncking. Ele se refere a como organizamos a informação e a processamos para gravação e recuperação em nossa memória. Chuncking ou fragmentação da informação é uma abordagem para contornar o gargalo da memória de curto prazo, mesmo que geralmente aproveite as informações existentes em nossa memória de longo prazo. Ele fundamenta-se em experimentos que explicitam que pessoas comuns, em média, conseguem manipular sete pedaços de informação na memória de curto prazo de cada vez [Miller 1955]. Mesmo que o processo de codificação de memórias em memória de longo prazo para recuperação posterior, seja o mesmo, quer a informação esteja fragmentada ou não [Miller 1955], é importante para aprendizagem que a informação seja apresentada dentro da capacidade cognitiva do aprendiz, de forma a economizar recursos cognitivos.
+ 
+Nesse contexto, apresentamos o conceito da teoria da carga cognitiva (Sweller, 1988). Ele diz respeito às restrições sob as quais nossas mentes são impostas ao trabalhar com uma quantidade significativa de informação simultânea de modo a ficar sobrecarregada e, consequentemente, exaurindo a quantidade de recursos. Complementarmente, Mayer propôs [Mayer 2001] um conjunto de 12 princípios da aprendizagem, dentre os quais destacamos o princípio de segmentação. Ele afirma que as pessoas aprendem melhor quando uma lição contínua complexa é dividida em segmentos separados. Assim é menos provável que a memória de trabalho do aprendiz seja sobrecarregada com o processamento essencial quando o conteúdo é apresentado em pedaços menores em vez de todo de uma vez. Na equação a seguir, apresentamos o relacionamento entre a carga cognitiva e o número de fragmentos do conteúdo, omitindo os outros princípios. A partir dela, nota-se que, quanto maior o número de fragmentos, menor a carga cognitiva.
+3.4.Quantidade de Iterações
+
+Outro fator importante a ser considerado para a construção da aprendizagem é o número de apresentações do conteúdo ao aprendiz de modo a sedimentar o entendimento e compreensão. A teoria construtivista de instrução de Bruner [Bruner 1976], identifica que as características de prontidão, estrutura de conteúdo, sequenciamento e reforço combinadas, permitem a instrução efetiva e fundamentam a ideia de aprendizagem em espiral. A aprendizagem em espiral refere-se à ideia de revisitar conceitos básicos repetidas vezes, construindo sobre eles o nível de plena compreensão e domínio. A teoria ausubeliana considera essa mesma questão como princípio da consolidação. Ela consiste em adquirir domínio e fluência acerca de um conceito pela sua revisitação repetidas vezes antes que novos materiais sejam introduzidos, assegurando-se a contínua prontidão na matéria de ensino de modo a aumentar a probabilidade de êxito na aprendizagem.
+
+Assim, para preencher a lacuna existente entre o aprendizagem planejada pelo professor e aquela que o aprendiz construiu, é necessária a apresentação de conceitos de domínio, não só em nível de abstração compatível com o arcabouço cognitivo do aluno, mas também refletindo outros fatores como, por exemplo, a carga cognitiva que ele suporta, a quantidade simultânea de conceitos que consegue manipular na memória de curto prazo e o número de vezes que já foi apresentado anteriormente.
+
+Num nível de abstração mais alto, de forma mais geral, podemos deduzir a partir das premissas anteriores que a aprendizagem é diretamente proporcional à quantidade de recurso cognitivo disponível no aprendiz, ao número de iterações do conteúdo revisitado e ao número de fragmentos do conteúdo a ser apresentado.
+
+3.4.A sequenciação de conteúdo
+
+Uma vez dispondo da quantidade adequada de recurso cognitivo e planejadas as iterações e fragmentos de conteúdo a serem apresentados, é também necessário que eles sejam expostos numa sequência coesa e com o nível de abstração requerido pelo aprendiz, a fim de propiciar o ambiente favorável à aprendizagem significativa, a partir da maximização desses fatores. Ausubel trata por organização sequencial a disposição da informação em ordem, de modo que se torne mais coerente possível em termos de conteúdo, observando os princípios de diferenciação progressiva e da reconciliação integrativa.
+
+As circunstâncias e dinâmicas em que são orquestrados e utilizados os fatores mencionados anteriormente, compõem a estratégia pedagógica de ensino e sua seleção adequada é um aspecto crucial para garantir a qualidade do aprendizagem. A escolha da melhor estratégia ainda é um desafio porque depende diretamente do modelo do aluno e seu entendimento sobre o domínio em questão. Em outras palavras, mesmo guiando-se pelos fatores gerais a partir dos quais construímos o conhecimento, é necessário sintonizá-los, parametricamente, para atender ao modelo de cada estudante, a fim de que ele possa assimilar e estruturar construtivamente o conjunto de conceitos em seu arcabouço, anexando a nova informação à sua rede conceitual. Alguns valores de parâmetros podem ser ajustados antes do processo de ensino, todavia, outros somente podem ser calibrados dinamicamente, na interação do aprendiz com o tutor, com a consequente construção ou atualização, à tempo, de seu perfil cognitivo.
+
+Murray [Murray 1997] defende que as estratégias pedagógicas de ensino devem ser complementadas com as táticas pedagógicas. Dessa forma, é necessário o planejamento nesses dois níveis, em que as estratégias pedagógicas diriam respeito sobre a forma como ensinar, e as táticas pedagógicas sobre as ações para efetivar a estratégia selecionada. Segundo Moreira [Moreira & Rodríguez 1997] a teoria original de Ausubel, enriquecida por Novak, apesar de também ser uma teoria de aprendizagem, é a que mais oferece, explicitamente, diretrizes instrucionais, princípios e estratégias que se pode vislumbrar mais facilmente como pôr em prática. Além disso, são as que estão mais perto da sala de aula, isto porque, diferentemente de outras teorias, nas quais a ideia de aprendizagem significativa está subjacente, a teoria de Ausubel é uma teoria de aprendizagem em sala de aula.
+
+3.5.Os mapas conceituais
+
+Uma técnica desenvolvida por Novak [Novak & Gowin 1984], decorrente da teoria de Ausubel é a dos mapas conceituais. Mapas conceituais são representações gráficas usadas para representar conceitos e a relação entre conceitos na forma de proposições. Uma proposição é uma unidade semântica formada pela ligação de dois ou mais termos conceituais ligados por palavras. Este tipo de aprendizagem pode se tornar significativa desde que os aprendizes estejam motivados para aprender e o material didático seja potencialmente significativo, considerando o que cada estudante já sabe para relacionar melhor tais conhecimentos com o novo conceito a ser aprendido. Perceba que os mapas conceituais, como estratégia pedagógica de ensino, são um elo entre o ensino individualizado e personalizado e a utilização de teoria de aprendizagem que preconiza a aprendizagem significativa. Resta agora o desenvolvimento de um modelo conceitual que possua um plano tático de ensino, em termos de ações, que seja centrado em mapas conceituais e considere os fatores que influenciam a aprendizagem, a fim de que ela seja significativa. Esse é o assunto da próxima seção.
+
+4. O Modelo Conceitual
+
+Desenvolvemos um arcabouço que possui como questão subjacente aspectos da teoria da aprendizagem significativa de Ausubel e complementada por Novak [Ausubel, Novak, & Hanesian 1978]. Sendo assim, é centrado em mapas conceituais e possui um plano tático de ensino gerado por processamento de mineração de dados [Boguski & Cury 2018] sendo aplicado por um sistema tutor inteligente [Boguski, Cury, & Gava 2019]. O modelo é constituído, mesmo que de forma evoluída, sob a abordagem semântica tripartida de sistemas tutores inteligentes, constituída categoricamente, pelo modelo de domínio, modelo do aluno, modelo do tutor e interface com aluno, diluídos em 5 fases principais: Preparação da aula, Construção do mapa do aluno, Preparação de tutoria, Tutoria e Resultados, como descritas na Figura 1.
+
+Metodologicamente, a aplicação do modelo acontece sobre uma atividade de construção de um mapa conceitual sob a orientação de um tutor inteligente, a partir de um texto escolhido previamente pelo professor. A interação aluno-tutor ocorre pela conversação por texto (chat). Para que a tutoria ocorra com sucesso torna-se estritamente necessário que todas as fases do modelo sejam seguidas de forma encadeada pois a saída de uma alimenta a entrada de outra.
+
+Esse arcabouço conceitual foi construído considerando as questões que influenciam o processo de aprendizagem abordados na Seção 3. Assim, cada parte do processo possui como estratégia subjacente aspectos que valorizem a quantidade de foco, nível de abstração, número de iterações, fragmentação de conteúdo e a apresentação de conteúdo numa sequência que fosse mais adequada ao aluno. O processo de tutoria foi planejado para que o conteúdo fosse apresentado de forma fragmentada e com diferentes de níveis de granularidade e que o foco fosse dado a conceitos considerados mais relevantes, a fim de que fosse utilizado a menor quantidade possível de recurso cognitivo do aluno. Essa abordagem visa proporcionar ao aprendiz condições para que obtenha uma melhor experiência na direção de uma aprendizagem significativa. A escolha dos mapas conceituais como ferramenta pedagógica permite que alguns dos fatores de aprendizagem possam ser melhor trabalhados a fim de catalisar a aprendizagem. Isso acontece porque a própria estrutura arquitetural dos mapas conceituais corrobora para que sejam exploradas
+
+questões	como	hierarquia	conceitual	e	abstração,	foco	e	número	de	iterações.
+Detalharemos a seguir as fases do nosso arcabouço.
+
+4.1. Fase 1: A preparação da aula e a organização de conteúdo
+
+Nesta fase são abordados os conceitos de foco e nível de abstração em que a informação será apresentada. Quando da preparação da aula, o professor precisa definir o contexto de ensino, com a delimitação do texto sobre o qual deverá ser construído o mapa conceitual pelos alunos (subfase de escolha do texto da atividade) e construir o mapa conceitual referência a partir do qual o tutor se orientará posteriormente (subfase de construção do mapa referência). Planejamos uma subfase de escolha de conceitos relevantes para que o professor pudesse definir quais conceitos precisam de maior ênfase pela sua relevância em relação ao contexto. Isso é importante em dois momentos posteriores: na fase 3, quando forem utilizados na preparação do plano de aula individual de cada aluno e na fase 4, quando esse plano for ministrado ao aluno, devendo gerar condições que permitam concentrar o aluno nesses conceitos, poupando-o de distrações que consumam seu recurso cognitivo desnecessariamente.
+
+A fim do tutor poder apresentar os conceitos ao aluno em nível de abstração correspondente ao seu perfil cognitivo, o professor pode descrever cada conceito do mapa referência com até 3 níveis de granularidade conceitual (subfase de definição de granularidade conceitual): nível 1 – alto nível de granularidade, nível 2 – médio nível de granularidade e nível 3 – baixo nível de granularidade. Dessa forma, cada nível possui, de acordo com sua característica, maior ou menor riqueza de detalhes conceituais. Para que essa subfase fosse facilitada, desenvolvemos uma integração com a Wikipédia, possibilitando obter automaticamente as diferentes granularidades conceituais. Nesse mesmo viés, realizamos a integração com bibliotecas que realizam uma busca em Onto.pt e retornam os sinônimos referentes ao conceito (subfase de escolha de sinônimos), realizando a análise morfológica com a atribuição de classe gramatical de cada conceito e a lematização para atribuir o lema correspondente ao conceito segundo o Cogroo. A busca por sinônimos permitirá que mais abstrações sejam feitas na apresentação de um conceito ao aluno pelo tutor.
+
+4.2. Fase 2: Construção do mapa inicial do aluno
+
+A construção do mapa inicial do aluno é uma estratégia para a explicitação de seu arcabouço conceitual em termos de relacionamento conceitual e hierárquico. Essa fase dispõe de insumo para a fase de preparação de tutoria revelando o conhecimento inicial dos alunos sobre o tema e é realizada a partir do texto tema fornecido pelo professor na fase 1.
+
+4.3. Fase 3: Preparação da Tutoria
+
+Na preparação para tutoria são processados os mapas iniciais dos alunos e traçado um plano de ensino que seja aderente às necessidades de cada aluno, com a sequenciação dos conceitos a serem apresentados a partir de regras de associação da mineração de dados. Neste momento, o tutor pode fragmentar o conteúdo, preparando as iterações de acordo com o que cada aluno ainda falta aprender, preparando uma sequência de apresentação conceitual que seja adequada a cada aluno individualmente, contudo, que permita a condução de toda a turma a um mesmo patamar de entendimento [Boguski & Cury 2018].
+
+4.4. Fase 4: A Tutoria
+
+Uma vez definidos conteúdo, níveis de abstração, foco nos conceitos relevantes, sequência de conteúdo preparada para o aluno, fragmentação e quantidade de iterações, o tutor possui condições suficientes para iniciar o processo de orientação do aluno. A tutoria consiste em guiar o aluno na construção do mapa conceitual pela apresentação de conceitos e os relacionamentos existentes entre eles. Uma característica interessante da interação aluno-tutor é que o tutor vai aprendendo quais são as preferências cognitivas do aluno quanto a nível de granularidade da informação apresentada, tempo de resposta, nível de intervenção/ajuda desejada, além do ritmo necessário para realização de atividades. Com intuito de abranger diferentes perfis cognitivos, programamos o tutor para ter comportamento ora expositivo, ora socrático.
+
+4.5. Fase 5: Resultados
+
+Ao término do período pré-determinado é possível verificar o desempenho de cada aluno com base naquilo que desenvolveu quando comparado com o mapa referência definido pelo professor. Pelo fato de o contexto de aprendizagem ser inerente a mapas conceituais, a avaliação quanto à validade dos resultados reside especificamente na verificação dos conceitos e seus relacionamentos estarem corretos. Estamos trabalhando para considerar nas medições de resultados, outras questões além das objetivas, tais como o perfil cognitivo do aluno, objetivando tornar mais precisa e coerente a aferição de conhecimento assimilado.
+
+5. Considerações finais
+
+Verificamos, por experimentos conduzidos em sala de aula, que o tutor, enquanto mediador diretivo, conduz o aluno de forma satisfatória a partir do plano de aprendizagem pré-estabelecido, considerando o conhecimento prévio do aprendiz, algumas de suas características particulares além de fatores globais que impactam o processo cognitivo. A condução do aluno na construção do mapa conceitual a partir do texto permite o pensamento crítico e autorreflexão, atingindo grande eficiência. Entretanto, alunos apontaram a necessidade de concessão de maior liberdade de tempo e interação não programada (questões em aberto) por meio de questionamento do aluno ao tutor durante a construção do mapa conceitual. Mesmo assim, ele foi mencionado em avaliações como comunicativo e aderente à proposta realizada. Existem muitos desdobramentos decorrentes deste trabalho de modo a contribuir para seu aprimoramento, possibilitando uma melhor experiência do aluno no caminho de aprendizagem. Algumas delas estão relacionadas à melhoria da interação tutor-aluno, a partir do desenvolvimento de processamento de linguagem natural com a exploração e estudo de mais fatores que possam catalisar o processo cognitivo. Nesta perspectiva, propomos o desenvolvimento de um ambiente para o projeto de tutores inteligentes para o mediação da construção coletiva do conhecimento, visando capturar aspectos coletivos da sala de aula, a partir de interações dos constituintes de uma família de tutores e também dos alunos, pela avaliação por pares de suas atividades. Esse ambiente objetiva ser baseado em regras de associação de mineração de dados, captura de informação multimodal de interações por meio de texto e imagens e possui integração com ontologias de domínio a fim de subsidiar a compreensão semântica do conteúdo, bem como considerar mais fatores que influenciam e potencializam o processo de aprendizagem.
+
+Por fim, enfatizamos a importância da assistência ou trabalho de aprendizagem supervisionado por agentes de software sobre mapas conceituais como um campo relativamente emergente, permitindo uma série de estudos e pesquisas a serem realizados, gerando uma grande contribuição para a educação em geral.
+
+Referências
+
+Ausubel, D. P. (1963). The psychology of meaningful verbal learning. New York: Grune and Stratton.
+
+Ausubel, D. P. (1968). Educational psychology: a cognitive view. New York: Holt, Rinehart and.
+
+Ausubel, D., Novak, J., & Hanesian, H. (1978). Educational psychology: a cognitive view
+
+(2nd ed.). New York: Holt Rinehart and Winston.
+
+Boguski, R. R., & Cury, D. (2018). Usando regras de associação para a identificação de falhas conceituais. Simpósio Brasileiro de Informática na Educação (SBIE), (pp. 1443-1453). Fortaleza.
+
+Boguski, R. R., Cury, D., & Gava, T. (2019). TOM: An intelligent tutor for the construction of knowledge represented in concept maps. Frontiers in Education (FIE). Cincinnati.
+
+Bruner, J. S. (1976). O Processo da Educação. Nacional.
+
+Hirashima, T. &. (2018). A Cognitive Model for ITS. Advanced Research on Computers in Education.
+
+Jones, M. G., & Brader-Araje, L. (2002). The Impact of Constructivism on Education:
+Language, Discourse, and Meaning. American Communication Journal, 5.
+
+Mayer, R. E. (2001). Multimedia Learning. Cambridge Press.
+
+Miller, G. A. (1955, April 15). The Magical Number Seven, Plus or Minus Two Some Limits on Our Capacity for Processing Information. Eastern Psychological Association, No. 2, pp. 343-352.
+
+Moreira, M., & Rodríguez, M. C. (1997). Aprendizagem Significativa: Um Conceito Subjacente. Actas del Encuentro Internacional sobre el Aprendizaje Significativo, (pp. 19-44). Burgos.
+
+Murray, W. R. (1997). Knowledge-based Guidance in the CAETI Center Associate. Eighth World Conference on Artificial Intelligence in Education - Workshop V : Pedagogical Agents. Kobe.
+
+Novak, J., & Gowin, D. (1984). Learning how to learn. Cambridge: Cambridge University Press.
+
+Richard R. Burton. (1988). The Environment Module of Intelligent Tutoring Systems. In J.
+
+J. Martha C. Polson, Foundations of intelligent tutoring systems. Hillsdale, N.J. : L.
+Erlbaum Associates.
+
+Sjøberg, S. (2007). Constructivism and learning . International Encyclopaedia of Education 3rd Edition. Elsevier.
+
+Sweller, J. (1988). Cognitive Load During Problem Solving:Effects on Learning. Cognitive Science, 257-285.
+

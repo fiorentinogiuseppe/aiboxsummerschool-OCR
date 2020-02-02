@@ -1,0 +1,372 @@
+Jogos Inteligentes Tangíveis como Instrumento de
+Mensuração Cognitiva
+ Érica J. S. Scheffel1,2
+, Claudia L. R. Motta1,2, Carla Verônica M. Marques1
+1
+Instituto Tércio Pacitti de Aplicações e Pesquisas Computacionais – Universidade Federal
+do Rio de Janeiro (UFRJ)
+2Programa de Pós-Graduação em Informática – Universidade Federal do Rio de Janeiro
+(UFRJ)
+Av. Athos da Silveira Ramos, 274 – 21.941-916 - Rio de Janeiro – RJ - Brasil
+{ericascheffel, claudiam, carlaveronica}@nce.ufrj.br
+Abstract. The objective of this article is to present a innovative proposal of a
+robotic instrument capable of providing a study about how some of the cognitive
+processes that form intelligence, such as Planning, Attention, Successive and
+Simultaneous Processing [Luria 1966], manifest themselves in the new experience
+described by Piaget as Assimilation Process and later Accommodation process
+[Piaget 1976], in order to verify, in a playful, three-dimensional and tangible form
+if possible failures in these processes can be minimized to improve the problemsolving capacity of school-age children.
+Resumo. O objetivo deste artigo é apresentar uma proposta de instrumento
+robótico e inovador capaz de oportunizar um estudo sobre como alguns dos
+processos cognitivos formadores da inteligência como Planejamento, Atenção,
+Processamento Sucessivo e Simultâneo [Luria 1966] se manifestam no primeiro
+contato com uma nova experiência, descrita por Piaget como Assimilação e, por
+conseguinte, Acomodação [Piaget 1976], com o intuito de verificar, de forma
+lúdica, tridimensional e tangível, se possíveis falhas nestes processos podem ser
+minimizadas para melhoria na capacidade de resolução de problemas das
+crianças em idade escolar.
+1. Introdução
+A preocupação com o déficit na aprendizagem dos brasileiros vem sendo manifestada por
+autores, pesquisadores e profissionais da educação desde o século passado e consiste na
+necessária adaptação da escola à realidade de cada época na qual a sociedade se encontra.
+[...] o sistema educativo, em vigor numa época determinada, é fruto e reflexo da
+organização do trabalho da sociedade a que serve. Quando este se modifica, a
+escola, isto é, aquele aparelhamento a que incumbe o preparo adaptativo da massa
+maior dos membros da comunhão, não pode fugir à fatalidade de transformar-se
+[Mennucci 1934, p.26].
+DOI: 10.5753/cbie.sbie.2019.1042 1042
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Apesar dos atuais avanços tecnológicos nas mais variáveis áreas de trabalho, a
+maioria das instituições educacionais fornece um ensino tradicional que estimula a obtenção
+de mérito através da memorização e da padronização dos resultados desejáveis, descartando
+as aptidões dos indivíduos que não se encaixam nestes, gerando a uniformização das pessoas
+que passam a se comportar de forma competitiva e não colaborativa como deveria ser para
+a saúde da sociedade. Este formato de educação propicia o desperdício das aptidões
+individuais, ou seja, o desuso das áreas de força de cada um [Marques 2017].
+Além disso, os estudos do psicólogo e Professor Emérito da UFRJ Franco Lo Presti
+Seminério mostraram que as crianças que se desenvolvem em um meio social com menos
+recursos e sem acesso às experiências necessárias para sua formação cognitiva se tornam
+adultos com menor capacidade intelectual e este é um problema, não apenas educacional,
+mas social [Seminério 1984].
+Desta forma, a preocupação com a aprendizagem dos brasileiros, principalmente
+quando se trata das criaças menos favorecidas socialmente, pode estar aliada aos novos
+instrumentos capazes de possibilitar a detecção de falhas existentes nos processos cognitivos
+com o intuito de que sejam reparadas de uma maneira lúdica e espontânea. A atual tecnologia
+viabiliza esta ferramenta, conforme já demonstrado na proposta dos Games Inteligentes, os
+quais são programados com inteligência artificial para observar e habilitar funções
+cognitivas de alta complexidade a partir da observação de suas reações diante da busca de
+soluções para os desafios propostos [Marques 2017]. Por fim, essa necessidade de
+construção de artefatos que promovam estudos sobre a formação epistêmica foi manifestada
+há mais de trinta anos pela cientista cognitiva Barbel Inhelder, cuja pesquisa foi
+desenvolvida, por décadas, ao lado de Jean Piaget:
+Seria muito audacioso esperar que o cognitivismo construtivista pudesse,
+simultaneamente, oferecer uma orientação de pensamento e de pesquisa para as
+futuras construções de “máquinas de arquitetura psicogenética” e, também, um
+conhecimento cada vez mais aprofundado dos processos de direção, de regulação
+e de avaliação que sustentam a trajetória das descobertas na criança [Inhelder et.
+al. 1996, p.298]?
+2. Fundamentação Teórica
+Nessa seção serão apresentadas diferentes teorias referentes à formação cognitiva, mas que
+se complementam de forma essencial para a concepção deste trabalho.
+2.1. A Teoria PASS de Luria
+A Teoria da Inteligência conhecida como Teoria PASS (Planejamento, Atenção,
+Processamento Sucessivo e Processamento Simultâneo) foi extraída dos estudos do médico
+e psicólogo soviético especialista em psicologia do desenvolvimento Alexander Luria
+(1966), posteriormente aprofundada por Das, Naglieri e Kirby em 1994, cuja pesquisa,
+baseada em análises de neuroimagem e estudos clínicos de indivíduos com lesões cerebrais,
+mostrou que o cérebro é composto de sistemas funcionais interdependentes, porém isolados.
+Além da subdivisão cerebral e suas funcionalidades interdependentes, os estudos de Luria
+pressupõem que a inteligência está consolidada em quatro processos cognitivos os quais se
+ancoram cada um em sua região definida:
+• Planejamento: refere-se ao processo cuja atividade foi idetificada extensamente no
+lobo frontal, no qual se desenvolvem funções executivas cognitivas responsáveis
+1043
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+pelo controle e organização do comportamento, assim como a seleção e/ou
+construção de estratégias para resolução de problemas e o monitoramento do
+desempenho das estratégias aplicadas.
+• Atenção: refere-se ao processo responsável pela manutenção dos níveis de alerta a
+fim de que o foco seja mantido nos estímulos de maior importância na resolução do
+problema, ignorando demais distrações. Durante esse processo, foram identificadas
+atividades em uma combinação que abrange o lobo frontal e partes inferiores do
+córtex, apesar de que os lobos parietais também se envolveram em alguns momentos
+de atenção.
+• Processamento Sucessivo: responsável pela decodificação, transformação e
+retenção de informações para organização de itens separados em uma série, ou seja,
+são estímulos organizados em uma ordem sequencial. Nesse processo, atividades
+foram amplamente identificadas nos lobos frontal-temporais.
+• Processamento Simultâneo: esse processo, cuja atividade cerebral acontece
+amplamente nos lobos occipital e parietal, também é responsável pela decodificação,
+transformação e retenção de informações, porém envolve a capacidade necessária
+para que os estímulos separados sejam integrados em um todo coeso e interrelacionado. Um simples exemplo disso é a identificação de duas imagens com
+figuras geométricas sobrepostas, sendo a primeira um círculo dentro de um quadrado
+e a segunda um quadrado dentro de um círculo.
+2.2. A Equilibração das Estruturas Cognitivas de Jean Piaget
+O estudo do epistemólogo suíço Jean Piaget (1976) apresenta a formação do conhecimento
+como produto de um processo central de equilibração que ocorre mentalmente nos sujeitos
+quando há experimentação de algo novo. Estes ciclos epistêmicos estão relacionados aos
+dois processos fundamentais para o equilíbrio cognitivo: Assimilação e Acomodação. O
+processo de Assimilação é a absorção de um elemento exterior, seja um objeto, situação ou
+qualquer conteúdo novo, por um esquema conceitual ou sensório motor existente no sujeito.
+Acomodação é o surgimento da necessidade de se considerar as peculiaridades do novo
+elemento exterior assimilado, transformando-o em um esquema conceitual ou sensório
+motor existente no indivíduo ou originando um novo esquema, modificando o conhecimento
+prévio existente. Sendo assim, o processo de Acomodação está sempre condicionado ao
+processo da Assimilação, porém, para que de fato aconteça é necessária uma atividade, ou
+seja, um certo esforço do sujeito, caso contrário o ser humano poderia assimilar todo o
+universo sem se enriquecer em compreensão [Piaget 1978].
+2.3. A Abordagem Psicomotora de Vitor da Fonseca
+Vitor da Fonseca desenvolveu a Bateria Psicomotora (BPM), cujo conjunto de situações ou
+tarefas visa analisar dinamicamente o perfil psicomotor da criança em concordância com a
+organização funcional do cérebro proposta por Luria (1966). Segundo Fonseca (2012) o
+psiquiatra Henri Wallon provavelmente foi o pioneiro da Psicomotricidade no campo
+científico o qual considerou o movimento como o primeiro instrumento do psiquismo
+[Wallon 1925 apud Fonseca 2012, p.13].
+Dentre os fatores analisados na BPM, o que mais contribuiu para esse trabalho foi o
+estudo da Praxia Fina por tratar de funções como a coordenação dinâmica manual e
+velocidade com precisão. Estes quesitos foram utilizados no Jogo Inteligente Tangível como
+1044
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+marcadores da intencionalidade observada considerando-se o tônus muscular, ou seja, o
+estado involuntário de alerta e contração que se encontram os músculos em repouso, os quais
+podem ser mensurados na velocidade de algumas ações seguidas de instantes de preensão
+estática e reflexiva ou devido a sua troca vertiginosa após a mesma situação descrita. Ambas
+as situações podem revelar o estado de tensão que apresenta o músculo em repouso,
+permitindo o início da contração para uma rápida ação após o impulso dos centros nervosos.
+“O tônus muscular é o alicerce das atividades práticas” [Le Boulch 1992 apud OLIVEIRA
+2001, p. 27].
+2.4. Os Games Inteligentes de Marques
+Os Games Inteligentes são jogos programados com inteligência artificial capazes de observar
+e habilitar funções cognitivas de alta complexidade através do trato lúdico, porém direto,
+com o computador [Marques 2017]. Sua construção envolve um processo constituído de
+quatro etapas fundamentais: Modelo Dimensional, Processo Criativo, Projeto Interacional e
+Desenvolvimento Conceitual [Marques 2005]. Um exemplo de Game Inteligente é o Jogo
+EICA que investiga a transitividade cognitiva entre diferentes áreas do conhecimento, como
+as áreas de linguagem, ciências e matemática.
+Figura 1. Jogo EICA [Marques 2017, p.70]
+Neste artigo, a proposta apresentada utilizou a modelagem computacional
+desenvolvida para a construção de um Game Inteligente, porém adaptada à atual tecnologia
+disponível no ramo da robótica, pois dessa forma o artefato físico, equipado com sensores e
+microcontroladores, se torna capaz de promover a coleta de dados originados a partir de sua
+manipulação espontânea. O propósito desta coleta de dados é viabilizar o alinhamento destes
+às relevantes abordagens teóricas neurocognitivas, evidenciando assim, o reconhecimento
+de padrões não observáveis no processo de aprendizagem e resolução de problemas para
+transformá-los em dados registráveis, passíveis de análise e interferências. O resultado disso
+foi um jogo estrutural robótico-cognitivo munido de crivos, os quais analisam fatores
+eliciados do contato com o experimento, extraídos de conceitos abordados nas teorias
+supracitadas, mensurando assim, os níveis de Planejamento, Atenção, Processamento
+Sucessivo e Simultâneo que possam ocorrer durante o processo de Assimilação, para que
+sejam comparados com os níveis mensurados durante o processo de Acomodação.
+1045
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Figura 2. Relação entre as Teorias
+3. Trabalhos Correlatos
+Não foram encontrados, na literatura, propostas semelhantes à apresentada neste trabalho,
+onde o jogo computadorizado é composto de aparatos físicos, equipados com sensores e
+microcontroladores capazes de promover a coleta de dados para análise cognitiva mediante
+sua manipulação pelo usuário. O que existe, conforme já apresentado, é a metodologia para
+construção dos Games Inteligentes [Marques 2015] cuja implementação da robótica é algo
+totalmente inovador.
+À parte das experimentações de nível cognitivo, o que há de correlação com este
+trabalho são os jogos tecnológicos tangíveis produzidos para entretenimento. Estes jogos
+tecnológicos são considerados tangíveis porque possibilitam interações palpáveis, onde os
+usuários atuam movimentando componentes físicos equipados com sensores e
+microcontroladores, a fim de permitir uma interação usuário-máquina. Um exemplo é o
+Reactable, um instrumento musical eletrônico com uma interface de usuário tangível,
+desenvolvido na Universidade Pompeu Fabra, Barcelona. Foi concebido em 2003 por Sergi
+Jordà, Günter Geiger, Martin Kaltenbrunner e Marcos Alonso, porém só foi apresentado ao
+público no ano de 2005, em um concerto na International Computer Music Conference de
+Barcelona.
+Recentemente, Gluz et. al. (2018) apresentaram uma proposta de educação inclusiva
+para integração sensorial no ensino de Ciências por meio de um ambiente virtual tangível.
+Os autores consideram que uma ferramenta de ensino inovadora capaz de integrar a
+tecnologia tangível com a realidade virtual tem uma perspectiva inclusiva para os alunos
+com déficits na comunicação. Porém esta abordagem auxilia na transmissão de conteúdos
+escolares, cujo foco não é similar ao da proposta do Hash 3D.
+4. Jogo Inteligente Tangível (JIT): Hash 3D
+Como proposta de modelo estrutural robótico-cognitivo para criação de um Jogo Inteligente
+Tangível (JIT) foi desenvolvido o Hash 3D, cujas regras podem ser facilmente inferidas por
+se tatar de uma versão mais elaborada de um dos jogos mais antigos e praticados por pessoas
+de todas as idades e de todos os lugares do mundo: o Jogo da Velha.
+1046
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Figura 3. Imagem computadorizada do Hash 3D
+O jogo tem como objetivo a formação sequencial, em linha reta e em qualquer
+direção possível, utilizando três elementos da mesma cor ou mesmo símbolo. Para isso, cada
+jogador dispõe de quinze peças, sendo cinco delas de cada da cor e com cinco tipos de
+símbolos diferentes, cada símbolo em uma das cores. Dessa forma, cada jogador possui cinco
+peças para formar sequências baseadas nas cores e apenas três para formar sequências
+baseadas nos símbolos. Cada jogador só pode formar sequências com suas próprias peças,
+as quais são identificadas pela cor dos símbolos: preto ou branco. Os jogadores se revezam
+e quando alguma sequência for completada corretamente, será disparado um sinal sonoro.
+Serão realizadas cinco partidas e as regras do jogo não são repassadas aos jogadores para
+que a primeira partida seja uma evidência do prossesso de Asimilaão e a quinta e última,
+do processo de Acomodação.
+
+Figura 4. Identificação das peças, casas do tabuleiro 3D e jogadores
+3.1. O Modelo Robótico Cognitivo
+Com efoque na dimensão microgenética, a construção do modelo dimensional proposto
+nessa pesquisa, a qual deu origem ao JIT, iniciou-se com a elaboração de um modelo mental
+que visa analisar a forma com que os indivíduos lidam com pressupostos (no sentido de que
+seja antecipado um possível resultado perante suas ideias de resolução) e também analisar
+1047
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+como esses lidam com as ambiguidades (no sentido de que sejam previstos mais de um
+resultado) quando estão diante da rezolução de um problema, com intuito de evitar
+momentos de hesitação inesperada, assim como intensificar as possibilidades de decisões
+mais assertivas.
+Não obstante analisar, apenas, se os indivíduos atuam inconscientemente com
+pressupostos e ambiguidades na resolução de problemas, o JIT foi cocebido a partir da
+elaboração de crivos, ou seja, conjuntos de citérios neuropsicopedagógicos que definem as
+regras e as decisões por trás das funções do design do jogo [Marques 2017], os quais se
+concretizarão por meio da manipulação das peças desse artefato equipado com
+microcontroladores e com transmissores. Sendo assim, cada crivo foi especificado
+cotemplando as possíveis ações e suas respectivas abordagens teóricas, como por exemplo,
+se o objetivo do jogo é formar sequências de três símbolos ou cores iguais, quando um
+jogador poziciona a segunda peça de uma sequência e o adversário aloca uma peça que
+impossibilite a conclusão da sequência alheia, a este será atribuído um ponto de Atenção,
+uma vez que, segundo Luria (1966), a Atenção se refere ao processo responsável pela
+manutenção dos níveis de alerta com o objetivo de que o foco seja mantido nas decizões
+mais relevantes.
+Quadro 1: Descrição do Modelo Dimensional
+Definição das ações que pontuam cada ação específica
+ Dimensão Ontogenética
+Assimilação - As ações da pimeira partida do jogo serão analizadas como respostas aos processos
+cognitivos eliciados no processo de Assimilação;
+Acomodação - As ações da quinta e última partida do jogo serão analisadas como respostas aos
+processos cogitivos eliciados no processo de Acomodação
+Dimensão Microgenética
+Planejamento
+- Início de uma formação sequencial com duas peças de mesma cor ou símbolo;
+- Início estratégico na casa 2.5 aumentando as possibilidades de vitória;
+- Revesão do jogo: defensiva seguida de ataque;
+- Vitória de dupla possibilidade;
+- Economia de peças que podem concluir sequencias iniciadas no bloqueio ao
+adversário.
+Atenção
+- Início de uma fomação sequencial;
+- Bloqueio à vitória do adversário;
+- Percepção da própria vitória.
+Processamento
+Sucessivo
+- Início de uma fomação sequencial com duas peças de mesma cor ou símbolo;
+- Investidas na fomação sequencial em um único plano;
+1048
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Cogresso Brasileiro de Informática na Educação (CBIE 2019)
+- Utilização da segunda peça de mesma cor ou símbolo;
+Processamento
+Simultâneo
+- Utilização de mais de um plano na segunda jogada;
+- Bloqueio à vitória do adversário envolvendo os três planos;
+- Percepção da própria vitória envolvendo os três planos;
+- Vitória na diagonal evolvendo os trêz lanos.
+Análise de
+Pressupostos
+- Mesmo jogador que inicia as partidas por mais de três vezes seguidas,
+independentemente de quem ganhou ou não a partida anterior, pressupôs que quem
+inicia sempre ganhará jogo.
+Análise de
+Ambiguidades
+- Formação sequencial de dupla possibilidade de vitória;
+- Jogador que promove o ataque utilizando posições que formariam sequências para o
+adversário.
+Espaços Mentais Atribuição à formação sequencial como forma de vitoriana primeira jogada ou falta
+de atribuição (quando o jogo empata, ou seja, quando termina em Velha).
+Análise Psicomotora
+Praxia Fina - Velossidade e pressisão no manuseio com as pças, pozicionamento no tabuleiro sem
+esbarrar nas dmais e auzência de quedas.
+Observação do
+Tônus
+- Rápida ação concebida após preensão estática e reflexiva das peças seguida de
+algum movimento detectável;
+- Troca vertiginosa das peças antes da jogada, após preensão estática detectável nas
+mesmas.
+3.2. Experimentação do Modelo com Simulação Manual do Protótipo
+A proposta de concretização do Hash 3D envolve uma estrutura de alumínio que sustentará
+os três andares do tabuleiro tridimensional. Suas vinte e sete casas serão alimentadas com
+um circuito montado com divisores de tensão resistivos, onde cada casa estará conectada a
+uma porta analógica de um microcontrolador Arduino, com a ajuda de um multiplexador de
+16 canais para expansão das mesmas. Dessa forma será possível identificar qual é a peça
+alocada em cada casa do tabuleiro uma vez que cada uma delas conterá um resistor de
+diferente valor ôhmico. Quando a peça for posicionada em determinada casa, o circuito será
+fechado por meio do contato de finas barras de cobre existentes no fundo das peças e nas
+casas do tabuleiro e o Arduino detectará o sinal e o valor da corrente identificando-a. A
+movimentação das peças será observada de forma inversa, ou seja, cada jogador iniciará a
+partida com suas peças organizadas em seus tabuleiros individuais e quando as mesmas
+forem retiradas para a jogada, o Arduino detectará a interrupção desta corrente. Os dados
+obtidos pelo Arduino serão enviados a um servidor local ou remoto para análise fina
+programada em Python.
+Para testar a funcionalidade do Modelo uma versão não computadorizada foi
+utilizada com dez alunos voluntários de turmas do 6º ao 9º ano de Escolaridade de uma
+1049
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Escola Pública situada no interior do Estado do Rio de Janeiro, onde os dados como o tempo
+de latência, o tempo de alocação das peças no tabuleiro, as peças, as casas de destino e a
+pontuação conforme os crivos foram coletados a partir da filmagem das partidas jogadas
+por cada dupla, para preenchimento de uma planilha esquematizada para este fim. O
+experimento aconteceu durante o horário de uma aula extracurricular de robótica que
+acontece, semanalmente, no contra turno. Seis dos alunos estão em turmas regulares, com a
+idade adequada a sua série e assíduos nessas aulas extracurriculares; os demais alunos
+pertencem a um Programa de Correção de Fluxo, o qual compreende o 6º e o 7º ano
+concomitantemente e recebe estudantes com baixo rendimento escolar e com discrepância
+entre a idade adequada e a série atual devido às recorrentes reprovações.
+Como resultado, pôde-se observar que os quatro alunos pertencentes ao Programa de
+Correção de Fluxo levaram mais tempo para entender o objetivo da formação sequencial,
+onde apenas o Aluno 7, que associou rapidamente o Hash 3D ao Jogo da Velha tradicional,
+teve um desempenho mais próximo dos alunos das turmas regulares. Também apresentaram
+maior limitação na exploração de jogadas que combinassem os três andares do tabuleiro, ou
+seja, maior limitação no Processamento Simultâneo, onde novamente, o Aluno 7 se destacou,
+conforme demonstrado nos gráficos.
+Figura 5. Gráficos das jogadas
+Figura 6. Aplicação do teste
+1050
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+5. Conclusão
+Conclui-se que esse trabalho é uma proposta lúdica, manifestada de forma positiva por todos
+os alunos que participaram, dotada de um nível de interatividade cujo design remete aos
+brinquedos tradicionais, ao mesmo tempo que dispõe de tecnologia e inovação no que diz
+respeito à observação de fenômenos cognitivos. Presume-se que a literatura escolhida como
+fundamentação teórica seja qualitativamente coerente na análise das atitudes tomadas
+durante as partidas do jogo, possibilitando a mensuração dos processos de Planejamento,
+Atenção, Processamento Sucessivo e Processamento Simultâneo que acontecem
+implicitamente no sujeito, diante de desafios inéditos, durante os momentos de Assimilação
+e Acomodação formadores da cognição.
+Espera-se que o proótipo seja construído e tetado com novos alunos voluntários
+para confirmar se os resultados serão coletados de uma forma mais eficiente e menos
+exaustiva do que foi feito manualmente. Espera-se também, que esses dados sejam
+transmitidos diretamente do JIT para uma nvem, possibilitando o assesso remoto e
+promovendo a itegração do atual conseito IoT ao trabalho.
+6. Referências
+Fonseca, V. (2012) “Manual de observação psicomotora: significação psiconeurológica dos
+fatores psicomotores”. 2.ed. Wak Editora, Rio de Janeiro.
+Gluz, J. C. et. al. (2018) “Ambiente Virtual Tangível para Integração Sensorial no Ensino
+de Ciências numa Perspectiva Inclusiva”. In Anais do SBIE 2018, pages 545–554.
+Inhelder, B. et. al. (1996) “O Desenrolar das descobertas da criança: pesquisa acerca das
+microgêneses cognitivas”. Trad. Eunice Gruman. Artes Médicas, Porto Alegre.
+Jordà, S. et. al. (2005) “The reacTable* A Tangible Tabletop Musical Instrument and
+Collaborative Workbench”. Pompeu Fabra University, Barcelona.
+https://www.researchgate.net/publication/247929547_The_reacTable_a_tangible_tablet
+op_musical_instrument_and_collaborative_workbench.html, December.
+Luria, A. R. (1966) “Human Brain and Psychological Processes”. 1 ª. ed. Harper & Row,
+Nova York.
+Marques, C. V. M. (2017) EICA – Estruturas Internas Cognitivas Aprendentes: Um Modelo
+Neuro-Computacional aplicado à instância psíquica do Sistema Pessoa em Espaços
+Dimensionais. Tese de Doutorado. COPPE/ UFRJ, Rio de Janeiro.
+Marques, C. V. M.; Calil, E.; Brasil, G. (2015) “Game Inteligente: conceito e aplicação”. In
+Anais do Seminário de Jogos Eletrônicos, Educação e Comunicação, v. 1, n. 1, pages
+162–171.
+Mennucci, S. (1934) “A Crise Brasileira da Educação”. 2.ed. Piratininga, São Paulo.
+Oliveira, G. de C. (2001) “Psicomotricidade: educação e reeducação num enfoque
+psicopedagógico”. 5.ed. Vozes, Petrópolis.
+Piaget, J. W. F. (1976) “A Equilibração das Estruturas Cognitivas: Problema Central do
+Desenvolvimento”. Zahar Editores, Rio de Janeiro.
+1051

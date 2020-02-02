@@ -1,0 +1,443 @@
+A Realidade Aumentada no Ensino de Sólidos Geométricos
+Maicon G. O. Palhano1
+, Fabiane de Oliveira
+2
+, Luciane Grossi2
+1 Departamento de Matemática e Estatística – Universidade Estadual de Ponta Grossa
+(UEPG)
+Av. Gen. Carlos Cavalcanti, 4.748 – Uvaranas
+CEP - 84030-900 – Ponta Grossa – PR – Brazil
+2 Departamento de Matemática e Estatística – Universidade Estadual de Ponta Grossa
+(UEPG)
+maicon.palhano2009@hotmail.com, fabiane1910@yahoo.com.br,
+lgrossi.uepg@gmail.com
+Abstract. This paper presents the result of a research on a workshop
+conducted with eighth and ninth year students of a State College, in which a
+game and Augmented Reality (AR) were used to approach geometric solids.
+The data collection occurred through a questionnaire, revealing that most
+students do not know AR, the use of games and software in teaching geometry
+is not a common practice in their classes, would like to see other applications
+of AR in mathematics, the game was well accepted, although considered
+difficult by some, aroused interest and motivation to study mathematical
+concepts providing the understanding of properties of geometric solids.
+Resumo. Este trabalho apresenta o resultado de uma pesquisa sobre uma
+oficina realizada com alunos dos oitavo e nono anos de um Colégio Estadual,
+em que um jogo e a Realidade Aumentada (RA) foram utilizados para abordar
+os sólidos geométricos. A coleta de dados ocorreu por meio de questionário,
+revelando que a maioria dos alunos desconhecem a RA, o uso de jogos e
+softwares no ensino de geometria não é uma prática comum em suas aulas,
+gostariam de ver outras aplicações de RA na matemática, o jogo foi bem
+aceito, embora considerado difícil por alguns, despertou o interesse e
+motivação para estudar conceitos matemáticos propiciando a compreensão de
+propriedades dos sólidos geométricos.
+1. Introdução
+Os alunos de hoje, desde pequenos são inseridos em um contexto digital, em que as
+Tecnologias Computacionais estão presentes em diversos aspectos da vida cotidiana.
+Entretanto, a escola ainda se encontra estruturada como no século passado, não
+acompanha as mudanças tecnológicas com a mesma velocidade que esta impacta a
+sociedade. Neste sentido, uma preocupação dos professores atualmente é de como
+despertar o interesse destes alunos pelos conteúdos curriculares. Dentre as Tecnologias
+DOI: 10.5753/cbie.sbie.2019.1012 1012
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Computacionais, a Realidade Aumentada tem sido utilizada em diversas áreas de
+conhecimento tais como medicina e saúde, arquitetura e projetos, artes e educação, em
+que se apresenta como uma possibilidade para atender aos anseios dos professores.
+Para Zorzal e Kirner (2005), no âmbito da educação, a “realidade aumentada”
+pode ser utilizada de várias maneiras, como por exemplo, estimulando o aluno a
+visualizar, conhecer e explorar os conteúdos curriculares ministrados pelo professor em
+sala de aula a partir da interação de elementos virtuais ao contexto real. Desta forma as
+atividades envolvendo RA possibilitam um aprendizado mais interativo e dinâmico.
+Em particular no Ensino de Matemática, a maior parte dos trabalhos e
+aplicativos desenvolvidos com RA referem-se ao conteúdo de Geometria.
+A Geometria é uma área da Matemática que estuda as formas através da
+visualização e observação de objetos a serem analisados, os quais podem ser
+encontrados em construções, obras de arte, na Física, Arquitetura e na natureza.
+Segundo Kaleff (2003), para o ensino de Geometria é fundamental incentivar os
+discentes a desenvolver suas habilidades de visualização tridimensional, análise e
+organização das informações encontradas no objeto, com o intuito de construir
+conceitos, relações e compreender as propriedades geométricas. O autor destaca ainda,
+que a observação do objeto de estudo em Geometria é fundamental para promover uma
+aprendizagem com significado, assim como a contextualização dessas formas na sua
+realidade. Fundamentada pela Teoria de Van Hiele Assad (2017) investigou os níveis do
+pensamento geométrico de estudantes de um colégio público da cidade de ParanaguáPR. A autora aponta que a dificuldade dos estudantes se encontra na visualização dos
+sólidos geométricos, bem como na abstração e na identificação no mundo real. A
+dificuldade na visualização de sólidos geométricos, também foi apontada por Leme
+(2017) em sua pesquisa com turmas do segundo ano do Ensino Médio de um Colégio
+Estadual do Município de Itaberá- São Paulo, em que abordou a Geometria Espacial
+através do software GeoGebra.
+No intuito de construir uma relação entre a Geometria e a realidade, os recursos
+tecnológicos vêm sendo empregados de forma profícua com o propósito de auxiliar o
+professor no ensino de Geometria. Destaca-se assim a RA, a qual Kirner e Kirner (2011)
+definem como: “o enriquecimento do mundo real com informações virtuais (imagens
+dinâmicas, sons espaciais, sensações hápticas) geradas por computador em tempo real e
+devidamente posicionadas no espaço 3D, percebidas através de dispositivos
+tecnológicos” (p. 16). Com o uso da RA pode-se viabilizar a interação do aluno com o
+objeto de estudo, de maneira a explorar tanto a forma, como as características do objeto.
+Segundo Tori e Hounsell (2018), a RA vem apresentando um crescimento
+significativo em termos mundiais quando se considera o número de artigos publicados
+nas principais revistas científicas da área tecnológica, como as publicadas pelo IEEE e
+pela ACM, assim reforçando a importância da área, bem como a utilidade da tecnologia
+e sua perspectiva de futuro.
+Aliado ao uso da RA podemos utilizar os jogos. Segundo a ABED1
+(2012) “os
+jogos estimulam o aluno, despertam sua curiosidade e criatividade, desenvolvem a
+
+1 Associação Brasileira de Educação a Distância.
+1013
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+capacidade de concentração e raciocínio, e propiciam uma maneira de aprender
+prazerosa”.
+Assim este trabalho tem por objetivo avaliar o uso da Realidade Aumentada no
+ensino de Geometria Espacial, por meio do jogo “Que sólido sou eu?”, aplicado à
+estudantes de um Colégio Estadual de Ponta Grossa, além de verificar o aprendizado e a
+impressão gerada nos participantes. Para atingir tais objetivos empregou-se neste estudo
+a coleta de dados, por meio de um questionário com perguntas mistas, fazendo-se uso de
+escalas e respostas dissertativas.
+2. Fundamentação teórica
+A Realidade Aumentada tem suas bases fixadas na década de 1960 com o pesquisador
+Ivan Sutherland, que contribuiu com a divulgação de um artigo em que mostra a
+evolução e os reflexos deste recurso no mundo e com um projeto que combina o mundo
+real com o mundo virtual, mantendo o senso de presença. (SUTHERLAND, 1968).
+Segundo Azuma (2001), a RA pode ser compreendida como um sistema que
+suplementa o mundo real com objetos virtuais gerados por computador que aparecem
+coexistir no mesmo espaço que o mundo real. Tendo por características a relação de
+objetos reais e virtuais, estabelecendo um diálogo em tempo real entre o usuário, o
+mundo real e o mundo virtual e envolvendo aspectos sensoriais tais como visão, audição
+e força.
+A Realidade Aumentada “possui um mecanismo para combinar o mundo real
+com o mundo virtual; mantém o senso de presença do usuário no mundo real; e enfatiza
+a qualidade das imagens e interação dos usuários” (KIRNER e TORI, 2006). Desta
+forma, incorpora no ambiente objetos virtuais, em uma relação em tempo real.
+O uso de estratégias inovadoras em ambientes formais de ensino é uma
+possibilidade de despertar interesse do aluno pelo assunto estudado, assim como
+promover a construção de uma aprendizagem que tenha significado ao estudante. Essa
+aprendizagem pode ser possibilitada com o uso da RA. A manipulação do objeto,
+“desperta maior interesse e motivação nas atividades possibilitando a criança pensar,
+criar e agir, ou seja, interagir (aprendizado ativo)” (NEUBAUER; RODRIGUES;
+SCHAF, 2013, p.11).
+A RA pode ser vista como uma maneira de interação, pois traz objetos virtuais a
+realidade do aluno, em uma associação simultânea no espaço tridimensional, tornandose assim, um instrumento didático que possibilita a compreensão de diversos conceitos e
+contextos que a primeiro modo são abstratos, como a Geometria Espacial na questão de
+visualização e associação dos objetos.
+Para possibilitar maior interesse e motivação dos estudantes, os professores
+podem inserir jogos em suas aulas, tornando o aluno ativo no seu aprendizado. Segundo
+Baumgartel (2016), ao empregar os jogos como recurso didático, “o estudante é
+envolvido de forma ativa, desenvolvendo autoconfiança e sai da passividade que
+normalmente ocorre em aulas tradicionais, em que prioriza-se a transmissão do
+conteúdo”.
+Assim, neste trabalho, optou-se por utilizar um jogo associado à RA, pois
+conforme foi verificado por Kishimoto (1996, p.96): “As crianças ficam mais motivadas
+1014
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+a usar a inteligência, pois querem jogar bem; sendo assim, esforçam-se para superar
+obstáculos, tanto cognitivos quanto emocionais”. Este comportamento se manifesta em
+estudantes de outros níveis, e o autor ainda aponta que “estando mais motivadas durante
+o jogo, ficam também mais ativas mentalmente”.
+Para que ocorra um aprendizado efetivo, não basta a utilização de instrumentos
+didáticos, como a RA e jogos por si só, é preciso um planejamento minucioso das
+atividades, as quais auxiliem os alunos a raciocinar, conjecturar e testar ideias, refletir
+sobre o tema abordado a fim de promover a socialização da Matemática com os alunos.
+O jogo utilizado neste trabalho teve por objetivo a interação e visualização
+tridimensional do objeto através da RA com intuito de associá-los, identificando suas
+semelhanças e distinções de forma mais lúdica.
+A partir dos trabalhos de Barbosa e Carvalho (2017), que apresentam o software
+Geotransform3D, o qual planifica e rotaciona sólidos por meio da RA e de Zorzal,
+Kirner e Lamounier (2006) que discutem o uso da RA nos jogos educacionais elaborouse o jogo “Que sólido sou eu?” o qual estimula o aprendizado de Geometria Espacial,
+bem como os conceitos de aresta, vértice e face. Além de instigar o raciocínio lógico,
+propicia uma interação entre os alunos e uma motivação para o estudo do conteúdo.
+3. Metodologia
+Neste artigo utilizou-se de uma pesquisa aplicada, que segundo Gil (2017, p. 26) é
+entendida como “voltada à aquisição de conhecimentos com vistas à aplicação numa
+situação específica”. Foi ofertada uma oficina de Matemática que contou com a
+participação de 17 estudantes do 8º e 9º ano de uma Escola Estadual do Município de
+Ponta Grossa (PR).
+A oficina foi aplicada em sala de aula com o uso dos tablets com um aplicativo
+de RA instalado. Para a visualização dos sólidos geométricos, utilizou-se o aplicativo
+Augmented Polyedrons2
+, disponível no Google Play Store e Apple Store.
+Considerando que sólidos geométricos são abordados superficialmente no
+Ensino Fundamental, pois a Geometria Espacial é aprofundada no Ensino Médio, foram
+fixados na parede alguns cartazes com ilustrações de sólidos e seus elementos: base,
+face, arestas e vértices, assim como as imagens e respectivos nomes dos sólidos que
+seriam trabalhados no jogo, para que os participantes pudessem consultar quando
+surgissem dúvidas.
+Buscou-se com a atividade investigar as relações dos estudantes com a RA,
+restringindo-se ao uso no ensino de Geometria Espacial. Como os estudantes não tinham
+conhecimento sobre RA, realizou-se primeiramente uma breve exposição oral sobre o
+tema, depois elucidou-se os objetivos da oficina, como seria a utilização dos
+marcadores3
+e a consulta aos cartazes fixados na parede da sala.
+
+2Augmented Polyedrons, desenvolvido por CHARDINE, M. Polyèdres augmentés – Mirage,
+2018. Disponível em:
+https://play.google.com/store/apps/details?id=com.miragestudio.polygons&hl=pt. Acesso em 31
+maio 2019.
+3
+“Os marcadores mais comuns (os fiduciais) são cartões com uma moldura retangular e com um
+símbolo em seu interior, funcionando como um código de barras 2D, que permite o uso de técnicas de
+1015
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Para esta oficina elaborou-se o jogo “Que sólido sou eu?” Este jogo foi
+desenvolvido tendo por base o jogo “Cara a Cara” da empresa Estrela, no qual os
+jogadores precisam desvendar qual o personagem do oponente por meio de perguntas.
+Nesta versão os estudantes precisam descobrir o sólido geométrico do oponente, por
+meio de perguntas modelo elaboradas com o intuito de dar pistas sobre seus elementos.
+Tais perguntas envolvem o número de vértices, arestas, faces e o formato da base do
+sólido: Quantas faces seu sólido tem? Quantos vértices seu sólido tem? Quantas arestas
+seu sólido tem? Qual o formato da base de seu sólido?
+Para jogar esta versão é necessário ter: (a) Dois celulares ou tablets com sistema
+operacional android e com o software “Augmented Polyhedrons” instalado; b) Dois
+conjuntos de marcadores, sendo cada um com doze unidades, disponíveis no software
+para download e impressão.
+Os sólidos envolvidos no jogo foram escolhidos de modo que fossem comuns
+aos estudantes e com características fáceis de identificar. Assim utilizou-se o cubo,
+paralelepípedo, esfera, cilindro, cone, as pirâmides de base quadrangular e triangular e
+os prismas de base trapezoidal e hexagonal. A Figura 1 (a) apresenta um marcador e a
+Figura 1 (b) os sólidos gerados pelo software a partir dos marcadores impressos.
+ (a) (b)
+Figura 1. (a) Marcador, (b) Sólidos em Realidade Aumentada
+Fonte: os autores
+Inicialmente os jogadores disputam com “par ou ímpar” quem começara o jogo,
+ou seja, fazendo as perguntas. O perdedor escolherá um marcador, que representa um
+sólido e por meio do aplicativo poderá observa-lo em RA para então responder as
+perguntas de seu adversário. Posteriormente, os participantes se alternaram com as
+perguntas com o intuito de descobrir o sólido omitido. O vencedor da rodada será o
+participante que primeiro descobrir qual é o sólido em questão. Fica a critério dos
+participantes ou do professor a pontuação atribuída ao vencedor da rodada, bem como o
+número de rodadas.
+Após algumas rodadas, novas duplas foram compostas e um questionário com as
+perguntas do tipo abertas e fechadas foi entregue aos que acabavam de jogar, a fim de
+colher informações sobre a experiência vivenciada na oficina com RA. A análise dos
+dados coletados se deu na forma de “pesquisa de métodos mistos”, que trata-se de um
+tipo de pesquisa que combina “elementos de abordagens de pesquisa qualitativa e
+
+visão computacional para calcular a posição da câmera real e sua orientação em relação aos marcadores,
+de forma a fazer com que o sistema possa sobrepor objetos virtuais sobre os marcadores.” (TORI,
+HOUNSELL e SILVA), 2018.
+1016
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+quantitativa” pois se complementam “para os amplos propósitos de amplitude e
+profundidade de compreensão e corroboração”. (JOHNSON, et. al. (2007), (p. 123,
+tradução nossa).
+A fim de garantir a integridade dos respondentes, cada questionário foi
+identificado por um número e utilizou-se as letras (M) e (F) para identificar se o
+estudante era do sexo masculino (M) ou feminino (F), sendo ao todo 8 estudantes do
+sexo feminino e 7 do sexo masculino. Houve dois participantes que não responderam a
+opção referente ao sexo.
+4. Resultados e Discussão
+No início da oficina fez-se uma breve exposição sobre RA, em que algumas imagens
+foram apresentadas aguçando a curiosidade dos alunos. Apresentou-se o objetivo da
+atividade, o funcionamento do aplicativo com o manuseio dos marcadores, assim como
+as regras do jogo “Que sólido sou eu?”.
+Os alunos demonstraram interesse ao fato de poderem trazer ao mundo real
+sólidos geométricos que a priori eles apenas visualizavam a imagem tridimensional
+impressa e precisavam imaginar sua forma mentalmente.
+As primeiras dificuldades observadas referem-se as termologias e conceitos
+utilizados, os quais não eram familiares e muitas vezes os estudantes confundiam um
+elemento tridimensional com bidimensional. A identificação de vértices, arestas e faces,
+o desconhecimento dos prismas e a nomenclatura dos sólidos geométricos envolvidos,
+foram as maiores dificuldades, as quais corroboram com os resultados dos trabalhos de
+Assad (2017) e Leme (2017), que apontam que os estudantes apresentam dificuldades na
+visualização dos sólidos geométricos e na identificação destes.
+No sentido de esclarecer as dúvidas, muitos alunos olhavam para os cartazes
+com bastante frequência para identificarem alguns conceitos dos sólidos e o seu
+reconhecimento. Entretanto com o passar de algumas jogadas a consulta aos cartazes
+foram diminuindo e os alunos começaram a manifestar domínio no jogo e traçavam
+estratégias sobre quais perguntas deveriam ser feitas primeiro para descobrir o sólido do
+oponente mais rapidamente.
+4.1. Análise dos questionários
+Esta seção apresenta um apanhado das principais questões do questionário
+aplicado, que teve por objetivo avaliar o uso da RA no estudo da Geometria Espacial,
+além de verificar o aprendizado e a impressão gerada ao jogarem o jogo “Que sólido sou
+eu?”.
+A questão 1, questionava se o estudante utilizou anteriormente algum jogo para
+o estudo de Geometria. Observou-se nas respostas que 88,2 % dos alunos não fazem uso
+de jogos e apenas 11,8 % utilizaram algum jogo no estudo de Geometria, porém não
+souberam dizer quais jogos usaram. Conforme afirma ABED (2012) “A inclusão de
+jogos em contextos educacionais ainda causa muita controvérsia entre professores e em
+praticamente toda a sociedade”, ainda ressalta que tal polêmica ocorre pois os “jogos
+são bem aceitos em ambientes educacionais como recreação e para o desenvolvimento
+de habilidades, principalmente, psicomotoras”. Neste sentido é evidente o percentual
+1017
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+elevado de alunos que não utilizam jogos em seus estudos, pois em muitas escolas os
+professores o consideram como entretenimento e em muitas vezes não se sentem
+confortável em usar tecnologias em sua prática.
+A segunda questão buscou saber se o estudante já utilizou algum software para
+estudar Geometria. Similar à questão anterior, 82,3% dos alunos alegam não usarem
+softwares para estudar Geometria e 17,7% fizeram uso. Vários são os fatores que atribui
+a pouca utilização de softwares no ensino, entre eles Schuhmacher, Alves e
+Schuhmacher (2017) apontam que “os professores possuem obstáculos didáticos quanto
+ao conhecimento em TIC4
+” seja por receio de não dominá-las, pela falta de estrutura
+física ou por estar habituado as aulas tradicionais.
+A questão 3 indagava se os participantes conheciam a Realidade Aumentada
+antes de participar deste jogo. A maioria dos participantes (70,6%) desconheciam a RA,
+apesar de ser uma tecnologia em destaque atualmente, não é muito utilizada nas escolas.
+Por outro lado, Macedo e Góes (2018) apresentam alguns trabalhos que relatam pontos
+positivos no uso da RA como recurso de ensino, principalmente nos aspetos
+motivacionais e interativos da tecnologia, reforçando a importância da inserção desta
+ferramenta na prática docente.
+A próxima questão questionava se o estudante gostou do jogo “Que sólido sou
+eu?”. 64,7% dos estudantes responderam que gostaram, 23,5% não gostaram e 11,8%
+não responderam. O fato de que alguns estudantes não gostaram do jogo, está
+relacionado à dificuldade que tiveram inicialmente com os conceitos, terminologias do
+conteúdo de Geometria Espacial visto que este conteúdo é trabalho com mais
+profundidade no Ensino Médio.
+A questão 5 tinha por objetivo analisar se a atividade ajudou os estudantes a
+reconhecerem os sólidos geométricos. Nessa questão, 82,4% dos participantes
+concordaram que a utilização do jogo com RA propiciou visualizar e reconhecer os
+sólidos geométricos, corroborando com Tori e Hounsell (2018) ao afirmarem que “A
+manipulação dos objetos virtuais tridimensionais tais como, movimentação e rotação,
+podem ajudar os alunos que possuem dificuldades de visualizar e compreender imagens
+espaciais 3D representadas no papel em 2D.”
+Com intuito de verificar se atividade estimulou o estudante a querer estudar mais
+os sólidos geométricos, na questão 6, constatou-se que 82,3% dos estudantes se sentiram
+estimulados a explorar os sólidos geométricos corroborando com Baumgartel (2016), o
+qual afirma que “a potencialidade dos jogos como recurso didático é enfatizada pela
+ludicidade como motivação, onde o estudante é envolvido de forma ativa”.
+A questão 7 indagava se houve momentos em que o estudante quis desistir do
+jogo e o porquê. Observou-se nas respostas que 64,7% dos participantes pensaram em
+desistir, 29,4% não tiverem este pensamento e 5,9% não responderam. No decorrer da
+atividade, verificou-se que os alunos gostaram do jogo devido a RA, porém queriam
+desistir pois acharam o jogo difícil e complicado pelas dificuldades conceituais de
+Geometria Espacial. Embora alguns estudantes como F7, F8 e F10 afirmaram que o jogo
+é muito difícil e complicado, outros como M11 e M18 afirmaram que o jogo é divertido
+
+4 Tecnologias de Informação e Comunicação.
+1018
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+e legal. Observou-se também que estudantes com pré-disposição à jogos, queriam
+continuar jogando.
+Na questão 08, investigou se os estudantes gostariam de estudar outros
+conteúdos da Matemática em RA. Dos respondentes, 76,5% gostariam de ver a RA
+aplicada à outros temas matemáticos e 23,5% não gostariam. Tal percentual se justifica
+por tratar-se da geração dos “nativos digitais”, ou seja, nascidos e crescidos em meio a
+tecnologia e por consequência apresentam grande afinidade as tecnologias e as suas
+novidades (MATTAR, 2009).
+A questão 09, solicitava que os estudantes apontassem quais os pontos positivos
+e negativos encontrados no jogo e o porquê. Das respostas coletadas selecionou-se
+algumas: M6 - É um incentivo a mais a estudar porque tira a chatice dos livros e traz a
+realidade; F7 - Aprendemos mais, só que é muito difícil; M13 - Estimula a gente querer
+estudar porque é uma maneira divertida de estudar; F9 - Aprende o que são arestas,
+bases e vértices; M11 - Auxilia o aprendizado na Matemática, pois ajuda a saber o que
+são os sólidos.
+Nos comentários dos alunos se destaca indícios de que a atividade contribuiu
+com a aprendizagem do conteúdo, o uso do jogo com RA motivou e promoveu o
+interesse dos alunos pelo conteúdo mesmo sendo considerado um conteúdo difícil.
+A receptividade da RA e do jogo envolvendo os sólidos geométricos foi bem
+positiva, visto que muitos gostariam de ver essa tecnologia aplicada em outros
+conteúdos da Matemática. A atividade mostrou-se estimulante aos alunos por permitir a
+visualização e manipulação tridimensional das figuras geométricas, concretizadas pelo
+jogo “Que sólido sou eu?”, oportunizando maior engajamento e propiciando uma
+aprendizagem com mais significado ao aluno.
+5. Considerações finais
+Diante a necessidade da escola e do professor de se adequar a realidade atual, em que os
+alunos se encontram inseridos numa sociedade midiática e tecnológica, a busca por
+recursos que despertem o interesse dos alunos pelos conteúdos matemáticos e propiciem
+aplicações dos conceitos em sala de aula é latente. Neste sentido, os jogos e o uso da RA
+mostram-se como um diferencial, pois permite ao aluno visualizar, examinar e explorar
+características e aspectos do conteúdo trabalhado em sala de forma mais proativa.
+Este trabalho constatou que o uso de jogos, softwares e RA no ensino de
+geometria não é uma realidade no cotidiano dos participantes da pesquisa, conforme os
+resultados das questões 1, 2 e 3. Estes resultados são corroborados e justificados pelo
+entendimento que ainda se tem de que estes recursos tecnológicos estão ligados ao
+entretenimento, ou mesmo pela dificuldade do professor em se adaptar as novas
+tecnologias.
+Os participantes da pesquisa, gostaram do jogo “Que sólido sou eu?”, apontaram
+que ele possibilitou a compreensão de propriedades dos sólidos geométricos que a priori
+são de difícil visualização e que o mesmo estimulou a quererem estudar mais sobre os
+sólidos geométricos. Entretanto muitos manifestaram interesse em desistir do jogo. Esta
+atitude atribuiu-se a dificuldade apresentada por eles diante dos conceitos abordados de
+1019
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+sólidos geométricos, que mesmo previsto no conteúdo programático do Ensino
+Fundamental, é apresentado superficialmente, voltando a ser abordado com mais
+profundidade no Ensino Médio.
+Os alunos participantes avaliam o uso da RA como divertida e estimulante, de
+maneira que gostariam de vê-la aplicada a outros conteúdos ou em outras disciplinas.
+Destaca-se a incidência de comentários que indicam indícios de que a atividade tenha
+propiciado a aprendizagem do conteúdo abordado. Segundo Neubauer; Rodrigues;
+Schaf (2013, p.11) ao propiciar a manipulação, neste caso dos sólidos geométricos em
+RA, estabeleceu-se um aprendizado ativo.
+Portanto há coerência no uso da RA na abordagem de conteúdos matemáticos,
+como Geometria Espacial. Deste modo é necessário que o professor obtenha um
+conhecimento prévio da tecnologia envolvida, a fim de que as dúvidas que surgem sobre
+seu uso, sejam sanadas. Pois conforme afirma Moran (2012), o uso de tecnologia pode
+facilitar o trabalho docente, contudo não é suficiente para conduzir o aprendizado do
+aluno, é necessário que o professor medie esta relação entre conteúdo, tecnologia e
+aluno.
+Diante do exposto pode-se dizer que os estudantes foram receptivos ao uso de
+RA para estudar sólidos geométricos, porém a grande dificuldade apresentada, deve-se
+ao fato de que os participantes eram alunos do 8º e 9º ano do Ensino Fundamental, e
+ainda não possuíam domínio sobre o conteúdo abordado. Neste sentido, sugere-se a
+aplicação desta atividade, com estudantes do Ensino Médio e acadêmicos do curso de
+Licenciatura em Matemática.
+Referências
+ABED. (2012) “Contribuições dos jogos em Educação. Brasília”, Distrito Federal,
+http://www.abed.org.br/congresso2012/anais/296c.pdf, Março de 2019.
+Assad, A. (2013), “Usando o Geogebra para analisar os níveis de pensamento
+geométrico dos alunos de Ensino Médio na perspectiva de Van Hiele” (Dissertação
+de mestrado). Universidade Estadual de Ponta Grossa. Ponta Grossa.
+Azuma, R., Baillot, Y., Begringer, R., Feiner, S., Julier, S. e Macintyre, B. (2001),
+Recent Advances in Augmented Reality. IEEE Computer Graphics and
+Applications, v. 21, n.6.
+Barbosa, J. W. S. e Carvalho, C. V. A. (2017), Geotransform3d: Objeto Computacional
+em Realidade Aumentada para apoio ao Ensino da Matemática. Revista de Educação,
+Ciências e Matemática, v. 1, p. 226-239.
+Baumgartel. P. (2016), “O uso de jogos como metodologia de ensino de Matemática”.
+XX EBRAPEM. Encontro Brasileiro de Estudantes de Pós-Graduação em Educação
+Matemática. Curitiba – PR, 12 a 14 de nov. de 2016.
+Gil, A. C (2017), Como elaborar projetos de pesquisa. Atlas. São Paulo.
+Johnson, R. B., Onwuegbuzie, A. J. e Turner, L. A. (2007), Toward a Definition of
+Mixed Methods Research. Journal of Mixed Methods Research, v. 1, n. 2, 112-133,
+2007.
+1020
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Kaleff, A.M.M.R. (2003), Vendo e entendendo poliedros: do desenho ao
+cálculo do volume através de quebra-cabeças e outros materiais
+concretos. Niterói: EdUFF.
+Kishimoto, T.M. (1996), Jogo, Brinquedo, Brincadeira e a Educação. São Paulo: Cortez.
+Kirner, C. (2018) “Realidade Virtual e Aumentada”,
+http://www.realidadevirtual.com.br, Abril de 2018.
+Kirner, C. e Kirner, T. G. (2011), Evolução e Tendências da Realidade Virtual e da
+Realidade Aumentada. In: Ribeiro, M.W.S.; Zorzal, E. R. (Org.). Realidade Virtual e
+Aumentada: Aplicações e Tendências, v. 1, p. 8-23, 1ª ed. Porto Alegre: SBC.
+Kirner, C. e Tori, R. (2006), Fundamentos de Realidade Aumentada. In: Romero Tori;
+Claudio Kirner; Robson Siscouto. (Org.). Fundamentos e Tecnologia de Realidade
+Virtual e Aumentada, v.1, p. 22-38, 1ª ed. Porto Alegre: Sociedade Brasileira de
+Computação – SBC.
+Leme, C. B. (2017), “O uso do Geogebra no ensino de Geometria Espacial para alunos
+do 2º ano do Ensino Médio (Dissertação de mestrado)”, Universidade Estadual de
+Ponta Grossa.
+Macedo, A. C e Góes, A. R. T. (2018), Realidade Aumentada no ensino e aprendizado
+de Matemática: Análise da Literatura no período 2013-2017.VI SINECT.
+Moran, J. M. (2012). A educação que desejamos: novos desafios e como chegar lá. 5ª
+ed. Campinas/SP. Editora Papirus.
+Mattar, J. (2009), Games em Educação: como os nativos digitais aprendem. São Paulo,
+Brasil: Pearson Prentice Hall.
+Neubauer, V. S., Rodrigues, M. C. G. e Schaf, F. M. (2013), Aprendizagem
+significativa: contribuições das tecnologias. In: XV Seminário Internacional de
+Educação no Mercosul, Cruz Alta- RS.: UNICRUZ, v. 1. p. 1-10.
+Schuhmacher, V. R. N., Alves Filho, J. P. e Schuhmacher, E. (2017), As barreiras da
+prática docente no uso das tecnologias de informação e comunicação. Ciênc. Educ.,
+Bauru, v. 23, n. 3, p. 563-576.
+Sutherland, I. E. (1968), A Head-mounted Three-dimensional Display. In: Fall Joint
+Computer Conference, AFIPS Conference Proceedings, v. 33, p. 757-764.
+Tori, R e Hounsell, M. S. (org.) (2018), Introdução a Realidade Virtual e Aumentada.
+Porto Alegre: Editora SBC.
+Zorzal, E. R e Kirner, C. (2005), “Jogos Educacionais em Ambiente de Realidade
+Aumentada”. In: WRA2005 - II Workshop sobre Realidade Aumentada.
+Piracicaba/SP, p. 52-55.
+Zorzal, E. R., Cardoso, A., Kirner, C. e Lamounier Júnior, E. (2006), “Realidade
+Aumentada Aplicada em Jogos Educacionais”, In: V Workshop de Educação em
+Computação e Informática do Estado de Minas Gerais - WEIMIG, Ouro Preto

@@ -1,0 +1,109 @@
+Uma análise de correlagão entre discipliras do ensino fundamental e o desempenho ra Olimpíada Brasileira de Informática
+
+Thalia S. Santara1,Alexandre F. Lopes1, Adriano H. Braga1
+Abstract. This paper performs an aralysis of the teaching-learning of Computatioral Thinking with scientific olympiads in computer science in classes that have been and have not been preparatory course. Furthermore, a descriptive statistic of the results obtained by the elementary school in the competition is presented and a correlation aralysis was perfomed with the students’ grades in the disciplines of ourrioular basic eduoation. The variables used in the research are compared with other related articles and point to the Portuguese Language discipline as the one that is most directly related to the satisfactory result in the Modality Initiation of Olimpíada Brasileira de Informática.
+
+Resumo. Este artigo realiza uma análise do ensino-aprendizagem de Pensamento Computacioral por meio de olimpíadas científicas em informática em turmas que houveram e não houveram ourso preparatório. Além disso, é apresentada uma estatística descritiva dos resultados obtidos pela escola ra competigão e efetuada uma análise de correlagão com as notas dos estudantes em discipliras da grade ourrioular do ensino fundamental. As variáveis utilizadas ra pesquisa são comparadas com demais trabalhos relaciorados e apontam a disciplira de Língua Portuguesa como a de maior relagão direta com o resultado satisfatório ra Modalidade Iniciagão da OBI.
+
+
+1.	Introdugão
+
+Com o entendimento de que boa parte das instituigões mantêm-se baseadas em software e hardware,a utilizagão de Tecnologia da Informagão e Comunicagão (TIC) tornou-se vital para os ganhos de um país. Apesar da crescente demanda por tais habilidades, verifica-se que há um declínio percentual frequente de estudantes matrioulados em oursos relaciorados à computagão, sendo que acadêmicas do sexo feminino torram-se ainda menores (BELL et al., 2009). Estimativas brasileiras apontam que há uma escassez de profissiorais de Tecnologia da Informagão (TI), ao mesmo tempo que o mercado eleva sua demanda, sendo necessário cerca de 420 mil novos contratados entre 2018 e 2024 (BRASSCOM, 2019).
+
+Bell et al. (2009) ainda evidenciam que estereótipos incorretos de carreiras de computagão estão distanciando estudantes de profissões que poderiam atraí-los. Inclusive, desde pequenos acabam não possuindo interesse por competências correlatas a computagão, como por exemplo, a matemática. Além disso, várias disoussões vêm sendo levantadas em favor do aumento da abrangência do ensino de computagão, considerando-a como uma ciência de relevância (BARCELOS; SILVEIRA, 2012). A Sociedade Brasileira de Computagão (SBC) também confirma ser tanto fundamental quanto estratégico ao Brasil que tais conteúdos sejam apresentados desde a eduoagão básica, tal fato que já ocorre em diversos países, como: Alemanha, Argentira, Austrália, Coreia do Sul, dentre outros (SBC, 2017).
+
+Além disso, em uma sociedade rodeada por tecnologia computacioral, defende-se a necessidade de que a eduoagão em todos os níveis de escolaridade possibilite a compreensão da tecnologia para entender e implementar solugões por meio de reoursos computaciorais, e não somente utilizá-las (BARCELOS; SILVEIRA, 2013). Assim, agões que envolvam estudantes desde os primeiros níveis de ensino, podem torrar-se uma estratégia para despertá-los efetivamente para a área. A exemplo disso, a SBC chancela a Olimpíada Brasileira de Informática (OBI), que coorderada pelo Instituto de Computagão da Universidade Estadual de Campiras (Unicamp), segue os parâmetros de demais olimpíadas científicas do país. A exeougão ocorre em prol de alavancar o interesse pela ciência da computagão enquanto campo de importância ra formagão básica de estudantes de nível fundamental, médio e superior (OBI, 2019).
+
+A OBI divide-se em três categorias, sendo: Iniciagão, Programagão e Universitária. No que tange a primeira delas, a Modalidade Iniciagão corresponde a uma das categorias dentro de olimpíadas científicas em informática, a única que não faz uso de computador para aplicagão da avaliagão e possui como público-alvo os estudantes do ensino fundamental. A modalidade é subdividida em: Nível 1, para matrioulados até o 7º ano e Nível 2, para matrioulados até o 9° ano. As provas são teóricas abordando questões de múltipla escolha que envolvem raciocínio lógico (SOUZA; LOPES, 2018), Pensamento Computacioral (PC) (WING, 2008) e até computagão desplugada (BELL et al., 2009).
+
+Desta maneira, dentro do contexto de olimpíadas de conhecimento, frequentemente trabalha-se com PC, fazendo o uso de ideias da computagão para resolver problemas do cotidiano e assim, passando por uma abstragão ao mundo real. Não necessariamente trata-se de soluoiorar qualquer problemática com auxílio de um computador, mas por meio de raciocínio lógico. Exercitar PC é valioso para todos, mesmo que não tenham interesse em computagão (BELL et al., 2009). Assim, tal campo mantém-se presente em pesquisas de diversas áreas, desde economia até humanidades, influenciando de modo direto e indireto, torrando-se um desafio eduoacioral ao ponto que se deveria aprender tal habilidade comegando nos primeiros anos de vida (WING, 2008).
+
+Ademais, torra-se comum o uso de abordagens de computagão desplugada para promogão de PC, visto que a mesma objetiva explorar conceitos de ciência da computagão envolvendo a resolugão de problemas para atingir determirada firalidade e dentre esse processo, lidar com conceitos desta ciência (BELL et al., 2009), sendo uma metodologia voltada para o ensino de computagão sem a necessidade do equipamento. Por conseguinte, habilidades de resolugão de problemas estimuladas podem facilmente relaciorar-se com as outras discipliras do núcleo comum. Para Barcelos e Silveira (2013), há trabalhos que identificam a correlagão entre conhecimentos matemáticos oriundos do ensino básico e o futuro suoesso de estudantes em oursos de computagão, principalmente em discipliras introdutórias.
+
+Sendo assim, o presente trabalho buscou avaliar a associagão entre o desempenho acadêmico de estudantes do ensino fundamental com o resultado em olimpíadas científicas em informática, mais precisamente quanto a Modalidade Iniciagão da XXI OBI. Deste modo, o estudo além desta introdugão, apresenta ra segão 2, os trabalhos relaciorados. ra segão 3, são descritos os métodos de análise, amostras selecioradas e questões de pesquisa, e a segão 4, apresenta-se e disoute-se os resultados encontrados pela experimentagão. Por fim, ra segão 5, as conclusões e apontamentos para trabalhos futuros.
+
+
+2.	Trabalhos Relaciorados
+
+Mestre et al. (2015) apontam que há um baixo quantitativo de estudos que avaliam a relagão de PC a áreas de conhecimento, como a Matemática. Nesse sentido, os autores se propuseram a verificar questões de matemática do Programa Interracioral de Avaliagão de Estudantes (Pisa), ao ponto de compreender se as habilidades para resolugão de problemas matemáticos possuíam relagão com aquelas desenvolvidas com PC. Foi perceptível que as habilidades de PC são similares à dos questioramentos de matemática e suas capacidades fundamentais, com indícios que a insergão no contexto da eduoagão básica poderá auxiliar no ensino-aprendizagem e raciocínio matemático.
+
+Oliveira, Nicoletti e Del Val oura (2014), verificaram a correlagão entre habilidades de computagão e desempenho dos alunos de ensino fundamental. Foi aplicado um teste lógico com semelhangas de conceitos de teoria da computagão, como o modelo da Máquira Turing. Participaram estudantes desde o 6º até o 9º ano e seu rendimento acadêmico foi obtido levando em conta a média entre as discipliras de Matemática, Língua Portuguesa, História, Geografia e Ciências em três bimestres letivos. Por meio do teste de Pearson, foram obtidas correlagões significativas e positivas fortes para 6º, 8º e 9º ano da escola aralisada e para o 7º ano, correlagão moderada, expressando a existência de relagão entre o teste computacioral e o desempenho acadêmico dos discentes.
+
+De forma similar ao estudo anterior, Rodrigues (2017) realizou um teste de proficiência com conhecimentos relativos à programagão de computadores, por intermédio de avaliagão referente aos anos firais de estudantes ra eduoagão básica, a fim de prover comparativos com o desempenho destes com o Exame racioral do Ensino Médio (ENEM). Diferenciando-se pelo nível dos participantes, ao fazer uso do teste de correlagão de Pearson com avaliagões por discipliras, foi verificada a existência de correlagão entre o desempenho do teste de PC e o desempenho em Matemática (eixo “Matemática e suas Tecnologias”), com coeficiente r = 0,44, considerada como correlagão positiva e moderada. Também foram avaliadas demais áreas de conhecimento e componentes ourrioulares presentes ra organizagão ourrioular do ensino médio. Ademais, a pesquisa constatou que estudantes do grupo experimental com experiências referente a conteúdos de programagão providas no ensino básico tiveram desempenho superior no ENEM, especialmente em “Ciências da ratureza e suas Tecnologias” e “Matemática e suas Tecnologias” (RODRIGUES; ANDRADE; CAMPOS, 2016).
+
+Este trabalho segue características dos trabalhos apresentados anteriormente, mas difere-se ao propor o ensino-aprendizagem de PC por intermédio da participagão ra Modalidade Iniciagão da OBI, a qual possui questões que têm como base o ideal de resolugão de problemas e raciocínio lógico, com interpretagão textual. O estudo aqui apresentado ainda diferencia-se pelos dados de análise, ao considerar a pontuagão desta competigão como instrumento para avaliagão de PC e correlagão com discipliras da matriz ourrioular do ensino fundamental.
+
+
+3.	Materiais e Métodos
+
+Para a exeougão deste trabalho foram realizadas análises com estudantes de três diferentes turmas (representadas por A, B e C), oursando o 9° ano do ensino fundamental regular do Colégio Estadual Câmara Filho, da cidade de Rialma-GO. Sendo assim, visando atingir os objetivos propostos pelo trabalho em questão, foram elaboradas as seguintes questões de pesquisa (QP), as quais serão respondidas no decorrer deste:
+
+●	QP1) Como dispõe-se o estudo comparativo entre a turma supervisiorada (Grupo Experimental) e as demais (Grupo Controle)?
+●	QP2) Qual o rendimento em olimpíadas científicas em Informática de estudantes que competiram pela primeira vez?
+●	QP3) Qual a correlagão das notas das discipliras do núcleo comum com os resultados da OBI?
+
+Para investigagão, os alunos foram classificados em dois grupos: experimental e de controle. O experimental constituiu-se de estudantes que realizaram a prova da olimpíada e tiveram ourso preparatório com ênfase em PC e dedugão lógica, além de responderem previamente exercícios de olimpíadas passadas (Turma A). Já o grupo controle foi formado por estudantes que não tiveram treiramento prévio e realizaram a prova da olimpíada (Turmas B e C). Em totalidade, os envolvidos nunca haviam competido nesta olimpíada científica, sendo inclusive a primeira vez que a escola teve ciência da mesma.
+
+Para os cáloulos de correlagão foram obtidos os dados do desempenho acadêmico individual de cada estudante do semestre letivo de 2019/1 com notas ra escala de 0 a 10, em cinco das discipliras presentes ra grade ourrioular vigente, conforme apresentado ra literatura por Oliveira, Nicoletti e Del Val oura (2014), sendo elas: Língua Portuguesa, Matemática, Geografia, História e Ciências. Outra variável utilizada foi a pontuagão obtida pelos estudantes no nível 2 da Modalidade Iniciagão, primeira fase da XXI OBI. A pontuagão de cada competidor é caloulada pela Unicamp, instituigão promotora da olimpíada, que por sua vez realiza a corregão e atribuigão das notas mediante os acertos dos participantes, atribuindo entre 0, nota mínima, e 15 pontos, nota máxima. Enfim, também foram utilizados os dados de classificagão geral dos competidores a nível estadual e pela região Centro-Oeste, com enfoque nos sujeitos de pesquisa.
+Mediante a obtengão e análise primária dos dados, uma amostra de 45 estudantes foi considerada para esse estudo. Os dados foram tabulados e dispostos em formato CSV (Comma-separated values), posteriormente utilizou-se da linguagem de programagão Python versão 3.7.3, com o auxílio das bibliotecas Pandas, Scipy, Matplotlib e Numpy, para realizar o processamento, análises estatísticas e geragão das visualizagões. Para a análise dos dados, como critério de exclusão, foram desconsiderados os estudantes que: i) evadiram da escola durante a exeougão da pesquisa, ou ii) não possuíam as notas ras discipliras do núcleo comum, ou iii) não realizaram a prova da olimpíada. O teste de correlagão de Pearson foi aplicado para examirar a relagão entre o resultado da OBI e as notas das discipliras do núcleo comum.
+
+
+4.	Resultados e Disoussão
+
+Quanto à classificagão dos estudantes para a fase 2 (estadual), um total de 48 competidores foram aprovados, dentro dos 176 inscritos no estado de Goiás. Destes, 23 são da instituigão objeto desta pesquisa, correspondendo a 48% dos aprovados. Entre as pontuagões individuais em decorrência da quantidade de acertos, a maior nota alcangada foi de 12/15, e o rendimento médio geral tratou-se de 5,6 pontos. Conforme os grupos já estabelecidos, a mediara do grupo experimental foi superior a do grupo controle, entretanto, esse grupo possuiu maior variabilidade dos dados, enquanto o grupo de controle menor discrepância entre as notas, apesar de possuir alguns outliers,conforme apresentado ra Figura 1.
+Outrossim, observa-se nos resultados provindos das análises realizadas, diferentes correlagões entre discipliras da grade ourrioular e a pontuagão alcangada pelos estudantes ra olimpíada (Tabela 1). Das discipliras citadas no trabalho como objeto de pesquisa, a que possui maior correlagão é Língua Portuguesa seguida de Ciências, ambas com correlagão moderada. Já Matemática, possui correlagão fraca, ao deter coeficiente r = 0,35. História e Geografia, apresentam-se com o coeficiente de correlagão inferior a 0,3, indicando que a correlagão entre as variáveis é desprezível por tratar-se de uma correlagão muito fraca, além de um valor de p (nível de significância) abaixo que 0,05 (p < 0,05), limite referência considerado para essa pesquisa.
+Deste modo, os resultados encontrados diferenciam-se aos descritos ra literatura no que tange aos efeitos de Língua Portuguesa. Ao destacar-se como a disciplira com maior coeficiente de correlagão (r = 0,45), o mais alto dentre os averiguados, aponta-se a influência desta em relagão a pontuagão ra referida olimpíada científica. Contudo, Rodrigues (2017) e Rodrigues, Alves e Campos (2016) não obtiveram relagões significativas, visto que o componente ourrioular “Linguagens, Códigos e suas Tecnologias” apresentou uma correlagão positiva fraca (r = 0,12) e que conforme os autores, não foi significativo, considerando não existir evidências de correlagão entre conhecimentos de programagão de computadores e desempenho neste eixo ourrioular.
+
+Acredita-se que os índices encontrados para Língua Portuguesa sejam relevantes no contexto da OBI, visto que a prova constitui-se de elevada interpretagão de texto, aptidão que combirada a lógica, auxilia ra resolugão das questões (SANTOS; OLIVEIRA; NETO, 2015; LOPES; SANTAra; BRAGA, 2018), principalmente tratando-se da Modalidade Iniciagão em que são exercícios teóricos.
+
+Com o objetivo de compreender melhor os resultados obtidos ra correlagão, foram gerados gráficos de dispersão (Figura 2), que associam as notas obtidas pelos estudantes em cada matéria (eixo y) com a pontuagão da OBI (eixo x), contendo as mesmas variáveis da correlagão de Pearson, e assim corroboram para demonstrar a disciplira de Língua Portuguesa como a de maior associagão conforme a linha de tendência linear.
+5.	Consideragões Firais
+
+Quanto a QP1, comparando-se entre o grupo experimental e controle, verificou-se que a mediara das notas ra OBI do grupo experimental foi mais elevada que a do grupo de controle, podendo concluir que o ourso preparatório não se evidenciou como fator decisivo para o bom rendimento ra olimpíada, ou seja, mesmo os estudantes que pertenciam ao grupo experimental conseguiram obter pontuagões positivas ra OBI. Em relagão a QP2, a instituigão avaliada obteve um ótimo rendimento ra OBI, tendo que em sua primeira participagão foi a escola com o maior número de aprovados em toda a região Centro-Oeste.
+
+Conclui-se, por meio das análises exeoutadas que no contexto da Olimpíada Brasileira de Informática, que a disciplira de Língua Portuguesa foi a de maior correlagão com o desempenho dos alunos ra competigão (QP3). Vale ressaltar que o modelo adotado pela olimpíada, apresenta para cada questão: cenário, regras e interrogagões, de forma textual. Dessa forma, primeiramente cabe ao estudante a leitura e interpretagão do texto, para assim prosseguir com a resolugão da prova, habilidades essas, desenvolvidas e exigidas ra disciplira de Língua Portuguesa. Portanto, se o estudante possui domínio ra leitura e interpretagão de texto, é provável que sua pontuagão seja satisfatória, que combirado a dedugão lógica, pode vir a proporciorar um bom desempenho ra OBI.
+
+Para trabalhos futuros é importante validar os resultados com um maior quantitativo de amostras de estudantes e edigões da olimpíada científica. Além disso, adicioralmente realizar uma análise comparativa com estudantes de escolas com diferentes perfis e fases da competigão.
+
+
+6.	Referências
+
+Barcelos, T. S., & Silveira, I. F. (2012). Pensamento computacioral e eduoagão matemática: Relagões para o ensino de computagão ra eduoagão básica. In XX Workshop sobre Eduoagão em Computagão, ouritiba. Arais do XXXII CSBC (Vol. 2, p. 23).
+
+Barcelos, T. S., & Silveira, I. F. (2013). Relagões entre o Pensamento Computacioral e a Matemática através da construgão de Jogos Digitais. In Arais do XII Simpósio Brasileiro de Games e Entretenimento Digital (SBGames).
+
+BRASSCOM	(2019).	Relatório	Setorial	de	TIC	2018,	https://brasscom.
+
+org.br/relatorio-setorial-de-tic-2019, Julho, 2019.
+
+Bell, T., Alexander, J., Freeman, I., & Grimley, M. (2009). Computer science unplugged: School students doing real computing without computers. The New Zealand Jourral of Applied Computing and Information Technology, 13(1), 20-29.
+
+Lopes, A. F., Santara, T. S., & Braga, A. B. (2018). Uma análise da influência da aplicagão de ourso preparatório de olimpíadas científicas de informática com estudantes de Ensino Médio. In Fórum Goiano de Software Livre,XV FGSL.
+Mestre, P., Andrade, W., Guerrero, D., Sampaio, L., da Silva Rodrigues, R., & Costa, E. (2015). Pensamento Computacioral: Um estudo empírico sobre as questões de matemática do PISA. In Arais dos Workshops do Congresso Brasileiro de Informática ra Eduoagão(Vol. 4, N°. 1, p. 1281).
+
+OBI (2019). Sobre a OBI, https://olimpiada.ic.unicamp.br/info/, Janeiro.
+
+Oliveira, O. L., Nicoletti, M. C., & Del Val oura, L. M. (2014). Quantitative correlation between ability to compute and student performance in a primary school. In
+
+Proceedings of the 45th ACM Technical Symposium on Computer Science Eduoation (pp. 505-510). ACM.
+
+Rodrigues, R. D. S. (2017). Um estudo sobre os efeitos do pensamento computacioral ra eduoagão. Dissertagão (Mestrado em Ciência da Computagão) - Universidade Federal de Campira Grande, Centro de Engenharia Elétrica e Informática, 2017. 95 f.
+
+Rodrigues, R. S., Andrade, W. L., & Campos, L. M. S. (2016). Can Computatioral Thinking help me? A quantitative study of its effects on eduoation. In 2016 IEEE Frontiers in Eduoation Conference (FIE)(pp. 1-8). IEEE.
+
+Santos, E. R. S., Cristiano, F., & Neto, I. B. D. M. (2015). Raciocínio Lógico e Computagão: Descobrindo Estratégias de ensino por meio da Olimpíada Brasileira de Informática. In Arais do Workshop de Informática ra Escola(Vol. 21, N°. 1, p. 266).
+
+SBC (2017). Referenciais de Formagão em Computagão: Eduoagão Básica, http://www.sbc.org.br/files/ComputacaoEduoacaoBasica-versaofiral-julho2017.pdf, Janeiro, 2019.
+
+Souza, J. S., & Lopes, A. S. B. (2018). Estimulando o pensamento computacioral e o raciocínio lógico no ensino fundamental por meio da OBI e computagão desplugada. In Brazilian Symposium on Computers in Eduoation (Simpósio Brasileiro de Informática ra Eduoagão-SBIE)(Vol. 29, Nº. 1, p. 1893).
+
+Wing,	J.	M.	(2008).	Computatioral	thinking	and	thinking	about	computing.
+
+Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences,366(1881), 3717-3725.
+
+
+
+
+
+
+ 

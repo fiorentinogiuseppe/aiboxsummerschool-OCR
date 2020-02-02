@@ -1,0 +1,426 @@
+Usando Comunicac¸ao Aumentativa e Alternativa para ensinar ˜
+Equivalencia de Est ˆ ´ımulos
+Jayr Pereira1
+, Natalia Franco ´
+1
+, Rosany Pereira2
+, Robson Fidalgo1
+1Centro de Informatica – Universidade Federal de Pernambuco (UFPE) ´
+Recife – PE – Brazil
+{jap2, nmf, rdnf}@cin.ufpe.br
+2Centro Educacional Nas´ılia Ferreira Dantas
+Penaforte – CE – Brazil
+rosanya30@gmail.com
+Abstract. In the context of inclusive education, Augmentative and Alternative
+Communication Systems (AAC) can be used for various purposes. In this sense,
+this article proposes a conceptual framework for adaptating activities based on
+the theory of Equivalence of Stimuli for AAC systems. This proposal was evaluated by health and education professionals, based on the technology acceptance
+model (TAM), obtaining positive results, thus showing its great potential for
+acceptance.
+Resumo. No contexto de educac¸ao inclusiva, sistemas de Comunicac¸ ˜ ao Aumen- ˜
+tativa e Alternativa (CAA) podem ser usados para diversos fins. Neste sentido,
+este artigo propoe um framework conceitual para adaptac¸ ˜ ao de atividades ba- ˜
+seadas na teoria de Equivalencia de Est ˆ ´ımulos para sistemas de CAA. Essa
+proposta foi avaliada por profissionais das areas de sa ´ ude e educac¸ ´ ao, com ˜
+base no modelo de aceitac¸ao da tecnologia (TAM), obtendo resultados positi- ˜
+vos, mostrando assim seu grande potencial de aceitac¸ao. ˜
+1. Introduc¸ao˜
+A Comunicac¸ao Aumentativa e Alternativa (CAA) [ASHA 2019] ˜ e uma Tecnologia As- ´
+sistiva importante nas adaptac¸oes necess ˜ arias para pessoas com defici ´ encia intelectual ˆ
+e/ou dificuldades na fala (e.g., pessoas com Paralisia Cerebral, Microcefalia, Transtornos
+do Espectro Autista, sequelas de AVC e Apraxia). Essas pessoas, apresentam limitac¸oes ˜
+na comunicac¸ao gestual, oral e/ou escrita e n ˜ ao conseguem ter uma comunicac¸ ˜ ao funci- ˜
+onal. Para esses casos, a CAA, a partir da selec¸ao de imagens com legendas, ajuda a: 1) ˜
+desenvolver a compreensao; 2) reduzir a frustrac¸ ˜ ao na tentativa de se comunicar; 3) ter um ˜
+poder maior de escolha; e 4) expressar sentimentos e opinioes. Al ˜ em da comunicac¸ ´ ao, ˜
+a CAA tambem pode ser usada como uma ferramenta de suporte ao desenvolvimento ´
+de atividades pedagogicas para a educac¸ ´ ao inclusiva desses indiv ˜ ´ıduos. No contexto da
+educac¸ao inclusiva, a CAA pode ser usada para diversos fins, por exemplo: 1) Adaptac¸ ˜ ao˜
+de conteudo – ensino de letras, s ´ ´ılabas, numeros e operac¸ ´ oes aritm ˜ eticas, bem como ou- ´
+tros conceitos (e.g., animais, cores e lugares); 2) Contac¸ao de hist ˜ orias e reproduc¸ ´ ao de ˜
+musicas – ensino de novos conceitos a partir de hist ´ orias ou m ´ usicas; 3) Instruc¸ ´ ao de ro- ˜
+tinas – ensino de rotinas (e.g., “escovar os dentes” e “tomar banho”); 4) Equivalencia de ˆ
+Est´ımulos – ensino de novos conceitos e de relac¸oes entre conceitos. ˜
+DOI: 10.5753/cbie.sbie.2019.1281 1281
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+A capacidade de formar classes de est´ımulos equivalentes a partir de relac¸oes ar- ˜
+bitrarias entre est ´ ´ımulos e fundamental para o desenvolvimento da comunicac¸ ´ ao funcional ˜
+e da leitura com compreensao [de Rose 1993]. Neste contexto, o paradigma de Equi- ˜
+valencia de Est ˆ ´ımulos [Sidman and Tailby 1982], a partir de procedimentos de escolha de
+acordo com o modelo (do ingles, ˆ Matching to Sample), tem sido utilizado para ensinar
+discriminac¸oes condicionais que permitem o estabelecimento de relac¸ ˜ oes arbitr ˜ arias entre ´
+est´ımulos diferentes (e.g., comer → comida; comida → bolo). Incluindo a emergencia ˆ
+de novas relac¸oes a partir das relac¸ ˜ oes condicionais ensinadas anteriormente (e.g., co- ˜
+mer → bolo). Assim, o paradigma fornece uma fundamentac¸ao te ˜ orica e sistem ´ atica para ´
+a definic¸ao emp ˜ ´ırica do que e “compreens ´ ao” [de Rose and Bortoloti 2007], o que per- ˜
+mite que ele seja usado nao s ˜ o como ferramenta de ensino, mas tamb ´ em como meio de ´
+avaliac¸ao. ˜
+Em Equivalencia de Est ˆ ´ımulos, o procedimento de escolha de acordo com o modelo consiste em um conjunto de atividades nas quais o indiv´ıduo e exposto a est ´ ´ımulos
+de modelo e de comparac¸ao, que s ˜ ao apresentados em forma de figuras, texto ou sons, ˜
+elementos que estao geralmente presentes em sistemas de CAA. Nesses sistemas, picto- ˜
+gramas (i.e., figuras) sao utilizados como suporte visual para a construc¸ ˜ ao de frases. Cada ˜
+pictograma esta atrelado a uma palavra, que por sua vez pode ser visualizada pelo usu ´ ario ´
+e falada pelo sintetizador de voz, comumente presente nesses sistemas. No entanto, o uso
+desses sistemas na realizac¸ao de atividades de Equival ˜ encia de Est ˆ ´ımulos requer um alto
+n´ıvel de personalizac¸ao, possibilitando que o mediador (i.e., terapeuta, professor, cui- ˜
+dador ou pai/mae) crie atividades tem ˜ aticas (e.g., n ´ umeros, letras, animais, rotinas). A ´
+plataforma aBoard [Franco et al. 2017], e um exemplo de sistema de CAA que possibi- ´
+lita a personalizac¸ao de conte ˜ udo, dando ao mediador a liberdade de adicionar e excluir ´
+pictogramas, criar e excluir pastas, editar os rotulos de pictogramas e pastas, etc. ´
+Sendo assim, explorando a capacidade de personalizac¸ao de sistemas como o ˜ aBoard, este trabalho propoe um ˜ framework conceitual para a adaptac¸ao de atividades de ˜
+Equivalencia de Est ˆ ´ımulos em sistemas de CAA. Esse framework conta com seis tipos
+de atividades que podem ser adaptadas nao s ˜ o para o ´ aBoard, mas para qualquer ferramenta de CAA que possibilite a personalizac¸ao de conte ˜ udo e que conte com duas ´ areas ´
+explicitamente distintas, uma para mostrar os est´ımulos modelo e outra para mostrar os
+est´ımulos de comparac¸ao. Para fins de prova de conceito, essas atividades foram ilustra- ˜
+das em um sistema de CAA fict´ıcio e sua aceitac¸ao avaliada junto a profissionais de sa ˜ ude ´
+e educac¸ao, usando como base o modelo de aceitac¸ ˜ ao de tecnologia (TAM). Os resulta- ˜
+dos obtidos mostram que a proposta e bem aceita pelos profissionais, considerando como ´
+metrica o grau de concord ´ ancia com as proposic¸ ˆ oes presentes no instrumento de pesquisa. ˜
+O restante deste artigo esta organizado da seguinte maneira: na Sec¸ ´ ao 2 apresenta- ˜
+se uma visao geral da plataforma ˜ aBoard, da teoria de Equivalencia de Est ˆ ´ımulos e do modelo de aceitac¸ao de tecnologia (TAM); na Sec¸ ˜ ao 3 ˜ e apresentada a proposta de adaptac¸ ´ ao˜
+de atividades de equivalencia de est ˆ ´ımulos em CAA; na Sec¸ao 4 apresenta-se o m ˜ etodo ´
+utilizado na avaliac¸ao; na Sec¸ ˜ ao 5 s ˜ ao mostrados os resultado; e, finalmente, na Sec¸ ˜ ao 6 ˜
+as considerac¸oes finais. ˜
+1282
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+2. Fundamentac¸ao Te ˜ orica ´
+2.1. Plataforma aBoard
+A Figura 1 mostra uma visao geral da Plataforma ˜ aBoard [Franco et al. 2017], que e uma ´
+plataforma em nuvem para CAA e educac¸ao inclusiva. A plataforma ˜ e composta por tr ´ esˆ
+componentes: 1) aplicativo aBoard1
+, usado por pessoas com dificuldades na fala para
+comunicac¸ao por meio de um dispositivo m ˜ ovel; 2) ´ aBoard editor, usado por mediadores
+(i.e., terapeuta, professor, cuidador ou pai/mae) para customizar o vocabul ˜ ario que ser ´ a´
+usado no aplicativo; e 3) aBoard server, que e usado para o armazenamento dos dados, ´
+controle de acesso e disponibilizac¸ao do conte ˜ udo. Seu diferencial ´ e a tecnologia base- ´
+ada em computac¸ao em nuvem e a caracter ˜ ´ıstica de sugerir s´ımbolos e oferecer respostas
+rapidas. O primeiro permite ao usu ´ ario acessar seus dados de qualquer dispositivo, e o ´
+segundo permite a sugestao de um novo pictograma de acordo com os pictogramas pre- ˜
+viamente selecionados e o facil uso de express ´ oes b ˜ asicas (e.g., sim, n ´ ao, obrigado) sem ˜
+interferir na construc¸ao de uma express ˜ ao. Al ˜ em disso, o ´ aBoard fornece uma plataforma
+que: 1) esta dispon ´ ´ıvel offline, nao exigindo uma conex ˜ ao com a Internet para usar o dis- ˜
+positivo movel; 2) ´ e baseada em uma interface minimalista, que mant ´ em o usu ´ ario focado ´
+no que e importante: os pictogramas; 3) organiza o conte ´ udo em categorias, o que torna ´
+mais rapida a selec¸ ´ ao de pictogramas, reduzindo o tempo de busca; 4) est ˜ a na nuvem, per- ´
+mitindo acesso aos dados do usuario de qualquer dispositivo; 5) fornece ´ feedback visual
+e sonoro ao selecionar qualquer pictograma ou botao de ac¸ ˜ ao, agindo como um reforc¸o ˜
+para o usuario; 6) permite a criac¸ ´ ao de express ˜ oes expl ˜ ´ıcitas (e.g., frases e operac¸oes ma- ˜
+tematicas) em uma ´ area de frase; e 7) permite a customizac¸ ´ ao do conte ˜ udo, o que aumenta ´
+a identificac¸ao entre usu ˜ ario e dispositivo, incentivando sua adoc¸ ´ ao. ˜
+Figura 1. Visao geral da plataforma aBoard. ˜
+Observe que, uma vez que a personalizac¸ao de conte ˜ udo ´ e feita fora do dispositivo ´
+movel e na nuvem, a Plataforma ´ aBoard permite que o mediador realize essa atividade em
+qualquer computador com acesso a Internet e sem retirar o dispositivo m ` ovel do usu ´ ario. ´
+Alem disso, mesmo que o computador ou o dispositivo m ´ ovel seja danificado, o conte ´ udo ´
+salvo na nuvem sempre podera ser acessado de qualquer outro computador ou dispositivo ´
+movel. Isso d ´ a ao mediador a liberdade de personalizar o conte ´ udo do vocabul ´ ario de ´
+acordo com as situac¸oes do dia-a-dia do usu ˜ ario, conforme o avanc¸o de suas capacidades ´
+de comunicac¸ao e aquisic¸ ˜ ao de vocabul ˜ ario. ´
+2.2. Equivalencia de Est ˆ ´ımulos
+Pensamento e linguagem exigem a capacidade de agrupar est´ımulos em classes, que emergem de relac¸oes entre est ˜ ´ımulos que nunca foram explicitamente ensinados. Ou seja, a
+1Dispon´ıvel na Google Play Store
+1283
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Equivalencia de Est ˆ ´ımulos [Sidman and Tailby 1982] consiste em estabelecer um tipo de
+relac¸ao de significado entre os s ˜ ´ımbolos (i.e., imagens, conceitos, letras, s´ılabas, palavras ou sons) e os eventos ou fenomenos aos quais esses s ˆ ´ımbolos se referem. Um dos
+procedimentos mais utilizados para estabelecer relac¸oes entre est ˜ ´ımulos e o ´ Matching to
+Sample (MTS) [Sidman 1994]. Nesse procedimento, um est´ımulo modelo (SM) e apre- ´
+sentado junto com alguns est´ımulos de comparac¸ao. Dentre os est ˜ ´ımulos de comparac¸ao, ˜
+tem-se apenas um considerado correto, chamado de est´ımulo discriminativo (SD), enquanto que os demais (distratores), sao chamados de ˜ est´ımulos delta (S∆). Desta forma,
+uma relac¸ao condicional ˜ e estabelecida entre dois est ´ ´ımulos, sendo um de modelo e outro
+de comparac¸ao. Por exemplo, se A1 ˜ e mostrado, ent ´ ao escolha B1; se A2 ˜ e mostrado, ´
+entao escolha B2, e assim por diante. Uma variac¸ ˜ ao da correspond ˜ encia t ˆ ´ıpica e a corres- ´
+pondencia multi-modelo, onde a quantidade de modelos de est ˆ ´ımulos e maior do que um, ´
+o que permite mais de uma correspondencia ao mesmo tempo. ˆ
+Segundo [Sidman 1994], o pareamento de est´ımulos pode dar origem a relac¸oes ˜
+de equivalencia, isto ˆ e, a partir do ensino expl ´ ´ıcito de relac¸oes entre est ˜ ´ımulos (A1→B1,
+B1→C1), outras relac¸oes podem emergir sem a necessidade de instruc¸ ˜ ao direta (A1 ˜ →C1)
+[Sidman 1994]. Note que as classes de est´ımulos equivalentes sao baseadas nas relac¸ ˜ oes ˜
+de equivalencia provenientes da teoria dos conjuntos: reflexividade (A1 ˆ ↔A1) simetria
+(A1→B1, B1→C1), e transitividade (A1→C1) [Sidman and Tailby 1982]. A Figura 2,
+ilustra a aplicac¸ao dessas relac¸ ˜ oes em um conjunto de atividades de equival ˜ encia de ˆ
+est´ımulos que seguem o modelo Matching to Sample. Na figura, a relac¸ao de reflexi- ˜
+vidade acontece quando o indiv´ıduo e exposto a um est ´ ´ımulo modelo e um est´ımulo discriminativo, que devem ser exatamente iguais (e.g., comer ↔ comer; comida ↔ comida;
+e bolo↔bolo). Ja a relac¸ ´ ao de simetria se d ˜ a quando o sujeito ´ e exposto a um est ´ ´ımulo
+modelo e a pelo menos um de comparac¸ao que contenham caracter ˜ ´ısticas em comum,
+ou seja, sejam da mesma classe (e.g., comer→comida; comida→bolo). A transitividade
+consiste na relac¸ao que deve emergir sem a necessidade de treinamento expl ˜ ´ıcito (e.g.,
+comer→bolo).
+Figura 2. Exemplo de atividade de equivalencia de est´ımulos. ˆ
+2.3. TAM (Technology Acceptance Model)
+O TAM (Technology Acceptance Model) [Davis 1985] prove explicac¸ ˆ oes de fatores que ˜
+sao considerados determinantes na aceitac¸ ˜ ao de tecnologia [Davis et al. 1989]. Esse mo- ˜
+delo e utilizado como ferramenta de avaliac¸ ´ ao na academia e na ind ˜ ustria, tendo como ob- ´
+jeto de investigac¸ao tecnologias de diversos tipos (e.g., softwares, dispositivos e platafor- ˜
+mas). O TAM possibilita a investigac¸ao de impress ˜ oes a respeito da aceitac¸ ˜ ao de tecnolo- ˜
+gia de usuarios de diversas populac¸ ´ oes, como profissionais da sa ˜ ude [Chau and Hu 2002] ´
+e educac¸ao [Teo 2009], por exemplo. ˜
+O modelo postula que a aceitac¸ao de uma determinada tecnologia ˜ e explicada por ´
+quatro fatores basicos [Davis et al. 1989], que s ´ ao definidos por [Holden and Karsh 2010] ˜
+1284
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+da seguinte maneira: Atitude (ATT), e o julgamento avaliativo de um indiv ´ ´ıduo sobre o comportamento alvo em alguma dimensao (e.g., bom/ruim, prejudicial/ben ˜ efico); ´
+Intenc¸ao Comportamental de Uso ˜ (BI), a motivac¸ao ou disposic¸ ˜ ao de um indiv ˜ ´ıduo em se
+esforc¸ar para realizar o comportamento desejado; Utilidade Percebida (PU), e a percepc¸ ´ ao˜
+de um indiv´ıduo de que o uso de determinada tecnologia aumentara o desempenho do tra- ´
+balho; e Facilidade de Uso Percebida (PEOU), e a percepc¸ ´ ao de um indiv ˜ ´ıduo de que o
+uso de determinada tecnologia sera livre de esforc¸o. ´
+3. Adaptac¸ao de Atividades de Equival ˜ encia de Est ˆ ´ımulos
+Com base no paradigma de Equivalencia de Est ˆ ´ımulos, e proposto um ´ framework conceitual que conta com seis tipos de atividades que podem ser adaptadas em sistemas de CAA.
+As principais caracter´ısticas dessas atividades sao: 1) apresentar um grau de dificuldade ˜
+crescente; 2) explorar as relac¸oes de reflexividade, simetria e transitividade; e 3) empre- ˜
+gar correspondencia multi-modelo para ordem de trabalho e sequ ˆ encia entre est ˆ ´ımulos
+discriminativos.
+O framework proposto pode ser aplicado em qualquer sistema de CAA, desde que
+este tenha uma area de conte ´ udo e uma ´ area para criac¸ ´ ao de frases. Conforme exemplo ˜
+da Figura 3, a area de conte ´ udo (delimitada por um ret ´ angulo grande) ser ˆ a usada para ´
+mostrar os est´ımulos de comparac¸ao (discriminativo e delta), enquanto que a ˜ area de frase ´
+(delimitada por um retangulo pequeno) ser ˆ a usada para mostrar os est ´ ´ımulos modelos e as
+respostas. Este artigo apresenta o aBoard como uma alternativa que atende esses criterios, ´
+mas o uso dessa proposta nao se limita a esse sistema. A Figura 3-A mostra um modelo ˜
+de atividade sem o est´ımulo delta. A Figura 3-B ilustra uma atividade com o est´ımulo
+delta. Por fim, a Figura 3-C apresenta um modelo de atividade com multi-modelo.
+Figura 3. Modelos de atividades adaptadas.
+As primeiras cinco atividades baseiam-se na correspondencia t ˆ ´ıpica (i.e., apenas
+um modelo de est´ımulo e apresentado) e exploram as relac¸ ´ oes de reflexividade, simetria ˜
+ou transitividade da discriminac¸ao condicional com ou sem est ˜ ´ımulo delta. Por sua vez, a
+ultima atividade ´ e baseada na correspond ´ encia multi-modelo (i.e., mais de um modelo de ˆ
+est´ımulo) que, alem de permitir a explorac¸ ´ ao das relac¸ ˜ oes de reflexividade, simetria e tran- ˜
+sitividade da discriminac¸ao condicional, permite tamb ˜ em trabalhar com ordem/sequ ´ encia ˆ
+entre est´ımulos discriminativos. As seis atividades, em ordem crescente de dificuldade,
+sao apresentadas a seguir: ˜
+1285
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+A1 – Descriminac¸ao reflexiva sem est ˜ ´ımulo delta: nesta atividade, o sujeito e´
+exposto a um unico est ´ ´ımulo modelo e a um unico est ´ ´ımulo de comparac¸ao. Ambos os ˜
+est´ımulos devem ser iguais para mostrar para o sujeito que se trata da mesma coisa.
+A2 – Discriminac¸ao reflexiva com est ˜ ´ımulo delta: diferente da atividade A1,
+nesta atividade o sujeito e exposto a mais de um est ´ ´ımulo, onde apenas um deles e o ´
+discriminativo, sendo o outro o est´ımulo delta. O objetivo desta atividade e avaliar se a ´
+relac¸ao de reflexividade foi adquirida pelo sujeito. ˜
+A3 – Discriminac¸ao sim ˜ etrica ´ : assim como na atividade A1, o sujeito e exposto ´
+a um unico est ´ ´ımulo modelo e a um unico est ´ ´ımulo de comparac¸ao. A diferenc¸a est ˜ a no ´
+objetivo que e mostrar ao sujeito que diferentes est ´ ´ımulos podem ser equivalentes. Para
+isso, o est´ımulo discriminativo precisa ter caracter´ısticas comuns ao est´ımulo modelo.
+A4 – Discriminac¸ao sim ˜ etrica com est ´ ´ımulo delta: as diferenc¸as entre esta atividade e a atividade A3 sao: 1) quantidade de est ˜ ´ımulos de comparac¸ao, que devem ser ˜
+pelo menos dois, onde apenas um deles sera o est ´ ´ımulo discriminativo e 2) o objetivo, que
+e avaliar se a relac¸ ´ ao de simetria foi adquirida pelo sujeito. ˜
+A5 – Transitividade discriminativa com est´ımulo delta: a diferenc¸a entre esta
+atividade e a atividade A4 esta em seu objetivo, pois esta visa avaliar se um novo par ´
+de est´ımulos, a partir de um est´ımulo comum, emergiu sem a execuc¸ao de uma nova ˜
+atividade.
+A6 – Discriminac¸ao multi-modelo ˜ : as diferenc¸as entre esta atividade e todas as
+anteriores sao: 1) quantidade de est ˜ ´ımulos modelos, que devem ser pelo menos dois e 2)
+o objetivo, que e ensinar e avaliar se a ordem/sequ ´ encia entre os est ˆ ´ımulos foi adquirida
+pelo sujeito. Note que os est´ımulos delta sao inerentes a esta atividade, uma vez que, ˜
+mesmo sendo a quantidade de est´ımulos modelo e de comparac¸ao iguais, qualquer erro ˜
+na sequencia de discriminac¸ ˆ ao produz um est ˜ ´ımulo delta.
+Destaca-se que, antes do in´ıcio da atividade, o mediador deve ter a atenc¸ao do ˜
+sujeito, pois ele deve observar que o mediador selecionara est ´ ´ımulo modelo na area de ´
+conteudo e ent ´ ao este aparecer ˜ a na ´ area de frase. Na sequ ´ encia, o mediador deve estimular ˆ
+o sujeito a selecionar o est´ımulo discriminativo que esta localizado na ´ area de conte ´ udo. ´
+Se isso levar mais de quinze segundos, o mediador deve dar uma dica verbal ou f´ısica e
+esperar mais quinze segundos. Se ocorrer novamente, o mediador deve avaliar o assunto
+e decidir se termina a sec¸ao, altera a atividade ou d ˜ a um tempo de descanso ao sujeito. ´
+Ressalta-se que um protocolo para aplicar essas atividades esta al ´ em do escopo deste ´
+trabalho. Destaca-se ainda que, a posic¸ao dos est ˜ ´ımulos comparativos deve mudar em
+todas as atividades, que podem ser usadas para explorar a relac¸ao entre v ˜ arios conceitos, ´
+por exemplo: 1) imagem para palavra escrita; 2) imagem para palavra ditada; 3) palavra
+escrita para palavra ditada; 4) imagem ou palavra para sua primeira letra; 5) imagem ou
+palavra para sua primeira s´ılaba; 6) imagem ou palavra para algumas (ou todas) suas letras
+(considerando ou nao a sequ ˜ encia correta); 7) imagem ou palavra para algumas (ou todas) ˆ
+as suas s´ılabas (considerando ou nao a sequ ˜ encia correta); 8) n ˆ umero por quantidade; 9) ´
+sequencia de etapas em uma rotina; e 10) sequ ˆ encia de elementos de uma m ˆ usica. ´
+1286
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+4. Avaliac¸ao da Aceitac¸ ˜ ao˜
+4.1. Amostragem
+A amostra desta pesquisa se caracteriza como uma amostra por conveniencia e n ˆ ao cons- ˜
+titui uma amostra probabil´ıstica, pois nao havia crit ˜ erios estat ´ ´ısticos para a selec¸ao de ˜
+participantes. Assim, foram selecionados profissionais das areas de sa ´ ude e educac¸ ´ ao que ˜
+trabalham com pessoas com deficiencia intelectual e t ˆ em experi ˆ encia no uso de CAA e/ou ˆ
+equivalencia de est ˆ ´ımulos. Ao todo, foram selecionados 23 profissionais, distribu´ıdos em
+5 areas de atuac¸ ´ ao, sendo: 7 psic ˜ ologos, 6 fonoaudi ´ ologos, 6 educadores, 3 psicopedago- ´
+gos e 1 assistente terapeutico. ˆ
+4.2. Instrumento e procedimentos
+O instrumento de pesquisa utilizado e dividido em duas partes: (i) um question ´ ario de- ´
+mografico com 7 (sete) perguntas para identificac¸ ´ ao do participante; e (ii) um ques- ˜
+tionario com 15 (quinze) quest ´ oes assertivas (cf. Tabela 1) com uma escala Likert ˜
+de 5 (cinco) pontos, sendo: 1) Discordo Totalmente (DT), 2) Discordo Parcialmente
+(DP), 3) Nem discordo, nem concordo (N), 4) Concordo Parcialmente (CP); e 5) Concordo Totalmente (CT). As questoes assertivas s ˜ ao baseadas no question ˜ ario proposto por ´
+[Chau and Hu 2002] e contemplam as dimensoes listadas e definic¸ ˜ oes apresentadas por ˜
+[Holden and Karsh 2010] para cada fator do TAM.
+Tabela 1. Questoes assertivas do instrumento ˜
+Codigo ´ Assertiva
+ATT1 Eu acho que realizar atividades de equivalencia de est ˆ ´ımulos com CAA e uma boa ideia. ´
+ATT2 Eu acho que realizar atividades de equivalencia de est ˆ ´ımulos com CAA e ben ´ efico. ´
+ATT3 Eu acho que realizar atividades de equivalencia de est ˆ ´ımulos com CAA tornaria as sessoes ˜
+terapeuticas mais interessantes. ˆ
+ATT4 Eu gostaria de realizar atividades de equivalencia de est ˆ ´ımulos com CAA.
+BI1 Eu pretendo realizar atividades de equivalencia de est ˆ ´ımulos com CAA regularmente.
+BI2 Eu sou favoravel a realizar atividades de equival ´ encia de est ˆ ´ımulos com CAA.
+BI3 Eu realizaria atividades de equivalencia de est ˆ ´ımulos com CAA.
+PU1 Eu acho que realizar atividades de equivalencia de est ˆ ´ımulos com CAA nao vai melhorar ˜
+meu trabalho durante a terapia.
+PU2 Eu acho que realizar atividades de equivalencia de est ˆ ´ımulos com CAA vai aumentar a
+eficacia da terapia. ´
+PU3 Eu acho que realizar atividades de equivalencia de est ˆ ´ımulos com CAA vai facilitar meu
+trabalho durante a terapia.
+PU4 Eu acho que realizar atividades de equivalencia de est ˆ ´ımulos com CAA nao˜ e´ util para o ´
+processo terapeutico. ˆ
+PEOU1 Eu acho que realizar atividades de equivalencia de est ˆ ´ımulos com CAA nao˜ e vi ´ avel para o ´
+processo terapeutico. ˆ
+PEOU2 Eu teria dificuldade em aprender a realizar atividades de equivalencia de est ˆ ´ımulos com CAA.
+PEOU3 Eu teria dificuldade para realizar atividades de equivalencia de est ˆ ´ımulos com CAA.
+PEOU4 Eu teria dificuldade em tornar-me habilidoso na realizac¸ao de atividades de equival ˜ encia de ˆ
+est´ımulos com CAA.
+Antes que os participantes respondessem os questionarios, lhes foi apresentado o ´
+conjunto de atividades descrito na Sec¸ao 3 ilustrado em um sistema de CAA fict ˜ ´ıcio. Alem´
+disso, todos os participantes foram informados sobre os objetivos da pesquisa, e avisados
+que ao responder o questionario estariam de acordo com o termo de consentimento da ´
+1287
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+pesquisa, que garante a anonimidade dos seus dados e os deixa livres para escolher se
+querem ou nao participar ou ter seus dados computados. ˜
+4.3. Metodo de an ´ alise ´
+Para a analise dos resultados das escalas utilizadas nesta pesquisa, foi utilizado o Grau ´
+de Concordancia de cada Preposic¸ ˆ ao ( ˜ GCP), que e baseado no oscilador estoc ´ astico de ´
+Wilder Jr., tambem conhecido como indicador de forc¸a relativa [Wilder 1978]. Para isso, ´
+se fez necessario calcular o n ´ umero de participantes que concordam ( ´ Con) – Con =
+CT + CP +
+N
+2
+– e discordam (Dis) – Dis = DT + DP +
+N
+2
+– de cada proposic¸ao para, ˜
+assim, chegar ao grau de concordancia – ˆ GCP = 100 − (
+100
+Con
+Dis +1 ). Outra metrica utilizada ´
+e o Grau de Concord ´ ancia do Fator (GCF), que consiste na m ˆ edia dos GCP das quest ´ oes ˜
+referentes a cada fator. De maneira que a media dos GCP das quest ´ oes BI1, BI2 e BI3, ˜
+por exemplo, equivale ao GCF do fator Intenc¸ao Comportamental de Uso ˜ . Os valores
+de GCP e GCF obtidos sao interpretados conforme tabela proposta por [Davis 1976] (cf. ˜
+Tabela 2).
+Tabela 2. Interpretac¸ao de valores do GCP ˜
+Valor do Grau de Concordancia ˆ Interpretac¸ao adequada ˜
+90 ou mais Concordancia muito forte ˆ
+80 a 89,99 Concordancia substancial ˆ
+70 a 79,99 Concordancia moderada ˆ
+60 a 69,99 Concordancia baixa ˆ
+50 a 59,99 Concordancia desprez ˆ ´ıvel
+40 a 49,99 Discordancia desprez ˆ ´ıvel
+30 a 39,99 Discordancia baixa ˆ
+20 a 29,99 Discordancia moderada ˆ
+10 a 19,99 Discordancia substancial ˆ
+9,99 ou menos Discordancia muito forte ˆ
+5. Resultados
+A Tabela 3 apresenta os resultados da aplicac¸ao do m ˜ etodo de an ´ alise descrito na Sec¸ ´ ao˜
+4.3, com a quantidade de concordantes (Con) e de discordantes (Dis), assim como o
+grau de concordancia da proposic¸ ˆ ao (GCP) e o grau de concord ˜ ancia do fator (GCF). As ˆ
+questoes marcadas com asterisco (*) s ˜ ao de escala inversa. O GCP das quest ˜ oes inversas ˜
+foram calculados subtraindo 100 do resultado final da equac¸ao do GCP. ˜
+Como mostrado na Tabela 3, todos os fatores tiveram grau de concordancia muito ˆ
+forte, considerando os n´ıveis propostos na Tabela 2. O fator Atitude (ATT) obteve GCF de
+98,91, que significa que a avaliac¸ao dos participantes sobre o comportamento alvo (i.e., ˜
+usar a proposta) e positivo. O alto valor obtido para fator ´ Intenc¸ao Comportamental de ˜
+Uso (BI) (93,48), sugere que os participantes estao motivados e dispostos a usar a pro- ˜
+posta. Quanto ao fator de Utilidade Percebida (PU), o alto valor obtido (95,65) demonstra
+que os participantes tem a percepc¸ ˆ ao de que o uso da proposta vai afetar positivamente ˜
+o seu trabalho, tornando-o mais facil e eficaz. O fator de ´ Facilidade de Uso Percebida
+(PEOU) tambem obteve um GCF alto (95,11), demonstrando a percepc¸ ´ ao dos participan- ˜
+tes de que o uso da proposta nao demanda um alto n ˜ ´ıvel de esforc¸o.
+1288
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Tabela 3. Resultados
+Questao˜ DT DP N CP CT Con Dis GCP GCF
+ATT1 0 0 0 3 20 23 0 100
+98,91 ATT2 0 0 0 4 19 23 0 100
+ATT3 0 0 2 7 14 22 1 95,65
+ATT4 0 0 0 6 17 23 0 100
+BI1 0 0 5 12 6 20,5 2,5 89,13
+BI2 0 0 1 4 18 22,5 0,5 97,83 93,48
+BI3 0 1 1 2 19 21,5 1,5 93,48
+PU1* 20 3 0 0 0 0 23 100
+95,65 PU2 0 0 3 10 10 21,5 1,5 93,48
+PU3 0 0 5 9 9 20,5 2,5 89,13
+PU4* 20 3 0 0 0 0 23 100
+PEOU1* 22 1 0 0 0 0 23 100
+95,11 PEOU2* 18 2 3 0 0 1,5 21,5 93,48
+PEOU3* 18 2 3 0 0 1,5 21,5 93,48
+PEOU4* 18 2 3 0 0 1,5 21,5 93,48
+As proposic¸oes que obtiveram menor GCP foram BI1 e PU3 (89,13 ambas), isso ˜
+se da pela quantidade de respostas neutras (N). A proposic¸ ´ ao BI1, por exemplo, est ˜ a re- ´
+lacionada ao fator de Intenc¸ao Comportamental de Uso ˜ e esta interessada em saber a ´
+intenc¸ao do participante em usar a proposta regularmente. Como a proposta foi apre- ˜
+sentada por meio de um sistema de CAA fict´ıcio, os participantes podem ter percepc¸oes ˜
+limitadas a respeito do uso real, e assim, preferem nao opinar sobre. PU1, por sua vez, ˜
+esta relacionada ao fator de ´ Utilidade Percebida e esta interessada na percepc¸ ´ ao do in- ˜
+div´ıduo sobre a capacidade da proposta em melhorar o seu trabalho, e tambem pode ter ´
+sido afetada pelo uso de um sistema fict´ıcio.
+6. Considerac¸oes finais ˜
+Este artigo propoe um ˜ framework conceitual que conta com seis tipos de atividades de
+Equivalencia de Est ˆ ´ımulos que podem ser adaptadas em um sistema de Comunicac¸ao Au- ˜
+mentativa e Alternativa (CAA). Essas atividades exploram os conceitos de reflexividade,
+simetria, transitividade e descriminac¸ao multi-modelo, com base no modelo ˜ Matching to
+Sample. A proposta de adaptac¸ao foi ilustrada em um sistema de CAA fict ˜ ´ıcio e apresentada a profissionais das areas de sa ´ ude e educac¸ ´ ao, com o objetivo de avaliar a aceitac¸ ˜ ao˜
+da proposta, usando como base o modelo de aceitac¸ao de tecnologia (TAM). ˜
+Os resultados obtidos indicam que a proposta e bem aceita pelos profissionais, ´
+que sao seus eventuais usu ˜ arios, considerando os fatores propostos pelo TAM: ´ Atitude,
+Intenc¸ao Comportamental de Uso ˜ , Utilidade Percebida e Facilidade de Uso Percebida.
+Essa conclusao baseia-se no grau de concord ˜ ancia obtido por cada proposic¸ ˆ ao do ques- ˜
+tionario aplicado, e no grau de concord ´ ancia de cada fator estudado. ˆ
+O framework aqui proposto pode ser usado para a adaptac¸ao de atividades que ˜
+podem ser utilizadas em diversos contextos educacionais. Os benef´ıcios que podem ser
+obtidos a partir de sua explorac¸ao dependem do grau de personalizac¸ ˜ ao permitido pelo ˜
+sistema de CAA utilizado e da criatividade do mediador. De forma geral, o uso do framework proposto favorece: 1) o aumento do numero de poss ´ ´ıveis conceitos a serem ensinados; e 2) a explorac¸ao dos elementos de interac¸ ˜ ao do CAA (i.e., figuras, texto e sons), ˜
+1289
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+aumentando assim o as possibilidades durante as atividades.
+Como trabalhos futuros, pretende-se explorar os elementos de jogos presentes nas
+atividades que compoem o ˜ framework e inserir outros elementos que sejam necessarios ´
+para caminhar em direc¸ao de um jogo s ˜ erio para o ensino de equival ´ encia de est ˆ ´ımulos
+usando recursos de CAA.
+7. Agredecimentos
+Esta pesquisa e apoiada pelo CNPq (458798/2013-4 e 461492/2014-8) e pela CAPES ´
+(88882.347547/2019-01).
+Referencias ˆ
+ASHA (2019). American speech-language-hearing association.
+Chau, P. Y. and Hu, P. J.-H. (2002). Investigating healthcare professionals’ decisions to
+accept telemedicine technology: an empirical test of competing theories. Information
+& management, 39(4):297–311.
+Davis, F. D. (1985). A technology acceptance model for empirically testing new enduser information systems: Theory and results. PhD thesis, Massachusetts Institute of
+Technology.
+Davis, F. D., Bagozzi, R. P., and Warshaw, P. R. (1989). User acceptance of computer
+technology: a comparison of two theoretical models. Management science, 35(8):982–
+1003.
+Davis, J. A. (1976). Levantamento de dados em sociologia. Zahar.
+de Rose, J. C. (1993). Classes de est´ımulos: implicac¸oes para uma an ˜ alise comportamen- ´
+tal da cognic¸ao. ˜ Psicologia: teoria e pesquisa, 9(2):283–303.
+de Rose, J. C. and Bortoloti, R. (2007). A equivalencia de est ˆ ´ımulos como modelo do
+significado. Acta Comportamentalia: Revista Latina de Analisis de Comportamiento ´ ,
+15(3):83–102.
+Franco, N., Lima, T., Lima, A., Silva, E., Lima, R., Cavalcante, T., and Fidalgo, R. (2017).
+aboard: Uma plataforma para educac¸ao inclusiva a partir de comunicac¸ ˜ ao aumentativa ˜
+e/ou alternativa. In Brazilian Symposium on Computers in Education (Simposio Brasi- ´
+leiro de Informatica na Educac¸ ´ ao-SBIE) ˜ , volume 28, page 977.
+Holden, R. J. and Karsh, B.-T. (2010). The technology acceptance model: its past and its
+future in health care. Journal of biomedical informatics, 43(1):159–172.
+Sidman, M. (1994). Equivalence relations and behavior: A research story. Authors
+Cooperative.
+Sidman, M. and Tailby, W. (1982). Conditional discrimination vs. matching to sample: An
+expansion of the testing paradigm. Journal of the Experimental Analysis of behavior,
+37(1):5–22.
+Teo, T. (2009). Modelling technology acceptance in education: A study of pre-service
+teachers. Computers & Education, 52(2):302–312.
+Wilder, J. W. (1978). New concepts in technical trading systems. Trend Research

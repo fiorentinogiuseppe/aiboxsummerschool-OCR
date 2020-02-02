@@ -1,0 +1,160 @@
+Avaliac¸ao˜ de Ju´ızes:
+
+Um Modelo Estat´ıstico para Perfilac¸ao˜ de Avaliadores
+
+James Alves 1, Elias de Oliveira1
+Abstract. In this article we present a model to audict judges behaviour in the evaluation of essays according to ENEM’s principles. Our model quantifies the reliability and the concordance among judges, based on the Pearson correlation coefficient applied both the general notes and, also, on the skills of the correc-tion grid. In the obtained results we highlight the tendency of the judges to be more judicious in Competence 2, with a high degree of concordance, and with a low agreement degree, -0.58, among the judges for Competence 3. Competen-cies that often denote a sharp discrepancy are a sign of the need for training to align the evaluators.
+
+Resumo. Neste artigo apresentamos um modelo para monitoramento de pro-fessores na avaliac¸ao˜ de redac¸oes˜ de acordo com as competenciasˆ da redac¸ao˜ do ENEM/INEP. Nosso modelo quantifica a confiabilidade e a concordanciaˆ entre ju´ızes baseado no coeficiente de correlac¸ao˜ de Pearson aplicado as` notas gerais, e tambem´ sobre as competenciasˆ da grade de correc¸ao˜. Como resul-tado da aplicac¸ao˜ do modelo observou-se a divergenciaˆ entre dois professores na Competenciaˆ 3, com um fator de correlac¸ao˜ de = 0:58. Ainda sim al-guns avaliadores obtiveram uma alta concordanciaˆ com = 1, demostrando um alinhamento na forma de avaliar a Competenciaˆ 2. As Competenciasˆ que denotam frequentemente uma discrepanciaˆ acintosa e´ um sinal da necessidade de treinamento para alinhamento dos avaliadores.
+
+1. Introduc¸ao˜
+
+A quantificac¸ao˜ da capacidade avaliativa entre professores e´ um desafio no meio da gestao˜ educacional. Atualmente tem-se atenc¸ao˜ especial a avaliac¸ao˜ de redac¸oes˜ do Exame Na-cional do Ensino Medio´ (ENEM), exame promovido pelo Instituto Nacional de Estudos e Pesquisas Educacionais An´ısio Teixeira (INEP). Para avaliar o conhecimento obtido pelo aluno ao longo de seu progresso na academia o ENEM/INEP tem como uma de suas etapas a escrita de uma redac¸ao˜ com temas que exigem do aluno conhecimento de acontecimentos e situac¸oes˜ diversas.
+
+A prova de redac¸ao˜ do ENEM/INEP requer do aluno um bom n´ıvel da l´ıngua portuguesa e tem peso no resultado geral do exame. O ENEM e´ um fator preponderante para ingresso em instituic¸oes˜ de ensino superior, logo a forma como a redac¸ao˜ e´ avaliada e´ de suma importanciaˆ para o indiv´ıduo avaliado. Portanto fica evidente a relevanciaˆ de que o padrao˜ da avaliac¸ao˜ seja criterioso e que obtenha-se resultados de alt´ıssima confianc¸a e com m´ınimo de vies´ por parte dos avaliadores.
+A correc¸ao˜ da redac¸ao˜ do ENEM/INEP e´ um processo que atribui uma nota de 0 a` 200 em cada uma das 5 competencias,ˆ perfazendo um total maximo´ de 1000 pontos. Cada redac¸ao˜ e´ avaliada por dois professores, a diferenc¸a entre a nota total dada por eles nao˜ pode ser superior a 100 pontos e nas competenciasˆ 80 pontos. Existindo alguma discrepanciaˆ um terceiro avaliador tambem´ fara´ a correc¸ao,˜ prevalecendo assim as notas dos professores mais aproximadas, caso persista a diferenc¸a entre as avaliac¸oes˜ um novo grupo de avaliadores e´ convocado [DAEB 2017].
+
+Os custos de todo processo de correc¸ao˜ do ENEM/INEP no Contrato no 12/2016 foi de R$117.419.455,93 [Romao˜ 2017]. A julgar pelo alto custo desse processo a aplicac¸ao˜ de tecnicas´ de monitoramento dos professores torna-se uma importante fer-ramenta para qualificar os avaliadores. A identificac¸ao˜ previa´ de discrepanciasˆ entre o entendimento dos avaliadores torna esse processo mais confiavel´ e com menores riscos de reavaliac¸oes,˜ visto que a cada novo avaliador aumenta-se os custos com a correc¸ao˜.
+
+O objetivo desse trabalho e´ propor um modelo estat´ıstico para analise´ de confia-bilidade e concordanciaˆ entre avaliadores de redac¸ao˜ em um ambiente virtual de apren-dizado (AVA), vislumbrando identificar e mitigar as diferenc¸as de entendimento avali-ativo entre os professores. O trabalho de [Alves et al. 2018] trac¸a uma estrategia´ para automatizac¸ao˜ do processo de analise´ de avaliac¸ao˜ por pares e autoavaliac¸ao,˜ entretanto neste trabalho usaremos apenas as notas atribu´ıdas, em cada competencia,ˆ pelos profes-sores, as` respectivas redac¸oes˜ dos alunos. Para avaliac¸ao˜ de redac¸oes˜ utilizamos rubricas para formatar os criterios´ de ju´ızo, dando aos avaliadores e avaliados uma visao˜ clara de suas caracter´ısticas que pautam a correc¸ao˜ das redac¸oes˜ [Arter and Chappuis 2006].
+
+O trabalho esta´ estruturado em 5 Sec¸oes˜. Na Sec¸ao˜ 2 apresentamos os trabalhos relacionados com analise´ entre avaliadores, construc¸ao˜ de rubricas e revisao˜ por pares. A Sec¸ao˜ 3 apresenta a metodologia utilizada no desenvolvimento da soluc¸ao˜ proposta neste trabalho. Na Sec¸ao˜ 4 sao˜ explicados os resultados obtidos com a aplicac¸ao˜ do modelo em um caso concreto, seguida pela Sec¸ao˜ 5 que sera´ discutido as considerac¸oes˜ parciais e trabalhos futuros.
+
+2. Trabalhos Relacionados
+
+Para clarificar aos avaliados e avaliadores o que se espera que seja apresentado na redac¸ao˜ propomos a utilizac¸ao˜ rubricas. Para [Arter and Chappuis 2006] a rubrica ajuda o avali-ado a entender o quao˜ bom e´ o pensamento cr´ıtico, e tambem´ para uma avaliac¸ao˜ geral do objeto avaliado. Os autores [Arter and Chappuis 2006] advogam que para que o aprendi-zado possa ser reforc¸ado e´ necessario´ que os objetivos a serem avaliados devam ser claros e que a rubrica reflita tais objetivos e que seus criterios´ devam ser descritos de acordo com a necessidade da avaliac¸ao˜.
+
+Juntamente com a utilizac¸ao˜ de rubricas adotamos a tecnica´ de revisao˜ por pa-res para comparar as notas dadas pelos avaliadores para as redac¸oes˜ dos alunos. Para [Smith 2006] esse tipo de avaliac¸ao˜ tem um custo elevado, os avaliadores apresentam uma serie´ de inconsistenciasˆ e irregularidades ao avaliarem e, tambem,´ com frequenciaˆ a avaliac¸ao˜ segue alguma tendenciaˆ pessoal, um vies,´ de quem avalia. Para mitigar a idi-ossincrasia dos avaliadores apresenta-se como soluc¸ao˜ a aplicac¸ao˜ de treinamento pratico´ com avaliadores mais experientes.
+
+A necessidade de medir a concordanciaˆ entre avaliadores se expressa diretamente no trabalho de [Cohen 1960] que quantifica a correspondenciaˆ entre avaliac¸oes˜ psicologicas´ para o diagnostico´ de doenc¸as mentais. Nesse caso o diagnostico´ e´ reali-zado por psicologos´ atraves´ de observac¸ao˜ comportamental. Essa abordagem permitiu aos profissionais da area´ alinharem criterios´ patologicos´ de doenc¸as de transtorno mental.
+
+[Matos 2014] observa a aplicac¸ao˜ das tecnicas´ de avaliac¸ao˜ de concordanciaˆ e confiabilidade de ju´ızes no Brasil. Aplicando a tecnica´ de coeficiente de correlac¸ao˜ in-traclasse explicitou o descompasso significativo no entendimento entre avaliadores de redac¸oes˜ mesmo utilizando criterios´ de objetivos para a correc¸ao˜. A falta de um processo automatico´ e cont´ınuo de qualificac¸ao˜ concorre com a imprescindibilidade de equalizar o ju´ızo dos avaliadores.
+
+Por sua vez [Oliveira and Spalenza 2017] propoe˜ um modelo que busca explicitar atraves´ de uma medida estat´ıstica a avaliac¸ao˜ e autoavaliac¸ao˜ de atividades entre os dis-centes e os docentes, onde professores e alunos avaliam todas as respostas submetidas no AVA. O metodo´ proposto explicita a eficacia´ do aprendizado e os alunos que temˆ alguma carenciaˆ de atenc¸ao˜ por nao˜ diferenciar as repostas certas de respostas erradas.
+
+A abordagem proposta por [Alves et al. 2018] utiliza a correlac¸ao˜ para perfilar alunos em uma ac¸ao˜ automatica´ a partir de dados obtidos atraves´ do AVA. Para analisar os alunos de acordo com seu perfil trac¸a-se um agrupamento de acordo com a semelhanc¸a entre a nota dada pelo aluno e o gabarito. Entende-se como gabarito a avaliac¸ao˜ da ativi-dade realizada pelo professor, assim perfilando em grupos os alunos que nao˜ entenderam e grupo de alunos com alto grau de confiabilidade com o professor.
+
+3. Ferramentas e Metodos´
+
+Para se obter os indicadores da avaliac¸ao˜ fez-se necessario´ a adoc¸ao˜ de um processo automatizado para receber as redac¸oes˜ e corrigi-las dentro do AVA. Primeiramente o aluno submete a redac¸ao˜ atraves´ do AVA que por sua vez que replica desta e e´ enviada para todos os avaliadores envolvidos no processo de correc¸ao˜ juntamente com a rubrica que foi vinculada previamente a atividade. Os avaliadores corrigem as redac¸oes˜ utilizando a rubrica e ao final sao˜ consolidadas todas as notas dos professores envolvidos e a analise´ do processo estat´ıstico e´ iniciado.
+
+Com as analises´ do modelo em maos˜ sera´ poss´ıvel caracterizar a concordanciaˆ ou discordanciaˆ entre os avaliadores. Portanto a combinac¸ao˜ do ferramental estat´ıstico com rubricas torna-se poss´ıvel pontuar estritamente as dimensoes˜ em que ocorrem diferenc¸as de entendimento entre os avaliadores.
+
+Para este trabalho foi utilizado como AVA o sistema Moodle1, que oferece nativamente suporte a utilizac¸ao˜ de rubricas como metodo´ avaliativo de atividades. Para extrac¸ao˜ dos dados do AVA utilizamos o Plugin2, uma ferramenta proposta por [Spalenza et al. 2018]. Desenvolvemos um programa para aplicac¸ao˜ do modelo de moni-toramento utilizando a linguagem de programac¸ao˜ R3 devido seu ferramental estat´ıstico acess´ıvel.
+3.1. Rubricas
+´
+E esperado que uma rubrica descreva o que deve ser alcanc¸ado em termos de qualidade do desempenho pretendido e tambem´ o indicador numerico´ de cada n´ıvel de desempenho. De maneira geral rubricas tem a dimensao˜ de qualidade, que e´ o que pretende-se avaliar, e a dimensao˜ dos qualificadores, que e´ a escala de pontuac¸ao˜ para cada item de qualidade [Carvalho and Fernandes 2012]. Adotamos como dimensao˜ de qualidade as competenciasˆ e os qualificadores sao˜ os criterios´ avaliativos de cada competenciaˆ.
+
+Para formular os criterios´ avaliativos desse trabalho tomamos como base o ma-nual de correc¸ao˜ de redac¸ao˜ do ENEM/INEP. Para inclusao˜ do modelo no AVA o adap-tamos reduzindo a faixa dos criterios´ de 0 a` 200 para 0 a` 20. O valor maximo´ que uma redac¸ao˜ pode chegar sera´ de ate´ 100 pontos. Alem´ disso, nesse trabalho nao˜ descrevere-mos os criterios´ de cada nota, estas descric¸oes˜ estao˜ dispon´ıveis diretamente no manual de correc¸ao˜ disponibilizado pelo INEP/ENEM4.
+
+A Tabela 1 mostra os aspectos que serao˜ avaliados. Para cada redac¸ao˜ as com-petenciasˆ podem receber o seguinte espectro de notas para as caracter´ısticas esperadas: 0 para muito baixa ou ausente, 5 para baixa, 10 quando boa, 15 muito boa e 20 para redac¸ao˜ excelente. Apos´ a avaliac¸ao˜ de todos os itens as notas sao˜ somadas para a formulac¸ao˜ da nota final da redac¸ao˜.
+
+Os avaliadores nao˜ conhecem as respostas de seus pares antes da analise´ pelo modelo. Com esse princ´ıpio garantimos que nao˜ existem influenciasˆ de terceiros nas avaliac¸oes˜ realizadas por esses avaliadores.
+3.2. Modelo de Monitoramento de Concordanciaˆ
+
+Inicialmente o modelo consiste em representar as avaliac¸oes˜ realizadas pelos professores de forma matricial. Em (1) a matriz N e´ criada para cada competenciaˆ c (descrito como: Nc), onde cada professor i atribui uma nota n ao aluno a. As notas finais tambem´ sao˜  transformadas nesse modelo. Logo faz-se uma comparac¸ao˜ entre conjunto de avaliadores experientes contra os novatos para uma mesma competenciaˆ.
+Sobre cada Nc aplica-se os metodos´ de correlac¸ao˜. Formalmente podemos des-crever correlac¸ao˜ como uma medida da proporc¸ao˜ de mudanc¸as entre duas classes, a classe para esta abordagem sao˜ todas as notas imputadas por um professor ni = fni1; ni2; ni3; :::; niag para a competenciaˆ c. Existem diversos modelos de correlac¸ao,˜ este trabalho aplica o modelo de correlac¸ao˜ de Pearson [Bussab and Morettin 2013]. Logo, em 2, obtemˆ-se a quantificac¸ao˜ da associac¸ao˜ entre os docentes ni e nj onde i 6= j para
+os a alunos avaliados. O valor da correlac¸ao˜ sera´.
+A Tabela 2 e´ um exemplo de como as notas de uma competenciaˆ ficam organiza-das na representac¸ao˜ matricial. A correlac¸ao˜ positiva proximo´ do valor 1 significara´ que as notas atribu´ıdas por um par de professores estao˜ bem correlacionadas, ao passo que valores negativos de correlac¸ao˜ apontarao˜ que um par de professores divergem em suas respectivas formas de dar notas.
+
+Os avaliadores n1 e n2 apresentam diferenc¸as nas notas atribu´ıdas aos alunos, porem´ o comportamento da nota dos dois e´ o mesmo. O avaliador 1, n1 = f0; 40; 120g, e´ comparado com o avaliador 2, n2 = f120; 160; 200g, o que resulta em = 0:98. O positivo proximo´ a 1 mostra uma correlac¸ao˜ positiva alta pelo comportamento de notas crescentes entre os pares, mesmo verificando-se uma diferenc¸a consideravel´ entre as notas dadas por eles. A mesma comparac¸ao˜ entre os avaliadores n1 e n3 apresenta uma relac¸ao˜ invertida de entendimento, tendo = 0:98 mostra uma correlac¸ao˜ negativa, enquanto um professor aumenta as notas o outro diminui.
+Para uma visualizac¸ao˜ adequada dos resultados utilizamos o grafico´ de heapmap exemplificado na Figura 1, mostrando de maneira facilitada o grau de confiabilidade das avaliac¸oes˜ da Tabela 1. Nessa visualizac¸ao,˜ quanto mais o quadrante for azul, melhor correlacionado estarao˜ os professores, por exemplo: os avaliadores n1 e n2, na secunda coluna na primeira linha da Figura. Observe que na Tabela 2 ambos deram notas cres-cente. Nos quadrantes em vermelho estao˜ os avaliadores que estao˜ destoando entre si,caso dos avaliadores n1 e n3 na celula´ da 3a coluna na 2a linha da Figura. Nesse caso observando novamente a Tabela 2 os avaliadores tem uma perspectiva completamente inversa ao dar notas.
+3.3. Modelo de Inferenciaˆ
+
+Ao analisarmos a correlac¸ao˜ das notas atribu´ıdas as` redac¸oes˜ pelos professores mostramos que e´ poss´ıvel detectar atraves´ da correlac¸ao˜ aspectos do comportamento dos avaliadores ao imputar uma nota a redac¸ao˜. Entretanto a correlac¸ao˜ e´ insuficiente para detectar as diferenc¸as entre as notas dos avaliadores segundo as restric¸oes˜ do INEP/ENEM, que con-forme visto da Sec¸ao˜ anterior mesmo obtendo um valor alto de correlac¸ao˜ ( = 0:98) percebemos que ainda assim a diferenc¸a das notas dos avaliadores superaram a limitac¸ao˜ de 80 pontos de diferenc¸a nas competenciasˆ.
+
+Supomos ter avaliadores que sao˜ especialistas na correc¸ao˜ da redac¸ao˜ segundo o modelo INEP/ENEM e que satisfac¸am as exigenciasˆ de correc¸ao˜. Tendo eles corrigido as mesmas redac¸oes˜ em uma competenciaˆ c teremos um conjunto de notas m a que tem media´ a e desvio padrao˜ a. Caso outro avaliador deˆ uma nota n a para a mesma redac¸ao˜ gostar´ıamos saber a probabilidade desse novo avaliador dar nota conforme a distribuic¸ao˜ de m a .
+
+Para obter a probabilidade formularemos uma regra de decisao˜ que facilitara´ a tomada de decisao˜. Sabe-se que existem duas possibilidades de erros para o modelo. Enumeramos esses erros da seguinte maneira:
+
+Erro tipo I : dizer que a nota e´ padrao˜ quando nao˜ e´.
+
+Erro tipo II : dizer que a nota nao˜ e´ padrao˜ quando e´.
+
+Tambem´ podemos enumerar as hipoteses´ que temos sobre a nota dada pelo pro-
+
+fessor:
+
+H0 :A nota e´ padrao˜.
+H1 :A nota nao˜ e´ padrao˜.
+
+Assim podemos definir pontos x1 e x2 para delimitar uma regiao˜ de aceitac¸ao˜ ra onde H1 sera´ rejeitado, dado por ra = fn a 2 Rjx1 n a x2g . Os valores que podem ser assumidos por x estao˜ entre 0 e 200. Agora podemos formular a probabilidade de cada erro em func¸ao˜ da ra postulada:
+
+P (Erro I) = P (n a 2= rajH0 e´ verdade) =
+
+P (Erro II) = P (n a 2 rajH1 e´ verdade) =
+
+Para confirmar que um professor da´ nota conforme um especialista precisamos determinar a probabilidade . Aplicamos a proposta de [Bussab and Morettin 2013] que define um = 0:05 afim de determinar os pontos que delimitam ra que serao˜ usados como parametrosˆ para obter-se (n a). A conhecer que = 1 , entao˜ quando (n a) < 0:5, n a nao˜ deu nota conforme os especialistas para a redac¸ao˜ observada.
+
+Usaremos a transformac¸ao˜ normal padrao˜ (3) para obtermos x, onde Z e´ uma variavel´ aleatoria´ com = 0 e = 1. A transformac¸ao˜ (3) e´ fundamental para calcular probabilidades relativas de qualquer distribuic¸ao˜ normal.
+Exemplificando todo o processo observamos a Tabela 2. Consideramos que todas as notas de n1 sao˜ medias´ de todos os avaliadores especialistas e tenhamos calculado previamente o 1 = f40:82; 40:82; 40:82g. Selecionamos a = 2, logo c = 40 e c = 40:82 e entao˜ encontramos os ponto x1 e x2 para P (Z) = 2 utilizando 3, observando a simetria da curva gaussiana para x1 teremos P (Z) = 2 logo:
+Observando as restric¸oes˜ do intervalo de notas poss´ıveis entao˜ x1 = 0 e pela simetria da curva gaussiana teremos x2 = 120. Dado os pontos do intervalo entao˜ te-mos ra = fn a 2 Rj0 n a 120g. Agora precisamos calcular a probabilidade
+(n a) = P (n a  2 rajH0 e´ verdade) dado um valor de n a, que sera´ usado como   da
+func¸ao˜ caracter´ıstica de		2 raj ) , e para todos os teste
+	dado por:( ) = P (X	
+dessa distribuic¸ao˜ teremos = 40:82. Para esta redac¸ao˜ podemos testar se outras notas pertencem a distribuic¸ao˜. Para a nota n22 teremos:
+Com o resultado obtido podemos afirmar que com apenas (160) = 16:35% o avaliador n2 nao˜ da´ notas conforme os especialistas para a = 2. Aplicando o mesmo modelo a n32 temos (80) = 83:48%, logo n2 tem maior probabilidade de dar notas como os especialistas para a = 2.
+
+Para visualizar o resultado da execuc¸ao˜ do procedimento para todas as notas da Tabela 2 utilizaremos um grafico´ de radar, disposto na Figura 2. Na Figura quanto mais proximo´ a nota da redac¸ao˜ esta do circulo do centro maior a probabilidade do avaliador dar notas conforme o especialista em uma determinada redac¸ao˜.
+4. Experimento e Resultados
+
+Em uma turma escolar durante o segundo semestre de 2018, foram indicados 6 temas de redac¸oes˜. Ao todo foram coletados 44 redac¸oes˜ para correc¸ao˜ e participaram do experi-mento 3 avaliadores, cada um analisou de maneira independente as redac¸oes˜ submetidas.
+
+4.1. Correlac¸ao˜ entre avaliadores
+
+Sobre a amostra selecionada analisamos os dados com o modelo proposto e obtivemos como resultado a Figura 3 para comparamos os resultados. Na Figura 3(a) vemos que na Competenciaˆ 3 existe uma divergenciaˆ entre o entendimento dos avaliadores, evidenciado na celula´ da coluna 2 na linha 1. No caso os avaliadores aval1 e aval3 discordam nas notas dadas na Competenciaˆ 3. Entre dois avaliadores ha´ alguma concordancia,ˆ mesmo que baixa. No caso o Aval 2 comporta-se como o avaliador mais bem correlacionado com os outros avaliadores, visto que os quadrantes que o compara com outros avaliadores se encontram em azul.
+
+Seguindo para a competenciaˆ 2 na Figura 3(b) mostra uma melhor sintonia entre os avaliadores aja visto que todas as celulas´ estao˜ em azul. Observando estes compor-tamentos e´ poss´ıvel dizer que e´ necessario´ uma atenc¸ao˜ especial na explicac¸ao˜ de como avaliar a competenciaˆ 3. Mesmo os avaliadores mais bem correlacionados denotam pouca convergenciaˆ ao avaliarem as redac¸oes˜.
+4.2. Inferenciaˆ de Avaliadores
+
+Adaptamos o modelo para este trabalho utilizando o Moodle como ferramentar para rece-ber as redac¸oes˜. Como exposto da Sec¸ao˜ 3.1 transformamos a faixa poss´ıveis para valores de 0 a` 20, tambem´ adaptamos a restric¸ao˜ de diferenc¸a aceitavel´ entre os avaliadores. A diferenc¸a entre as notas das competenciasˆ deve ser inferior a 5 e a diferenc¸a entre as notas finais deve ser inferior a 10.
+
+Tambem´ contamos com apenas um avaliador que foi treinado para correc¸ao˜ de redac¸oes˜. Logo assumimos que c e´ a nota desse avaliador. Com base no c proposto calculamos um c que ainda atende as restric¸oes˜ adaptadas adotando (4):
+Determinado o c aplicamos nosso modelo aplicamos a matriz de cada com-petenciaˆ e a matriz de notas finais. Apresentamos a baixo os resultados para c = 5. O resultado exposto na Figura 4 mostra que Avaliador 3 na redac¸ao˜ 3 expressa uma menor probabilidade de avaliar redac¸oes˜ como um especialista.
+Observe que para a Competenciaˆ 1 o Avaliador 2 nao˜ esta fora de rc denotando que esta fora das restric¸oes˜ de avaliac¸oes˜. Esse resultado indica a necessidade de aprofundar-se na avaliac¸ao˜ da competenciaˆ.
+
+5. Considerac¸oes˜ Finais e Trabalhos Futuros
+
+Este trabalho apresentou modelo para identificac¸ao˜ de correlac¸ao˜ entre multiplos´ avali-adores de maneira automatica´. O modelo busca identificar as semelhanc¸as e diferenc¸as entre as notas de uma mesma competenciaˆ para avaliadores de redac¸oes˜ utilizando um modelo de rubricas.
+
+Os professores avaliaram as mesmas redac¸oes˜ para que pudessemos´ realizar a aplicac¸ao˜ do modelo; fixando portanto um mesmo contexto a todos eles. Dentro dessas condic¸oes˜ o monitoramento de cada competenciaˆ da rubrica mostrou claramente os pon-tos da diferenc¸a entre os professores na inserc¸ao˜ de notas em redac¸oes˜ de acordo com os criterios´ do ENEM/INEP. Nossos instrumentos de visualizac¸ao˜ exposˆ com clareza os pon-tos onde e´ necessario´ a conciliac¸ao˜ de entendimento sobre a forma de correc¸ao˜. A aborda-gem automatizada e´ um diferencial desse trabalho pois viabiliza a aplicac¸ao˜ periodica´ de testes entre avaliadores, e uma verificac¸ao˜ sistematica´ dos metodos´ avaliativos esperados.
+Para trabalhos futuros se faz necessaria´ a adoc¸ao˜ de uma abordagem que iden-tifique com rigor as exatas notas que estao˜ diferentes e a proporc¸ao˜ das diferenc¸as de cada aluno avaliado, para que assim as discussoes˜ possam ser pautadas estritamente nas redac¸oes˜ com diferenc¸as de compreensao˜ dos avaliadores.
+
+Agradecimentos
+
+O presente trabalho foi realizado com apoio da Coordenac¸ao˜ de Aperfeic¸oamento de Pes-soal de N´ıvel Superior - Brasil (CAPES) - Codigo´ de Financiamento 001
+
+Referenciasˆ
+
+Alves, J., Pereira, W., Brito, O., and Oliveira, E. D. (2018). Avaliac¸ao˜ em Pares e Autoavaliac¸ao:˜ Um Modelo Estat´ıstico Para Perfilac¸ao˜ de Alunos. In Brazilian Sym-posium on Computers in Education (Simposio´ Brasileiro de Informatica´ na Educac¸ao˜-SBIE), volume 29, pages 1653–1662.
+
+Arter, J. A. and Chappuis, J. (2006). Creating & Recognizing Quality Rubrics. Assess-ment Training Institute, Inc Series. Pearson Education, Nee York, USA.
+
+Bussab, W. O. and Morettin, P. A. (2013). Estat´ıstica Basica´. Saraiva, Sao˜ Paulo, 8 edition.
+
+
+Carvalho, R. S. and Fernandes, C. T. (2012).  Easy Rubric: um Editor de Rubricas no
+
+Padrao˜ IMS Rubric. Anais do Workshop do Congresso Brasileiro de Informatica´ na
+
+Educac¸ao˜, pages 10–11.
+
+Cohen, J. (1960). A coefficient of agreement for nominal scales. Educational and Psy-chological Measurement, 20(1):37–46.
+
+DAEB, D. D. A. D. E. B. (2017). Redac¸ao˜ No Enem 2017 Cartilha Do Participante.
+
+Matos, D. A. S. (2014). Confiabilidade e concordanciaˆ entre ju´ızes : aplicac¸oes˜ na area´ educacional. Estudos em Avaliac¸ao˜ Educacional, 25(59):298–324.
+
+Oliveira, E. and Spalenza, M. (2017). Self and peer assessment strategies. Anais do Computer on the Beach.
+
+
+Romao,˜ C. (2017). Proposta de um sistema automatico´ de avaliac¸ao˜ de redac¸oes˜ do enem, foco na competenciaˆ 1: Demonstrar dom´ıno da modalidade escrita formal da l´ıngua portuguesa. Master’s thesis, Universidade Federal do Esp´ırito Santo.
+
+Smith, R. (2006).  Peer review: A flawed process at the heart of science and journals.
+
+Journal of the Royal Society of Medicine, 99(4):178–182.
+
+Spalenza, M. A., Nogueira, M. A., de Andrade, L. B., and de Oliveira, E. (2018). Uma Ferramenta para Minerac¸ao˜ de Dados Educacionais: Extrac¸ao˜ de Informac¸ao˜ em Am-bientes Virtuais de Aprendizagem. Anais do Computer on the Beach, pages 741–750.
+
+
+

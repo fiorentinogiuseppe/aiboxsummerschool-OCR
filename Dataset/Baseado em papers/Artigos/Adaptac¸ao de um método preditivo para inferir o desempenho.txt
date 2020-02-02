@@ -1,0 +1,403 @@
+Adaptac¸ao de um m ˜ etodo preditivo para inferir o desempenho ´
+de alunos de programac¸ao˜
+Samuel C. Fonseca1
+, Elaine H. T. Oliveira1
+, Filipe D. Pereira2
+,
+David Fernandes de Oliveira1
+, Leandro S. G. Carvalho1
+1
+Instituto de Computac¸ao – Universidade Federal Amazonas (UFAM) ˜
+2Departamento de Ciencia da Computac¸ ˆ ao - Universidade Federal de Roraima (UFRR) ˜
+{scf,elaine,david,galvao}@icomp.ufam.edu.br,filipe.dwan@ufrr.br
+Abstract. The objective of this work is to evaluate the generalizability of a
+method for predicting the performance of CS1 students in an online judge. To
+achieve this goal, we present an adaptation of the method to a dataset generated
+through a educational context different from the one in which the method was
+originally evaluated. As a result, we observed that the prediction method, using
+the new dataset, achieved an accuracy of 82% in the task of predicting student
+performance as early as possible.
+Resumo. Este trabalho tem por objetivo avaliar a capacidade de generalizac¸ao˜
+de um metodo de predic¸ ´ ao de desempenho de alunos de turmas de Introduc¸ ˜ ao˜ a`
+Programac¸ao de Computadores (IPC) em ambientes de correc¸ ˜ ao autom ˜ atica de ´
+codigo (ACAC). Para tanto, ´ e apresentado um processo de adaptac¸ ´ ao do m ˜ etodo ´
+a uma base de dados gerada a partir de um contexto educacional diferente da- `
+quele em que o metodo foi avaliado originalmente. Como resultado, observou- ´
+se que o metodo de predic¸ ´ ao, adaptado ˜ a nova base, atingiu uma acur ` acia de ´
+82% na tarefa de detecc¸ao precoce de alunos com altas chances de reprovac¸ ˜ ao. ˜
+1. Introduc¸ao˜
+Turmas de IPC, em geral, sao numerosas [Pereira et al. 2019]. Com isso, atender indi- ˜
+vidualmente alunos dessas turmas se torna um grande desafio. Segundo [Pereira 2018],
+para os estudantes iniciantes em disciplinas introdutorias de programac¸ ´ ao, estas habilida- ˜
+des sao de um alto n ˜ ´ıvel de complexidade: compreensao do problema, planejamento de ˜
+soluc¸ao, reduc¸ ˜ ao de erros no algoritmo e escrita do c ˜ odigo no plano de soluc¸ ´ ao. ˜
+Somado a isso, ainda e poss ´ ´ıvel mencionar a alta taxa de reprovac¸ao em discipli- ˜
+nas introdutorias de programac¸ ´ ao [Pereira et al. 2019]. Segundo um grupo de pesquisa- ˜
+dores, um terc¸o dos estudantes de IPC nao consegue obter o m ˜ ´ınimo para a aprovac¸ao na ˜
+disciplina [Watson and Li 2014].
+Diante do exposto, a publicac¸ao de [Dwan et al. 2017] apresenta um modelo pre- ˜
+ditivo que utiliza algoritmos de aprendizagem de maquina para predizer os resultados do ´
+desempenho do aluno, informando se o aluno corre risco de reprovac¸ao ou n ˜ ao na dis- ˜
+ciplina de IPC. Alem disso, os dados desse modelo foram obtidos atrav ´ es de um ACAC ´
+chamado CodeBench1
+. Para a validac¸ao do m ˜ etodo de predic¸ ´ ao proposto, foram coletados ˜
+1http://codebench.icomp.ufam.edu.br/
+DOI: 10.5753/cbie.sbie.2019.1651 1651
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+dados de nove turmas de IPC da Universidade Federal do Amazonas (UFAM), durante o
+per´ıodo de 05/06/2016 a 13/09/2016. No total, 486 alunos resolveram sete listas usando a
+linguagem de programac¸ao Python. Eles podiam realizar um n ˜ umero ilimitado de tenta- ´
+tivas de submissao, desde que atendesse ao prazo m ˜ aximo estipulado para a resoluc¸ ´ ao da ˜
+lista de exerc´ıcios.
+Entretanto, esse metodo preditivo foi constru ´ ´ıdo para uma base de dados espec´ıfica, a qual foi fornecida pelo juiz on-line CodeBench. Contudo, a comunidade cient´ıfica estimula que tais estudos sejam reproduzidos em outros contextos educacionais
+a fim de verificar se eles sao generaliz ˜ aveis a outras bases de dados educacionais. Se- ´
+gundo [Estey et al. 2017], em um grupo de trabalho do ITiCSE (Annual Conference
+on Innovation and Technology in Computer Science Education), [Ihantola et al. 2015]
+identificaram a necessidade cr´ıtica de estudos de validac¸ao e de replicac¸ ˜ ao para melhor ˜
+compreensao dos fatores e das raz ˜ oes que contribuem para os resultados obtidos. Com ˜
+efeito, o foco deste trabalho foi adaptar e aplicar o metodo preditivo proposto por [Dwan ´
+et al. 2017] a base de dados disponibilizada por [Estey et al. 2017]. `
+Para apresentar a adaptac¸ao proposta, o presente artigo foi dividido em 5 sec¸ ˜ oes. ˜
+A Sec¸ao 2 apresenta os trabalhos relacionados que tamb ˜ em realizaram predic¸ ´ ao de desem- ˜
+penho usando dados coletados a partir de turmas de IPC. A Sec¸ao 3 descreve a adaptac¸ ˜ ao˜
+do modelo preditivo. A Sec¸ao 4 apresenta a metodologia utilizada na conduc¸ ˜ ao dos expe- ˜
+rimentos junto aos resultados e a Sec¸ao 5 apresenta as considerac¸ ˜ oes finais. ˜
+2. Trabalhos relacionados
+O trabalho de [Pereira 2018] procurou obter um modelo preditivo para inferir o desempenho dos discentes a partir de algoritmos de aprendizagem de maquina. Para isso, ele ´
+contou com uma selec¸ao de 20 atributos extra ˜ ´ıdos a partir da interac¸ao dos alunos com ˜
+um juiz on-line. Entre os atributos, podemos citar a media de linhas de coment ´ arios, a ´
+media de submiss ´ oes, a m ˜ edia das linhas de log, etc. Vale ressaltar que os atributos ado- ´
+tados por [Pereira 2018] foram selecionados atraves de um processo de engenharia de ´
+variaveis ( ´ feature selection), e que cada atributo representa uma caracter´ıstica do perfil de
+programac¸ao dos alunos, o qual ser ˜ a definido mais adiante. Como resultado, atingiu-se ´
+74,44% de acuracia na tarefa de identificar se os alunos iriam ser reprovados ou aprovados ´
+usando os dados das duas primeiras semanas de aula em uma base de dados balanceada.
+Destaca-se ainda que, a partir da oitava semana de aula, o metodo atingiu acur ´ acias entre ´
+85% e 90,62%.
+No trabalho produzido por [Estey and Coady 2016] tambem foram propostos ´
+alguns atributos que podem ser usados para identificar alunos de IPC com risco de
+reprovac¸ao, como consumo de dicas, compilac¸ ˜ oes, submiss ˜ oes, etc. Esse trabalho ˜
+tambem apresentou um modelo preditivo para inferir o desempenho dos discentes. Vale ´
+ressaltar que a coleta de dados desse trabalho foi realizada pelo BitFit2
+, uma ferramenta
+desenvolvida pelo autor para que alunos de turmas de IPC possam fazer exerc´ıcios semanais. Essa ferramenta, alem de ser uma ACAC, disponibiliza uma s ´ erie progressiva ´
+de dicas para cada atividade. Com isso, foi constru´ıdo um modelo preditivo que fazia
+uma classificac¸ao bin ˜ aria para identificar se o estudante iria passar ou n ´ ao na disciplina. ˜
+O modelo preditivo apresentado obteve uma acuracia m ´ edia de 81% ao final do curso, ´
+2https://github.com/ModSquad-AVA/BitFit
+1652
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+entretanto com uma taxa de identificac¸ao de 30% dos alunos que reprovaram nas duas ˜
+primeiras semanas de aula.
+Alem de [Pereira 2018] e [Estey and Coady 2016], outros trabalhos da literatura ´
+procuraram identificar atributos uteis para o processo de predic¸ ´ ao de desempenho dos ˜
+estudantes em disciplinas de programac¸ao. Por exemplo, [Ahadi et al. 2016] mostram ˜
+que a quantidade de submissoes de c ˜ odigos, independentemente dos c ´ odigos submetidos ´
+estarem corretos ou nao, possui correlac¸ ˜ ao com a nota do aluno nas provas. ˜
+No estudo de [Auvinen 2015] foi investigado se os alunos exibem habitos de es- ´
+tudo indesejaveis em termos de pr ´ atica de gerenciamento de tempo e comportamento de ´
+tentativa e erro. O autor relata que comec¸ar a estudar perto do prazo final das atividades
+esta relacionado a um baixo desempenho. Somado a isso, observou-se em alguns discen- ´
+tes sinais de resoluc¸ao de impasses por tentativa e erro e isso tamb ˜ em est ´ a correlacionado ´
+com um desempenho baixo nos exerc´ıcios e na avaliac¸ao. ˜
+3. Adaptac¸ao do Modelo Preditivo ˜
+Nesta sec¸ao ser ˜ ao descritos o contexto educacional e a base de dados nos quais a ˜
+adaptac¸ao proposta neste trabalho foi aplicada. Al ˜ em disso, ser ´ a apresentado o processo ´
+de adaptac¸ao do modelo preditivo proposto por [Dwan et al. 2017]. ˜
+3.1. Contexto Educacional
+Os dados deste estudo foram coletados por [Estey et al. 2017] em um curso de IPC de
+13 semanas ministrado em Java. No total, foram abordados 10 topicos de programac¸ ´ ao˜
+durante o curso: variaveis, fluxo de controle, m ´ etodos, condicionais, loops, E/S, arrays, ´
+algoritmos de busca, classificac¸ao e objetos. O curso consiste em 2,5 horas de aula por ˜
+semana, com 10 laboratorios de programac¸ ´ ao de duas horas, onde os alunos recebem ˜
+atividades de aprendizagem baseadas em problemas e tarefas de programac¸ao semanais. ˜
+As avaliac¸oes parciais acontecem durante a quinta e a nona semana, e h ˜ a uma avaliac¸ ´ ao˜
+final no encerramento do semestre.
+Nesse contexto, foi introduzido o BitFit, onde as atividades realizadas nesse
+ACAC sao volunt ˜ arias e n ´ ao afetam as notas dos discentes. Esse juiz on-line foi in- ˜
+troduzido como um recurso de pratica suplementar, que oferece exerc ´ ´ıcios semelhantes
+aos apresentados durante os laboratorios semanais. Al ´ em disso, o BitFit ´ e uma ferramenta ´
+de programac¸ao on-line, de c ˜ odigo aberto, onde os alunos escrevem c ´ odigo no navega- ´
+dor. Botoes para compilar, executar, submeter uma soluc¸ ˜ ao, obter uma dica, e fazer uma ˜
+pergunta sao todos instrumentados para coletar padr ˜ oes de interac¸ ˜ ao do aluno. ˜
+Os resultados de compilac¸ao e execuc¸ ˜ ao s ˜ ao exibidos para o usu ˜ ario enquanto eles ´
+trabalham com o problema atual. Uma soluc¸ao˜ e considerada correta se todos os casos ´
+de teste forem aprovados. Vale ressaltar que nao h ˜ a restric¸ ´ ao do n ˜ umero de vezes que um ´
+estudante pode compilar, executar ou submeter um exerc´ıcio.
+Em cada semestre em que o BitFit foi usado, havia mais de 80 perguntas distribu´ıdas pelos topicos do curso. Dentro de cada t ´ opico h ´ a de seis a dez perguntas, orde- ´
+nadas por dificuldade. Os discentes nao s ˜ ao obrigados a resolver corretamente as quest ˜ oes ˜
+mais faceis antes de tentar resolver os exerc ´ ´ıcios mais dif´ıceis dentro de um determinado
+topico, e s ´ ao capazes de iniciar em qualquer t ˜ opico que escolherem. ´
+1653
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Os dados considerados para este estudo incluem o numero de tentativas, quanti- ´
+dade de dicas consumidas, compilac¸oes, compilac¸ ˜ oes sem erros, execuc¸ ˜ oes, soluc¸ ˜ oes e ˜
+tempo de resoluc¸ao. Vale ressaltar que todos esses dados coletados foram medidos em ˜
+relac¸ao˜ as notas da avaliac¸ ` ao final. ˜
+3.2. Contexto dos dados
+E necess ´ ario entender a organizac¸ ´ ao da base de dados disponibilizada no GitHub ˜
+3 por
+[Estey et al. 2017]. Os dados foram coletados durante 4 semestres, e para cada semestre
+e poss ´ ´ıvel acessar as notas finais dos alunos, bem como os atributos gerados pelos alunos
+para cada questao resolvida. No caso, o semestre 1 teve a participac¸ ˜ ao de 155 alunos, o ˜
+semestre 2 apenas 54, o semestre 3 teve 273 alunos, e por ultimo, o semestre 4, teve 174 ´
+alunos. Cada tentativa de resoluc¸ao de uma dada quest ˜ ao tinha as seguintes informac¸ ˜ oes: ˜
+o ID do usuario, o ID do t ´ opico, o ID da quest ´ ao, o tempo inicial da resoluc¸ ˜ ao da quest ˜ ao, ˜
+o numero de compilac¸ ´ oes, o n ˜ umero de execuc¸ ´ oes, o n ˜ umero de dicas consumidas, o ´
+numero total de tentativas, o n ´ umero total de tentativas corretas, o tempo final da resoluc¸ ´ ao˜
+da questao e o n ˜ umero de compilac¸ ´ oes sem erro. ˜
+3.3. O Modelo Preditivo
+A Figura 1 ilustra o processo de construc¸ao do modelo preditivo proposto por [Dwan ˜
+et al. 2017]. Primeiramente, os autores realizaram o pre-processamento dos dados, onde ´
+os codigos submetidos e os logs dos alunos no ACAC foram analisados a fim de gerar os ´
+valores numericos que comp ´ oem o perfil de programac¸ ˜ ao de cada aluno. Esses valores ˜
+sao representados por m ˜ edias de uma lista de exerc ´ ´ıcios. Para exemplificar, um atributo
+trabalhado pelos autores foi a media de tentativas, que era representado pela quantidade ´
+total de testes na tentativa de solucionar todas as questoes da lista dividido pelo n ˜ umero ´
+total de questoes da lista. Depois disso, foi realizado um ciclo entre selec¸ ˜ ao de atributos, ˜
+escolha do algoritmo de aprendizagem de maquina e ajuste de hiperpar ´ ametros at ˆ e se ´
+obter um modelo que maximizasse a acuracia na predic¸ ´ ao do desempenho. ˜
+Figura 1. Fluxograma de aplicac¸ao do m ˜ etodo de [Dwan et al. 2017] ´
+A Figura 2 ilustra o processo de adaptac¸ao do m ˜ etodo preditivo proposto por ´
+[Dwan et al. 2017] na base de dados disponibilizada por [Estey et al. 2017]. Primeiramente, como os dados do modelo proposto por [Dwan et al. 2017] estavam organizados
+por medias de listas de exerc ´ ´ıcios e nao por quest ˜ oes, foi necess ˜ ario realizar uma m ´ edia ´
+dos atributos por sessao com os dados disponibilizados por [Estey et al. 2017], onde cada ˜
+sessao˜ e composta pelos dados dos discentes a cada semana de aula. ´
+3www.github.com/aestey/phd
+1654
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Figura 2. Fluxograma da adaptac¸ao da base de dados disponibilizada por [Estey ˜
+et al. 2017] para o modelo proposto por [Dwan et al. 2017]
+Em seguida, foram removidos os dados dos discentes que nao usaram a ferramenta ˜
+BitFit ao longo dos 4 semestres, e foi realizado um balanceamento na base utilizando uma
+tecnica de subamostragem baseada em clusterizac¸ ´ ao. Essa t ˜ ecnica realiza subamostragem ´
+atraves da gerac¸ ´ ao de centroides baseadas em m ˜ etodos de ´ clustering. Neste trabalho, foi
+utilizado o algoritmo K-means (com inicializac¸ao de centroides usando ˜ K-means++) no
+processo de clusterizac¸ao da classe majorit ˜ aria. Note que o processo de clusterizac¸ ´ ao˜ e´
+realizado por similaridade a fim de preservar a informac¸ao. Posteriormente, os dados s ˜ ao˜
+removidos alternadamente de cada cluster e nao de forma aleat ˜ oria, o que minimiza as ´
+chances de perda de informac¸oes relevantes na base de dados nesse processo de subamos- ˜
+tragem. Utilizaram-se 8 clusters, visto que esse valor minimizava a entropia nos dados
+(elbow method) [Kodinariya and Makwana 2013].
+Em relac¸ao˜ a selec¸ ` ao de atributos, cabe dizer que n ˜ ao h ˜ a necessidade de usar al- ´
+goritmos para encontrar os subconjuntos de atributos mais relevantes, uma vez que [Estey
+et al. 2017] coletou apenas 7 atributos no total. O numero de atributos adotados por [Dwan ´
+et al. 2017] e superior a 20, e por isso os autores optaram pelo procedimento de selec¸ ´ ao˜
+de atributos.
+Alem disso, para o ajuste de hiperpar ´ ametros - par ˆ ametros dos algoritmos de ˆ
+classificac¸ao dos modelos preditivos - foi utilizado o GridSearchCV (GSCV), que ˜ e um ´
+algoritmo de busca exaustiva com todas as possibilidades sobre os valores espec´ıficos de
+um modelo preditivo [Pedregosa et al. 2011], onde o retorno dessa func¸ao s ˜ ao os melhores ˜
+hiperparametros encontrados para o estimador. ˆ
+De acordo com [Dwan et al. 2017], os melhores resultados em sua predic¸ao foram ˜
+obtidos, em geral, pelos algoritmos ensembles baseados em arvore de decis ´ ao. Com isso, ˜
+os algoritmos de classificac¸ao utilizados para a construc¸ ˜ ao dos modelos preditivos foram o ˜
+Random Forest (RF) e ExtraTreesClassifier (ETC). Em contribuic¸ao ao modelo proposto ˜
+por [Dwan et al. 2017], neste trabalho tambem foi utilizado o algoritmo de classificac¸ ´ ao˜
+XGBoost (XGB) com Early Stopping, que e uma abordagem para treinar modelos com- ´
+plexos de aprendizagem de maquina para evitar overfitting, e que monitora o desempenho ´
+do modelo que esta sendo treinado em um conjunto de dados de teste separado. Caso o ´
+desempenho desse conjunto nao apresente melhoras ap ˜ os um n ´ umero fixo de iterac¸ ´ oes de ˜
+treinamento, entao ela interrompe o procedimento de treinamento. ˜
+Para validar o modelo preditivo, foi adotado o metodo de validac¸ ´ ao cruzada com ˜
+10 partic¸oes ( ˜ folds). Esse metodo divide a base em ´ k partic¸oes, usando ˜ k-1 para treino e 1
+para teste. Apos isso, calcula-se a acur ´ acia na partic¸ ´ ao de teste. Esse processo ˜ e repetido ´ k
+vezes, ate que todas as partic¸ ´ oes tenham sido usadas como teste. Finalmente, computa-se ˜
+1655
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+a media das acur ´ acias obtidas nos testes. ´
+3.4. Perfis de Programac¸ao˜
+O perfil de programac¸ao˜ e um conjunto de atributos usados para descrever o comporta- ´
+mento do aluno durante suas tentativas de solucionar os exerc´ıcios de programac¸ao dis- ˜
+ponibilizados pelo professor. Neste trabalho, o perfil de programac¸ao dos alunos ser ˜ a´
+composto pelos mesmos atributos adotados por [Estey et al. 2017] durante seus experimentos. Sao eles: ˜
+1. compiles (E1): Numero de compilac¸ ´ oes; ˜
+2. correct attempts (E2): Numero de tentativas corretas; ´
+3. error free compiles (E3): Compilac¸oes sem erro; ˜
+4. hints (E4): Quantidade de dicas que o aluno usou;
+5. runs (E5): Quantidade de execuc¸oes; ˜
+6. total attempts (E6): Numeros de todas as tentativas, corretas ou n ´ ao; ˜
+7. time (E7): Tempo de resoluc¸ao; ˜
+No entanto, conforme dito anteriormente, para usar esses atributos no modelo
+preditivo proposto por [Dwan et al. 2017], sera necess ´ ario calcular a m ´ edia de seus valores ´
+para cada um dos 10 topicos de programac¸ ´ ao ministrados por [Estey et al. 2017] durante ˜
+seu curso de IPC (vide Sec¸ao 3.1). ˜
+4. Experimentos
+Apos a adaptac¸ ´ ao e balanceamento da base, al ˜ em do ajuste dos hiperpar ´ ametros, foi re- ˆ
+alizada uma serie de experimentos com o objetivo de identificar a acur ´ acia do modelo ´
+preditivo. A Figura 3 ilustra a metodologia adotada na conduc¸ao dos experimentos. ˜
+Figura 3. Fluxograma da conduc¸ao dos experimentos ˜
+Vale frisar que os experimentos foram conduzidos de tal forma que seja poss´ıvel
+comparar os resultados obtidos com aqueles publicados por [Estey et al. 2017]. Diante
+do exposto, para comparar os resultados, foram realizados experimentos com todos os
+semestres em conjunto, utilizando os dados das 3 primeiras semanas de aula. Foram
+conduzidos experimentos com a base desbalanceada e com a base balanceada.
+1656
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+4.1. Experimentos com a base de dados desbalanceada
+A Tabela 1 mostra que o algoritmo de classificac¸ao RF aliado ao GSCV obteve um ˜ recall
+Rap para os alunos aprovados4
+igual a 70%, e precisao˜ Pap para os aprovados5
+igual a 84%.
+Entretanto, o algoritmo obteve um recall Rrep para os alunos reprovados igual a 50% com
+uma precisao˜ Prep para o mesmo grupo de 30%. Assim, o metodo preditivo proposto ´
+por [Dwan et al. 2017] obteve uma acuracia ´ Acc igual a 66% na base desbalanceada
+disponibilizada por [Estey et al. 2017].
+Tabela 1. Resultado com todos os semestres para as tres primeiras semanas de ˆ
+aula na base de dados desbalanceada.
+Resultados Rap Pap Rrep Prep Acc
+Adaptac¸ao de [Dwan et al. 2017] ˜ 70% 84% 50% 30% 66%
+[Estey et al. 2017] 89% 92% 67% 57% 85%
+A Tabela 1 mostra ainda que [Estey et al. 2017] obteve, com os dados das 3
+primeiras semanas de aula, um recall Rap de 89% para os alunos aprovados com uma
+precisao˜ Pap de 92% para o mesmo grupo. Por outro lado, obteve-se um recall Rrep de
+67% para os alunos reprovados com uma precisao˜ Prep de 57% apos aplicar um filtro de ´
+trajetoria. Assim, o m ´ etodo de [Estey et al. 2017] atingiu uma acur ´ acia ´ Acc de 85%,
+obtendo melhores resultados que os atingidos com o metodo de [Dwan et al. 2017]. ´
+Como a base de dados estava desbalanceada, o algoritmo de classificac¸ao RF ficou com ˜
+vies, ou seja, ele tendia a inferir que a grande maioria dos alunos seriam aprovados (classe ´
+majoritaria) e, por conseguinte, obteve resultados n ´ ao satisfat ˜ orios. ´
+4.2. Experimento com a base de dados balanceada
+A Tabela 2 mostra os resultados com a base balanceada atraves da t ´ ecnica de Cluster ´
+Centroids, onde o algoritmo de classificac¸ao RF aliado ao GSCV obteve um ˜ recall Rap
+para os alunos aprovados igual a 92%, e precisao˜ Pap para os aprovados igual a 80%. Por
+outro lado, o mesmo algoritmo obteve um recall Rrep de 71% para os alunos reprovados
+e precisao˜ Prep de 87%. Nesse experimento, o metodo de [Dwan et al. 2017] atingiu uma ´
+acuracia ´ Acc de 82%.
+Tabela 2. Resultado com todos os semestres para as tres primeiras semanas de ˆ
+aula na base de dados balanceada.
+Resultados Rap Pap Rrep Prep Acc
+Adaptac¸ao de [Dwan et al. 2017] ˜ 92% 80% 71% 87% 82%
+[Estey et al. 2017] 89% 92% 67% 57% 85%
+Comparando, a precisao˜ Pap para alunos aprovados de [Estey et al. 2017] foi superior a de [Dwan et al. 2017]. O ultimo obteve uma precis ´ ao˜ Pap de 80% enquanto o primeiro atingiu 92%. Em relac¸ao˜ a acur ` acia ´ Acc, os resultados sao relativamente pr ˜ oximos, ´
+4O recall dos aprovados e o n ´ umero de alunos que foram classificados corretamente como aprovados ´
+dividido pela quantidade total de alunos realmente aprovados. Analogamente, pode-se quantificar o recall
+dos alunos reprovados.
+5A precisao dos aprovados ˜ e o n ´ umero de alunos que foram classificados corretamente como aprovados ´
+dividido pelo numero total de alunos classificados como aprovados. Analogamente, pode-se quantificar a ´
+precisao dos alunos reprovados. ˜
+1657
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+com uma pequena superioridade do trabalho apresentado por [Estey et al. 2017], visto
+que a adaptac¸ao de [Dwan et al. 2017] atingiu 82% de acur ˜ acia ´ Acc, enquanto [Estey
+et al. 2017] chegaram a 85%.
+Apesar disso, note que o objetivo principal desses modelos e identificar alunos ´
+com alta probabilidade de reprovac¸ao, conforme defendido pelo pr ˜ oprio trabalho de [Es- ´
+tey et al. 2017]. A importancia desse objetivo deve-se ao fato de que, uma vez identi- ˆ
+ficados tais alunos, pode-se tomar um conjunto de medidas proativas para minimizar as
+chances de tais alunos realmente reprovarem. Nesse sentido, o trabalho de [Dwan et al.
+2017] foi superior, pois ele obteve um recall Rrep e precisao˜ Prep maiores do que os obtidos por [Estey et al. 2017]. Mais especificamente, [Dwan et al. 2017] obteve um recall
+Rrep de 71% para os alunos reprovados com uma precisao˜ Prep de 87%, enquanto [Estey
+et al. 2017] chegaram a um recall Rrep de 67% com uma precisao˜ Prep de 57%. Em outras
+palavras, a adaptac¸ao do m ˜ etodo de [Dwan et al. 2017] consegue identificar alunos com ´
+alta probabilidade de reprovac¸ao com um n ˜ ´ıvel de confianc¸a maior. Alem disso, [Estey ´
+et al. 2017] obteve um recall Rap de 89% para os alunos aprovados, enquanto a adaptac¸ao˜
+do metodo de [Dwan et al. 2017] atingiu 92%. ´
+4.2.1. Perfil dos discentes em uma base de dados balanceada
+Por fim, tentou-se identificar as caracter´ısticas que diferem alunos com alta probabilidade
+de aprovac¸ao dos alunos com alta probabilidade de reprovac¸ ˜ ao. Note que essas diferenc¸as ˜
+sao importantes para os docentes, uma vez que podem trazer ˜ insights sobre o que precisa
+ser feito para reverter a alta probabilidade de reprovac¸ao de alguns alunos. Nesse sen- ˜
+tido, a Figura 4 apresenta um grafico detalhando as principais diferenc¸as entre o perfil de ´
+programac¸ao de alunos aprovados do perfil de alunos reprovados. ˜
+Figura 4. Radar de atributos dos discentes aprovados em laranja, e reprovados
+em azul
+Conforme pode ser visto na figura, alunos aprovados passam mais tempo resolvendo as atividades, assim como possuem mais compilac¸oes sem erro. Al ˜ em disso, eles ´
+tentam e acertam mais. Por outro lado, os alunos reprovados consomem mais dicas. Em
+relac¸ao a execuc¸ ˜ ao e compilac¸ ˜ oes, n ˜ ao h ˜ a uma grande diferenc¸a. ´
+Ainda, e poss ´ ´ıvel comparar esse padrao de comportamento com o obtido por [Es- ˜
+tey et al. 2017]. Nesse artigo, os autores relatam que os discentes aprovados compi1658
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+lam mais e consomem menos dicas, enquanto os alunos reprovados compilam menos e
+consomem mais dicas. Neste trabalho foi obtido o inverso em relac¸ao ao n ˜ umero de ´
+compilac¸oes, ou seja, alunos reprovados compilavam um pouco mais que os alunos apro- ˜
+vados, o que pode ser explicado pela subamostragem realizada na base de dados. Note
+que esse padrao de mais compilac¸ ˜ oes/execuc¸ ˜ oes por parte de alunos reprovados tamb ˜ em´
+foi reportado no trabalho de [Dwan et al. 2017].
+Em poucas palavras, com excec¸ao da diverg ˜ encia em torno da quantidade de ˆ
+compilac¸oes supracitada, o que se nota ˜ e que os comportamentos de programac¸ ´ ao de ˜
+alunos relatados por [Dwan et al. 2017] sao similares aos citados nesta sec¸ ˜ ao relaciona- ˜
+dos ao contexto educacional e dados disponibilizados por [Estey et al. 2017]. Isso pode
+sugerir que esses padroes s ˜ ao generaliz ˜ aveis, isto ´ e, multi-institucionais e multiculturais, ´
+visto que os autores lidam com contextos educacionais e culturais diferentes.
+5. Considerac¸oes Finais ˜
+A adaptac¸ao proposta obteve resultados expressivos. Para ilustrar, alcanc¸ou-se nas tr ˜ esˆ
+primeiras semanas uma acuracia ´ Acc de 82% em uma base de dados balanceada. Entretanto, o trabalho de [Estey et al. 2017] atingiu uma acuracia ´ Acc de ate 85% com os dados ´
+das mesmas tres primeiras semanas de aula em uma base de dados desbalanceada. Ape- ˆ
+sar dessa diferenc¸a, deve-se notar que, conforme apontado por [Alamri et al. 2019], para
+minimizar o problema de alto ´ındice de reprovac¸ao em turmas de IPC, ˜ e necess ´ ario focar ´
+mais na detecc¸ao precoce de alunos com altas chances de reprovac¸ ˜ ao. Nesse sentido, a ˜
+adaptac¸ao proposta neste estudo foi superior, isto ˜ e, na capacidade de identificar precoce- ´
+mente alunos com chances de reprovar com alta precisao. Destaca-se que o que propiciou ˜
+essa melhora foi a adaptac¸ao proposta neste estudo ao m ˜ etodo de [Dwan et al. 2017], ´
+onde foi realizada uma subamostragem utilizando uma tecnica baseada em centroides de ´
+clusters. Por outro lado, [Estey et al. 2017] atingiu uma acuracia ´ Acc maior em func¸ao de ˜
+uma alta precisao˜ Pap nos verdadeiros positivos, isto e, o modelo de [Estey et al. 2017] ´ e´
+mais preciso para reconhecer alunos que provavelmente serao aprovados na disciplina. ˜
+Destaca-se que a principal contribuic¸ao desta pesquisa est ˜ a no conjunto de ´
+evidencias obtido atrav ˆ es dos experimentos, que fortalece a ideia de uma poss ´ ´ıvel
+generalizac¸ao do modelo preditivo proposto por [Dwan et al. 2017]. Para exemplificar, ˜
+no contexto educacional de [Estey et al. 2017], a linguagem Java era utilizada, enquanto
+no de [Dwan et al. 2017] era a linguagem Python. Com isso, acredita-se que a linguagem de programac¸ao n ˜ ao˜ e um fator que influencia nas m ´ etricas propostas para o perfil de ´
+programac¸ao. ˜
+Frisa-se ainda que a generalizac¸ao do modelo preditivo ˜ e relevante por diversas ´
+razoes, dentre as quais ressalta-se: i) um ˜ unico modelo preditivo generalizado poderia ser ´
+aplicado em varios contextos educacionais diferentes; ii) v ´ arias instituic¸ ´ oes e professores ˜
+poderiam utilizar esse modelo preditivo, permitindo a identificac¸ao de discentes em risco ˜
+de reprovac¸ao e iii) tendo um ˜ unico modelo generalizado, v ´ arios especialistas poderiam ´
+otimizar o metodo. ´
+Agradecimentos
+Os autores agradecem o apoio prestado pela Fundac¸ao de Amparo ˜ a Pesquisa do Estado `
+do Amazonas - FAPEAM por meio do Edital N. 002/2018 - Universal Amazonas.
+1659
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Referencias ˆ
+Ahadi, A., Vihavainen, A., and Lister, R. (2016). On the number of attempts students
+made on some online programming exercises during semester and their subsequent
+performance on final exam questions. ACM Conference on Innovation and Technology
+in Computer Science Education, pages 218–223.
+Alamri, A., Alshehri, M., Cristea, A., Pereira, F. D., Oliveira, E., Shi, L., and Stewart, C.
+(2019). Predicting moocs dropout using only two easily obtainable features from the
+first week’s activities. pages 163–173. Springer.
+Auvinen, T. (2015). Harmful study habits in online learning environments with automatic
+assessment. 2015 International Conference on Learning and Teaching in Computing
+and Engineering, pages 50–57.
+Dwan, F., Oliveira, E., and Fernandes, D. (2017). Predic¸ao de zona de aprendizagem de ˜
+alunos de introduc¸ao˜ a programac¸ ` ao em ambientes de correc¸ ˜ ao autom ˜ atica de c ´ odigo. ´
+Simposio Brasileiro de Inform ´ atica na Educac¸ ´ ao-SBIE ˜ , 28(1):1507.
+Estey, A. and Coady, Y. (2016). Can interaction patterns with supplemental study tools
+predict outcomes in cs1? Proceedings of the 2016 ACM Conference on Innovation and
+Technology in Computer Science Education - ITiCSE ’16, pages 236–241.
+Estey, A., Keuning, H., and Coady, Y. (2017). Automatically classifying students in need
+of support by detecting changes in programming behaviour. Proceedings of the 2017
+ACM SIGCSE Technical Symposium on Computer Science Education.
+Ihantola, P., Vihavainen, A., Ahadi, A., Butler, M., Borstler, J., Edwards, S. H., Isohanni, ¨
+E., Korhonen, A., Petersen, A., Rivers, K., Rubio, M. , Sheard, J., Skupas, B., Spacco,
+J., Szabo, C., and Toll, D. (2015). Educational data mining and learning analytics
+in programming: Literature review and case studies. ACM. Proceedings of the 2015
+ITiCSE on Working Group Reports, pages 41–63.
+Kodinariya, T. M. and Makwana, P. R. (2013). Review on determining number of cluster
+in k-means clustering. International Journal, 1(6):90–95.
+Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., Blondel,
+M., Prettenhofer, P., Weiss, R., Dubourg, V., Vanderplas, J., Passos, A., Cournapeau,
+D., Brucher, M., Perrot, M., and Duchesnay, E. (2011). Scikit-learn: Machine learning
+in python. Journal of Machine Learning Research, 12:2825–2830.
+Pereira, F. D. (2018). Uso de um metodo preditivo para inferir a zona de aprendiza- ´
+gem de alunos de programac¸ao em um ambiente de correc¸ ˜ ao autom ˜ atica de c ´ odigo. ´
+Dissertac¸ao (Mestrado em Ci ˜ encia da Computac¸ ˆ ao) – Instituto de Computac¸ ˜ ao, Uni- ˜
+versidade Federal do Amazonas. Manaus.
+Pereira, F. D., Oliveira, E., Cristea, A., Fernandes, D., Silva, L., Aguiar, G., Alamri, A.,
+and Alshehri, M. (2019). Early dropout prediction for programming courses supported
+by online judges. pages 67–72. Springer.
+Watson, C. and Li, F. W. (2014). Failure rates in introductory programming revisited.
+Proceedings of the 2014 Conference on Innovation & Technology in Computer Science
+Education, pages 39–44.

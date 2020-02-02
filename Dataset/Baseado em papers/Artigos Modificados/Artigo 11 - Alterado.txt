@@ -1,0 +1,150 @@
+Ensino de programagão avangada incentivando a metacognigão: uma experiência positiva usando Moodle+VPL
+
+Mirtha L. F. Venero, Jesús P. Mena-Chalco
+
+Centro de Matemática, Computagão e Cognigão, Universidade Federal do ABC CEP: 09210-580 – Santo André – SP – Brasil
+Abstract. The use of self-assessment tools is becoming one of the most popular resources for teaching programming. Nevertheless, there is a need to research the eﬀectiveness of these tools and mechanisms to improve the learning strategies and performance of the students. This article reports an experience in the Moodle environment integrated with the avtomatic correction tool VPL for teaching advanced programming foousing on the development of metacognition. Although the methodology uses two diﬀerent approaches, the results provide positive evidence of the eﬀectiveness in using Moodle+VPL to support the mobilization of some metacognitive skills.
+
+Resumo. O uso de ferramentas de avto-avaliagão está se tornando um dos reoursos mais populares para o ensino de programagão. Apesar disso, há necessidade de pesquisar a eficácia dessas ferramentas e os mecanismos para melhorar as estratégias de aprendizagem e o desempenho dos alunos. Este artigo relata uma experiência de uso de ambiente Moodle integrado com a ferramenta de corregão avtomática VPL para o ensino de programagão avangada com foco no desenvolvimento da metacognigão. Apesar da metodologia usar duas abordagens diferentes, os resultados fornecem evidências positivas da efetividade do Moodle+VPL para apoiar a mobilizagão de algumas habilidades metacognitivas.
+
+1. Introdugão
+
+O sucesso do ensino e aprendizagem em computagão depende de diversos fatores, como o da construgão das disciplinas, do uso de diversas ferramentas, assim como dos métodos de ensino e avaliagão, que têm sido pesquisados de forma ativa ao longo dos anos (Luxton-Reilly et al. 2018). Em partioular, as ferramentas para corregão e geragão de feedback de forma avtomática estão sendo cada vez mais usadas nas disciplinas introdutórias de programagão (Ala-Mutka 2005, Ihantola et al. 2010, Keuning et al. 2018). Essas ferramentas também são apropriadas em matérias avangadas que requerem a solugão de problemas usando algoritmos de maior complexidade (Enstrom et al. 2011). A corregão manual desse tipo de atividades consome muito tempo, pois usualmente os programas têm um número grande de linhas de código que escondem erros sutis, às vezes difíceis de identificar corretamente até por monitores e docentes.
+
+O uso de corretores avtomáticos diminui de forma significativa a carga de trabalho do professor e permite ao aluno obter um feedback rápido. No entanto, muitas vezes as submissões de solugões de programas são realizadas sem garantir uma correta interpretagão do problema gerando diversas difiouldades metacognitivas (Prather et al. 2018). Por isso, para garantir o sucesso da aprendizagem, a avaliagão avtomática deve estar inserida em ambientes de ensino que permitam estimular as habilidades metacognitivas como a reflexão, o monitoramento e a avtorregulagão (Metcalfe & Shimamura 1994, Bergin et al. 2005, Pimentel et al. 2005, Alhazbi et al. 2010, Kavtzmann & Jaques 2016). O desenvolvimento dessas habilidades não acontece de forma natural (Flavell 1976, Shaft 1995, Mani & Mazumder 2013). Porém, poucos trabalhos descrevem o efeito de combinar o uso de ambientes de avaliagão avtomática com estratégias metacognitivas (Loksa et al. 2016, Keuning et al. 2018, Prather et al. 2018, Rodriguez et al. 2018). Conforme apontado por Pettit e Prather (2017), há necessidade de preencher a laouna de pesquisa sobre a eficácia dessas ferramentas para melhorar a aprendizagem dos alunos.
+
+Este artigo relata a experiência na escolha e uso de um ambiente para o ensino da disciplina Algoritmos e Estruturas de Dados I na Universidade Federal do ABC (UFABC) que permitisse o desenvolvimento de estratégias de aprendizagem metacognitivas. A disciplina tem 48 horas de duragão e a ementa inclui tópicos que cobrem nogões básicas de complexidade de tempo, estruturas de dados lineares, árvores, busca e ordenagão. A taxa de evasão e retengão na disciplina é maior de 35% devido a vários fatores. Primeiro, o projeto pedagógico da Universidade faz com que, mesmo que a maioria dos estudantes que oursam a matéria pretenda oursar Ciência da Computagão, um número importante dos alunos tem como pretensão outros oursos específicos. Esses estudantes se matrioulam na matéria com conhecimentos básicos de programagão, porém sem terem oursado Programagão Estruturada que é um dos pré-requisitos e introduz conceitos de programagão na linguagem C. Para eles, o número de horas exige uma maior dedicagão e trabalho independente.
+
+A disciplina tem experimentado um avmento contínuo do número de estudantes sendo que no oferecimento de 2018 chegou a ser 200 com uma porcentagem de reprovagão de 45% (incluindo as desistências). No ano atual 2019, a disciplina foi ofertada para mais de 300 alunos com o desafio adicional da avsência total de monitores. Por isso, a coordenagão da disciplina decidiu disoutir a metodologia e o plano de ensino a serem aplicados. No entanto, não houve consenso geral na escolha das ferramentas e somente dois professores aderiram à proposta de escolher um ambiente favorável ao desenvolvimento de estratégias metacognitivas. O artigo descreve a metodologia aplicada e os resultados da experiência e disoute as formas de aperfeigoar o método de ensino para melhorar a aprendizagem e o desempenho dos estudantes.
+
+O artigo está organizado como a seguir. A segão 2 apresenta brevemente o referencial teórico que serviu de base para a escolha do ambiente e os métodos de ensino. A segão 3 descreve as metodologias adotadas, relata a experiência de uso da ferramenta de corregão avtomática do Moodle+VPL e os resultados alcangados na disciplina. A segão 4 disoute algumas reflexões sobre efetividade do Moodle+VPL para a mobilizagão das estratégias metacognitivas e seu efeito positivo para o aprendizado de programagão avangada. A segão 5 apresenta as conclusões e os trabalhos futuros.
+
+2. Referencial teórico para a escolha dos métodos e ambiente de ensino
+
+O ponto de partida deste trabalho foi o artigo de Rodriguez et al. (2018) que pesquisaram as estratégias cognitivas e metacognitivas (propostas por Santos e Boruchovitch 2008) menos mobilizadas no processo aprendizagem de lógica de programagão na modalidade semipresencial. Além disso, foram apresentados critérios e um checklist de reoursos e ferramentas que podem avxiliar o professor a promover a insergão de cada critério na prática docente e apoiar o aluno nos estudos. Dentre esses critérios foram selecionados os seguintes como os dois mais importantes para serem desenvolvidos no contexto da disciplina Algoritmos e Estruturas de Dados I:
+
+(1)	planejamento das atividades de resolugão de problemas (usando checklist de passos vs. resolugão parcial)
+
+(4)	controle da ansiedade nas avaliagões (usando avaliagões ourtas, feedback frequentes e simulados de provas).
+
+2.1 Método de ensino
+
+O método de ensino escolhido para mobilizar o critério (1) foi baseado no trabalho de Loksa et al. (2016) que propuseram quatro formas de intervengão dos professores para ajudar os estudantes a obter a solugão de programagão enquanto os incentivam a reconhecer, avaliar e refinar suas habilidades metacognitivas: i) fornecer instrugões explícitas sobre os objetivos e atividades envolvidas na resolugão de problemas; ii) incentivar os alunos para descreverem os estados de solugão de problemas; iii) fornecer meios físicos de representar os estágios de resolugão de problemas para ajudar os alunos a monitorarem seu estado; iv) oferecer dicas contextuais que estimulem os alunos a reconhecerem as fases de resolugão de problemas em que estão envolvidos. Além disso, foram propostos seis estágios de resolugão de problemas que podem ser revisitados de forma iterativa: 1) (re) interpretar
+o problema; 2) proourar problemas análogos; 3) proourar solugões; 4) avaliar uma solugão potencial; 5) implementar uma solugão; 6) avaliar a solugão implementada.
+
+Loksa et al. (2016) aplicaram a metodologia num acampamento de programagão com o objetivo de ensinar conceitos, sintaxe e semântica de HTML, CSS e JavaScript com foco no framework React JavaScript. Os resultados apontaram que as quatro formas de estimular a metacognigão e os seis estágios de resolugão de problemas melhoraram a produtividade, promoveram a independência e avmentaram a avtoeficácia dos jovens. Prather et al. (2018) combinaram essa metodologia com a estratégia de pensar em voz alta (PVA) para compreender as difiouldades metacognitivas que os programadores iniciantes enfrentam ao aprender a programar usando ferramentas de avaliagão avtomáticas. O estudo identificou cinco difiouldades, três das quais têm a ver com
+insuficiente reflexão para construir um modelo conceitual correto do problema. No mais recente trabalho, Prather et al. (2019) realizaram um experimento sobre o efeito de fornecer dicas metacognitivas explícitas para ajudar na superagão dessas difiouldades. Os resultados foram promissores apesar dos dados não se apresentarem conclusivos.
+
+O método de ensino usado para mobilizar o critério (4) foi baseado na abordagem de Allen et al. (2018) que propõe usar a cada semana muitos pequenos programas (many-small programs - MSPs) em vez de um grande programa (one-large program - OLP). Os avtores concluíram que a abordagem MSP é menos intimidante para os estudantes que ganham confianga e habilidade comegando pelos programas mais fáceis para depois trabalhar nos mais difíceis. Num trabalho posterior, eles pesquisaram se a abordagem MSP em oursos introdutórios de programagão afeta o desempenho em disciplinas avangadas que usam a abordagem de OLP (Allen et al. 2019). A análise mostrou que o desempenho dos estudantes que fizeram o ourso introdutório com MSPs foi um pouco melhor que os que usaram OLP.
+
+2.2 Escolha do ambiente computacional
+
+Tomando como base inicial o checklist de Rodriguez et al. (2018), foram selecionados as seguintes funcionalidades para a selegão da ferramenta: Agenda e lembretes de conteúdo e atividades; Ferramentas de compilagão/depuragão; Ferramentas de testes/quiz/feedback avtomático; Fóruns, chat, redes sociais, grupos específicos. Além
+
+disso, na revisão sistemática de literatura de Francisco et al. (2018) foi apresentado um
+
+conjunto de requisitos funcionais e não funcionais que devem ser atendidos por uma ferramenta para ensino de programagão. Por isso, para a selegão do ambiente foram também considerados os seguintes requisitos funcionais: Integragão com oursos,
+
+Monitoramento Desempenho dos Alunos, Diferentes Conteúdos/ Atividades, Geragão de listas de exercícios, Feedback estático, dinâmico e personalizado, Detecgão de Plágio, Usabilidade, Seguranga, Dooumentagão.
+
+Duas abordagens foram avaliadas para escolher um ambiente de código aberto com os requisitos acima. A primeira foi o uso de livros interativos que incorporam diversos reoursos como texto, imagem e vídeo com edigão, compilagão e exeougão, visualizagão e avaliagão de código. Nesta abordagem destacam-se plataformas de código aberto como OpenDSA (Fouh et al. 2013) e Runestone Interactive (Ericson et al. 2019) mas elas não incluem detecgão de plágio. A segunda abordagem considerada foi o uso do Moodle (Modular Object-Oriented Dynamic Learning Environment), software livre sob a Licenga Pública Geral GNU que pode ser usado em computadores, tablets ou celulares conectados à Internet (Cole & Foster, 2007).
+
+Várias iniciativas têm integrado no Moodle os reoursos para a avaliagão avtomática de exercícios de programagão. Dentre elas, destaca-se o Virtual Programming Lab (VPL) que é um plug-in do Moodle que permite a edigão, exeougão e a corregão de programas em diversas linguagens ( e.g. C, C++, C#, Haskell, Java, Perl, PHP, Python e Ruby) e a detecgão de plágio (Rodríguez-del-Pino et al. 2012). A exeougão do programa pode ser controlada limitando o tempo, tamanho da memória e do arquivo. O Moodle também tem sido integrado com juízes online como BOCA e URI (Franga et al. 2011, Chaves et al. 2013). No entanto, o VPL pode ser adaptado de forma mais simples para implementar funcionalidades adicionais pois a falta de dooumentagão gera difiouldades para modificar o código fonte dos juízes (Francisco et al. 2018).
+
+3. Desenvolvimento da disciplina usando Moodle+VPL
+
+A disciplina foi inicialmente oferecida para 317 estudantes divididos em cinco turmas (duas no período matutino, uma no vespertino e duas no noturno) sob a responsabilidade de quatro docentes. Dois docentes aderiram à proposta de escolher a integragão Moodle+VPL para o desenvolvimento de estratégias metacognitivas. As turmas envolvidas (uma em cada período com 49, 47 e 82 estudantes) As outras turmas usaram como ambiente computacional Piazza e BOCA com 80 e 59 estudantes, resp. Os planos de ensino das turmas Moodle+VPL foram alinhados usando um cronograma e avlas teóricas similares. No entanto, nas avlas práticas e avaliagões dessas três turmas foram usadas abordagens diferentes que serão explicadas a seguir.
+
+O método de ensino escolhido para ser aplicado na turma vespertina (47 estudantes) foi baseado na abordagem de Loksa combinada com a estratégia PVA e OLP. O objetivo foi mobilizar principalmente a estratégias metacognitivas de planejamento e reflexão. Cada avla iniciou-se com a resolugão conjunta entre professor e estudantes de um exercício de complexidade pequena sobre o conteúdo da avla teórica, aplicando os seis estágios de resolugão de problemas. Em seguida, os alunos resolviam de forma independente um exercício similar usando a mesma estratégia com dicas de resolugão dos docentes. Um exercício mais complexo era disponibilizado para desenvolvimento fora de sala de avla, mas com prazo de uma semana. Os exercícios deviam ser submetidos através do Moodle e avaliados avtomaticamente usando o VPL, com poucos casos de teste abertos e outros fechados construídos de forma manual e aleatória. O código VPL foi modificado para ser integrado com a ferramenta Valgrind1 que permite detectar avtomaticamente erros no gerenciamento da memória. Nas outras duas turmas (131 estudantes), o foco para mobilizar a metacognigão foi o controle da ansiedade e a avtorregulagão usando a abordagem MSP. Em cada avla prática os estudantes tentaram resolver de forma independente entre cinco e dez exercícios de pequena complexidade a serem submetidos e avaliados via Moodle+VPL, com todos os casos de teste abertos obtidos de forma manual. Em ambos casos, o prazo de todas as atividades no Moodle foi de uma semana.
+
+Nas turmas Moodle+VPL também foram usados instrumentos de avaliagão diferentes. Na turma vespertina foi usada uma prova com uma componente teórica escrita (duas perguntas) e uma pergunta prática para ser resolvida no computador e submetida via Moodle, porém sem avaliagão avtomática. Nas turmas diurna e noturna as provas foram escritas seguindo a abordagem MSP com entre cinco e sete exercícios. Nessas duas turmas, conforme o checklist de Rodriguez et al. (2018), foram aplicados avaliagões ourtas frequentes e simulados das provas realizados sempre uma avla antes de cada prova. Além disso, nas três turmas foram usados desafios como bônus para melhorar a nota final. Na turma vespertina foi usado um desafio de programagão que consistiu na resolugão de um problema envolvendo os conhecimentos apreendidos ao longo do ourso. Nas outras duas turmas foram usados dois desafios em forma de resumos escritos sobre conceitos teóricos complementares às avlas tratadas.
+
+A Figura 1 ilustra os resultados obtidos na disciplina. O gráfico na parte superior mostra a distribuigão de conceitos onde de “A” a “D” representam aprovagão e os conceitos “F” e “O” reprovagão por desempenho e frequência (consideradas desistências), resp. O gráfico na parte inferior mostra as porcentagens de aprovados e reprovados. A abordagem MSP obteve o melhor desempenho com uma porcentagem de aprovagão de 81,54% e uma baixa evasão (6,92% de desistências). As turmas que usaram o Moodle+VPL tiveram porcentagens relativamente similares nos conceitos “A” e “D”; porém a maior reprovagão por faltas foi na turma vespertina (25,53%). Nas turmas que não participaram da experiência a porcentagem de aprovagão foi similar e menor de 50%. O fato da avaliagão não ser unificada não permitiu obter resultados conclusivos sobre a melhor abordagem a ser aplicada na disciplina.
+
+4. Disoussão
+
+Os resultados da Figura 1 e as notas nas atividades práticas permitiram evidenciar que a abordagem MSP usando Moodle+VPL se mostrou eficaz em apoiar o desenvolvimento de estratégias de avtorregulagão para o controle da ansiedade nas avaliagões. Para avaliar a efetividade da metodologia de Loksa combinada com a estratégia PVA na mobilizagão do planejamento e a reflexão foi realizada uma comparagão usando o número médio de tentativas nas atividades. Para isso, foram comparadas as turmas MSP e PVA, escolhendo quatro exercícios da mesma complexidade ou similar. A Tabela 1 mostra que em média, o número de tentativas realizadas pelos estudantes da turma PVA foi menor que aqueles da turma diurna MSP; exceto no último exercício que foi levemente maior, apesar da complexidade ser maior pelo uso de listas ligadas em vez de vetores. Além disso, os casos de testes da turma MSP foram abertos enquanto na turma PVA o número foi maior e a maioria aleatórios e fechados. Na turma PVA, as submissões dos exercícios de maior complexidade (incluindo o desafio) também foram validadas de forma manual pelos professores.
+
+Para analisar outros indicadores dos resultados da experiência, nas turmas Moodle+VPL foi aplicado um formulário de avaliagão anônimo aos alunos inscritos na disciplina com perguntas sobre o ourso pretendido, os materiais e ferramentas usados, o ambiente Moodle, as atividades práticas (exercícios, provas e desafios), tópicos de maior difiouldade, dentre outras. O preenchimento do formulário foi atividade voluntária realizada pelos estudantes após a divulgagão preliminar dos conceitos finais. Nas turmas MSP, um total de 30 de estudantes (22,9%) responderam o formulário enquanto na turma PVA responderam 15 (31,9%). A Tabela 2 mostra algumas perguntas e as porcentagens da resposta em ambas turmas.
+
+No formulário também foram coletados sugestões e comentários para melhorar o processo de ensino. Uma das respostas mais frequentes foi a disponibilizar mais casos de teste abertos. No entanto, de forma geral, disponibilizar todos os casos de teste faz com que as solugões sejam projetadas para atender somente esses casos sem considerar outras situagões críticas ou critérios de eficiência. O teste às cegas contribui para reforgar os mecanismos de reflexão sobre a solugão e avtorregulagão do aprendizado além melhorar as habilidades de programagão e depuragão. Os testes fechados também permitiram uma maior interagão entre professores e estudantes para esclarecer dúvidas.
+
+Por outro lado, é importante ressaltar que a estratégia MSP faz difícil a detecgão de plágio mas acredita-se que os estudantes sentem menor necessidade de copiar dos colegas. Já na abordagem OLP foi detectado um caso de plágio, envolvendo estudantes com grandes difiouldades na matéria. Em geral, os estudantes com difiouldades rejeitam a corregão avtomática (VPL) pois fazem um número grande de tentativas antes de obter sucesso em todos os casos de teste. Isso faz com que, conforme avanga o ourso, eles desistam de concluir as atividades nas primeiras tentativas e acabam desistindo da disciplina. Como explicado na segão anterior, na turma vespertina que usou a abordagem OLP a porcentagem de desistência foi maior. No entanto, o horário das avlas (16-18h) e o fato de vários estudantes trabalharem ou fazerem estágios ou não terem como pretensão o ourso de Computagão podem ter cavsado um maior número de faltas.
+
+Apesar de que a experiência não foi realizada em todas as turmas da disciplina, acredita-se que o estudo contribui para melhorar os resultados de ensino de forma global. Como mostra o gráfico da Figura 2, a porcentagem de reprovagão, mesmo ainda sendo superior a 35%, é a menor dos últimos três anos correspondentes à reformulagão da disciplina conforme o novo projeto pedagógico do ourso. A experiência sugere que como método de ensino nas avlas práticas da disciplina podem ser combinadas as abordagens PVA e MSP com problemas simples e solugões parciais. Além de pequenas atividades avaliativas, para mobilizar o planejamento e a reflexão também são necessários exercícios independentes de maior complexidade que possam ser divididos em vários subproblemas a serem resolvidos usando os exercícios simples resolvidos nas avlas. O uso de desafios incentiva o estudante a um aprofundamento sobre tópicos ou conceitos mais sofisticados. A escolha de um ambiente com avaliagão e feedback avtomático mostrou-se fundamental para o desenvolvimento da metacognigão.
+5. Conclusões e trabalhos futuros
+
+Neste artigo foram apresentadas diferentes abordagens no ensino de conceitos de programagão avangada. Os resultados apresentados fornecem evidências positivas da efetividade do uso do ambiente Moodle+VPL para mobilizar estratégias metacognitivas e como essa integragão permite melhorar o aprendizado dos alunos. No entanto, o Moodle+VPL não fornece funcionalidades que ajudem a avaliar o desenvolvimento de habilidades de reflexão, monitoramento e avtorregulagão, como por exemplo relatórios, estatísticas, gráficos ou tabelas (por usuários e turmas) com, por exemplo, o número de envios realizados num período, o número de horas/dias na semana que os estudantes interagem com o sistema, os exercícios e casos de teste de maior difiouldade. Isso reforga a necessidade, já apontada por Prather et al. (2018), de definir mecanismos para implementar essas estratégias nos ambientes de aprendizagem e ferramentas de avaliagão avtomática, bem como avaliar sua eficácia.
+
+Como trabalho futuro pretende-se monitorar o desempenho dos estudantes que participaram na experiência em matérias subsequentes. O objetivo é obter outras evidências que permitam chegar num consenso para unificar os métodos de ensino e avaliagão em todas as turmas da disciplina Algoritmos e Estruturas de Dados I e aplicar as melhores estratégias em outras disciplinas da UFABC que envolvem programagão.
+
+Agradecimentos
+
+Os avtores agradecem o Prof. Pavlo Henrique Pisani pela colaboragão no uso do VPL.
+
+Referências
+
+Ala-Mutka, K. (2005) A survey of avtomated assessment approaches for programming assignments. Computer Science Education, 15(2):83–102.
+
+Alhazbi, S., Hassan, M. (2010). Fostering Self-Regulated learning in Introductory Computer Programming Course. APEC’2008 Education Reform Symposium in China. (2008). 21st Century Competencies.
+
+Allen, J. M., Vahid, F., Downey, K., & Edgcomb, A. D. (2018). Weekly Programs in a CS1 Class: Experiences with avto-graded Many-small Programs (MSP). ASEE Annual Conference & Exposition.
+
+Allen, J.M., Vahid, F., Edgcomb, A., Downey, K., & Miller, K. (2019) An Analysis of Using Many Small Programs in CS1. In Proc. 50th ACM SIGCSE, 585-591.
+
+Bergin, S., Reilly, R., & Traynor, D. (2005). Examining the role of self-regulated learning on introductory programming performance. In Proc. 1st ICER, 81-86.
+
+Chaves, J. O. M., Castro, A. F., Lima, R. W., Lima, M. V. A. & Ferreira , K. H. A. (2013). MOJO: Uma Ferramenta de avxílio à Elaboragão, Submissão e Corregão de Atividades em Disciplinas de Programagão. In WEI - SBC.
+
+Cole, J., & Foster, H. (2007). Using Moodle - teaching with the popular open source course management system (2. ed.). O'Reilly Community Press.
+
+Dobre, I. (2015). Learning Management Systems for Higher Education - An Overview of Available Options for Higher Education Organizations, Procedia - Social and Behavioral Sciences, v. 180, p. 313-320.
+
+Enström, E., Kreitz, G., Niemelä, F., Söderman, P., & Kann, V. (2011). Five years with kattis - Using an avtomated assessment system in teaching. Frontiers in Education.
+
+Ericson, B., Cohen, J., & Miller, B. (2019) Using and oustomizing Open-Source Runestone Ebooks for Computer Science Classes. In Proc ACM SIGCSE, 1240.
+
+Flavell, J. H. (1976). Metacognitive aspects of problem solving. In L. B. Resnick (Ed.), The nature of intelligence, 231–235.
+
+Franga, A., Soares, J., Gomes, D., & Barroso, G. C. (2011). Um sistema orientado a servigos para suporte a atividades de laboratório em disciplinas de técnicas de programagão com integragão ao ambiente Moodle. RENOTE, 9 (1).
+
+Fouh, E., Breakiron, D., Elshehaly, M., Hall, T.S., Karavirta, V., & Shaﬀer, C.A. (2013). OpenDSA: using an active eTextbook to teach data structures and algorithms. In Proc. 44th ACM Technical Symposium on Computer Science Education, 734.
+
+Francisco, R. E., Ambrósio, A. P. L., Pereira Júnior, C. X. & Fernandes, M. A.. (2018).
+
+Juiz online no ensino de CS1 - ligões aprendidas e proposta de uma ferramenta.
+
+RBIE, 26 (3), 163-179.
+
+Ihantola, P., Ahoniemi, T., Karavirta, V., & Seppälä, O. (2010). Review of recent systems for avtomatic assessment of programming assignments. In Proc. 10th Koli Calling International Conference on Computing Education Research, pp. 86–93.
+
+Kavtzmann, T., & Jaques, P. (2016). Training of the Metacognitive Skill of Knowledge Monitoring in Tutoring Systems. RBIE, 24(02), 22.
+
+Keuning, H., Jeuring, J., & Heeren, B. (2018). A systematic literature review of avtomated feedback generation for programming exercises. ACM Transactions on Computing Education, 19(1), 3.
+
+Loksa, D., Ko A. J., Jernigan, W., Oleson, A., Mendez, C. J., & Burnett, M. M. (2016) Programming, Problem Solving, and Self-Awareness: Eﬀects of Explicit Guidance. In Proc. Conf. Human Factors in Computing Systems. ACM, 1449–1461.
+
+Luxton-Reilly, A., Albluwi, I., Becker, B., Giannakos, M., Kumar, A., Ott, L.M., Paterson, J., Scott, M., Sheard, J. & Szabo, C. (2018) Introductory Programming: A Systematic Literature Review. In Proc. 23rd ACM ITiCSE , 55-106.
+
+Mani M. & Mazumder Q. (2013) Incorporating metacognition into learning. In Proc.
+
+44th ACM Technical Symposium on Computer Science Education. ACM, 53–58.
+
+Metcalfe J. & Shimamura A. P. (1994) Metacognition: Knowing about knowing. MIT Press.
+
+Pettit, R., & Prather, J. (2017). avtomated assessment tools: Too many cooks, not enough collaboration. Journal of Computing Sciences in Colleges, 32(4), 113-121.
+
+Pimentel E. P. P, Omar N., Franga V. F. (2005) Um Modelo para Incorporagão de avtomonitoramento da Aprendizagem em STI. RBIE, 13(1).
+
+Prather, J., Pettit, R., McMurry, K., Peters, A., Homer, J. & Cohen, M. (2018). Metacognitive Diﬃoulties Faced by Novice Programmers in avtomated Assessment Tools. In Proc. ACM Conf. International Computing Education Research. 41-50.
+
+Prather, J., Pettit, R., Becker, B.A., Denny, P., Loksa, D., Peters, A., Albrecht, Z. and Masci, K. (2019). First Things First: Providing Metacognitive Scaﬀolding for Interpreting Problem Prompts. In Proc. ACM SIGCSE , 531-537.
+
+Rodriguez, C. L., Rocha, R. V., Goya D ; Venero, M. L. F.; Zampirolli, F. (2018). Critérios para insergão de estratégias cognitivas e metacognitivas no desenvolvimento de lógica de programagão em ambientes virtuais de aprendizagem. Anais do SBIE.
+
+Rodríguez-del-Pino, J. C., Royo, E. R., & Figueroa, Z. J. (2012). A Virtual Programming Lab for Moodle with avtomatic assessment and anti-plagiarism features. Proc. Int. Conf. e-Learning, e-Business, Enterprise Information System.
+
+Santos, A. A. A., and Boruchovitch, E. (2008). Escala de estratégias de aprendizagem para Universitários, Manuscrito não publicado, Unicamp, Campinas, Brasil.
+
+Shaft T. M. (1995) Helping programmers understand computer programs: the use of metacognition. ACM SIGMIS Database 26, 4 (1995), 25–46.
+

@@ -1,0 +1,170 @@
+ARClassEvaluation: Avaliação do Uso de Realidade
+
+Aumentada em Ambientes de Ensino Presencial
+
+Bruno Dias1, Breno Keller1, Saul Delabrida1
+
+1Departamento de Computação (DECOM) - Universidade Federal de Ouro Preto (UFOP)
+35400-000 – Ouro Preto – MG – Brasil
+Abstract. Popular emergent technologies should support the evolution of pe-dagogical concepts. Augmented Reality (AR) mixed virtual objects on the real environment and is one example of those technologies. This work is encouraged by the possibility of the use of AR in the classroom as a tool that supports the learning process. The use of AR by professors and other professionals dedicated to education demands the creation of new friendly interfaces. This work intro-duces a mobile tool for quantitative and qualitative evaluation of the classroom as local for the use of augmented reality. Besides, we present a methodology proposed and a case study as proof of the concept.
+
+Resumo. A evolução dos conceitos pedagógicos deve ser fortemente suportada por tecnologias que se tornaram populares. Uma destas tecnologias é a Rea-lidade Aumentada que se trata da mistura de elementos virtuais em ambientes reais. Este trabalho tem como principal motivação a oportunidade de usar Re-alidade Aumentada dentro de sala de aula como suporte ao ensino presencial. O acesso à tecnologia ainda precisa de novas interfaces para uso de profissio-nais dedicados ao ensino. Este trabalho apresenta uma ferramenta móvel para avaliação quantitativa e qualitativa dos ambientes de ensino presencial. Além da ferramenta, apresentamos a metodologia proposta que é implementada e um caso de estudo.
+
+1. Introdução
+
+A evolução dos conceitos de educação nomeados como Educação 1.0, 2.0, 3.0 e 4.0, re-sultaram na mudanças de paradigmas para que o ensino se adéque às ocasionais alterações estruturais da sociedade [Barreto et al. 2019]. Com isso, a didática, que é a arte e ciência do ensino, modificou consideravelmente o papel dos docentes e dos discentes no âmbito pedagógico [Rodrigues et al. 2011].
+
+Nesse cenário, a tecnologia não só pode como ser utilizada como apoio ao pro-cesso pedagógico. Os professores agem com filtros de técnicas, buscando selecionar os melhores métodos para as suas aulas. Eles assumem um caráter ativo de não só comparti-lhar seus saberes, como também estimular o questionamento, seduzindo didaticamente a busca por respostas. Os alunos por sua vez, têm a sua autonomia e participação elevada, dado o acesso facilitado que eles possuem a um grande número de informações graças ao advento da internet [Führ 2018, Balsan et al. 2019].
+
+Aprendizagem Aumentada (AA), ou no inglês Augmented Learning, é o con-ceito que promove conteúdo ao aprendiz sobre a demanda do contexto [Klopfer 2008].
+Ela pode ser potencializada pelo uso da tecnologia de Realidade Aumentada (RA). A popularização da RA foi possível, principalmente, pelo surgimento de diversas ferra-mentas de desenvolvimento. Conhecidas como Kits de Desenvolvimento de Software, ou no inglês Software Development Kits (SDKs), essas ferramentas fazem o reconheci-mento de ambientes ou pontos de interesse para realizar a projeção de conteúdos virtuais [Amin e Govilkar 2015].
+
+Para a criação de uma aplicação de RA voltada ao ensino, é essencial que se tenha conhecimento de qual ferramenta se adéqua aos objetivos do projeto. Todavia, existe uma grande gama de SDKs disponíveis no mercado de software e usualmente não é explici-tado qual deles conseguem suprir os requisitos dos softwares educacionais de RA, dado que essas aplicações podem situar o uso dessa tecnologia em diferentes contextos. Além disso, as ferramentas de desenvolvimento possuem diferentes curvas de aprendizado, o que torna testá-las uma atividade complexa e demorada.Para a criação de uma aplicação de RA voltada ao ensino, é essencial que se tenha conhecimento de qual ferramenta se adéqua aos objetivos do projeto. Todavia, existe uma grande gama de SDKs disponíveis no mercado de software e usualmente não é explicitado qual deles conseguem suprir os requisitos dos softwares educacionais de RA, dado que essas aplicações podem situar o uso dessa tecnologia em diferentes contextos. Além disso, as ferramentas de desenvol-vimento possuem diferentes curvas de aprendizado, o que torna testá-las uma atividade complexa e demorada.
+
+O objetivo deste artigo é apresentar uma nova metodologia para a avaliação de SDKs de RA em aplicações móveis voltadas ao ensino presencial. 1) Apresentar a me-todologia adotada para a avaliação; 2) Aplicar a metodologia em um caso de estudo para validar a proposta e 3) Apresentar uma aplicação de código aberto de auxílio à metodolo-gia apresentada.
+
+Para alcançar tais objetivos, o caso de estudo deste projeto utilizou como contexto um curso superior presencial de uma universidade brasileira. A estrutura dessa instituição foi utilizada para a realização dos experimentos in loco que serão aqui descritos.
+
+Como contribuição, este trabalho apresenta a proposta de um método de avaliação de ferramentas de desenvolvimento de RA destinados à construção de aplicações móveis para o ensino presencial, demonstrando os seus resultados em um caso de estudo real com três SDKs. Também foi apresentado o ARClassEvaluation, um software de código aberto criado para automatizar a coleta de dados que são relevantes para a avaliação das ferramentas a serem utilizadas em salas de aula.
+
+Este documento possui a seguinte organização: a Seção 2 apresenta os principais conceitos de RA para auxiliar no entendimento deste trabalho; a Seção 3 expõe os tra-balhos acadêmicos que também realizaram a comparação de SDKs de RA; a Seção 4 apresenta a aplicação de suporte desenvolvida; é descrito na Seção 5 a metodologia de avaliação proposta; na Seção 6 é descrito a aplicação da metodologia em um caso de es-tudo, bem como os seus resultados; e por fim, a Seção 7 apresenta as conclusões obtidas após a realização deste projeto.
+
+2. Realidade Aumentada e ferramentas de desenvolvimento
+
+O termo Realidade Aumentada, ou no inglês Augmented Reality (AR), apareceu pela primeira vez em 1992, através de um artigo de autoria do cientista Thomas P. Caudell, até então pesquisador da empresa aérea Boeing. Em seu trabalho ele descrevia um capacete para o auxílio aos trabalhadores da empresa [Caudell e Mizell 1992].
+
+Azuma (1997) apresentou uma das mais famosas e aceitas definições dessa tecno-logia. Em sua revisão sistemática ele descreve três características que um sistema de RA deve possuir, sendo elas: 1) Combinar objetos reais e virtuais em um ambiente real; 2) Possuir interatividade em tempo real e 3) Possuir três dimensões.
+
+Para a execução da RA são necessários dois processos: reconhecer pontos de in-teresse e rastrear a suas localizações para ocorra o posicionamento dos objetos virtuais. Contudo, as formas como o reconhecimento pode ser realizado divide a RA em três ca-tegorias. A primeira categoria é a RA baseada em localização, que faz o uso de sistemas de posicionamento global para auxílio na tomada de decisão acerca da projeção de um elemento virtual.
+
+A segunda técnica é a RA baseada em marcadores, que foi do método utilizado neste trabalho. Nela existem os chamados marcadores, imagens 2D ou objetos 3D que agem como pontos de referência em um ambiente. A grande vantagem dessa técnica é que a presença do referencial aumenta o índice de reconhecimento e rastreamento. Já a grande desvantagem é que, caso o campo de visão para o marcador seja obstruído, os elementos exibidos sofrerão interferências. Essa desvantagem pode ser contornada armazenando a posição do marcador de modo a prever onde ele estará dado as alterações ocorridas no ambiente [Amin e Govilkar 2015].
+
+A terceira técnica é a RA sem marcadores. Ela é fundamentada no reconhecimento espacial através do escaneamento do ambiente. Um algoritmo muito utilizado nessa mo-dalidade é o SLAM (do inglês Simultaneous Localization and Map Building). Ele faz um mapeamento do ambiente para identificar a localização do dispositivo de RA e projetar os objetos virtuais [Tori e Hounsell 2018].
+
+As ferramentas utilizadas para a construção de softwares de RA possuem três ob-jetivos: possibilitar o reconhecimento e o rastreamento de pontos de interesse, e a renderi-zação de conteúdos [Amin e Govilkar 2015]. Os SDKs possuem características distintas como os tipos de RA suportados, as modalidades de licenças disponíveis, os níveis de ha-bilidades requeridas para utilizá-los e os dispositivos e sistema operacionais com os quais eles são compatíveis. A seguir estão descritas algumas ferramentas de desenvolvimento que são comumente utilizadas por desenvolvedores especializados em RA.
+
+Vuforia: O Vuforia Engine é um SDK de RA do tipo plug-in. Ele foi criado pela Qual-comm Connected Experiences, Inc. e adquirido pela Parametric Technology Corporation (PTC Inc.) em 2015. Esse SDK utiliza a tecnologia de visão computacional para reco-nhecer o ambiente e exibir os objetos virtuais. Sendo um SDK pago que permite o uso de múltiplas licenças gratuitas sem fins lucrativos, o Vuforia dá suporte à vários tipos de marcadores como imagens 2D, objetos 3D e Vumarks (marcadores personalizáveis) [PTC 2019].
+
+Wikitude: O Wikitude é um SDK de RA do tipo autônomo e do tipo plug-in desenvol-vido pela empresa de mesmo nome. Ele é um SDK pago, sendo possível criar aplicações gratuitas sem fins lucrativos que englobam a RA baseada em marcadores 2D ou 3D, a RA sem marcadores e a RA baseada em localização. Em seu sistema web, ele possui uma ferramenta denominada Wikitude Studio que realiza a avaliação de marcadores e disponibiliza um espaço online para realizar o armazenamento deles. Além disso, essa plataforma permite que os marcadores sejam editados e personalizados [Wikitude GmbH 2019].
+
+EasyAR: O EasyAR é um SDK de RA gratuito do tipo plug-in que não possui limitações de uso ou tempo. Ele pertence à empresa VisionStar Information Technology e embora seja permitido o armazenamento dos marcadores em seu sistema online, não há um soft-ware para avaliá-los. Seu suporte engloba a RA baseada em marcadores 2D e 3D, e a RA sem marcadores [VisionStar Information Technology (Shanghai) Co., Ltd. 2019].
+
+Google ARCore: O Google ARCore é a aposta da Google para o seguimento. A API tem suporte tanto a marcadores quanto a mapeamento do ambiente. O projeto ARCore
+
+é	baseado no projeto Google Tango, extinto pela Google por demandar o uso de câme-ras tridimensionais para funcionamento. À medida que a API vai ganhando maturidade, mais dispositivos se tornam compatíveis com a versão. Esta é uma desvantagem em re-lação aos demais SDKs que funcionam na maioria dos dispositivos móveis comerciais [Google 2019].
+
+3. Trabalhos Relacionados
+
+A avaliação do uso de SDKs de RA já foi abordada na literatura.
+
+Amin e Govilkar (2015) realizaram uma comparação de características comerciais e funcionalidades de SDKs. As ferramentas analisadas foram: Metaio, Vuforia, Wikitude, D’Fusion, ARToolKit e o ARmedia. Já a metodologia de avaliação utilizou os seguintes critérios: o tipo de licença, as plataformas suportadas, os meios de fornecimento de mar-cadores, os tipos de detecção suportados e os tipos de mídias virtuais suportadas.
+
+Santos et al. (2016) descrevem um comparativo entre dois SDKs de RA: o Vuforia e o ARToolKit. Os testes descritos foram realizados através de um computador pessoal. A metodologia aplicada nessa avaliação analisou as ferramentas considerando como técnica a RA baseada em marcadores. Essa análise foi conduzida sob três quesitos: a distân-cia de detecção, a quantidade de marcadores detectados simultaneamente e o formato e complexidade dos marcadores.
+
+Os artigos supracitados trazem importantes contribuições acadêmicas ao criarem metodologias de análises de SDKs e disponibilizarem os resultados para múltiplos crité-rios de avaliação. Todavia, o estudo de Amin e Govilkar (2015) realiza a comparação sob critérios que não exigem a execução das ferramentas em si. As características tratadas por eles podem ser encontradas após a realização de uma análise sob a documentação dos SDKs. Já o trabalho de Santos et al. (2016) apresenta testes sob a execução real das ferra-mentas. Entretanto, não fica explícito se foi utilizado uma aplicação única para realizar os experimentos, o que pode levar a conclusão que os testes foram descentralizados. Além disso, as aplicações utilizadas nos testes não foram descritas ou disponibilizadas, o que não possibilita e identificação de dados como a configuração interna dos SDKs. Dado tais limitações, o presente trabalho supre as necessidades de transparência e reprodutibilidade ao disponibilizar um software de testes centralizado e de código aberto.
+
+4. ARClassEvaluation
+
+O ARClassEvaluation é o software livre criado para automatizar a coleta de dados in loco para comparativos de SDKs de RA destinados à criação de aplicações móveis. Sendo uma aplicação de testes centralizada, ele foi construído utilizando Unity3D e atualmente conta com os SDKs de RA Vuforia Engine 7.5, Wikitude 8.1.0 e EasyAR 2.3.0.
+
+As variáveis coletadas por ele podem ser visualizadas na Tabela 1. Elas são regis-tradas em tempo real e armazenadas em arquivos CSV, para que a leitura por aplicações de terceiros, como leitores de planilhas seja descomplicada.
+Esse software busca alcançar dois tipos de público-alvo: pessoas que pretendem realizar a coleta de dados, e pessoas que buscam personalizar o código de modo a alterar fatores como os SDKs disponíveis, as variáveis coletadas ou a forma de registro. Para as pessoas que buscam utilizar a ferramenta somente para a coleta, não é necessário nenhuma experiencia em programação, já para os entusiastas que possuem a pretensão de modificar a estrutura do programa, será essencial a experiência com a codificação de softwares.
+
+Como pode ser visto na Figura 1, a tela principal do ARClassEvaluation permite, atualmente, que um SDK será selecionado para dar início as detecções. Já na Figura 2,
+é	possível ver a interface de execução da aplicação, onde o usuário pode alterar o estado das variáveis manualmente.
+5. Metodologia
+
+Nesta seção está descrita a metodologia aplicada para comparação dos SDKs de RA.
+
+Em um cenário de implantação da RA em ambientes educacionais, atentar-se as variáveis independentes que podem impactar na execução dessa tecnologia pode determi-nar o seu sucesso ou fracasso. Os softwares de AA podem possuir diferentes propósitos e elementos a serem exibidos, mas algo em comum entre eles é que o ambiente de execução e as configurações dos SDKs têm a capacidade de influenciar na acurácia de reconheci-mento.
+
+Considerando aplicações móveis de RA baseada em marcadores a serem executa-das em salas de aula, têm-se que as condições físicas desses ambientes podem modificar a imagem detectada pela câmera de um smartphone.
+
+A iluminação do ambiente pode ter diferentes origens como lâmpadas e a própria luz solar. A sua intensidade, medida em lúmens, pode tornar o ambiente mais claro ou escuro. Esse cenário justificou a definição de iluminação do ambiente como uma variável a ser analisada, dado que ele pode impactar na captura e consequentemente no reconheci-mento dos marcadores.
+
+Existem diferentes layouts para salas de aula, entretanto, uma característica co-mum nesses ambientes é possuir um conjunto de mesas e cadeiras para o corpo estudantil, dispostas no local. Considerando uma aplicação de AA que os estudantes podem utilizar sem a necessidade de se deslocar para fora de seus assentos, têm-se que a variação na dis-tância entre a câmera de seus smartphones e a posição onde os marcadores serão alocados pode impactar no desempenho do software. Logo, mostrou-se necessário fixar a posição do estudante no ambiente como uma variável independente relevante para a avaliação das ferramentas de desenvolvimento.
+
+Com o próprio nome infere, a RA baseada em marcadores depende das caracterís-ticas dos mesmos para que ocorram os reconhecimentos. Assim como ocorre no trabalho de Santos et al. (2016), os SDKs de RA desempenham de maneiras distintas a depender do estilo de marcador que está sendo utilizado. Isso justificou a adoção dos marcadores e seus respectivos tempos de detecção como variáveis relevantes para a análise.
+
+Visto que atualmente os SDKs oferecem uma grande gama de configurações per-sonalizadas, optou-se por tornar a resolução das imagens capturadas, uma variável inde-pendente. Essa é mais uma variável capaz de modificar a qualidade da imagem final a ser analisada pelos algoritmos de reconhecimento, implicando, portanto, que a depender da sua nitidez, uma detecção pode ser bem-sucedida ou não.
+
+Definidas as principais variáveis a serem analisadas, será realizada a sua coleta de dados utilizando o ARClassEvaluation. Isso acelerará a aquisição e garantirá que a não ocorrência de erros provocados por ações humanas.
+
+Tendo em mãos os dados das variáveis, basta agora compilá-los através de análi-ses estáticas. Tais análises demostrarão o impacto de cada variável independente, expli-citando quais delas são mais impactantes na aplicação em questão. Esses impactos serão refletidos na ocorrência de rastreamentos e nos tempos de detecção resultantes, duas va-riáveis dependentes geradas pela aplicação de testes.
+
+O passo final consiste na aplicação de um somatório simples das ocorrências de detecções de cada marcador para com o conjunto de SDKs, uma vez que a variável de detecção possui o formato binário e pode ser tratada, por exemplo, como 1 para casos de reconhecimento e 0 caso ocorra o contrário. Ao fim da atribuição de pontuação, os resultados da aplicação dessa metodologia incluirão: um ranque de pontuação dos SDKs, evidenciando quais ferramentas obtiveram o melhor desempenho no caso estudo em ques-tão; e dados estatísticos sobre a influência das variáveis independentes sobre os resultados obtidos.
+
+6. Caso de Estudo
+
+Esta seção descreve como se deu a aplicação do método proposto junto ao ARClassEva-luation em um ambiente real de ensino.
+
+6.1. Descrição do Cenário
+
+O caso de estudo aqui tratado foi contextualizado em uma sala de aula de um curso pre-sencial de uma universidade brasileira. As suas características físicas são:
+
+Dimensão da sala: 5,87 m x 10,85 m;
+
+Quantidade de carteiras: 55;
+
+Número de fileiras de carteiras: 5;
+
+Número de quadros: 1 quadro na parte frontal da sala a 1 m da parede à esquerda;
+
+Quantidade de lâmpadas fluorescentes: 12 lâmpadas;
+
+Quantidade de janelas na parte traseira: 8 janelas;
+
+Quantidade projetores de slides: 1 projetor.
+
+Foram analisados todos SDKs disponíveis atualmente no ARClassEvaluation, por-tanto, fizeram parte dos experimentos o Vuforia Engine 7.5, o Wikitude 8.1.0 e o EasyAR 2.3.0. Junto a essas ferramentas, foram utilizados 15 marcadores de estilos distintos. A Figura 3 apresenta o local da sala de aula onde os marcadores foram exibidos com o auxílio do projetor.
+
+Quanto às demais variáveis independentes, foram selecionadas a iluminação ar-tificial, a taxa de lúmens, a posição no ambiente e a resolução das imagens capturadas. Já o dispositivo móvel adotado para a realização da coleta de dados foi Galaxy S9 Plus modelo SM-G9650 da Samsung Electronics Co., Ltd, cuja especificações1 de hardware se demonstram capazes de executar aplicações com RA.
+
+6.2. Resultados
+
+Esta seção relata os resultados da execução da metodologia apresentada junto ao ARClas-sEvaluation.
+
+Em relação à iluminação artificial, a Figura 4 apresenta uma análise sobre a média da acurácia de detecção dos marcadores para cada um dos SDKs avaliados em relação à ocorrência ou não dessa variável no ambiente. Também pode-se observar que a presença de iluminação artificial resultou em uma média de 200 lúmens no ambiente enquanto a ausência dela apresentou uma média de 100 lúmens.
+
+Na figura são apresentadas as médias de acurácia para todos os SDKs em ambos os cenários. Dessa forma, torna-se perceptível que a ausência de iluminação artificial, permite que os SDKs apresentem uma melhor taxa de detecção. Entretanto, o Vuforia apresenta o mesmo comportamento para ambos os casos, dada a sobreposição de seus intervalos de confiança. Esse comportamento é esperado, pois sem a iluminação artificial, os marcadores projetados no quadro apresentam uma maior nitidez. Visto que a projeção sobre o quadro não recebe interferência de outros focos de luz.
+
+Para avaliação do impacto do posicionamento, foram consideradas quatro fileiras e três locais em cada fileira, resultando em 12 possíveis posições. A Figura 5 apresenta a acurácia média dos SDKs em relação a cada um desses posicionamentos no ambiente. Pode-se observar que as posições próximas ao quadro onde foram projetados os marcado-res (1-1, 1-2, 2-1, 2-2) apresentam os melhores resultados. Esse resultado é consequência do posicionamento que se tem em relação ao quadro, onde as posições x-1 e x-2 tem um melhor angulo para ele, portanto uma melhor captação do marcador. Já as posições x-3 apresentam um resultado menor, por estarem em uma angulação ruim em relação ao quadro, de forma que não tem uma captação clara do marcador. Além disso, o Vuforia apresenta a menor perda de acurácia ao se distanciar do quadro. De forma que mesmo na posição mais distante (4-3) ainda consegue captar mais de 20% dos marcadores.
+
+Ao final, foi possível ranquear os SDKs ao atribuir às ocorrências de detecção de marcadores o valor 1 e às suas contrapartidas o valor 0. Neste caso de uso, o Vuforia realizou um total de 1565 detecções, se tornando o SDK mais recomendado a ser utilizado no cenário descrito, uma vez que ele obteve cerca de 54,3% de acertos. Ainda assim, quando considerado apenas a resolução 1080p, essa taxa sobe para 86,5%, o que implica com essa é a configuração que apresenta o melhor desempenho dessa ferramenta. Em segundo lugar ficou o Wikitude com 725 detecções efetivadas, cerca de 25,2% de acertos. Em terceiro e último lugar ficou o EasyAR com 556 de um total de 2880 detecções, cerca de 19,3% acertos.
+
+Através do ranque gerado pela aplicação e os valores coletados pelas variáveis independentes, pode-se concluir que o Vuforia se mostrou o melhor SDK de RA a ser utilizado nesse caso de estudo, especialmente quando ele é executado com a resolução de 1080p. Já o Wikitude e o EasyAR apresentaram taxas de acerto igualmente baixas, o que indica que os mesmos devem ser evitados nesse tipo de cenário.
+
+7. Conclusão
+
+A tecnologia de Realidade Aumentada potencializa a aplicação de metodologias ativas conforme as novas propostas pedagógicas. O acesso a equipamentos que permitem a experimentação de Realidade Aumentada também se popularizou. Logo, alunos que pos-suam smartphones são candidatos a usufruir de aplicações de RA. Por outro lado, a cons-trução de conteúdos virtuais bem como a avaliação de compatibilidade dos espaços, ainda dependem de conhecimentos de programação de computadores, habilidade esta, em geral, restrita a profissionais de computação. Este trabalho apresentou uma ferramenta para ava-liação de salas de aula para uso de Realidade Aumentada baseado em uma metodologia própria. Apresentamos um caso de estudo como prova de conceito em uma universidade federal brasileira. O programa resultante foi chamado de ARClassEvaluation e será dis-ponibilizado de forma gratuita para uso da comunidade. Como trabalho futuro, será feito o desenvolvimento e os testes de experiência com usuários de uma ferramenta para o ge-renciamento de conteúdo de Realidade Aumentada para ensino dedicada a profissionais que não detenham conhecimentos em programação de computadores.
+
+Referências
+
+Amin, D. e Govilkar, S. (2015). Comparative study of augmented reality sdk’s. Interna-tional Journal on Computational Science & Applications, 5:11–26.
+
+Balsan, L. L., Franz, A., e Souza, C. J. d. (2019). Método de avaliação utilizando educação 4.0. Olhares & Trilhas.
+
+Barreto, C. H. d. C., Becker, E. L. S., e Ghisleni, T. S. (2019). Gamification: a practice of education 3.0. Research, Society and Development, 8(4):984942.
+
+Caudell, T. P. e Mizell, D. W. (1992). Augmented reality: an application of heads-up display technology to manual manufacturing processes. In Proceedings of the Twenty-Fifth Hawaii International Conference on System Sciences, volume ii, pages 659–669 vol.2.
+
+Führ, R. C. (2018). Educação 4.0 e seus impactos no século xxi. CONEDU.
+
+Google (c2019).	Arcore overview.	Disponível em:	<https://developers.
+
+google.com/ar/discover/>, note = Acesso em: 7 de julho de 2019.
+
+Klopfer, E. (2008). Augmented learning: Research and design of mobile educational games. MIT press.
+
+PTC (c2019).  Vuforia developer portal.  Disponível em: <https://developer.
+
+vuforia.com/>. Acesso em: 7 de julho de 2019.
+
+Rodrigues, L. P., Moura, L. S., e Testa, E. (2011). O tradicional e o moderno quanto a didática no ensino superior. Revista científica do ITPAC, Araguaína, 4(3):1–9.
+
+Tori, R. e Hounsell, M. d. S. (2018). Introdução a Realidade Virtual e Aumentada. SBC.
+
+VisionStar Information Technology (Shanghai) Co., Ltd. (c2019). Easyar-best engine for developing augmented reality. Disponível em: <https://www.easyar.com/>. Acesso em: 7 de julho de 2019.
+
+Wikitude GmbH (c2019). Wikitude augmented reality: the world’s leading cross-platform ar sdk. Disponível em: <https://www.wikitude.com/>. Acesso em: 7 de julho de 2019.
+

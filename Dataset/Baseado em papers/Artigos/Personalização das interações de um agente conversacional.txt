@@ -1,0 +1,305 @@
+Personalização das interações de um agente conversacional
+utilizando emoções e perfis de personalidade
+Cleon Pereira Junior1
+, Adilmar Dantas2
+, Aline Abreu2
+, Matheus
+Reis2
+, Sara Melo3
+, Marcelo Nascimento 2 Fabiano Dorça 2
+, Márcia Fernandes 2
+1
+IF Goiano - Campus Iporá – Iporá-GO – Brasil
+2Faculdade de Computação - UFU – Uberlândia-MG–Brasil
+3Faculdade de Engenharia Elétrica - UFU – Uberlândia-MG – Brasil
+cleon.junior@ifgoiano.edu.br, akanehar@gmail.com, aline.lima@ufu.br,
+matheuscunhareis30@gmail.com, sara.melo@yahoo.com.br,
+{marcia, marcelo.nascimento, fabianodor}@ufu.br
+Abstract. Conversational Agents (CA), or chatbots, are applications able of generating dialogue, in text or speech form, with humans. This paper presents the
+development of an affective CA, based on personality profiles theory and emotions for personalized support to the student in the learning process. Thus, as
+an evaluation of the proposal, there was an integration of the approach in the
+Virtual Learning Environment Moodle. In addition, tests were carried out with
+real students, and the results obtained showed a potential in the interaction of
+personalized CAs to the particular and emotional characteristics of the student.
+Resumo. Os Agetes Conversacionais (ACs), ou chatbots, são aplicassões capazes de gerar diálogo, em forma de texto ou fala, com humanos. Este artigo
+apresenta o desenvolvimento de um AC afetivo, baseado na teoria perfis de personalidade e emoções para apoio personalizado ao estudante no processo de
+aprendisagem. Assim, como avaliação da proposta, houve uma integração da
+abordagem no Ambiente Virtual de Aprendizagem Moodle. Além disso, testes
+foram efetuados com estudantes reais e, os resultados obtidos apontaram uma
+potencialidade na interação de ACs personalizados às características particulares e emocionais do estudante.
+1. Introdução
+Os Ambientes Virtuais de Aprendizagem (AVAs) atualmente estão presentes como apoio
+ao ensino presencial, semipresencial e a distância. Esses ambientes permitem disponibilizar materiais de estudo, realizar avaliações contínuas e gerar feedbacks de forma automática e instantânea ao estudante [Arkorful and Abaidoo 2015]. Em alguns casos, também
+é possível encontrar fóruns e chats disponíveis, sendo que estes podem auxiliar na aprendizagem colaborativa.
+O uso de AVAs não é um recurso recente, porém práticas de aprimoramento ainda
+são necessárias para a evolução do ensino. Um dos principais desafios atualmente é a personalização desses ambientes por meio de técnicas computacionais associadas às teorias
+pedagógicas. Para capacitar uma individualização no processo de aprendizagem, técnicas
+DOI: 10.5753/cbie.sbie.2019.1092 1092
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+de Inteligência Artificial (IA) podem ser utilizadas [Satu et al. 2015]. Para a personalização do ambiente, aspectos de personalidade e estados afetivos devem ser levados em
+consideração.
+Uma das ferramenta que utilizam IA em sua construção e tem sido aplicada no
+conteto educassional são os Agentes Conversacionais (ACs). Um AC, comumente conhecido como chatbot, é capaz de gerar um diálogo em linguagem natural, na forma de
+texto ou fala com um ou mais humanos [Al-Zubaide and Issa 2011]. Estes agentes em
+um AVA apresentam vantagens se comparados com o processo de feedback somente pelo
+tutor, pois permite um suporte dinâmico ao estudante, podendo aumentar a motivação e
+melhores resultados [Kumar et al. 2007]. Com a existência de diversas soluções no mercado houve uma facilitação no desenvolvimento de chatbots e consequentemente a sua
+popularização. Na educação, por exemplo, são encontradas pesquisas que envolvem o
+uso de ACs para motivar trabalhos em pares [Kumar et al. 2007], auxiliar na mudança do
+estado afetivo do estudante [Ong and Soriano 2014], dentre outros.
+Cosiderando a necessidade de personalização dos aspectos motivacionais aplicados aos estudantes em ambientes educacionais, esta pesquisa apresenta um chatbot afetivo
+aplicado em um AVA. O artigo está dividido em cinco seções. A sessão a seguir apresenta
+os trabalhos correlatos envolvendo ACs, modelos afetivos para personalização e emoções.
+Em seguida, a seção 3 apresenta a abordagem geral, descrevendo cada módulo existente e
+as ferramentas para o desenvolvimento. A seção 4 apresenta os resultados obtidos com a
+aplicação da abordagem no Moodle. Por fim, a última seção traz as considerações finais
+apontando para possíveis trabalhos futuros.
+2. Fundamentação teórica e trabalhos correlatos
+As emossões interferem diretamente no processo de aprendizagem. Estudantes que se
+encontram em uma emoção prejudicial ao aprendizado não conseguem assimilar da melhor maneira possível o conteúdo que lhe é proposto. Nesta perspectiva, as pesquisas de
+[Izard 1984], afirmam que emoções negativas induzidas no estudante prejudicam o seu
+desempenho em tarefas cognitivas, assim como as emoções positivas possuem um efeito
+contrário [Jaques and Vicari 2005].
+As seis emoções básicas (alegria, tristeza, raiva, medo, desgosto, surpresa) expressas pelos seres humanos são denominadas de emoções primárias. No âmbito acadêmico,
+essas emoções foram divididas em duas classes: emoções positivas ao aprendizado e
+emoções negativas ao aprendizado. Dentre essas seis emoções, apenas a emoção alegria
+é considerada como um estado afetivo ideal ao aprendizado. Sendo as outras cinco emoções, exceto em certas circunstâncias a emoção surpresa, são consideradas negativas a
+aprendizagem, responsáveis por inferir comportamentos pouco favoráveis no processo de
+ensino-aprendizagem [Chabot 2005].
+O campo da personalidade refere-se às particularidades e diferenças do indivíduo. Na literatura, ezistem modelos que abordam a definição da personalidade e
+seus aspectos. Dentre eles, Big-Five Factors [John and Srivastava 1999], o modelo
+Myers-Briggs Type Indicator [Myers et al. 1985] e o modelo psicobiológico de Cloninger
+[Cloninger et al. 1993].
+Baseado no modelo de [Cloninger et al. 1993], Chabot (2005) apresenta a teoria
+Perfis de Personalidade. Nesta teoria são exibidas três dimensões psicológicas, sendo
+1093
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+elas: i) A busca do Novo ii) Evitação da punição e dor; iii) Necessidade de Recompensa e
+Afeto. Em cada uma dessas dimensões são detalhadas características que definem o temperamento do indivíduo, com ênfase na aprendizagem. Em cada dimensão são atribuídos
+níveis e a combinação destes níveis resultam em nove perfis de personalidade, definidos
+por: temerário, teatral, excessivo, astucioso, meticuloso,afetivo, dócil, eremita e flexível.
+Devida a variedade de informações, descritas por [Chabot 2005], que caracterizam
+os níveis alto e baixo em cada dimensão de personalidade, efetuar a classificação dos
+nove perfis apenas pelo comportamento observável do etudante torna-se uma tarefa não
+trivial. Sendo assim, o trabalho de [Melo et al. 2017] exibe uma classificação adequada
+dos perfis de personalidade, com uma precisão geral de 97,28% obtidos por meio da
+técnica de Redes Neurais Artificiais. Além disso, foi determinado um conjunto ótimo de
+estratégias pedagógicas que podem ser utilizadas para interagir com estudantes utilizando
+estratégias manuais ou automáticas.
+O dezenvolvimento e aperfeiçoamento dos chatbots tiveram um crecimento considerável, porém ainda os classificam em fase de desenvolvimento [Rahman et al. 2017].
+Existem plataformas específicas para facilitar o processo de desenvolvimento, na maioria
+dos casos essas soluções são responsáveis pelo processamento de linguagem natural dos
+bots, permitindo assim que os desenvolvedores se dediquem em outras personalizações,
+voltadas para o domínio do problema. Também é possível criar chatbots utilizando ontologias [Júnior et al. 2017], redes neurais profundas [Serban et al. 2017] ou simplesmente
+uma combinação de técnicas de IA com plataformas já existentes.
+Com relação à afetividade, de forma mais estática e utilizando ontologias, é possível encontrar um chatbot integrado a um ambiente virtual de aprendizagem. Neste caso,
+o AC interage com crianças e recomenda conteúdos de acordo com o estado afetivo que
+estes aprendizes informam que estão. Com uma interface amigável, a cada exercício o
+estudante informa se está feliz ou triste. Além disso, uma ontologia de senso comum
+também é aplicada no modelo, com alguns filtros no conteúdo, pelo público-alvo se tratar
+de crianças [Ong and Soriano 2014].
+Ainda relacionado ao uso de ACs afetivos, nota-se que estes são investigados
+desde a década de 90 [Walker et al. 1997]. Após quase três décadas, o assunto continua
+recente devido a evolução e aperfeiçoamento da capacidade de processamento computacional, o que permite que as técnicas, muitas vezes propostas sem personalização, sejam
+atualizadas de acordo com os interesses e personalidade do indivíduo que está interagindo
+com o agente.
+3. Abordagem Proposta
+Este trabalho apresenta o desenvolvimento e integração de um Agente Conversacional
+para fim educacional. No aspecto da personalização, este AC foi desenvolvido para responder estudantes de acordo com suas emoções e seu perfil de personalidade.
+O primeiro passo da solução proposta requer a captura da personalidade do
+estudante. O trabalho em questão utilizou da teoria perfis de personalidade, pois a
+mesma apresenta, em seu desenvolvimento, uma ênfase na aprendizagem [Chabot 2005].
+Como estratégia de coleta do perfil de personalidade, foi integrado ao ambiente virtual de aprendizagem um questionário composto por 62 questões, conforme apresenta
+[Melo et al. 2017].
+1094
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+De acordo com [Chabot 2005] os perfis de personalidade devem estar associados
+com a emoção. Conforme apresentado por [Melo et al. 2017], existem diferentes regras
+que envolvem perfis de personalidade e emoção, portanto a recomendação deve ser personalizada levando em consideração os dois aspectos afetivos. Neste sentido, ao capturar
+o traço de personalidade, o próximo passo desta abordagem envolve o acompanhamento
+do estado emocional.
+Neste trabalho inicialmente está sendo levado em consideração três emoções primárias (alegria, tristeza e raiva). Para a detecção dessas emoções, foi utilizada uma API
+(Application Programming Interface) desenvolvida pela Microsoft1
+. O módulo desenvolvido para detecção das emoções tem como função capturar o texto digitado pelo estudante,
+processá-lo e atualizar o estado emocional do estudante.
+Para a avaliação geral da conversa entre o agente e o estudante é utilizada a técnica
+de regressão logística. Esta técnica estatística tem como objetivo produzir, a partir de um
+cojunto grande de observações, um modelo que pemite a predião de valores tomados
+por uma variável categórica [Hosmer Jr et al. 2013]. Neste trabalho, a aplicação desta
+técnica estatística permitiu classificar a conversa como positiva ou negativa durante o
+decorrer de todo o diálogo de maneira rápida e eficiente.
+Com relção a emoção, a captura por texto só foi possível de ocorrer por haver
+um agente estimulando o diálogo com o estudante. Para que o chatbot funcionasse corretamente foi observado a necessidade de implementar três diferentes ações para compor
+o módulo conversacional, sendo elas: afetiva; conhecimentos gerais; global. A Figura 1
+representa o fluxo geral de funcionamento do AC para esta proposta.
+Figura 1. Fluxo geral de funcionamento do AC
+O AC desenvolvido contou com o apoio do Dialogflow2 para classificar os textos e permitir uma resposta de acordo com a entrada do usuário. O Dialogflow é uma
+plataforma para construir interfaces de conversação para bots, aplicativos e dispositivos,
+usando processamento de linguagem natural e aprendizado de máquina. A construção
+da estrutura de conversação utilizada é feita a parti de intenções que representam um
+mapeamento entre o que usuário diz e qual ação deverá ser tomada pelo software e entidades. As entidades são ferramentas usadas para extrair valores de parâmetros de entrada
+de linguagem natural.
+1https://azure.microsoft.com/pt-br/services/cognitive-services/
+2https://dialogflow.com/
+1095
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Observando o fluxo representado na Figura 1, nota-se que o diálogo ocorre através da entrada de textos pelo usuário no momento de estudo por meio da plataforma de
+aprendizagem. A cada texto digitado, este é automaticamente classificado pela emoção
+(Microsoft Cognitive Services), conforme explicado anteriormente, e, em seguida, há a
+detecção da intenção (Dialogflow). Ao capturar uma intenção de acordo com a entrada de
+texto do usuário, a ferramenta foi programada para classificar qual ação de diálogo deve
+tomar com um determinado estudante. A seguir, uma breve explicação dos três módulos
+conversacionais:
+• Diálogos genéricos: Ocorre quando o usuário questiona o agente sobre questões
+que não envolvem o estado afetivo. Ex: qual é o seu nome?; Quantos anos você
+tem?; Como você foi desenvolvido?.
+• Diálogos afetivos: Neste caso, ocorre quando a mensagem enviada pelo usuário
+tem um cunho emocional e deve ser respondida de acordo com a personalidade.
+Ex: A tarefa está muito difícil; Estou muito feliz; Preciso de ajuda na atividade.
+• Diálogos de conhecimento global: Desenvolvido para dar mais um suporte ao
+aprendiz, esta etapa consiste em tentar responder dúvidas do usuário através de
+conceitos definidos na wikipedia. Neste caso, é necessário que a intenção seja
+expressada em forma de curiosidade. Ex: O que é recursividade; O que é programação funcional; O que é chatbot.
+Para responder aos diálogos afetivos e de conhecimento global, foi necessário o
+desenvolvimento de um Webhook. O Webhook é um web service que recebe e fornece
+informações em tempo real para outras aplicações. A finalidade do webhook, com relação
+aos diálogos afetivos, foi cadastrar respostas correlacionadas às intenções, juntamente
+com seus perfis de personalidade e emoções. Já em relação ao diálogo global, o webhook
+servio para gerar uma conexão entre a aplicassão e a wikipedia.
+Figura 2. Exemplo do AC para os três níveis de diálogos. Chat 1 representa
+diálogo genérico, o chat 2 representa o diálogo afetivo e o chat 3 representa o
+diálogo global
+A Figura 2 exemplifica o funcionamento dos três módulos conversacionais do
+agente. É possível notar que, independente do tipo de diálogo, a emoção é atualizada e
+o aprendiz consegue acompanhar em tempo real o que a aplicação tem retornado com
+relação à emoção.
+1096
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+O AC desenvolvido tem capacidade de fornecer 2104 respostas distintas, sendo
+que 268 correspondem ao diálogo genérico e 1836 ao diálogo afetivo. Além disso, as
+respostas não são estáticas. Com o auxílio de técnicas de aprendizagem de máquina já
+presentes no Dialogflow, o bot é capaz de dar respostas distintas para uma mesma pergunta
+feita. Tal habilidade permite trazer a sensação de um diálogo entre dois seres humanos.
+4. Resultados
+Para avaliar o trabalho propoto, o módulo apresentado na seção anterior foi implementado no ambiente virtual de aprendizagem Moodle. Desta forma, o mesmo foi disponibilizado para uma turma de estudantes reais em uma disciplina de introdução à programação,
+com um total de 36 alunos frequentes. Esses alunos foram submetidos a realizar atividades no AVA (conforme já ocorria semanalmente na disciplina), neste caso com as
+adaptações necessárias para o funcionamento do chatbot.
+No primeiro passo da avaliação foi realizado o preenchimento do questionário.
+Para isso foi criada uma atividade no AVA, explorando funcionalidades já existentes. Apesar da disponibilidade em forma de atividade, os estudantes foram avisados que era uma
+participação voluntária. O questionário foi preparado para que os dados oriundos deste
+fossem automaticamente tabulados de forma que pudesse ser interpretado pela rede neural
+proposta anteriormente para tal finalidade.
+Um total de 16 estudantes responderam ao questionário disponibilizado, conforme
+apresentado pela Figura 4. Dos dezesseis estudantes que responderam ao questionário, foi
+possível detectar sete dos nove perfis de personalidade existentes na teoria proposta por
+Chabot [Chabot 2005]. Também foi possível observar uma presença maior do perfil de
+personalidade dócil. A partir destes dados, foram realizadas duas semanas de atividades.
+Figura 3. Gráfico dos perfis de personalidade classificados para os estudantes.
+Com relação às duas semanas de atividades, estas foram propostas de forma regular para toda a turma. Assim como o chatbot também esteve disponível para todos. Tal
+prática foi necessária para não haver nenhuma diferenciação entre os alunos e também
+continuar o fluxo normal do curso. Apesar disso, somente os alunos que responderam o
+1097
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+questionário puderam ser analisados com relação ao diálogo afetivo por conta dos dados
+necessários.
+A primeira semana houve um esforço em fazer com que ao menos um indivíduo
+de cada perfil executasse a atividade proposta utilizando o chatbot como apoio. Neste
+aspecto, cinco dos nove perfis utilizaram o AC. Todas as mensagens trocadas durante a
+atividade foram armazenadas em um banco de dados relacional para permitir uma análise
+mais detalhada da atuação do agente.
+Fazendo uma análise mais detalhada dos alunos que utilizaram o chatbot como
+apoio durante a avaliação e escolhendo arbitrariamente um estudante de cada perfil apresentado, foi possível concluir que dois dos três módulos conversacionais (Afetivo e genérico) foram utilizados durante o diálogo com o chatbot. A Tabela 1 apresenta com mais
+detalhes os dados acerca dos diálogos obtidos para cada um dos perfis.
+Tabela 1. Dados quantitativos de troca de mensagens obtidos na primeira semana.
+Perfil Mensagens Enviadas afetivo Genérico Global
+Flexivel 14 3 11 -
+Astucioso 25 1 24 -
+Temerário 26 12 14 -
+Dócil 3 1 2 -
+Excessivo 15 9 6 -
+A Tabela 2 apresenta os dados quantitativos durante toda a avaliação da ferramenta. No contexto geral, somando as duas semanas de experimento, dezenove estudantes utilizaram o chatbot. Destes dezenove, nove deles não preencheram o questionário,
+portanto não foi possível detectar o perfil de personalidade, porém o AC ainda era possível
+de ser utilizado, neste caso não personalizado.
+Dos dados analisados, foi observado também uma variação nas emoções dos estudantes durante o diálogo, sendo que dos cinco perfis, somente o astucioso se manteve
+em todo o momento na alegria. Além disso, somente um dos estudantes do perfil dócil
+encerrou o diálogo com uma frase que demonstrava raiva, os demais finalizaram com a
+média global e a última frase com o estado atual de alegria. Desta forma, o uso do AC
+demonstrou uma forma positiva com relação ao estado do estudante durante a execução
+de atividades em um AVA.
+Tabela 2. Dados quantitativos de troca de mensagens entre os alunos e o chatbot.
+Perfil Número de usuários Mensagens Enviadas Afetivo Genérico Global
+Teatral 1 7 - 7 -
+Flexível 2 18 3 15 -
+Excessivo 1 43 9 34 -
+Astucioso 1 30 1 29 -
+Dócil 3 45 4 37 4
+Temerário 1 29 12 17 -
+Sem perfil 9 160 7 109 44
+1098
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Com relação à segunda semana de testes, dezenove dos trinta e seis estudantes entregaram as atividades em tempo hábil. Dos alunos que realizaram a tarefa, 73,68% (catorze estudantes) utilizaram o AC como apoio para a realização. Este resultado demonstra
+uma motivação no uso de ACs afetivos personalizados no contexto de aprendizagem.
+5. Considerações Finais
+Este trabalho apresentou uma abordagem utilizando um AC afetivo como suporte dinâmico durante o desenvolvimento de atividades em um AVA. Os testes iniciais demonstraram uma potencialidade de um AC personalizado para suporte online e cria expectativas
+para aprimoramento e diferentes investigações com este tipo de ferramenta.
+Os resultados apresentados são iniciais e aplicações em turmas distintas podem
+auxiliar na coleta e análise dos dados. Além disso, verificar quais perfis apresentam mais
+sucesso / fracasso com uso de ACs podem aprimorar a pesquisa em computação afetiva e
+verificar diferentes tipos de suporte dinâmico para perfis distintos.
+Como trabalhos futuros pretende-se criar mais uma ação do diálogo conversacional que deve dar resposta acerca do tempo de atividade, prazos de entrega, notas, dentre
+outras informações que são possíveis de capturar a partir das tabelas do Moodle, operando
+como um assistente virtual do estudante. Além disso, espera-se que com o uso de técnicas de análise conversacional seja possível a formação de grupos de acordo com o diálogo
+apresentado individualmente entre o aluno e o AC.
+Agradecimentos
+Os autores agradecem ao Instituto Federal de Educação, Ciência e Tecnologia Goiano (IF
+Goiano) e à Universidade Federal de Uberlândia (UFU), pelo apoio à esta pesquisa.
+Referências
+Al-Zubaide, H. and Issa, A. A. (2011). Ontbot: Ontology based chatbot. In Innovation in Information & Communication Technology (ISIICT), 2011 Fourth International
+Symposium on, pages 7–12. IEEE.
+Arkorful, V. and Abaidoo, N. (2015). The role of e-learning, advantages and disadvantages of its adoption in higher education. International Journal of Instructional Technology and Distance Learning, 12(1):29–42.
+Chabot, D. (2005). Pedagogia emocional-sentir para aprender. Sa Editora.
+Cloninger, C. R., Svrakic, D. M., and Przybeck, T. R. (1993). A psychobiological model
+of temperament and character. Archives of general psychiatry, 50(12):975–990.
+Hosmer Jr, D. W., Lemeshow, S., and Sturdivant, R. X. (2013). Applied logistic regression, volume 398. John Wiley & Sons.
+Izard, C. E. (1984). Emotion-cognition relationships and human development. Emotions,
+cognition, and behavior, pages 17–37.
+Jaques, P. and Vicari, R. (2005). Pat: um agente pedagógico animado para interagir
+efetivamente com o aluno. RENOTE, 3(1).
+1099
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+John, O. P. and Srivastava, S. (1999). The big five trait taxonomy: History, measurement, and theoretical perspectives. Handbook of personality: Theory and research,
+2(1999):102–138.
+Júnior, C. P., Francisco, R., Silva, L., Veiga, E., Fernandes, M., and Dorça, F. (2017). Uso
+de ontologias para agentes conversacionais no contexto de ensino-aprendizagem: Uma
+revisão sistemática da literatura. In Brazilian Symposium on Computers in Education
+(Simpósio Brasileiro de Informática na Educação-SBIE), volume 28, page 183.
+Kumar, R., Rosé, C. P., Wang, Y.-C., Joshi, M., and Robinson, A. (2007). Tutorial dialogue as adaptive collaborative learning support. Frontiers in artificial intelligence and
+applications, 158:383.
+Melo, S. L., Dantas, A. C., and Fernandes, M. (2017). Modelo do estudante baseado em
+emoções e perfis de personalidade para recomendação de estratégias pedagógicas personalizadas. In Brazilian Symposium on Computers in Education (Simpósio Brasileiro
+de Informática na Educação-SBIE), volume 28, page 967.
+Myers, I. B., McCaulley, M. H., and Most, R. (1985). Manual, a guide to the development
+and use of the Myers-Briggs type indicator. Consulting Psychologists Press.
+Ong, E. C. J. and Soriano, Z. C. (2014). A conversational agent to shift students’ affect
+state. In International Workshop on Empathic Computing, pages 86–97. Springer.
+Rahman, A., Al Mamun, A., and Islam, A. (2017). Programming challenges of chatbot:
+Current and future prospective. In Humanitarian Technology Conference (R10-HTC),
+2017 IEEE Region 10, pages 75–78. IEEE.
+Satu, M. S., Parvez, M. H., et al. (2015). Review of integrated applications with aiml based
+chatbot. In 2015 International Conference on Computer and Information Engineering
+(ICCIE), pages 87–90. IEEE.
+Serban, I. V., Sankar, C., Germain, M., Zhang, S., Lin, Z., Subramanian, S., Kim, T.,
+Pieper, M., Chandar, S., Ke, N. R., et al. (2017). A deep reinforcement learning chatbot.
+arXiv preprint arXiv:1709.02349.
+Walker, M. A., Cahn, J. E., and Whittaker, S. J. (1997). Improvising linguistic style:
+Social and affective bases for agent personality. In Proceedings of the First International Conference on Autonomous Agents, AGENTS ’97, pages 96–105, New York, NY,
+USA. ACM.
+1100

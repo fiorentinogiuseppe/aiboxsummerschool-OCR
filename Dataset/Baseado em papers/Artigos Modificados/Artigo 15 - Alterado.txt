@@ -1,0 +1,154 @@
+O desenvolvimento do Pensamento Computacional alem´ do ensino em cienciasˆ exatas: uma revisao˜ da literatura
+
+Fabiula F. de Souza1, Ramon R. Leite1, Cecy M. Martins Brito1,
+Maria Lucia´ B. Vilella2, Caroline Q. Santos2
+Abstract. There is much research related to the application of Computational Thinking (CP) in the most diverse levels of teaching.However, when analyzing works that have already reviewed the literature on this subject, it was first noti-ced that there is not a consistent number of papers that use the PC beyond the exact sciences. In this sense, the present work seeks to investigate in a more spe-cific way how the teaching of the CP has been worked in disciplines that are not of exact, through a review of the literature. The results showed that the number of papers in Brazil in this cut is still incipient and that the teaching of the CP is still very focused on its application in the area of exact sciences, rather than being worked on a more interdisciplinary proposal.
+
+Resumo. Ha´ muitas pesquisas relacionadas a` aplicac¸ao˜ do Pensamento Com-putacional (PC) nos mais diversos n´ıveis de ensino. Porem,´ ao analisar traba-lhos que ja´ fizeram revisao˜ da literatura nessa tematica,´ observou-se a princ´ıpio nao˜ haver um consistente numero´ de trabalhos que empregam o PC alem´ das cienciasˆ exatas. Nesse sentido, o presente trabalho busca investigar de maneira mais espec´ıfica como o ensino do PC tem sido trabalhado em disciplinas que nao˜ sejam de exatas, atraves´ de uma revisao˜ da literatura. Os resultados evi-denciaram que o numero´ de trabalhos no Brasil nesse recorte ainda e´ incipiente e que o ensino do PC ainda esta´ muito voltado para sua aplicac¸ao˜ na area´ de cienciasˆ exatas, ao inves´ de ser trabalhado numa proposta mais interdisciplinar.
+
+1. Introduc¸ao˜
+
+O termo Pensamento Computacional (PC) foi definido por [Wing 2006], como en-volvendo a “resoluc¸ao˜ de problemas, a capacidade de projetar sistemas e a compre-ensao˜ do comportamento humano recorrendo aos conceitos fundamentais da Cienciaˆ da Computac¸ao”˜. A sua inserc¸ao˜ no contexto educacional, em diferentes n´ıveis do ensino, tem sido objeto de estudo em varias´ frentes.
+As habilidades do PC contribuem para aprendizagem de resoluc¸ao˜ de proble-mas em diversas areas´ do conhecimento, atraves´ de uma serie´ de etapas: coleta de da-dos, analise´ de dados, representac¸ao˜ de dados, decomposic¸ao˜ de problema, abstrac¸ao,˜ algoritmos e simulac¸ao˜. A organizac¸ao˜ da resoluc¸ao˜ de problemas baseados nestes conceitos convida o estudante a desenvolver competenciasˆ e estrategias´ mais eficientes [Conforto et al. 2018].
+
+Para [Nascimento et al. 2018], os conceitos e habilidades do Pensamento Com-putacional devem ser utilizados no ensino de diversas disciplinas, nao˜ somente as areas´ da computac¸ao˜ e cienciaˆ exatas, com o intuito de ampliar o desempenho escolar desde a educac¸ao˜ basica´ ate´ o ensino superior. Uma das propostas difundidas e´ a tentativa de criar uma disciplina espec´ıfica para desenvolvimento do PC. Outra abordagem defende o seu aspecto transdisciplinar, ou seja, que o modo de se pensar do PC seja empregado como metodologia de ensino das varias´ areas´ do conhecimento.
+
+Ha´ muitas pesquisas relacionadas a` aplicac¸ao˜ do Pensamento Computacional nos mais diversos n´ıveis de ensino. Porem,´ ao analisar trabalhos que ja´ fizeram revisao˜ da literatura nessa tematica,´ observou-se que, a princ´ıpio, nao˜ parece haver um numero´ ex-pressivo de trabalhos que nao˜ sejam das areas´ de cienciasˆ exatas que empregam o PC. Alem´ disso, os proprios´ trabalhos de revisao˜ da literatura encontrados possuem enfoques relacionados ao PC aplicado na Robotica,´ Programac¸ao,˜ uso de Tecnologias Digitais de Informac¸ao˜ e Comunicac¸ao˜ (TDICs) e outras areas´ das cienciasˆ exatas.
+
+Nesse sentido, o presente trabalho busca investigar de maneira mais espec´ıfica como o ensino do Pensamento Computacional tem sido trabalhado em disciplinas que nao˜ sejam das areas´ de cienciasˆ exatas. Tal analise´ permitira´ localizar poss´ıveis tendenciasˆ e lacunas que ainda existam nessa area,´ para que possam ser exploradas em futuras pesqui-sas, sobretudo no Brasil.
+
+O restante do artigo esta´ organizado da seguinte forma: na Sec¸ao˜ 2 sao˜ apresen-tados os principais trabalhos relacionados que descrevem revisoes˜ sistematicas´ de litera-tura sobre o desenvolvimento do pensamento computacional; na Sec¸ao˜ 3 e´ apresentada a metodologia utilizada no presente trabalho; na Sec¸ao˜ 4 sao˜ apresentados os resultados obtidos; na Sec¸ao˜ 5 os resultados sao˜ analisados e, por fim, na Sec¸ao˜ 6, sao˜ apresentadas as considerac¸oes˜ finais.
+
+2. Trabalhos Relacionados
+
+Para verificar se a realizac¸ao˜ desta revisao˜ da literatura apontaria informac¸oes˜ ate´ entao˜ desconhecidas sobre o desenvolvimento do Pensamento Computacional alem´ do ensino em cienciasˆ exatas, foram analisadas revisoes˜ sistematicas´ da literatura, que se caracteri-zam pelo seu carater´ mais objetivo. Os trabalhos considerados investigaram questoes˜ rela-cionadas ao PC publicados no Congresso Brasileiro de Informatica´ na Educac¸ao˜ (CBIE).
+
+[Barcelos et al. 2015] apresentam uma revisao˜ sistematica´ da literatura para iden-tificar como as relac¸oes˜ entre a Matematica´ e o Pensamento Computacional foram de-monstradas por meio do desenvolvimento de atividades didaticas´ descritas na literatura. Foram consultados artigos no per´ıodo entre 2006 e 2014. Os autores observaram que, dentre diversos assuntos da matematica,´ ha´ predom´ınio de algebra,´ calculo´ e habilida-des cognitivas de alto n´ıvel e verificaram um aumento em experienciasˆ relacionadas ao pensamento computacional e matematica´ na educac¸ao˜ basica´.
+[Araujo et al. 2016] realizaram um mapeamento sistematico´ sobre como o pen-samento computacional e´ estimulado e avaliado no Brasil, cobrindo artigos de 2012 ate´ julho de 2016. Os autores conclu´ıram que as abordagens mais utilizadas para o est´ımulo do pensamento computacional sao˜ codigos,´ testes e programac¸ao˜.
+
+[Zanetti et al. 2016] apresentam, por meio de um mapeamento sistematico,´ uma visao˜ sobre a pesquisa relacionada ao Pensamento Computacional no Brasil no Ensino de Programac¸ao,˜ cobrindo artigos publicados no per´ıodo entre 2012 e 2015. Os resultados mostraram uma tendenciaˆ dos artigos encontrados voltados para o ensino medio,´ tecnico´ e fundamental. As praticas´ mais usadas nos estudos foram linguagem de programac¸ao˜ virtual, Jogos digitais e computac¸ao˜ desplugada.
+
+[Avila et al. 2017a] realizaram uma revisao˜ sistematica´ sobre o desenvolvimento de habilidades e competenciasˆ do Pensamento Computacional em estudantes do ensino basico,´ utilizando a robotica´ educacional como estrategia´ fundamental. Foram analisados nesse estudo artigos entre os anos de 2013 a 2016. Os resultados apontaram que a mai-oria dos projetos de robotica´ utiliza kits da empresa LEGO, e propoe˜ metodologias que trabalham com atividades praticas,´ em grupos e ludicas´.
+
+[Avila et al. 2017b] realizaram uma revisao˜ sistematica´ para identificar e analisar pesquisas relevantes que realizavam avaliac¸ao˜ de habilidades ou dimensoes˜ do PC. Esta revisao˜ buscou artigos no per´ıodo entre 2011 e 2016 e apontou que a maioria dos arti-gos encontrados utiliza a intervenc¸ao˜ com avaliac¸ao˜ propria´ e intervenc¸ao˜ com avaliac¸ao˜ propria´ fundamentada em metodos´ existentes. Entretanto diversos estudos nao˜ citam de forma clara um fundamento teorico´ para suportar os instrumentos de avaliac¸ao˜ e o pro-cesso avaliativo como um todo.
+
+[Carvalho et al. 2017] realizaram um mapeamento sistematico´ com o objetivo de investigar quais os principais Objetos de Aprendizagem sao˜ utilizados para realizar as ati-vidades embasadas pelo Pensamento Computacional, cobrindo artigos entre 2012 e 2017. Os resultados apontaram que os Objetos de Aprendizagem estimulam a aprendizagem e o interesse pelo conteudo´ apresentado pelo professor. As praticas´ mais usadas sao˜ ativi-dades ludicas,´ compostas de jogos, softwares educativos, kits de robotica´ e ambientes de programac¸ao˜.
+
+[Bordini et al. 2017] apresentam um mapeamento sistematico´ com o objetivo de expor o Pensamento Computacional em relac¸ao˜ ao Ensino Fundamental e Medio,´ co-brindo artigos entre 2012 e agosto de 2016. Observou-se que as praticas´ pedagogicas´ mais utilizadas no ensino medio´ e fundamental sao˜ as aulas de programac¸ao,˜ propos-tas atraves´ de projetos, abordagem scaffolding, habilidades de abstrac¸ao˜ e pensamento algor´ıtmico.
+
+[Nascimento et al. 2018] realizaram um mapeamento sistematico´ para investigar a contribuic¸ao˜ do Pensamento Computacional para a aprendizagem de disciplinas da Educac¸ao˜ Basica´. Foram consultados artigos publicados no per´ıodo entre 2012 e 2016. Esse estudo mostrou que na educac¸ao˜ basica,´ tanto no Brasil quanto no mundo, existem trabalhos sendo desenvolvidos a fim de estimular o uso do pensamento computacional no ensino de diversas disciplinas. A maioria dos trabalhos tratava das areas´ de exatas, mas foram identificados tambem´ nas areas´ Artes, Historia´ e Geografia.
+
+Os mapeamentos descritos acima abordam estudos do Pensamento Computacio-nal, com foco em diferentes aspectos. No entanto, a revisao˜ de literatura realizada neste trabalho se difere dos acima mencionados, pois pesquisa trabalhos nacionais e interna-cionais sobre o desenvolvimento do Pensamento Computacional com enfoque na sua aplicac¸ao˜ em outras areas´ do conhecimento, alem´ das Cienciasˆ Exatas.
+
+
+
+3. Metodologia
+
+
+Para verificar como o ensino do Pensamento Computacional esta´ sendo trabalhado em outras areas´ do conhecimentos, alem´ da Cienciasˆ Exatas, buscou-se fazer uma revisao˜ da literatura de trabalhos produzidos nesse campo. Para tanto, foram pesquisadas quatro bases de dados que contemˆ trabalhos relacionados ao tema. Sao˜ tresˆ bases nacionais, o Congresso Brasileiro de Informatica´ na Educac¸ao˜ (CBIE), Congresso da Sociedade Brasileira de Computac¸ao˜ (CSBS) e o Workshop de Informatica´ na Escola (WIE), e uma base internacional, a Association for Computing Machinery (ACM) Library. Tais bases foram escolhidas dada a sua importanciaˆ e relevanciaˆ de pesquisas relacionadas ao tema. O per´ıodo considerado para a busca compreende os anos de 2006, data em que o termo Pensamento Computacional surge no meio academico,ˆ ao mesˆ de abril de 2019.
+
+Nas bases nacionais, os termos de busca foram “Pensamento Computacional e Cienciasˆ Humanas”, “Pensamento Computacional e Humanidades”, “Pensamento Com-putacional e Literatura” “Pensamento Computacional e Ciencias”ˆ. Na base de dados in-ternacional, os termos utilizados para a busca por artigos foram “Computational Thin-king and Humanities”, “Computational Thinking and Human Sciences”, “Computational Thinking and Literature”, “Computational Thinking and Science”.
+
+A princ´ıpio foram considerados tanto os trabalhos que aplicam o ensino do PC em sala de aula (abordagem pratica),´ como tambem´ aqueles que propoem˜ e/ou discutem o curr´ıculo e as praticas´ pedagogicas´ do PC nas areas´ do conhecimento que nao˜ exclusiva-mente da area´ de exatas (abordagem teorica)´.
+
+Foram descartados da analise´ trabalhos com alguns enfoques espec´ıficos, a sa-ber: aqueles que trabalham o PC apenas com cienciasˆ exatas e no ambitoˆ da computac¸ao;˜ aqueles cujo principal objetivo e´ revisao˜ da literatura; trabalhos que nao˜ estavam dis-pon´ıveis na ´ıntegra, ou que pela parte dispon´ıvel nao˜ era poss´ıvel bem compreender o escopo e resultado do mesmo; e artigos que publicam o mesmo trabalho realizado (nesse caso utilizou-se a publicac¸ao˜ mais recente).
+
+Uma vez selecionados os artigos, buscou-se melhor compreender a abordagem dada aos trabalhos a partir das seguintes perguntas de pesquisa: (P1) O trabalho tem enfoque em apenas uma area´ do conhecimento (ou uma disciplina)? Entre as areas´ traba-lhadas, encontra-se a area´ de exatas? Empregam o PC em outras areas´ do conhecimento que nao˜ sejam cienciasˆ exatas? (P2) Ha´ algum trabalho que apenas proposˆ um curr´ıculo ou uma metodologia e nao˜ a aplicou efetivamente? (P3) Dentre aqueles que efetivamente aplicaram, identificaram alguma mudanc¸a no desempenho e, ou motivac¸ao˜ dos alunos? (P4) Qual o n´ıvel educacional para o qual foi direcionada a pesquisa (jardim de infancia,ˆ ensino basico,´ ensino superior)?(P5) Ha´ trabalhos no Brasil que desenvolvem o PC em outras areas´ do conhecimento, alem´ das cienciasˆ exatas?
+4. Resultados Obtidos
+
+A partir da pesquisa realizada, foram obtidos nove artigos na plataforma ACM Library. Nos anais dos eventos nacionais, foram obtidos um total de cinco artigos, sendo dois no CBIE, dois no CSBC e um no WIE. Selecionou-se, portanto, o total de 14 artigos, que se encontram listados na tabela 1. Para simplificar a menc¸ao˜ dos artigos no texto, foi criada uma coluna ID, cuja numerac¸ao˜ e´ utilizada como referenciaˆ ao longo desse trabalho.
+Com relac¸ao˜ a` pergunta de pesquisa numero´ 1 (P1), que diz respeito as` areas´ de conhecimento em que os trabalhos foram aplicados, tresˆ artigos desenvolveram habilida-des do PC integrando fundamentos da computac¸ao˜ em uma unica´ disciplina, o artigo de ID 9 teve enfoque em Cienciasˆ Biologicas,´ o ID 10 e ID 14 em Cienciasˆ. Dois artigos desenvolveram habilidades do PC em tresˆ areas´ do conhecimento, sem o envolvimento com a area´ das cienciaˆ exatas: os de ID 3 e ID 7, que trabalharam os topicos´ de Cienciasˆ Humanas, Cienciasˆ Biologicas´ e Artes.
+
+De forma interdisciplinar, nove artigos trabalham os conceitos do pensamento computacional em diversas areas´ do conhecimento, inclusive a matematica´. Sao˜ eles: ID 1 (Licenciatura em Computac¸ao,˜ Pedagogia, Matematica,´ Biologia, Historia´ e Letras), ID 2 (Artes, Biologia, Qu´ımica, Educac¸ao˜ F´ısica, L´ıngua Portuguesa ou Redac¸ao,˜ Ma-tematica),´ ID 4 (Matematica,´ Linguagens, Cienciasˆ Humanas, Cienciasˆ da Natureza), ID 5 (Ciencias,ˆ Filosofia, Matematica,´ L´ıngua Portuguesa, Ingles,ˆ Biologia e Historia),´ ID 6 (Historia,´ Artes, Cienciasˆ e F´ısica/Matematica),´ ID 8 (Educac¸ao˜ F´ısica, Alfabetizac¸ao,˜ Matematica,´ Escrita Criativa e Arte), ID 10 (Ciencias,ˆ Tecnologia, Engenharia e Ma-tematica),´ ID 12 (Tecnologia da Informac¸ao,˜ Matematica,´ Estudos Gerais, Inglesˆ e
+
+Chines),ˆ ID 13 (Sociologia, Matematica´ e Musica)´.
+
+Tratando-se da pergunta numero´ 2 (P2), que distingue os trabalhos puramente teoricos´ daqueles que buscam uma intervenc¸ao˜ pratica,´ que os trabalhos de ID 7 e ID 10 apenas propuseram uma metodologia ou um curr´ıculo, ou mesmo apenas uma discussao˜ sobre o tema, mas sem propor uma aplicac¸ao˜ de forma concreta. Por outro lado, doze tra-balhos se propuseram a aplicar o ensino do PC atraves´ de oficinas, entrevistas, seminarios´
+ou cursos, sendo ID 1 (seminarios´ e oficinas), ID 2 (oficinas), ID 3 (oficinas), ID 4 (cur-sos), ID 5 (oficinas e entrevistas), ID 8 (oficinas e entrevistas), ID 12 (cursos), ID 13 (cursos) e ID 14 (cursos). Por sua vez, o artigo ID 9, ID 6 e ID 11 utilizam um jogo para aplicar as habilidades do PC.
+
+Em relac¸ao˜ a` pergunta numero´ 3 (P3), que procura definir se a intervenc¸ao˜ pro-posta logrou algum resultado concreto, considerando os trabalhos mencionados na per-gunta anterior que fizeram alguma intervenc¸ao˜ pratica,´ os trabalhos de ID 1, ID 2, ID 4, ID 12, ID 14 notaram diferenc¸a nos participantes (alunos e, ou professores), com novas capacidades adquiridas ou melhoradas, o que foi constatado por diferentes maneiras. Uma delas foi pela observac¸ao˜ dos proprios´ pesquisadores antes e apos´ os trabalhos envolvendo o PC, como o trabalho de ID 1. A comparac¸ao˜ entre o desempenho de dois diferentes gru-pos de alunos (ensino tradicional e mediante PC) tambem´ foi utilizado, como no trabalho de ID 4. Tambem´ foram utilizadas avaliac¸oes˜ (ID 12 e ID 14) para identificar o progresso dos participantes apos´ as intervenc¸oes˜. Ademais, foram empregadas entrevistas com os professores, que puderam relatar suas impressoes˜ de como o Pensamento Computacional proporcionou melhoria no desempenho dos estudantes.
+
+Ja´ os trabalhos ID 3, ID 5, ID 8, ID 11, e ID 13 evidenciam que os alunos e professores reconheceram a aplicabilidade do PC como uma metodologia de soluc¸ao˜ de problemas, ou seja, houve uma melhor conscientizac¸ao˜ do que e´ o PC e como ele pode ser utilizado. Os instrumentos para fazer essa constatac¸ao˜ foram majoritariamente entrevis-tas e questionarios,´ no intuito de coletar as impressoes˜ dos participantes, principalmente professores que participaram de cursos de capacitac¸ao˜ e introduc¸ao˜ ao PC. Os trabalhos ID 6, atraves´ de atividades como contagem de historias,´ e ID 9, por meio de um jogo, tambem´ propuseram uma intervenc¸ao,˜ mas nao˜ chegam a aplica´-la e, portanto, ainda nao˜ possuem resultados a serem analisados.
+
+Tratando-se da pergunta numero´ 4 (P4), que identifica o n´ıvel educacional ao qual as pesquisas foram destinadas, os seguintes trabalhos estudam o ensino do PC no ensino basico´ (fundamental e medio):´ ID 2 (alunos da disciplina de artes), ID 4 (alunos do ensino medio´ da escola SESI), ID 5 (alunos do ensino fundamental e medio´ de varias´ discipli-nas), ID 6 (curr´ıculo do ensino fundamental), ID 8 (professores da escola primaria),´ ID 12 (professores do n´ıvel basico),´ ID 9 (alunos do ensino basico),´ ID 11 (estudantes de
+
+cienciasˆ do ensino medio)´ e ID 14 (alunos do setimo´ ano). Por sua vez, os artigos ID 3 (professores do ensino superior), ID 10 (alunos de graduac¸ao˜ e pos´ graduac¸ao)˜ e ID 13 (curr´ıculos para disciplinas da graduac¸ao)˜ tiveram foco em alunos do ensino superior.
+
+Ha´ ainda aqueles trabalhos que envolvem os dois n´ıveis de ensino ou tratam do
+´
+PC de maneira generica,´ sem enfatizar um determinado n´ıvel. E o caso dos trabalhos de ID 1 (alunos de graduac¸ao˜ e professores do ensino basico),´ ID 7 (computac¸ao˜ para ensino aprendizagem e compreensao˜ do mundo). Tais trabalhos sao˜ mencionados na Tabela 1 como n´ıvel de ensino “geral”.
+
+Com relac¸ao˜ a` pergunta numero´ (P5), que trata da localizac¸ao˜ na qual se desenvol-veu as pesquisas, do total de trabalhos analisados, ha´ cinco cujos estudos foram conduzi-dos no Brasil (ID 1 ao ID 5). Outros 6 trabalhos foram conduzidos nos Estados Unidos (ID 6, 7, 9, 10, 11 e 13), um na Nova Zelandiaˆ (ID 8), um no Nepal (ID 14) e um na China (ID 12).
+5. Analise´ dos Resultados
+
+Ao se analisar os trabalhos obtidos a partir das perguntas de pesquisa, pode-se notar que, dentre os trabalhos que empregam o ensino do Pensamento Computacional em mais de uma area,´ a matematica´ e´ a disciplina que mais aparece em comum na maioria dos arti-gos encontrados. Pelo carater´ restrito da pesquisa, muitos artigos foram exclu´ıdos por se tratar apenas de aplicac¸oes˜ do PC em cienciasˆ exatas. Pode- se perceber que sao˜ poucos os trabalhos encontrados que aplicam as habilidades do PC somente em areas´ do conhe-cimento diferentes das exatas. Entretanto, tendo em vista que os repositorios´ utilizados na pesquisa sao˜ mais voltados para a area´ das Cienciasˆ Exatas, isso pode ter influenciado o pequeno numero´ de trabalhos encontrados, consistindo em uma limitac¸ao˜ do presente estudo.
+
+Outro achado e´ o fato de que nao˜ ha´ muitos trabalhos que se empenham em ape-nas propor um curr´ıculo ou uma metodologia. Geralmente as propostas de abordagens sao˜ acompanhadas de estudos e intervenc¸oes˜ praticas,´ de modo a testar e corroborar com o ponto de vista sustentado. Nesses trabalhos aplicados, foi poss´ıvel verificar que o em-prego do Pensamento Computacional em outras areas´ que nao˜ fossem diretamente rela-cionados as` cienciasˆ exatas tiveram uma avaliac¸ao˜ positiva. Isso se deu tanto em relac¸ao˜ ao desempenho auferido pelos pesquisadores nas atividades quanto pela impressao˜ dos proprios´ participantes dos estudos.
+
+Com relac¸ao˜ ao n´ıvel educacional mais pesquisado pelos autores, percebe-se uma quantidade maior de trabalhos voltados para o ensino basico,´ embora se tenha encontrado trabalhos de desenvolvimento do PC com enfoques espec´ıficos no ensino superior.
+
+6. Conclusao˜
+
+O presente artigo buscou, atraves´ de uma revisao˜ da literatura, investigar as pesquisas que empregam o Pensamento Computacional em diferentes areas´ do conhecimento, que nao˜ seja em cienciasˆ exatas.
+
+Os resultados evidenciaram que o numero´ de trabalhos no Brasil nesse recorte ainda e´ incipiente. Notou-se tambem´ que a maioria dos trabalhos esta´ direcionada ao ensino basico´. Nas pesquisas conduzidas, observou-se um impacto positivo no ensino em relac¸ao˜ ao estagio´ anterior, em que o Pensamento Computacional ainda nao˜ havia sido utilizado nos contextos estudados. Os trabalhos analisados, de modo geral, aprovam e incentivam o uso do PC e sugerem que ele seja utilizado para desenvolver habilidades nos curr´ıculos em diversas areas´ do ensino.
+
+Pode-se concluir que o ensino do Pensamento Computacional ainda esta´ muito voltado para sua aplicac¸ao˜ na area´ de cienciasˆ exatas, ao inves´ de ser trabalhado numa
+
+´
+
+proposta mais interdisciplinar. E preciso despender esforc¸os para que o PC seja visto como uma metodologia de ensino, uma proposta didatica,´ ao inves´ de uma simples tecno-logia como um corpo estranho as` diversas areas´ do conhecimento.
+
+Referenciasˆ
+
+Araujo, A. L., Andrade, W., and Guerrero, D. (2016). Um Mapeamento Sistematico´ sobre a Avaliac¸ao˜ do Pensamento Computacional no Brasil. In Anais dos Workshops do Congresso Brasileiro de Informatica´ na Educac¸ao˜, volume 5, page 1147.
+Avila, C., Cavalheiro, S., Bordini, A., and Marques, M. (2017a). O Pensamento Com-putacional por meio da Robotica´ no Ensino Basico´ - Uma Revisao˜ Sistematica´. In Brazilian Symposium on Computers in Education (Simposio´ Brasileiro de Informatica´ na Educac¸ao˜ - SBIE), volume 28, page 82.
+
+Avila, C., Cavalheiro, S., Bordini, A., Marques, M., Cardoso, M., and Feijo, G. (2017b). Metodologias de Avaliac¸ao˜ do Pensamento Computacional: uma revisao˜ sistematica´. In Brazilian Symposium on Computers in Education (Simposio´ Brasileiro de In-formatica´ na Educac¸ao˜ - SBIE), volume 28, page 113.
+
+Barcelos, T., Munoz,˜ R., Acevedo, R. V., and Silveira, I. F. (2015). Relac¸oes˜ entre o Pensamento Computacional e a Matematica:´ uma Revisao˜ Sistematica´ da Literatura. In Anais dos Workshops do Congresso Brasileiro de Informatica´ na Educac¸ao˜, volume 4, page 1369.
+
+Bell, T., Duncan, C., and Atlas, J. (2016). Teacher Feedback on Delivering Computational Thinking in Primary School. In Proceedings of the 11th Workshop in Primary and Secondary Computing Education on ZZZ - WiPSCE ’16, pages 100–101, New York, New York, USA. ACM Press.
+
+Bordini, A., Avila, C., Marques, M., Foss, L., and Cavalheiro, S. (2017). Pensamento Computacional nos Ensinos Fundamental e Medio:´ uma revisao˜ sistematica´. In Bra-zilian Symposium on Computers in Education (Simposio´ Brasileiro de Informatica´ na Educac¸ao˜ - SBIE), volume 28, page 123.
+
+Buffum, P. S., Ying, K. M., Zheng, X., Boyer, K. E., Wiebe, E. N., Mott, B. W., Blackburn, D. C., and Lester, J. C. (2018). Introducing the Computer Science Concept of Variables in Middle School Science Classrooms. In Proceedings of the 49th ACM Technical Symposium on Computer Science Education - SIGCSE ’18, pages 906–911, New York, New York, USA. ACM Press.
+
+Carvalho, J., Netto, J. F., and Almeida, T. (2017). Revisao˜ sistematica´ de literatura sobre pensamento computacional por meio de objetos de aprendizagem. In Brazilian Sym-posium on Computers in Education (Simposio´ Brasileiro de Informatica´ na Educac¸ao˜-SBIE), volume 28, page 223.
+
+Conforto, D., Cavedini, P., Miranda, R., and Caetano, S. (2018). Pensamento compu-tacional na educac¸ao˜ basica:´ interface tecnologica´ na construc¸ao˜ de competenciasˆ do seculo´ xxi. Revista Brasileira de Ensino de Cienciasˆ e Matematica´, 1(1).
+
+de Souza, I. M. L., Rodrigues, R. D. S., and Andrade, W. (2016). Explorando Robotica´ com Pensamento Computacional no Ensino Medio:´ Um estudo sobre seus efeitos na educac¸ao˜. In Brazilian Symposium on Computers in Education (Simposio´ Brasileiro de Informatica´ na Educac¸ao˜ - SBIE), volume 27, page 490.
+
+Ferreira, A. C., Melhor, A., Barreto, J., de Paiva, L. F., and Matos, E. (2015). Experienciaˆ Pratica´ Interdisciplinar do Racioc´ınio Computacional em Atividades de Computac¸ao˜ Desplugada na Educac¸ao˜ Basica´. In Anais do Workshop de Informatica´ na Escola, volume 21, page 256.
+
+Gaither, K., Gomez, R., Akli, L., Mendenhall, R., Bland, M., Fratkin, S., Rivera, L., and DeStefano, L. (2017). Advanced Computing for Social Change. In Proceedings of
+the Practice and Experience in Advanced Research Computing 2017 on Sustainability, Success and Impact - PEARC17, pages 1–4, New York, New York, USA. ACM Press.
+
+Gautam, A., Bortz, W. E. W., and Tatar, D. (2017). Case for Integrating Computational Thinking and Science in a Low-Resource Setting. In Proceedings of the Ninth Interna-tional Conference on Information and Communication Technologies and Development
+
+-	ICTD ’17, pages 1–4, New York, New York, USA. ACM Press.
+
+Gourlet, P., Le Goc, M., and Follmer, S. (2017). Revisiting Turtles and Termites. In Proceedings of the 2017 Conference on Interaction Design and Children - IDC ’17, pages 679–682, New York, New York, USA. ACM Press.
+
+Kampff, A. J. C., Lopes, T., Alves, I. M., de Souza, V. C., Rigo, S., and Marson, F. (2016). Pensamento Computacional no Ensino Superior: Relato de uma oficina com professores da Universidade do Vale do Rio dos Sinos. In Anais dos Workshops do Congresso Brasileiro de Informatica´ na Educac¸ao˜, volume 5, page 1316.
+
+Kong, S.-C. and Lao, A. C.-C. (2019). Assessing In-service Teachers’ Development of Computational Thinking Practices in Teacher Development Courses. In Proceedings of the 50th ACM Technical Symposium on Computer Science Education - SIGCSE ’19, pages 976–982, New York, New York, USA. ACM Press.
+
+Lee, I., Martin, F., and Apone, K. (2014). Integrating computational thinking across the K–8 curriculum. ACM Inroads, 5(4):64–71.
+
+Nascimento, C., Santos, D. A., and Tanzi, A. (2018). Pensamento computacional e in-terdisciplinaridade na educac¸ao˜ basica:´ um mapeamento sistematico´. In Anais dos Workshops do Congresso Brasileiro de Informatica´ na Educac¸ao˜, volume 7, page 709.
+
+Panoff, R. M. and Michael, R. (2014). Computational thinking for all. In Proceedings of the 45th ACM technical symposium on Computer science education - SIGCSE ’14, pages 1–2, New York, New York, USA. ACM Press.
+
+Pollock, L., Mouza, C., Guidry, K. R., and Pusecker, K. (2019). Infusing Computational Thinking Across Disciplines. In Proceedings of the 50th ACM Technical Symposium on Computer Science Education - SIGCSE ’19, pages 435–441, New York, New York, USA. ACM Press.
+
+Santos, E. S., Fabian, W., Vera, M., De, E., and Matos, S. A percepc¸ao˜ dos professo-res sobre a pratica´ da interdisciplinaridade no ensino de computac¸ao˜ para escolares. Technical report.
+
+Soares de Franc¸a, R., Afonso dos Santos Ferreira, V., Cardoso Ferro de Almeida, L., and Jose´ Costa do Amaral, H. A disseminac¸ao˜ do pensamento computacional na educac¸ao˜ basica:´ lic¸oes˜ aprendidas com experienciasˆ de licenciandos em computac¸ao˜. Technical report.
+
+Wing, J. M. (2006). Computational thinking. Communications of the ACM, 49(3):33–35.
+
+Zanetti, H., Borges, M., and Ricarte, I. (2016). Pensamento Computacional no Ensino de Programac¸ao:˜ Uma Revisao˜ Sistematica´ da Literatura Brasileira. In Brazilian Sympo-sium on Computers in Education (Simposio´ Brasileiro de Informatica´ na Educac¸ao˜ - SBIE), volume 27, page 21.
+
+

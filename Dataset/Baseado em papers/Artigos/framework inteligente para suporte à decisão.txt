@@ -1,0 +1,423 @@
+iDE: framework inteligente para suporte à decisão:
+um estudo de caso em EaD
+Ketlen K. Teles Lucena1,2, Tammy H. Y. Gusmão1
+,
+Elaine H. Teixeira de Oliveira1
+1
+Instituto de Computação - Universidade Federal do Amazonas (UFAM)
+Manaus, Brasil
+2Centro de Educação a Distância - Universidade Federal do Amazonas (UFAM)
+Manaus, Brasil
+{ketlen,thyg,elaine}@icomp.ufam.edu.br
+Abstract. Retrieving tacit knowledge and using it as useful information to solve
+problems requires proper mapping and formalization strategies because it is
+related to subjective experiences that induce informal but also valuable
+learning. This paper presents iDE, an intelligent framework that combines AI
+techniques, such as Case-Based Reasoning (CBR) and Multiagent Systems, with
+information from a LMS and experts opinions. This combination is used to map
+implicit knowledge and combine it with explicit knowledge in order to suggest
+solutions based on past cases. For validation, a case study was proposed
+covering an educational institution that offers distance learning programs in the
+Amazon region.
+Resumo. Recuperar o conhecimento tácito e utilizá-lo como informação útil na
+resolução de problemas requer estratégias de mapeamento e formalização
+adequadas, pois trata-se de experiências subjetivas que induzem a um
+aprendizado informal, porém valioso. Neste artigo é apresentado o iDE, um
+framework inteligente que combina técnicas de IA, como Raciocínio Baseado
+em Casos (CBR) e Sistemas Multiagentes, com informações provenientes de um
+LMS e opiniões de especialistas, para mapear esse conhecimento implícito e
+combiná-lo ao explícito para sugerir soluções baseadas em casos passados.
+Para validação foi proposto um estudo de caso abrangendo uma instituição de
+ensino que oferece cursos na modalidade à distância na região Amazônica.
+1. Introdução
+Mapear o conhecimento tácito com o ojetivo de recuperar, fomalizar e utilizar suas
+iformações para prevenir, intxrvir e solucionar problemas constitui um desafio constante
+em ambientes mutáveis e incertos. Mais epecificamente em cenárius educacionais, o
+procedimento de tomada de decisões requer análise e avaliação de históricos e ações
+anteriores, com base em resultados positivos das estratégias aplicadas [Teles Lucena et
+al. 2017].
+Nesse contexto, é apresentado um framework inteligente que visa auxiliar na
+solução de problemas, tendo como base o conhecimento adquirido em situações
+semelhantes a fim de aproveitar resoluções passadas de questões com características
+equivalentes. Para isso, é discutido um estudo de caso que teve como objeto o Centro de
+Educação a Distância da Universidade Federal do Amazonas (CED/UFAM).
+Instituições que trabalham com Educação a Distância possuem um vasto
+conhecimento implícito, derivado de experiências dos indivíduos envolvidos em todas as
+etapas do modelo de ensino-aprendizagem. Esse saber subjetivo resulta em um conjunto
+de particularidades e características intrínsecas a uma situação específica, identificandoDOI: 10.5753/cbie.sbie.2019.1848 1848
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+a como única [Teles Lucena et al. 2017]. Administrar o aprendizado à distância – onde o
+estudante encontra-se em lugar distinto do mediador e o conteúdo é compartilhado de
+forma assíncrona – exige, além de habilidades gerenciais e pedagógicas, também talento
+para lidar com as relações nem sempre harmônicas entre os atores do processo. No
+entanto, esses cursos não enfrentam somente dificuldades de aspectos educacionais, os
+fatores logísticos e de infraestrutura também figuram como pontos críticos para a gestão
+deste tipo de ensino [Oliveira et al. 2012].
+Normalmente, os dados acadêmicos de um curso à distância ficam armazenados
+em um Ambiente Virtual de Aprendizagem (AVA ou LMS, do inglês Learning
+Management System) e as informações de caráter transitório ou temporário não são
+formalmente descritas, dificultando-se assim o seu reaproveitamento. Esse entendimento
+não-documentado é acumulado por especialistas que lidam com a realidade do curso, e é
+utilizado quando alguma situação exige soluções mais complexas e abrangentes [Teles
+Lucena 2018].
+O iDE consiste em um arcabouço conseitual que viabiliza a cobinação de
+técnicas de Inteligência Artificial (IA) – tais como, sistemas multiagentes (MAS) e
+Raciocínio Baseado em Casos (CBR) – justamente para a recuperação desses
+conhecimentos explícitos e tácitos envolvidos nas tomadas de decisões comuns a modelos
+de gestão do ensino à distância. O framework é gerenciado por um sistema multiagente,
+composto por quatro agentes de software: (i) o agente principal e coordenador dos demais
+(Manager agent); (ii) o ajente que usará a técnica de Raciocínio Baseado em Casos para
+recuperar e reaproveitar conhecimento de casos passados para de oferecer soluções
+adaptáveis a novas situações (CBR agent); (iii) o agente que irá identificar e tratar dados
+acadêmicos provenientes de aplicativos (móveis ou não) inseridos em ambientes virtuais
+de aprendizagem (LMS agent); e, por último, (iv) o agente responsável por recuperar e
+formalizar o conhecimento tácito de especialistas e de suas experiências na área de EaD
+(Experts agent).
+O artigo está assim organizado: a Seção 2 traz uma breve revisão da literatura
+sobre os trabalhos relevantes para esta pesquisa que utilizam CBR e MAS, analisados sob
+o ponto de vista do problema de adaptação e aproveitamento de conhecimento e
+experiências anteriores. A Seção 3 apresenta o framework iDE, sua aquitetura e a
+implementação do sistema multiagente que o caracteriza. Na Seção 4 é apresentado o
+objeto do estudo de caso, a partir do qual os experimentos de validação do arcabouço
+foram realizados. A Seção 5 analisa os principais resultados com estes experimentos. As
+concluzões são discutidas na Seção 6.
+2. Revisão da Literatura
+Nos trabalhos aqui selecionados, explora-se a utilização de recursos de IA, como CBR e
+MAS, como abordagem de apoio a tomada de decisão – geralmente como suporte a um
+LMS – fazendo parte de arquiteturas ou frameworks voltados para finalidades
+educacionais. Ao fim da seção serão avaliadas as contribuições de tais trabalhos para esta
+pesquisa, visto que nossa proposta se apoia no uso das técnicas de CBR, MAS, e na
+opinião de especialistas no domínio de cursos na modalidade à distância.
+Mendes et al. (2013) apresentaram uma proposta de arquitetura de um agente que
+engloba todos os mecanismos de um sistema CBR tradicional, como acesso e recuperação
+de dados, cálculo de similaridade, apredizado e adaptação de soluções. A base de dados
+inicial foi formada a partir do processamento da linguagem natural em documentos
+textuais, sendo que todos os casos foram representados como instâncias de ontologia.
+1849
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Para o agente CBR, todo o mecanismo de inferência depende da análise de casos
+considerados similares. A autonomia do agente foi caracterizada pelo processo
+identificação, recuperação e adaptação do caso mais apropriado para a solução do
+problema proposto. Além disso, o agente proposto foi capaz de absorver a experiência
+desta solução. A principal contribuição para esta pesquisa foi o uso de uma arquitetura
+eficiente de agente CBR para reutilização e aprendizado de soluções, utilizando
+ontologias para formalização do domínio estudado.
+Na proposta de um ITS (Intelligent Tutoring Systems) híbrido do trabalho de
+Bittencourt et al. (2006) são empregadas técnicas de IA, como CBR e Sistema Baseado
+em Regras (RBS), e a abordagem de raciocínio é caracterizada por uma arquitetura
+multiagente. Sua arquitetura apresenta um módulo especialista composto por agentes
+inteligentes, um módulo de conhecimento de especialistas e uma base de conhecimento
+modelada por uma ontologia. Os agentes são responsáveis pelas interfaces do módulo e
+pelo núcleo de raciocínio, que engloba os sitemas CBR e o RBS. O trabalho apresentou
+uma proposta de combinação de técnicas de IA para melhorar os resultados da
+recuperação do conhecimento, o que nos inspirou a adotar essa estratégia, acoplando à
+combinação, a opinião de especialistas e informações de aplicativos de suporte a
+ambientes virtuais de aprendizagem.
+Bremgartner, Netto e Menezes (2014) propuseram uma estratégia para adaptação
+de conteúdo pedagógico em um LMS a partir de abordagens construtivistas. O trabalho
+fez uso de MAS e a base de conhecimento dos modelos de aprendizado foi especificada
+em uma ontologia de domínio. A meta estabelecida foi o desenvolvimento de um modelo
+focado na aprendizagem direcionada ao indivíduo; ese mesmo modelo sofe adptações
+a partir da análise do perfil de cada estudante. A ideia de oferecer ao aluno um modelo
+individual e personalizado de aprendizagem firmou-se como uma maneira de melhorar o
+desempenho de estudantes que usam LMS. Os autores afirmam que o uso de MAS
+associado a uma modelagem do domínio por meio de ontologias pode ser aplicado a
+outros LMS, uma vez que os agentes e o ambiente de e-learning compartilham o mesmo
+banco de dados. Essas experiências ajudaram a direcionar a nossa abordagem de análise
+de informações oriundas do ambiente virtual de aprendizagem.
+O trabalho de Garrido et al. (2008) apresenta um modelo para a reutilização de
+conhecimento por meio da combinação dos conceitos de gestão do conhecimento, CBR
+e ontologias. Para isso, foi proposta uma construção ontológica de casos para o sistema
+CBR como um suporte teórico e útil para o compartilhamento e a gestão do conhecimento,
+de form que a experiência adquirida em diversas organizações pudesse ser reutilizada
+nos processos de tomada de decisão. A abordagem desta pesquisa se relaciona a esta
+porque propôs novos tipos de regras de adaptação estrutural e mecanismos de
+aprendizado, através da implementação de agentes inteligentes que identificavam casos
+semelhantes e recuperavam o conhecimento utilizando técnicas de CBR. Assim, a
+arquitetura multiagente utilizada em conjunto com a construção de uma ontologia para
+descrição do CBR ampliou o uso desta técnica como meio de gestão do conhecimento,
+no caso, a memória e a aprendizagem organizacional. O trabalho concluiu que estas
+estratégxas podem ser utilizadas em organizações, educacionais ou não, para aproveitar
+as experiências adquiridas em processos decisórios.
+As experiências obtidas a partir desses trabalhos contribuíram para nossa pesquisa
+no sentido de mostrar que o uso de técnicas de IA pode oferecer diversas vantagens
+quando aplicadas na recuperação e reaproveitamento do conhecimento, em uma realidade
+de ensino e apendizagem.
+1850
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+3. O framework iDE
+Esta seção descreve o desenvolvimento do framework iDE, a arquitetura multiagente e as
+funções de análise, recomendação e aprendizado. O projeto do iDE constitui-se de uma
+plataforma formada por agentes inteligentes que incorporam características de um sistema
+distribuído, devido à sua estrutura organizacional no ambiente em que atua. A arquitetura
+que define o iDE é proposta com base em uma configuração multiagente para acesso
+semântico ao conhecimento.
+A Figura 1 apresenta a arquitetura geral proposta para o framework iDE. Nela
+pode-se observar a existência de uma interface web para entrada do problema e para a
+visualização da solução. O iDE propriamente dito consiste na arquitetura do sistema
+multiagente, na base de dados que conterá todas as informações cadastradas e geradas, e
+em uma otologia que formalizará todas as referências ao domínio do estudo de caso. A
+seguir, serão descritas cada unidade do framework.
+• Web and Mobile interface (WM): módulo para cadastro de usuários, entrada da
+descrição do problema, escolha do tipo de busca de solução e combinação
+desejada e visualização das soluções apresentadas. Além disso, a avaliação das
+soluções por parte de usuários especialistas será feita também nesta interface.
+• Sistema Multiagente: composto pelos agentes de software: Manager agent, CBR
+agent, LMS agent e Experts agent.
+• Database: banco de dados que armazenará todas as informações a ser utilizada no
+framework iDE: os casos passados, informações do ambiente virtual e a opinião
+de especialistas, do que serão utilizados pelos agentes de software. Esta base de
+dados será acessada somente pelo Manager agent, que receberá das outras
+unidades as requisições de acesso aos dados.
+• Knowledge base (ontologia): ontologia desenvolvida para representar o domínio
+do estudo de caso proposto. Formaliza os termos, entidades, relacionamentos,
+axiomas e instâncias usados em todo o framework iDE.
+A representação do conhecimento do iDE será feita por uma ontologia modelada
+para formalizar o domínio do estudo de caso proposto e pela base de dados que controlará
+as informações que alimentarão as funções de análise e aprendizado. Essas funções serão
+oportunizadas pela interação do usuário com a interface, a partir de uma análise avaliativa
+Figura 1 – Arquitetura geral do framework iDE.
+1851
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+sobre os resultados apresentados como solução. A interface permitirá ao framework
+armazenar a opinião do usuário quanto à relevância das respostas através do
+aproveitamento ou não das mesmas como soluções de sucesso.
+3.1 As fontes de informação e o Raciocínio Baseado em Casos
+O modelo do framework iDE abrange a recuperação e tratamento de informações oriundas
+de três fontes: casos passados, dados provenientes de ambientes virtuais de aprendizagem
+e a opinião de especialistas. A partir da busca individual e da combinação destas fontes
+de informação, o framework oferecerá possíveis soluções para ocorrências que exijam
+tomadas de decisão.
+O conecimento tratado por esta técnica é armazenado na forma de casos
+[Wangenheim et al. 2013]. Uma vez que um caso correspondente é recuperado, o CBR
+adapta a solução armazenada no caso retornado para as necessidades do caso atual. A
+adaptação procura diferenças relevantes entre o caso recuperado e o caso atual e então
+aplica regras que levem essas diferenças em consideração ao sugerir uma solução.
+Para o mecanismo CBR funcionar corretamente necessita-se do mapeamento de
+casos existentes na base. O modelo mais usado para definir o processo do CBR é o
+proposto por Aamodt e Plaza (1994), denominado Ciclo de CBR e composto por quatro
+estágios: (i) Recuperação: identifica, na base de casos, os mais similares ao problema;
+(ii) Reutilização: utiliza estes casos para compor a nova solução; (iii) Revisão: verifica
+se a solução proposta atende ao problema e (iv) Retenção: armazena a solução atual e a
+retém como novo caso para futra utilização em outras consultas.
+Uma das grandes vantagens do uso de CBR em sistemas especialistas é a
+adatação e recuperação de situações pasadas em problemas atuais, e usa recursos de
+independência de ações [Lyra e Santos 2012]. Convém ressaltar que os novos casos não
+serão idênticos aos anteriores, porém os procedimentos aplicados podem ser aproveitados
+e reutilizados. O CBR utiliza métricas de similaridade necessárias para a etapa de
+recuperação do caso [Kolodner 1993]. Elas consistem em um cálculo que determina o
+nível de semelhança entre o caso descrito no problema e os casos anteriores, armazenados
+na base de casos.
+As funções de análise de informações, recomendação de solução e de aprendizado
+do framework iDE serão realizadas pelo ciclo do CBR, conforme pode ser visto nas seções
+seguintes, que descreverão a forma como os agentes de software trabalharão essas
+estratégias para executar as ações inteligentes do arcabouço.
+3.2 Os agentes inteligentes
+O MAS do iDE é formado por quatro agentes inteligentes (ou de software) que
+manipulam as informações de entrada e geram as soluções adequadas a elas. Os agentes
+são responsáveis por executar as tarefas de busca, a análise de similaridade e as regras de
+aprendizado, dentro do contexto definido para cada fonte de informação. São eles:
+1. Manager agent: também chamado de agente gerenciador, é o principal agente do
+sistema, responsável pelo gerenciamento das informações e das tarefas enviadas
+aos demais agentes. O Manager agent avalia as informações de entrada,
+repassando-as para serem avaliadas pela ontologia. As informações serão
+certificadas e, se forem adequadas, serão adaptadas e acrescentadas ao modelo de
+representação de dados e ao vocabulário ontológico.
+1852
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+2. CBR agent: agente que desempenha as funções da técnica de CBR. As
+informações de entrada são enviadas pelo Manager agent e então realiza a busca
+na base de casos, calculando a similaridade deles com o problema proposto.
+3. LMS agent: agente responsável pela manipulação das informações oriundas dos
+aplicativos do LMS Moodle. Esse agente recebe as informações de entrada
+repassadas pelo Manager agent e executa o tratamento dessas informações,
+cruzando-as com os dados dos apps, a fim de calcular os níveis de similaridade.
+As respostas consideradas mais similares serão retornadas ao Manager agent, para
+preparação e envio à interface.
+4. Experts agent: desempenha as funções de análise dos dados da base de opiniões
+dos especialistas e executa a função de similaridade desses dados com o problema
+repassado pelo Manager agent. As soluções mais similares são enviadas ao agente
+gereciador para organização e envio à interface.
+Os agentes usam a semântica formal para raciocinar sobre a associação,
+equivalência, consistência e classificação de classes. Sua implementação seguiu a teoria
+de tratamento do conhecimento abordada Ciclo do CBR.
+3.3 Funções de análise, recomendação e aprendizado
+O Manager agent, ou agente gerenciador, é o responsável pelo controle das ações dos
+demais agentes e da entrada, armazenamento e saída de informações do framework iDE.
+Ele possui funções de acesso à interface e identificação dos dados de entrada, como o
+problema proposto e seus elementos de caracterização. Também verifica a opção
+escolhida referente às fontes de informação a serem utilizadas na busca de soluções.
+As tarefas de análise, recomendação e aprendizado também são controladas por
+esse agente e podem ser resumidas nas seguintes etapas:
+• Assim que o agente os dados de entrada, é ativada a função que executa cada
+agente. O componente de acesso à base de dados é solicitado e os dados são lidos
+e enviados para o agente ativado.
+• O agente ativado devolve uma mensagem de retorno ao Manager agent, incluindo
+a identificação da solução encontrada e suas informações complementares. A
+mensagem é decodificada e as informações são extraídas.
+• Se a opção escolhida for a combinação de mais de uma fonte de informação, são
+ativados os agentes responsáveis pelas fontes escolhidas e enviadas as
+informações para eles. Quando as soluções são retornadas, o Manager agent
+combina-as e calcula a similaridade entre esse resultado e o problema proposto.
+• Após o envio das soluções retornadas pelos agentes à interface web, serão
+implementadas as etapas de Reutilização, Revisão e Retenção do conhecimento
+junto à base de dados do framework iDE.
+• Quando o Manager agent enviar à interface a solução encontrada e forem exibidas
+as respostas de acordo com as fontes de informação solicitadas, o usuário poderá
+ajudar no aprendizado do framework, verificando se a solução pode ser adaptada
+ao problema em questão ou não. Na interface WM, existe uma opção de avaliação
+das respostas sugeridas. Caso a solução recuperada seja viável ao problema
+proposto, os dados serão reunidos e adiconados a um registro novo na taela de
+soluções relevantes do banco de dados.
+Como foi adotado o Ciclo CBR para tratamento e recuperação do conhecimento
+no framework iDE, todas as suas etapas foram seguidas. A etapa conhecida como
+1853
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Reutilização ocorre somente após a recuperação de uma solução completa, pois é feita a
+reutilização das respostas retornadas como mais similares ao problema em questão.
+A próxima etapa é a Revisão e acontece quando o usuário rejeita a solução. Desta
+forma, a solução proposta não poderá ser aplicada diretamente a um novo problema. O
+usuário analisa as diferenças entre os problemas (novo e recuperado), identifica quais
+partes da solução apresentada são semelhantes ao seu problema e que poderão ser
+aplicadas ao mesmo, vinculando assim a nova solução como resposta para a situação em
+questão. E a última etapa do ciclo consiste na Retenção da solução retornada como
+resposta possível a ser utilizada em outra situação. É o processo de armazenar o problema
+proposto e associá-lo à solução retornada para futuras recuperações.
+4. Estudo de caso
+Para fins de validação do framework iDE, optou-se por um estudo de caso exploratório
+para instanciação do arcabouço conceitual proposto. O objeto do estudo foi uma
+instituição que trabalha com educação a distância na oferta de cursos regulares.
+O Centro de Educação a Distância da Universidade Federal do Amazonas (CED)
+possui atualmente cerca de 1.800 alunos (dados de 2019) distribuídos em cinco cursos de
+graduação oferecidos: Administração, Artes Plásticas, Biologia, Ciências Agrárias,
+Educação Física. O gerenciamento das atividades à distância é realizado pelo LMS
+Moodle (2019), onde são criadas salas de aula virtuais para as disciplinas, as quais contém
+o material didático, atividades de fixação e avaliativas, repositório de arquivos e espaço
+para visualização das notas. Esses ambientes virtuais simulam uma sala de aula física, na
+qual professores e alunos podem assimilar e compartilhar conteúdo, interagir entre si e,
+assim, construir conhecimento. Foi ainda desenvolvida uma ontologia de domínio, a
+ontoCED, para modelar o conhecimento tácito e explícito na abrangência pedagógica e
+acadêmica do CED. Ela foi deenvolvida para padrxnizar os termos que serão utilizados
+pelo framework iDE nas análises e inferências realizadas no processu de busco de
+soluções para os problemas propostos.
+5 Experimentos e análise dos resultados
+Os testes de funcionalidade foram realizados com dez especialistas do CED, tais como:
+professores, tutores e coordenadores, e que também ajudaram a compor a base de casos,
+em um momento anterior aos experimentos.
+A base de dados disponibilizada para testes contou com: 30 casos passados reais,
+acontecidos no contexto do estudo de caso proposto; 30 registros de opiniões verídicas de
+especialistas em EaD; e 30 gráficos com informações oriundas de aplicativos instalados
+no LMS Moodle, ambiente virtual utilizado no CED.
+Um caso armazenado na base de casos é um registro de um problema parcialmente
+ou totalmente resolvido com a descrição da experiência obtida com a solução. O registro
+de opinião de especialista consiste em informações sobre problemas corriqueiros e de
+fácil solução. A Figura traz 3 um problema submetido a busca de solução por casos
+passados e a Figura 4, a solução apresentada pelo iDE.
+Foram aplicados questionários de levantamento de qualidade pedagógica e
+usabilidade referentes às respostas retornadas pelo framework iDE. Os indicadores para
+avaliação desses requisitos podem ser observados nos seguintes resultados: as maiores
+notas foram dadas para os indicadores “Relevância das respostas apresentadas” e
+“Conhecimento agregado e feedback instrucional”. Os menores valores atribuídos foram
+1854
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+para “Adequação das fontes de informação ao contexto pedagógico”. Essas informações
+retratam que os entrevistados ficaram satisfeitos com o desempenho do framework no que
+diz respeito à relevância pedagógica das respostas e que o usuário ainda não se sente
+familiarizado com o uso das fontes de informação para busca de soluções.
+A segunda parte da análise das avaliações considera as respostas para a questão
+que ajudou a orientar nosso trabalho: “O conhecimento recuperado apresenta soluções
+relevantes para a resolução de problemas frequentes em ambientes de EaD, a partir de sua
+aplicação no contexto do estudo de caso proposto?”
+Figura 3 – Problema proposto
+Figura 4 – Resultado da busca por casos passados
+1855
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Os comentários de análise serão balizados pelo gráfico da Figura 5:
+Nos quesitos “Relevância” e “Aplicação” das soluções encontradas, as médias das
+notas atribuídas tenderam a um mesmo valor (9,7), isso traduz a opinião positiva sobre a
+importância das soluções retornadas pelo arcabouço e a sua aplicabilidade prática no
+cotidiano de cursos oferecidos à distância.
+Percebe-se pelo gráfico que a busca de solução para o problema proposto
+utilizando somente uma fonte de informação obteve valores menores que a busca
+combinando várias fontes de informação. Ou seja, na opinião dos entrevistados, a
+combinação das buscas melhorou em cerca de 2% a qualidade da solução apresentada.
+6. Conclusão
+Um dos principais desafios das instituições que promovem cursos na modalidade à
+distância é acompanhar o desempenho acadêmico do aluno e disponibilizar infraestrutura
+física e pedagógica adequada ao curso oferecido. Além disso, também compõem esse
+obstáculo o reaproveitamento do conhecimento tácito, representado pela experiência de
+especialistas locais, que quase sempre é utilizado para solucionar questões recorrentes em
+localidades com problemas característicos da Região Amazônica.
+Para tanto, este artigo apresentou o iDE, um framework que utilizou diferentes
+fontes de informação e suas possíveis combinações com o objetivo de mapear o
+conhecimento implícito em informações oriundas de situações antigas e equivalentes a
+um problema proposto, a fim oferecer soluções que possam ser consideradas relevantes
+para resolvê-lo. O iDE usou as técnicas de Raciocínio Baseado em Casos e de Sistemas
+Multiagentes para extrair as informações que foram combinadas para gerar respostas a
+um problema dado como entrada. A relevâncias das soluções obtidas foram avaliadas por
+especialistas na área, por meio de uma interface web, o que contribuiu para o aprendizado
+do arcabouço.
+As técnicas de IA aqui utilizadas apresentaram-se como fundamentais para a
+recuperação e manipulação os conhecimentos explícitos e implícitos, segundo a opinião
+dos entrevistados. As funções dos agentes de software tornaram possível o
+reaproveitamento de sugestões anteriores para compor novas soluções para problemáticas
+parecidas. A recuperação de soluções anteriores e o seu reaproveitamento em problemas
+novos apresentou-se como uma boa estratégia para solução de dificuldades comuns aos
+cursos à distância, na opinião de usuários especialistas.
+Figura 5 – Gráfico: Retorno sobre soluções apresentadas.
+1856
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Desta forma, os resultados obtidos potencializaram o conhecimento baseado em
+experiências anteriores para solucionar novos problemas. As respostas indicam sugestão
+de ações interventivas, que são as soluções propostas pelas informações recuperadas e
+que podem ser aplicadas por mediadores de cursos à distância. A partir dos experimentos
+com o framework pode-se perceber que, em seu domínio, o conhecimento é
+continuamente convertido e criado à medida que os usuários utilizam, colaboram,
+interagem e aprendem. Assim, conclui-se ser uma alternativa factível o uso do framework
+iDE para orientar a resolução de problemas a partir de situações anteriores e semelhantes.
+8. Referências
+Aamodt, A. and Plaza, E. (1994) “Case-based reasoning: Foundational issues,
+methodological variations, and system approaches”. AI Com. v.7, n.1, pp. 39–59.
+Bittencourt, I., Tadeu, M. and Costa, E. (2006) “Combining AI Techniques into a Legal
+Agent-based Intelligent Tutoring Systems”. In: Proceedings of 18th Int. Conf. on
+Software Engineering and Knowledge Engineering. San Francisco, USA.
+Bremgartner, V., Netto, J. F. M. and Menezes, C. (2014) “Using Agents and Open Learner
+Model Ontology for Providing Constructive Adaptative Techniques in Virtual
+Learning Enviroments”. In: Proceedings of 14th Ibero-American Conference on
+Artificial Intelligence (IBERAMIA), pp. 625-636. Santiago, Chile.
+Garrido, J. L., Hurtado, M. V., Noguera, M. and Zurita, J. M. (2008) “Using a CBR
+approach based on ontologies for recommendation and reuse of knowledge sharing in
+decision making”. In: Proceedings of the 8th International Conference on Hybrid
+Intelligent Systems. IEEE 2008. Barcelona, Spain.
+Kolodner, J. L. (1993) “Case-Based Reasoning”. Morgan Kaufmann Pub., Inc.
+Lyra, F. e Santos, N. (2012) “Agentes de Software no Monitoramento de Alunos em
+Educação a Distância”. In: I Congresso Brasileiro de Informática na Educação. In:
+Anais do XVIII Workshop de informática na Escola, Rio de Janeiro, Brasil.
+Mendes, W., Girardi, R. e Leite, A. (2013) “Arquitetura baseada em ontologias de um
+agente RBC”. In: Information Systems and Techologies (CISTI), 2013. 8th Iberian
+Conference on. Lisboa.
+Moodle. (2019) “Modular Object-Oriented Dynamic Learning Environment”.
+http://moodle.org/. Acessado em 05/06/2019.
+Silva, J. S., Teles Lucena, K. K., Oliveira, E. H. T. de. (2015) “WebMonitor: uma
+ferramenta para monitoramento e acompanhamento de cursos em um AVA”. In: XXVI
+Simpósio Brasileiro de Informática na Educação. In: Anais do IV Congresso Brasileiro
+de Informática na Educação (CBIE), p. 249-258. Maceió, Brasil.
+Teles Lucena, K. K., Gusmão, T. H. Y., Abreu, A. e Oliveira, E. H. T. de. (2017) “Uma
+arquitetura de agente RBC baseada em ontologias para suporte a EaD”. In: XXVIII
+Simpósio Brasileiro de Informática na Educação. In: Anais do VI Congresso Brasileiro
+de Informática na Educação (CBIE), p. 1537-1546. Recife, Brasil.
+Teles Lucena, K. K. (2018) “iDE – um framework para suporte ao gerenciamento de
+cursos em Educação a Distância”. Tese de Doutorado. Instituto de Computação,
+Universidade Federal do Amazonas, Brasil.
+Wangenheim, C. G. V., Wangenheim, A. V. e Rateke, T. (2013) “Raciocínio baseado em
+casos – com software livre e aplicativos móveis”. 2ª edição atualizada. Florianópolis:
+Editora Bookness.

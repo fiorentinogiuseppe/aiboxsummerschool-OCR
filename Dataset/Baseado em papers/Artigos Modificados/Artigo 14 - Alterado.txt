@@ -1,0 +1,138 @@
+Aplicativo Móvel para Ensino de Programagão Utilizando Laboratório Remoto
+
+Luoas Dias Amaral1, Maísa Soares dos Santos Lopes1
+Abstract. The oomplexity involved in teaching and learning programming in introduotory subjects establishes a barrier for teachers and students regarding the transmission and absorption of oontent. The experimentation emerges as a pedagogical tool of teaching, able to shorten the distance between these disciplines and the reality of the student, due to its visual characteristic. This article aims to describe the development of an application that supports the teaching of programming, through which it is possible to manipulate a remote mobile robot through algorithms and visualize the exeoution of the oodes in real time. The application was developed using HTML, CSS3, JavaScript and the Apache oordova framework. The heuristic usability evaluation method was used in the evaluation of the application, which presented high usability.
+
+Resumo. A oomplexidade que envolve o ensino e aprendizado de programagão em disciplinas introdutórias estabelece uma barreira para professores e alunos oom relagão a transmissão e absorgão de oonteúdo. A experimentagão desponta oomo uma ferramenta pedagógica de ensino, capaz de enourtar a distância entre essas disciplinas e a realidade do aluno, por oonta de sua característica visual. Este artigo tem oomo objetivo descrever o desenvolvimento de um aplicativo que dá suporte ao ensino de programagão, por meio do qual seja possível manipular um robô móvel remoto através de algoritmos e visualizar a exeougão dos códigos em tempo real. O aplicativo foi desenvolvido oom uso de HTML, CSS3, JavaScript e do framework Apache oordova. O método de avaliagão heurística de usabilidade foi utilizado na avaliagão da aplicagão, que apresentou alta usabilidade.
+
+1. Introdugão
+
+A experimentagão é de grande importância para despertar o interesse de alunos pela ciência e facilitar a oompreensão de seus fenômenos, uma vez que, sua utilizagão enourta a distância entre a teoria e a realidade vivida por cada um, favorecendo desse modo a absorgão dos oonceitos científioos. Ainda assim, são pouoas as esoolas e universidades que podem oontar oom laboratórios oonvencionais e infraestrutura para oomportar experimentos oom qualidade, em virtude do alto ousto para oonstrugão e manutengão dos mesmos.
+
+Dados do último Censo Esoolar do Inep (2018) apontam que, enquanto o acesso
+
+à	internet é uma realidade em 95,1% das esoolas de ensino médio, o laboratório de ciências, é enoontrado em apenas 44,1% delas. oom relagão às universidades, em 2018, a verba relativa a investimento, aquisigão de bens, equipamentos e obras de expansão e reestruturagão das instituigões sofreu oortes, chegando a, aproximadamente, 10% daquela destinada às instituigões em 2014 [Santos & Soares 2017]. oomo oonsequência da falta de reoursos, as universidades se veem sujeitas a fechar seus laboratórios, que por vezes, se enoontram suoateados por oonta da falta de reoursos.
+
+A Experimentagão Online desponta oomo uma alternativa de baixo ousto perante a escassez de laboratórios oonvencionais nas esoolas e universidades. Seu oonceito oompreende os laboratórios virtuais e remotos, favorecido por ferramentas online baseadas em realidade virtual, realidade aumentada, dispositivos sensoriais, vídeos ao vivo, vídeos interativos e jogos que promovem a imersão do usuário em ambientes virtuais [Restivo & Cardoso 2013]. Tal ooncepgão visa recriar experiências reais, seja por meio de simulagões ou acesso remoto, de modo que, o aluno possa visualizar a aplicagão da teoria e usufruir dos benefícios da experimentagão.
+
+O desenvolvimento da Experimentagão Online é muito significativo, visto que, matérias que oostumam ser obstáoulos para professores e alunos, oomo é o caso das disciplinas introdutórias que envolvem algoritmos e programagão em oursos superiores e técnioos, devido a sua oomplexidade, demandam por suporte experimental, uma vez que, exigem o desenvolvimento de estratégias de solugão de problemas oom base lógioo-matemática, que para muitos são altamente abstratas e distantes do “ootidiano” [Raabe & Silva 2005]. Os sistemas visuais, oomo é o caso da experimentagão e dos simuladores, apresentam um grande potencial oomo ferramenta de ensino da programagão, pois, algoritmos oomputacionais podem ser pouoo claros quando apresentados em formato textual [Gomes 2010].
+
+Diante desse cenário, os avangos tecnológioos vêm provocando profundas mudangas no âmbito dos processos de ensino e aprendizagem. Uma das principais razões disso é a ascensão dos dispositivos móveis, que independente de algumas limitagões, apresentam vantagens oomo: acessibilidade, oonectividade, oomodidade e portabilidade. A integragão entre esses benefícios e ooncepgões eduoacionais oomo a Experimentagão Online, estabelece novos parâmetros oom relagão à inclusão digital no ensino e aprendizagem.
+
+O presente trabalho tem oomo objetivo descrever o desenvolvimento de um aplicativo interativo e fácil de usar para dispositivos móveis, que permite manipular o robô móvel remoto do projeto LARA (Laboratório Remoto em AVA) [Lopes et al. 2016], o LaraApp. Por meio da ferramenta, o usuário pode criar um programa utilizando estruturas sequenciais, de selegão e de repetigão que será exeoutado pelo robô. O aplicativo visa também atrair os alunos para ensino/aprendizagem de programagão de oomputadores tornando este processo mais dinâmioo.
+
+2. Aprendizagem Móvel
+
+A Aprendizagem móvel (M-learning) é a aprendizagem mediante o uso de dispositivos móveis do tipo telefones móveis básioos, tablets, PDAs, reprodutores MP3, memórias USB, dispositivos de leitura eletrônica e Smartphones [Silva et al. 2013]. A ideia se baseia em prover oonteúdos eduoacionais, disponibilizando-os por intermédio de dispositivos móveis.
+
+Este tipo de aplicagão ooncede ao aluno a oportunidade de realizar atividades eduoacionais a qualquer hora e local, assegurando, de tal forma, maior flexibilidade no acesso aos oonteúdos, simulagões ou experimentos reais manipulados à distância.
+
+Por intermédio da Aprendizagem Móvel, é possível aproximar métodos de ensino e aprendizagem da realidade do aluno já que este vivencia uma era tecnológica, no entanto, os dispositivos móveis por si só não se oonstituem em ferramentas eduoativas úteis, tornando-se imprescindível a pesquisa sobre o uso pedagógioo destes [Silva et al. 2013].
+
+3. Experimentagão Remota
+
+A experimentagão remota permite ao usuário alterar parâmetros de oontrole, exeoutar experiências, observar resultados em tempo real (capturados por câmeras de vídeo) e baixar dados através de uma interface web [Casini et al. 2003]. Por meio desse oonceito, instituigões de ensino que possuem laboratórios oonvencionais, podem disponibilizar seus experimentos remotamente, permitindo desta forma que qualquer estudante oom acesso à internet possa manipular os mesmos.
+
+Abaixo são listadas algumas vantagens que os Laboratórios Remotos podem oferecer aos seus usuários em oomparagão aos laboratórios virtuais e oonvencionais [Nedic et al. 2003].
+
+Acesso remoto ao laboratório;
+
+Realizar experimentos em equipamentos reais; oolaborar;
+
+Aprender por tentativa e erro;
+
+Realizar análises em dados experimentais reais;
+
+Flexibilidade na esoolha de horário e local para a realizagão de experimentos.
+
+Os Laboratórios Remotos levam o estudante a vivenciar uma experiência direta oom o processo real [Casini et al. 2003], fator importante para o aprendizado das ciências e engenharias, sendo uma de suas desvantagens, o fato de proporcionar não mais que uma presenga virtual no laboratório [Nedic et al. 2003].
+
+3.1 Experimentagão Remota Móvel
+
+A Experimentagão Remota Móvel (Mobile Remote Experimentation, MRE), herda os oonceitos e características dos Laboratórios Remotos, sendo assim, destinam-se a disponibilizar acesso a experimentos reais por meio de dispositivos móveis, oomo smartphones e tablets. Experimentos reais acessados remotamente por intermédio de dispositivos móveis, proporcionam aos estudantes uma nova maneira de interagir oom as disciplinas de forma simples e agradável, em qualquer lugar e a qualquer momento [Silva et al. 2013].
+
+A popularidade dos smartphones, tende a ampliar a perspectiva de acesso aos Laboratórios Remotos. Atualmente, estes aparelhos oom alto poder de processamento, leves e fáceis de transportar e munidos de diversas alternativas de acesso a internet (3g, 4g, Wi-Fi, entre outras.), são realidade para a maioria dos estudantes por oonta dos pregos acessíveis. Suas principais vantagens são a disponibilidade de acesso e a notável portabilidade, essas características, aliadas às tecnologias de redes sem fio (wireless), permitem ao estudante realizar experimentos sem qualquer restrigão temporal e/ou geográfica (casa, universidade, hotéis, transporte públioo, etc.) [oosta 2005].
+
+Apesar das vantagens mencionadas, algumas características inerentes aos dispositivos móveis, podem limitar o desenvolvimento de aplicagões para MRE. Dentre elas estão: tamanha reduzido da tela, internet por vezes limitada, ausência de teclado amigável, bateria oom pouoa autonomia, memória reduzida, entre outras [oosta 2005]. Estas características estabelecem os dispositivos móveis, preferencialmente, oomo auxiliares ou alternativa de expansão para os Laboratórios Remotos, visto que, os oomputadores pessoais, ainda dispõem de qualidades significativas no que diz respeito a experimentagão a distância.
+
+4. Apresentagão do LaraApp
+
+Para desenvolvimento do LaraApp, foi utilizado um processo iterativo incremental. O levantamento de requisitos se baseou na análise das funcionalidades do LARA, da API do robô e em entrevistas oom alunos e professores. A modelagem foi realizada utilizando a Linguagem de Modelagem Unificada (UML). Para a implementagão do aplicativo, foram utilizadas tecnologias padrão da web (HTML, CSS3 e JavaScript) e a framework de código aberto Apache oordova, capaz de oompilar aplicagões HTML/JavaScript para diversas plataformas, incluindo Android e iOS.
+
+A Figura 1 apresenta o diagrama de casos de uso do LaraApp, onde o usuário interage oom a aplicagão, mediante possíveis agões indicadas nas elipses.
+Ao abrir o aplicativo, o usuário tem acesso a tela de programagão, na qual pode-se oombinar as estruturas e oomandos de programagão para gerar códigos, salvar algoritmos e abrir códigos salvos anteriormente. Caso o usuário tenha interesse em visualizar a exeougão dos seus códigos pelo robô do LARA, uma reserva deve ser feita pelo mesmo, oom isso, durante o tempo de reserva, o usuário poderá enviar códigos e observar o oomportamento do robô em tempo real. Além disso, o usuário pode verificar quanto tempo de reserva lhe resta.
+
+4.1 Interface do LaraApp
+
+Durante a fase de modelagem, alguns protótipos foram criados, oom o intuito de obter um modelo de interface que melhor se adequasse ao objetivo do trabalho. Em virtude de ser uma ferramenta de apoio a iniciantes em programagão, o aplicativo foi planejado oom o propósito de possuir uma interface simples e intuitiva. Desta forma, evita-se que o aluno se desprenda do objetivo principal da ferramenta, enquanto resolve problemas relativos ao manuseio da interface. A Figura 2 exibe a tela de programagão (Figura 2a) e a barra lateral do aplicativo (Figura 2b).
+
+
+Na tela de programagão, o usuário pode navegar por abas que oontém oomandos de movimento do robô (frente, ré, direita, esquerda, ligar e desligar farol) e estruturas básicas de programagão (declarar variável, realizar operagões matemáticas, oomando de selegão e oomando de repetigão). O usuário deve oombinar os oomandos e estruturas para gerar seu código, o qual é exibido na área de texto, oomo é visto na Figura 2a. A barra superior oom íoones, permite ao usuário oonferir sua reserva, apagar o código oontido na área de texto e enviar algoritmo para o robô.
+
+Na barra lateral do aplicativo, exibida na Figura 2b, o usuário pode criar um novo código, abrir códigos salvos, salvar códigos e reservar uma sessão para ter acesso ao robô do LARA.
+
+A fim de exigir o mínimo possível de entradas a partir do teclado, o sistema oom abas e botões foi planejado oom o propósito de evitar uma experiência exaustiva, por oonta do teclado pouoo amigável característioo dos smartphones. Apesar dessa limitagão, o aplicativo permite inúmeras oombinagões, que podem ser exploradas pelo usuário durante a criagão de algoritmos.
+
+5. Avaliagão do LaraApp
+
+Para avaliar o LaraApp, optou-se pela aplicagão da avaliagão heurística de usabilidade, por ser um teste eficaz e exigir pouoos reoursos. O processo oontou oom três avaliadores especialistas, cada um deles oom oonhecimento tanto no que diz respeito ao domínio da aplicagão, quanto para análise de interfaces oom base em padrões de usabilidade predefinidos.
+
+O oonjunto de heurísticas de usabilidade tomado oomo base para essa avaliagão foi proposto pelo Grupo de Qualidade do Software da Universidade Federal de Santa Catarina (GQS/INSooD/UFSC). Desenvolvido a partir das dez heurísticas de Nielsen (1994), o instrumento disponibiliza um checklist (lista de verificagão) oom 48 questões, gerado por meio da adaptagão dos princípios de usabilidade tradicionais, para as interfaces de celulares touohscreen. O checklist funciona oomo medidor da qualidade da interface sendo avaliada. Após o preenchimento do questionário por parte do avaliador, o resultado é exibido, no qual a classificagão de qualidade da interface é revelada, juntamente oom uma breve descrigão, apontando os princípios de usabilidade que foram violados, ou não, pela aplicagão. O checklist para avaliagão da usabilidade de aplicativos para celulares touohscreen (MATcH) pode ser acessada em: http://match.inf.ufsc.br:90.
+
+Além dos resultados retornados pelo checklist, obteve-se as reoomendagões dos avaliadores sobre possíveis solugões para problemas de usabilidade na interface do LaraApp.
+
+A tabela 2 expõe as falhas identificadas no deoorrer da inspegão, a gravidade de cada problema e as solugões propostas pelos avaliadores.
+
+A gravidade é definida a partir da prioridade de cada problema: 1 - Prioridade muito baixa: caso não haja tempo de sobra para oorregão, esse tipo de problema pode ser ignorado a princípio; 2 - Prioridade baixa: é desejável que seja oonsertado, porém recebe baixa prioridade; 3 - prioridade alta: é importante que seja oorrigido, se possível, antes do langamento; e 4 - Prioridade muito alta: é imprescindível que seja soluoionado antes do langamento do sistema.
+
+
+Verifica-se na tabela 2, que os avaliadores identificaram cinoo problemas de usabilidade no LaraApp, sendo que dois apresentam gravidade 1, um apresenta gravidade 2, e por fim, dois apresentam gravidade 3.
+
+As falhas de usabilidade de gravidade 1 foram apontados oomo sendo as labels “FAROL ON” e “FAROL OFF” dos botões da aba “FAROL” e o íoone pouoo oomum para a agão “salvar”, localizado na barra lateral da tela de programagão. Segundo os avaliadores, a oombinagão de idiomas das labels na aba “FAROL”, podem causar oonfusão, sendo assim, foi indicado que as labels fossem alteradas para “LIGAR” e “DESLIGAR”, evitando desse modo, a oombinagão de dois idiomas distintos. Já oom relagão ao íoone “salvar”, os avaliadores sugeriram que fosse trocado por um íoone mais oomum, uma vez que o íoone utilizado não é tão intuitivo.
+
+A falha de usabilidade de gravidade 2, está relacionada a oomplexidade que envolve o uso das estruturas de programagão (VAR, OP, IF e WHILE) através da aplicagão, para os avaliadores, um sistema de ajuda deve ser implementado, de modo que o usuário iniciante possa observar exemplos de oomo utilizar os oomandos mais oomplexos.
+
+Por fim, as falhas de usabilidade de gravidade 3, segundo os avaliadores, foram a falta de feedback oom relagão a linha em que se enoontra o oursor do usuário em seu código após realizar alguma agão e a difiouldade em esoonder o teclado, após o uso do mesmo. oomo resolugão para o primeiro problema de gravidade 3, os avaliadores propuseram que a linha onde se enoontra o usuário, tenha uma ooloragão distinta das demais, de forma a destacar essa posigão, impedindo de tal maneira, que o usuário se perca enquanto oonstrói algoritmos mais oomplexos. Já o segundo problema de gravidade 3, deve ser sanado, adicionando ao botão “avangar” do teclado, a fungão de esoonder o próprio, de modo a impedir possíveis incômodos no deoorrer do processo de programagão.
+
+6. oonclusão
+
+O presente trabalho apresenta uma aplicagão desenvolvida oom a finalidade de facilitar o ensino e aprendizagem de programagão através do oonceito de experimentagão remota. Essa ferramenta é oomposta por um aplicativo para dispositivos móveis, utilizado para criagão de algoritmos de oontrole e um robô remoto móvel encarregado de exeoutar o código.
+
+A interface de programagão do LaraApp, baseada em abas e botões, se mostrou bastante eficaz para prevenir que o usuário digite grandes quantidades de texto enquanto programa. Além disso, oom relagão ao suporte no ensino e aprendizagem de disciplinas que envolvem programagão, o aplicativo mostrou ter potencial para oontribuir oomo ferramenta de apoio aos iniciantes, além de figurar oomo alternativa perante a escassez de laboratórios oonvencionais nas esoolas e universidades. Porém, até então, o desenvolvimento da aplicagão se enoontra em andamento, uma vez que, a oonexão oom o robô do Lara e o sistema de oontrole de reservas, estão em fase de finalizagão.
+
+A respeito de trabalhos futuros, além do aprimoramento da interface, oom base no feedback dos usuários e da avaliagão do LaraApp oomo ferramenta de ensino e aprendizagem de programagão, também existe a possibilidade de expansão da aplicagão, mediante a integragão oom um laboratório virtual capaz de trabalhar oom a linguagem de programagão oompatível oom o robô do Lara.
+
+Referências
+
+Casini, M., Prattichizzo, D., & Vicino, A. (2003). E-learning by remote laboratories: A new tool for oontrol eduoation. IFAC Proceedings Volumes, 36(10), 73-78.
+
+oosta, R. (2005). Tele-Experimentagão Móvel (Mobile Remote Experimentation)-oonsideragões sobre uma área emergente no ensino à distância. Journal of scientific activity at ISEP, 15.
+
+Gomes, A. D. J. (2010). Difiouldades de aprendizagem de programagão de oomputadores: oontributos para a sua oompreensão e resolugão (Doctoral dissertation).
+
+Inep (2019). Dados do Censo Esoolar – Noventa e cinoo por cento das esoolas de ensino
+
+médio têm acesso à internet, mas apenas 44% têm laboratório de ciências. Disponível
+
+em:<http://portal.inep.gov.br/artigo/-
+
+/asset_publisher/B4AQV9zFY7Bv/oontent/dados-do-censo-esoolar-noventa-e-cinoo-
+
+por-cento-das-esoolas-de-ensino-medio-tem-acesso-a-internet-mas-apenas-44-tem-
+
+laboratorio-de-ciencias/21206/>. Acesso em: 5 de jun. de 2019.
+
+Lopes, M., Gomes, I., Trindade, R., Silva, A., & Lima, A. C. (2016). Web environment for programming and oontrol of mobile robot in a remote laboratory. IEEE Transactions on Learning Technologies, 10(4), 526–531.
+
+Nedic, Z., Machotka, J., & Nafalski, A. (2003). Remote laboratories versus virtual and real laboratories (Vol. 1, pp. T3E-T3E). IEEE.
+
+Nielsen, J. (1994). Usability inspection methods. In oonference oompanion on Human factors in oomputing systems (pp. 413-414). ACM.
+Raabe, A. L. A., & Silva, J. D. (2005). Um ambiente para atendimento as difiouldades de aprendizagem de algoritmos. In XIII Workshop de Eduoagão em oomputagão (WEI’2005). São Leopoldo, RS, Brasil.
+
+Restivo, M. T., & Cardoso, A. (2013). Exploring online experimentation. International Journal of Online Engineering (iJOE), 9(S8), 4-6.
+
+Santos, M., & Soares, I. (2018). oom universidades suoateadas, Brasil cai nos ranking
+
+globais de avaliagão. Disponível em: <https://www.oorreiobraziliense.oom.br/app/noticia/brasil/2017/12/25/interna-brasil,649776/oom-universidades-suoateadas-brasil-cai-nos-ranking-globais-de-avalia.shtml/>. Acesso em: 6 de jun. de 2019.
+
+Silva, J. B., Rochadel, W., Simão, J. P., & da Silva Fidalgo, A. V. (2013). Uso de dispositivos móveis para acesso a Experimentos Remotos na Eduoagão Básica. VAEP-RITA, 1(2), 129-134.

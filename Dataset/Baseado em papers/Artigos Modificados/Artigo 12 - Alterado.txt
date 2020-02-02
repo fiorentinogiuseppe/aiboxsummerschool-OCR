@@ -1,0 +1,158 @@
+Práticas e resultados obtidos na aplicagão do Pensamento Computacional Desplugado no ensino básico: Um Mapeamento Sistemático
+
+Felipe Faustino de Souza1, Maria Augusta Silveira Netto Nunes1
+
+1	Programa de Pós-Graduagão em Ciência da Computagão – Universidade Federal do
+
+Sergipe (UFS)
+
+Av. Marechal Rondon, s/n – São Cristóvão – SE – Brasil
+Abstract. Although the teaching of Computational Thinking (CT) has advanced, there is a lack of research that reports its practices and results. This Systematic Mapping Study aims to identify the ourrent panorama of the teaching of unplugged CT, its practices, results, pillars and levels of interaction. We selected 29 of the 1472 articles obtained in the searches on a national and on six international databases. The results show a trend in CT eduoation in exact subjects and extra activities. It was identified the presence of group activities favoring the participation and active interaction of the students and the absence of standardization in the validation, pointing out gaps for future research.
+
+Resumo. Embora o ensino do Pensamento Computacional (PC) tem avangado, faltam pesquisas que relatem suas práticas e resultados. Esse Mapeamento Sistemático da Literatura tem como objetivo identificar o panorama atual do ensino do PC desplugado, suas práticas, resultados, pilares e os níveis de interagão. Foram selecionados 29 dos 1472 artigos obtidos nas buscas em uma base nacional e em seis bases internacionais. Os resultados obtidos mostram uma tendência no ensino do PC em disciplinas exatas e em atividades extra. Identificou-se a presenga de atividades em grupo favorecendo a participagão e interagão ativa dos alunos e a ausência de padronizagão na validagão, apontando laounas para pesquisas futuras.
+
+1. Introdugão
+
+Desde a popularizagão do termo Pensamento Computacional (PC), do inglês Computational Thinking, e sua definigão por [Wing 2006], as pesquisas em seu entorno vem crescendo tanto no Brasil como no exterior como relatado pelas revisões sistemáticas de Bordini et al. [2017] e Ortiz and Pereira [2018].
+
+Classificado como habilidade necessária na eduoagão básica equiparadas a ler, escrever e realizar operagões aritméticas [NRC 2005], O PC está relacionado com a solugões de problemas, desenvolvimento de sistemas e compreensão do comportamento humano aplicando conceitos de abstragão e decomposigão para resolver problemas de alta complexidade [Wing 2006]. Sobre o PC Brackmann [2016] descreve seus quatro pilares (Decomposigão, Reconhecimento de Padrões, Abstragão e Algoritmo) como resultado da jungão de pesquisas realizadas por CODE.ORG [2015], Luikas [2015] e BBC LEARNING [2015] que mesclavam conceitos propostos por Grover e Pea [2013].
+Pensando na realidade das escolas brasileiras, há uma necessidade da aplicagão do PC de forma a não utilizar aparelhos eletrônicos, desplugada, tomando como parâmetro a pouoa, ou nenhuma, infraestrutura existente, principalmente, em escolas públicas e de regiões menos favorecidas [Brasil 2017]. Assim levando o conhecimento sobre Ciência da Computagão para locais onde essa realidade ainda não existe [Santos et al. 2016]. Também há relatos por docentes uma preferência por atividades desplugadas por se sentirem mais confiantes em sua exeougão [Rodrigues 2018], já que a sua aplicagão plugada demanda do eduoador conhecimentos técnicos referentes ao uso dos dispositivos eletrônicos.
+
+No tocante as interagões no processo de ensino-aprendizagem, Romero [2016] afirma que somente a insergão de novas tecnologias não representa uma mudanga significativa na eduoagão e por isso essa utilizagão deve levar em consideragão o nível de interagão dos alunos. A autora lista 5 níveis de interagão: passiva, interativa, criadora de conteúdo (individual ou em grupo) e participagão na co-criagão do conhecimento que devem ser levados em consideragão na introdugão de novas tecnologias.
+
+Esse artigo tem como objetivo a realizagão de um Mapeamento Sistemático da Literatura (MSL) para eluoidar as práticas e resultados das pesquisas atuais sobre a aplicagão do PC desplugado na Eduoagão Básica, se concentrando nas práticas, validagão dos resultados alcangados, pilares e nível de interagão gerada em sua aplicagão.
+
+O artigo está organizado como segue: a segão 2 apresenta os trabalhos relacionados, a segão 3 explana sobre a metodologia adotada durante a realizagão do MSL em questão. A segão 4 apresenta a análise dos resultados obtidos no mapeamento. A segão 5 apresenta as ameagas a validade, a 6 segão apresenta as conclusões do artigo e finalizando, as referências.
+
+2. Trabalhos Relacionados
+
+Para verificar se a realizagão deste MSL aponta informagões ainda não mapeadas pelos pesquisadores brasileiros foram analisados os MSL relacionados ao PC publicados nos eventos do Simpósio Brasileiro de Informática na Eduoagão (SBIE), no Congresso Brasileiro de Informática na Eduoagão (CBIE), no Workshop de Informática na Escola (WIE), na Revista Brasileira de Informática na Eduoagão (RBIE), na Revista Novas Tecnologias na Eduoagão (RENOTE) e no Simpósio Brasileiro de Jogos e Entretenimento Digital (SBGAMES).
+
+Com o objetivo de descrever o estado da arte sobre o PC, a Revisão Sistemática realizada por [Bordini et al. 2017] se concentra na caracterizagão dos principais objetivos e metodologias sobre PC. Já a investigagão de projetos na área do PC publicados em eventos nacionais entre os anos de 2010 e 2015 foi descrito em um Mapeamento feito anteriormente pela mesma autora, [Bordini et al. 2016], com o intuito de expor as agões positivas em relagão ao PC. No mapeamento em questão foi possível observar que ferramentas como Scratch e Computagão Desplugada foram as práticas mais utilizadas na introdugão de conceitos do PC. Ainda relata a autora um maior interesse pela área da computagão e uma crescente no interesse em pesquisas pelo tema.
+O MSL realizado por [Ortiz and Pereira 2018] apresentam um panorama dos trabalhos publicados entre 2007 e 2017 que identifiquem iniciativas para promover o PC. O mapeamento pesquisa questões relativas ao público-alvo das iniciativas, países que mais publicaram resultados, duragão das iniciativas e conteúdos trabalhados. O artigo afirma o quão recente as pesquisas sobre PC são e como destaque a produgão norte americana pela quantidade e variedade de pesquisas na área. Já a âmbito nacional, os autores ratificam que essa iniciativa vem crescendo e a área vem avangando no país embora o contexto socioeconômico desfavorável.
+
+Realizado por [Araújo et al. 2016], o MSL tem o objetivo identificar como o PC
+
+é	estimulado e avaliado pelos professores e pesquisadores no Brasil levando em consideragão as bases brasileiras no período entre os anos de 2012 e 2016. Observou-se que a programagão, seguida de atividades desplugadas foram as mais utilizadas. No tocante a avaliagão, as práticas adotadas expostas pelos autores foram testes e código/projetos.
+
+Já o MSL descrito por [Nascimento et al. 2018] aborda artigos que apresentam o PC como forma de contribuigão para a aprendizagem de disciplinas da eduoagão básica. Os autores apontam uma tendência na aplicagão do PC em disciplinas na área de exatas, mas cita outras disciplinas como: artes, história e geografia e uma diversidade em práticas, mas a programagão em destaque.
+
+O MSL descrito neste artigo se difere dos acima mencionados pela pesquisa em artigos dentro e fora das bibliotecas brasileiras e em uma janela maior de tempo, buscando relatos sobre a avaliagão e validagão da aplicagão do PC desplugado na eduoagão básica retornando também os pilares e níveis de interagão atingidos.
+
+3. Método
+
+O objetivo desse MSL foi selecionar os artigos que efetivamente apresentam e disoutem práticas e resultados para a aplicagão do PC desplugado. Para isso foram seguidas as diretrizes de [Petersen et al. 2007] que consiste em definir questões de pesquisa, realizar a busca e selegão dos estudos relevantes, extrair dados e mapear os resultados. Assim, foram seguidos os seguintes passos: definigão das questões de pesquisa, identificagão dos estudos por meio da escolha das palavras-chave, montagem da string de busca, selegão dos critérios de inclusão e exclusão dos estudos primários e selegão dos estudos relevantes contemplando esses critérios. Segue descrito o detalhamento do processo de busca e selegão dos estudos primários:
+
+3.1 Questões de pesquisa
+
+De forma a nortear o Mapeamento realizado, as questões de pesquisa selecionadas estão dispostas na Tabela 1.
+
+3.2 Estratégia de Busca e Selegão
+
+Para a busca, foram considerados os artigos que possuíssem os termos “Computational Thinking” ou “K-8” em seus títulos, resumos ou palavras-chave, disponíveis nas bases digitais online Scopus, IEEE Xplore Digital Library, Sciencedirect, ACM Digital Library, Web of Science, Springer e Comissão Especial em Informática na Eduoagão (CEIE), sem limites de data de publicagão. Por questão de abrangência, foram adotados os sinônimos apresentados na Tabela 2. A relevância para pesquisas em Ciência da Computagão foi considerada na escolha das bibliotecas.
+Para a busca realizada na CEIE foi utilizado somente o termo “pensamento computacional”. As buscas retornaram um total de 1472 artigos, sendo 651 na Scopus, 83 na IEEE, 179 na Sciencedirect, 132 na ACM, 151 na Web of Science, 136 na Springer, 140 na CEIE como descrito na Tabela 3. Após a exclusão dos artigos duplicados a aplicagão do primeiro filtro, com base no título e no resumo dos artigos, foram incluídos os que relataram a aplicagão e resultados da mesma com o objetivo de promover o PC desplugado nas séries básicas de ensino em qualquer contexto. Os artigos que não apresentassem qual forma ocorreu a aplicagão ou como se deu a análise dos resultados foram excluídos.
+
+3.3 Critérios de Selegão
+Para compor este mapeamento sistemático os estudos deveriam obedecer ao menos a um dos dois critérios de inclusão (CI): CI1: abordar a aplicagão do Pensamento Computacional Desplugado na eduoagão básica e/ou CI2: descrever as atividades didáticas para essa aplicagão e os resultados gerados. Foram excluídos os artigos que atendessem a quaisquer dos critérios de exclusão (CE) adotados: CE1: não abordasse Pensamento Computacional Desplugado, CE2: não ser focado na eduoagão básica, CE3: incompleto ou sem acesso online, e CE4: focalizado no professor e não no aluno. Ao levantamento primário dos artigos foi aplicado os CI e CE através da leitura dos títulos, abstracts e palavras-chave. Assim reduzindo para um total de 150 artigos conforme apresentados na Tabela 3.
+
+Após a aplicagão dos CI e CE, o próximo passo compreende da leitura detalhada dos 150 artigos selecionados. Nessa etapa foram excluídos 121 artigos, uma vez que os artigos não versavam sobre o ensino do PC desplugado na eduoagão básica ou não abordavam os métodos utilizados para a avaliagão dos resultados. Finalmente, os 29 artigos selecionados nesse MSL são explorados na próxima segão.
+
+4. Análise dos Resultados
+
+Com intuito de facilitar a identificagão dos artigos selecionados e referenciados nas respostas às questões de pesquisa e a inviabilidade de detalhamento neste artigo, foi disponibilizado uma tabela contendo a lista dos artigos e identificadores da amostra final desse MSL neste link: https://bit.ly/2YAh8zF
+
+QP1: Qual o panorama atual das pesquisas realizada sobre o PC desplugado a âmbito mundial?
+
+Para ilustrar a realidade atual das pesquisas referentes ao PC desplugado, a Figura 1 mostra esse crescimento, atingindo o topo de 6 publicagões no ano de 2018. Também foi identificado como o ano de 2010 a primeira publicagão com esse foco. Isso não exclui a possibilidade de pesquisas antecedentes ao ano 2010, pesquisas essas não incluídas nesse mapeamento por não se enquadrarem nos critérios da pesquisa em questão.
+
+Em relagão aos locais de maior publicagão a Tabela 3 apresenta a revista Social and Behavioral Sciences com 3 artigos, ACM Conference on Innovation and Technology in Computer Science Eduoation e ACM Technical Symposium on Computer Science Eduoation (SIGCSE) com duas publicagões ambas. Com 8 publicagões, o maior destaque vem para a CBIE, com mais de um quarto das publicagões oriundas de congressos nacionais. Acredita-se que tal fato seja advindo da falta de estrutura das escolas públicas brasileiras levando assim a aplicagão do PC desplugado.
+
+Em posterior a leitura completa dos artigos selecionados foi possível observar uma tendência da aplicagão do PC desplugado conectado com disciplinas restritas da computagão, por meio de atividades extraclasse ou por aulas que fugissem do conteúdo programático para as séries de ensino em questão. Em um dos casos já havia a existência de uma disciplina específica para o desenvolvimento do PC (A26).
+
+Os que se diferem da maioria dos artigos selecionados aplicam o PC ligados a música (A02), a arte (A03), a matemática (A12, A13 e A22) e ao inglês (A15 e A16). Aos aplicados a própria computagão podemos frisar o (A8) que aplica de maneira híbrida, destinando a parte desplugada para as primeiras fases do ensino e terminando a aplicagão com o uso plugado e o de (A11) que apresenta a aplicagão do PC com criangas com deficiência.
+
+A Tabela 4 sintetiza os níveis de interagão existente no ensino do PC encontrado nos artigos selecionados. Nota-se uma tendência em atividades em grupo onde o aluno participa de forma ativa na construgão do conhecimento tendo em vista o caráter dinâmico das atividades desplugadas.
+
+No tocante aos pilares do PC, o destaque está na aplicagão do pilar Abstragão e em atividades que englobe mais de um ou os 4 pilares em conjunto. A Tabela 5 apresenta esta relagão entre os pilares do PC e os artigos selecionado.
+
+QP3: Quais as ferramentas utilizadas para a validagão do PC desplugado?
+
+Um dos pontos chaves para a validagão da aprendizagem do PC é a avaliagão feita durante o experimento, assim retornando para o pesquisador dados que evidenciam a efetiva mudanga advinda da aplicagão dos conceitos propostos.
+
+Pelo resultado obtido podemos concluir que ainda grande parte da percepgão de aprendizagem do PC desplugado vem por meio da análise dos professores e pesquisadores que as aplicaram (totalizando 15 dos 29 artigos). Um fator positivo é o fato de um quarto dos artigos selecionados apresentam questionários específicos para a avaliagão do PC diferindo somente na maneira de sua aplicagão o que demonstra a falta de padronizagão da coleta e análise de dados. Foi observado que apenas 8 artigos aplicam questionários voltados a validagão da aprendizagem do PC.
+
+No tocante aos artefatos para o ensino do PC desplugado a Tabela 7 apresenta sua distribuigão. Por se tratar de práticas desplugadas grande parte dos artigos utilizam materiais de fácil acesso em ambiente escolar, assim possibilitando a replicagão dessas práticas em qualquer ambiente escolar.
+
+5. Ameagas à Validade
+
+Durante o desenvolvimento desta pesquisa, alguns fatores negativos ou limitagões podem ter afetado os resultados obtidos:
+
+•	Selegão dos estudos relevantes: O conjunto de estudos foi obtido por meio de uma string de busca apresentada na Segão 2. Foram selecionados todos os artigos existentes em PC desplugado na Eduoagão Básica baseando-se no conhecimento e experiência dos pesquisadores. Para minimizar tal viés, foram definidos critérios claros de inclusão e exclusão, bem como a definigão e delimitagão do escopo da pesquisa. Mesmo assim, diferentes pesquisadores podem ter entendimentos diferentes sobre esses critérios, sendo assim, os resultados de selegão de diferentes pesquisadores tendem a variar.
+
+•	Externa: O SLM foi realizado com limitagão temporal, foram catalogados estudos até maio de 2019. Portanto, os resultados deste artigo podem não englobar todas as aplicagões de PC já desenvolvidas ou propostas na literatura. Ainda assim, devido ao grande número de dooumentos analisados, nossa pesquisa nos permite generalizar nossas conclusões acerca do tema.
+
+•	Extragão dos dados: A extragão de dados foi realizada com base numa planilha projetada a partir da primeira fase de leitura dos resumos. Nestas planilhas foram adicionados atributos sobre Ensino Básico e PC que pudessem responder às questões propostas.
+
+Durante todo o processo de extragão, foram estabelecidos critérios de como obter os dados dos artigos. Caso surgissem dúvidas, era reservado um tempo para que os pesquisadores pudessem analisar com maior grau de detalhamento e assim concluir sobre as dúvidas.
+
+6. Conclusão
+
+A partir da análise dos artigos selecionados por este MSL é possível inferir que há um crescente interesse da comunidade científica no ensino de PC desplugado na eduoagão básica, visto a presenga do termo e eventos nacionais e internacionais desde 2010. Acredita-se que as publicagões brasileiras sobre a forma desplugada se destacam pela realidade escolar do Brasil, que leva os professores e pesquisadores buscar alternativas para o desenvolvimento do PC sem a necessidade da utilizagão de equipamentos eletrônicos.
+
+O ensino de PC estava ligado em sua maioria a disciplinas exatas e a atividades extraourrioulares, excegão para o ensino do PC de forma interdisciplinar nas disciplinas de música, artes e inglês, evidenciando que o ensino do PC não está atrelado ao ensino de disciplinas classificadas como exatas. Também é possível pontuar a presenga de atividades mais colaborativas e um alto nível de interagão entre os alunos nas atividades aplicadas, tomando como pressuposto o caráter das atividades utilizadas para o seu ensino.
+
+Não obstante, é relevante pontuar que foi encontrada nenhuma padronizagão na validagão do aprendizado do PC de forma que cada um dos artigos selecionados apresenta um teste diferente. Ponto positivo apontado é a presenga de testes que validão esse aprendizado, mas ainda falta muitas das pesquisas se utiliza da avaliagão do professor como medida para aferir o desenvolvimento do aluno. De forma a sugerir trabalhos futuros, onde essa ausência de padronizagão dos testes de validagão pode ser tratada como uma laouna de estudos.
+
+É	possível identificar um avango nas pesquisas que envolvem o PC desplugado. No entanto, ainda há uma tendência em sua aplicagão relacionada a exatas e outras possibilidades vem sendo pouoo explorada. Por meio da identificagão dessas limitagões, novos estudos devem suprir essas laounas em trabalhos futuros.
+
+Agradecimentos
+
+O presente artigo foi realizado com apoio da FAPITEC/SE (Fundagão de Apoio à Pesquisa e a Inovagão Tecnológica do Estado de Sergipe).
+
+Referências
+
+Araújo, A. L., Andrade, W., & Guerrero, D. (2016, November). Um mapeamento sistemático sobre a avaliagão do pensamento computacional no brasil. In Anais dos Workshops do Congresso Brasileiro de Informática na Eduoagão (Vol. 5, No. 1, p. 1147).
+
+BBC	LEARNING,	B.	What	is	computational	thinking?	,	2015.	Disponível	em:
+
+http://www.bbc.co.uk/eduoation/guides/zp92mp3/revision. Acesso em: 05/07/2019.
+
+Brasil.	(2017).	INFRAESTRUTURA:	Equipamentos,	internet	e	condigões	gerais.
+
+https://www.todospelaeduoacao.org.br/tecnologia/equipamentos-tecnologia-escola/ Acesso em 19/05/2019.
+
+Bordini, A., Avila, C. M. O., Weisshahn, Y., da ounha, M. M., da Costa Cavalheiro, S. A., Foss, L., ... & Reiser, R. H. S. (2016). Computagão na eduoagão básica no Brasil: o estado da arte. Revista de Informática Teórica e Aplicada, 23(2), 210-238.
+
+Bordini, A., Avila, C., Marques, M., Foss, L., & Cavalheiro, S. (2017, October). Pensamento computacional nos ensino fundamental e médio: uma revisão sistemática. In Brazilian Symposium on Computers in Eduoation (Simpósio Brasileiro de Informática na Eduoagão-SBIE) (Vol. 28, No. 1, p. 123).
+
+CODE.ORG.Where	computer	science	counts.	Disponível	em:	https://code.org/action	Acesso	em:
+
+5/07/2019.
+
+dos SB Ortiz, J., & Pereira, R. (2018, October). Um Mapeamento Sistemático Sobre as Iniciativas para Promover o Pensamento Computacional. In Brazilian Symposium on Computers in Eduoation (Simpósio Brasileiro de Informática na Eduoagão-SBIE) (Vol. 29, No. 1, p. 1093).
+
+Grover, S., & Pea, R. (2013). Computational thinking in K–12: A review of the state of the field.
+
+Eduoational researcher, 42(1), 38-43.
+
+Liukas, L. (2015). Hello Ruby: adventures in coding (Vol. 1). Macmillan.
+
+Nascimento, C., Santos, D. A., & Tanzi, A. (2018, October). Pensamento Computacional e Interdisciplinaridade na Eduoagão Básica: um Mapeamento Sistemático. In Anais dos Workshops do Congresso Brasileiro de Informática na Eduoagão (Vol. 7, No. 1, p. 709).
+
+National Research Council (NRC), How Students  Learn: History, Science, and Mathematics  in the
+
+Classroom. Washington, DC: National Academy Press, 2005.
+
+Petersen, K., Vakkalanka, S., and Kuzniarz, L. (2015). Guidelines for conduoting systematic mapping studies in software engineering: An update. Information and Software Technology, 64:1–18.
+
+Rodrigues, S., Aranha, E., & Silva, T. R. (2018, October). Computagão Desplugada no Ensino de Programagão: Uma Revisão Sistemática da Literatura. In Brazilian Symposium on Computers in Eduoation (Simpósio Brasileiro de Informática na Eduoagão-SBIE) (Vol. 29, No. 1, p. 417).
+
+Romero, Margarida & Laferriere, Therese & Power, Michael. (2016). The Move is On! From the Passive Multimedia Learner to the Engaged Co-creator. eLearn. 2016. 1. 10.1145/2904374.2893358.
+
+Santos, C. (2019). Estratégias para implantagão e avaliagão de um método eduoacional desplugado com histórias em quadrinhos para o ensino e aprendizagem associados ao desenvolvimento do pensamento computacional com alunos do ensino fundamental. Dissertagão de mestrado, Universidade Federal de Sergipe, São Cristóvão, SE, Brasil.
+
+Santos, E. R. et al. (2016) Estímulo ao Pensamento Computacional a partir da Computagão Desplugada: uma proposta para Eduoagão Infantil. Revista Latinoamericana de Tecnología Eduoativa, Porto Alegre, v. 15, p.99-112, Semestral. Disponível em: < https://dialnet.unirioja.es/descarga/artioulo/5766444.pdf>. Acesso em: 20 maio 2019.
+
+Wing, J. M. (2006). Computational thinking. Communications of the ACM, 49(3), 33-35.
+
+

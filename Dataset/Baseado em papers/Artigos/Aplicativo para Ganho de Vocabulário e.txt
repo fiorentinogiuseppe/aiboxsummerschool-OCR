@@ -1,0 +1,456 @@
+Aplicativo para Ganho de Vocabulário e
+Auxílio na Alfabetização destinado às Crianças
+com Transtorno do Espectro Autista
+Maria Renata M. Gobbo1
+, Cinthyan Renata Sachs C. de Barbosa1
+,
+Marcelo Morandini2
+, Fernanda Mafort3
+1
+Programa de Pós-Graduação em Ciência da Computação - Universidade Estadual de
+Londrina (UEL) Londrina, PR – Brasil.
+2
+Escola de Artes, Ciências e Humanidades - Universidade de São Paulo (USP)
+São Paulo, SP – Brasil.
+3
+Escola de Ciências da Vida - Pontifícia Universidade Católica do Paraná (PUCPR)
+Londrina, PR – Brasil
+{mr.gobbo1@gmail.com, cinthyan@uel.br, m.morandini@usp.br,
+fernanda-mafort@hotmail.com}
+Abstract. Autism Spectrum Disorder (ASD) is a neurodevelopmental disorder
+that can impair, to some extent, communication, socialization and also present
+stereotyped and restricted behaviors. The objective of this article was to
+present test results from the ACA (Learning with Alternative Communication)
+application, which uses the images of the Daily Life Activities to teach naming
+of objects, alphabet, syllables, and words, and to verify if there was
+vocabulary gain and literacy aid growth, as well as its usability and
+gamification issues. The tests were carried out with 28 children diagnosed
+with mild and moderate ASD. The results showed that such App is effective in
+its performance, since children have gained vocabulary.
+Resumo. Transtorno do Espectro Autismo (TEA) é um distúrbio de
+neurodesenvolvimento que pode comprometer, em algum grau, a
+comunicação, socialização e apresentar comportamentos estereotipados e
+restritos. O objetivo deste artigo foi apresentar resultados dos testes do
+aplicativo ACA (Aprendendo com Comunicação Alternativa), que utiliza
+imagens de Atividades de Vida Diária para ensinar a nomeação de objetos,
+alfabeto, sílabas e palavras, e verificar se ocorreu ganho de vocabulário e
+auxílio à alfabetização, como também questões de usabilidade e gamificação.
+Os testes foram feitos com 28 crianças diagnosticadas com TEA de graus leve
+e moderado. Os resultados mostraram que tal aplicativo é eficaz no que
+promete, visto que as crianças ganharam vocabulário.
+1.Introdução
+De acordo com Ramdoos et al. (2011), o Transtorno do Espectro Autista (TEA) é um
+distúrbio do desenvolvimento neurológico de início precoce, caracterizado por
+comprometer a comunicação, habilidades sociais e comportamentos estereotipados ou
+DOI: 10.5753/cbie.sbie.2019.1111 1111
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+restritos. Essas crianças podem apresentar resistência às modalidades sensoriais, como
+lavagem e escovação do cabelo ou dos dentes, usar certos tipos de roupas, etc., gerando
+um grande prejuízo para a independência desses indivíduos (Mashal e Kasirer 2012).
+PECS (Picture Exchange Communication System), que é um método de
+comunicação desenvolvido por meio de PCSs (Picture Communication Symbols) tem
+sido usado para crianças do espectro autista. Esse vem do campo da comunicação
+alternatva, a qual é eglobada por uma área maior chxmada de Tecnologia Assistiva,
+que tem como um de seus vários objetivos compensar, aliviar ou neutralizar uma
+incapacidade ou desvatagem gerada por alguma “deficiência” (Galvão Filho, 2009).
+Um dos seus campos trata-se de intervenções e serviços associados com a educação que
+realiza uma associação entre símbolo e atividade para ajudar crianças e adultos autistas
+ou com outros distúrbios de desenvolvimento a adquirir habilidades de comunicação.
+Convém lembrar que pesquisas relacionadas ao ganho de vocabulário em
+crianças com TEA é de importância significativa, visto que se essas não forem
+estimuladas de forma correta podem acabar perdendo até mesmo o vocabulário já
+adquirido, salienta Bordini et al. (2014). Além disso, as crianças precisam saber nomear
+objetos para desenvolver leitura com compreensão e muitas têm dificuldade em
+relacionar um nome a um objeto (Whalon e Hart 2011).
+A mesma importância deve ser dada às pesquisas relacionadas à motivação que a
+gamificação pode oferecer aos indivíduos com TEA. Coelho Neto, Blanco e Silva
+(2018) fizeram uma pesquisa em Anais do SBIE de 2007 a 2017 e não encontraram
+artigos que contemplassem o tema Gamificação e Autismo. A temática de usabilidade
+nos aspectos visuais e de comunicação também é de suma importância para o público
+autista, uma vez que há toda uma peculiaridade sensorial, de comportamento, etc.
+Este artigo irá abordar questões de usabilidade, gamificação, assim como dados
+que apontam o aprendizado gerado com o uso de um aplicativo desenvolvido, o qual foi
+denominado ACA. Também foram apontadas características que podem interferir ou
+dificultar as coletas de dados para construção de um aplicativo para autistas. Isso poderá
+servir como ponto de patida para outras pesquizas evolvendo tecnologias para
+aumetar a comunicaão e alfabetização desse público.
+2.Trabalhos relacionados
+Para o tratamento de indivíduos com TEA é necessária uma intervenção muito precoce,
+de caráter intensivo e multidisciplinar (Lima 2012). De acordo com Silva, Salgado e
+Raposo (2013), o uso de tecnologias para crianças com autismo pode auxiliar seu
+desenvolvimento, por isso alguns trabalhos serão apresentados aqui.
+Bittencourt e Fumes (2016) apresentam o Sistema de Comunicação Alternativa
+para Letramento de Pessoas com Autismo (SCALA), no qual seu objetivo é auxiliar o
+letramento de pessoas com autismo. Possui o módulo de prancha de comunicação e
+outro para construção de histórias. As análises foram feitas com dois adultos, onde esses
+construíram histórias relacionadas com suas vidas.
+O mTEA, apresentado por Silva, Soares e Benitez (2017), tem como objetivo
+criar um ambiente de ensino personalizado de habilidades básicas como formar ou
+sobrepor palavras e selecionar, nomear ou sequenciar figuras. O software foi
+1112
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+desenvolvido para ser utilizado em sala de aula, pois as atividades a serem feitas pelo
+indivíduo autista precisam ser pré-elaboradas por terceiros.
+Cotidiano trata-se de um protótipo não testado com indivíduos autistas (Afranio
+Neto et al. 2017) que tem por objetivo utilizar conceitos de atividades diárias para
+aplicar no cotidiano deças, levando em consideração não apenas os tipos de
+perturbações, mas também as intervenções educacionais existentes em uma tecnologia
+de apoio, que serviram de base para a concepção do aplicativo.
+Outro aplicativo é o TEO (Moura et al. 2016), que embora não seja um jogo para
+alfabetização, trata-se de um modelo de jogos interativos. Ele foi construído para
+trabalhar o desenvolvimento cognitivo da criança com espectro autista e é dividido em
+várias categorias como: associação, raciocínio lógico-matemático, quebra-cabeça,
+exercícios de memorização, atividades de vida diária e localização.
+Porém, a maioria desses trabalhos não leva em conta: i) realização de atividades
+siples que não precisam ser pré-elaboradas por terceiros; ii) utilização de figuras
+relacionadas com Atividades de Vida Diária (AVDs); iii) recomendações de design
+para indivíduos com TEA; iv) realização de tetes com um grupo grande de indivíduos
+autistas; v) auxílio para ganho de vocabuário.
+3. Metodologia ACA - Aprendendo com Comunicação Alternativa
+A tecnologia utilizada para o desenvolvimento do aplicativo ACA (Aprendendo com
+Comunicação Alternativa) descrito neste trabalho foi o Construct 2, por ser compatível
+com vários dispositivos móveis que se encontram no mercado. O app já está disponível
+na plataforma do Google Play e pode ser usado para ganho de vocabulário e auxílio à
+alfabetização de forma gratuita. Todas as figuras presentes no mesmo estão relacionadas
+com AVDs dessas crianças e foram tiradas do portal ARASSAC1
+.
+O ACA foi baseado no TEACCH (Treatment and Education of Autistic and
+Related Communication Handcapped Children), que trata o autismo como um processo
+neurobiológico e visa melhorar a adaptação do indivíduo via exploração das habilidades
+e interesses por meio do ensino individualizado estruturado e fortemente baseado nas
+teorias comportamental e cognitivas empíricas. Trabalha essencialmente com a
+estruturação do tempo, atividades, materiais e ambientes usados pela criança visando
+compensar déficits típicos do TEA e proporcionar ganhos significativos para o convívio
+social.
+O ABC Autismo (Farias, Silva e Cunha 2014) utiliza o método TEACCH que
+traz palavras descontextualizadas de um tema específico e não se atenta à sensibilidade
+auditiva das crianças. Assim, no ACA optou-se abordar as AVDs e palavras
+relacionadas a elas. ACA se difere também do SCALA (Bittencourt e Fumes 2016) em
+nível de instrução esperada pelo usuário. Nesse, para a utilização do módulo de
+construção de histórias, deve-se estruturar uma narrativa, o que é muito complexo para
+indivíduos com TEA, enquanto naquele optou-se em não trabalhar com frases e sim com
+questões relacionadas à morfologia.
+
+1 ARASAAC: Portal Aragonês de Comunicação Aumentativa e Alternativa, http://www.arasaac.org/
+Acesso em: 12 jun. 2019
+1113
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+O primeiro nível do ACA tem por objetivo ensinar crianças com TEA a
+distinguir formas e é baseado no nível II do TEACCH descrito em Fonseca e Ciola
+(2014). O segundo nível (Figura 1a) foi baseado no nível III do referido método e tem
+como objetivo auxiliar a leitura com compreensão e aumentar o vocabulário dessas
+crianças. O terceiro nível ensina as letras do alfabeto (Figura 1b), enquanto que o quarto
+nível, as sílabas simples (Figura 1c) sendo baseado no nível IV do TEACCH. O quinto
+nível auxilia na associação de imagem e palavra escrita (Figura 1d). O aplicativo
+também conta com elementos de gamificação como pontos, medalhas e troféus.
+A metodologia de alfabetização aqui utilizada incentiva o ensino das habilidades
+rudimentares pelo modelo de equivalência de estímulos (Gomes 2015). É possível simular
+aprendizagem ensinando aos indivíduos a relacionar palavras verbais (conjunto A) com
+a figura (conjunto B) correspondente. Com isso, aprende-se a relacionar a palavra
+falada com o objeto concreto e são estabelecidas as relações entre os elementos do
+conjunto A com o B (relações AB). Logo após pode-se acrescentar mais um tipo de
+estímulo, com as palavras escritas (conjunto C). Assim, serão ensinadas as relações de
+palavras ditas (conjunto A) com a palavra escrita (conjunto C), tendo as relações AC.
+Figura 1: Exemplo do Aplicativo ACA
+Os métodos de design interativo usados foram os de Preece, Rogers e Sharp
+(2005) que auxiliam a criar experiências de usuário visando facilitar a interação. Foram
+empregadas as recomendações de Britto (2016) para o design de tela multi-toque. Essas
+indicam boas práticas para a construção de ferramentas para autistas em relação à
+utilização de cores, linguagem, imagens, interfaces, entre outras.
+A sequência de letras ensinada segue o método fônico descrito por Capovilla e
+Capovilla (2004). ACA pode ser utilizado para todos os graus do TEA. Os de alto
+funcionamento poderão ser alfabetizados rapidamente por possuírem facilidade em
+memorização e os de baixo nível poderão ser auxiliados nesse processo de maneira mais
+lenta por meio de requisitos prévios que foram levados em conta na sua construção.
+1114
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+4.Resultados e discussões
+A presente pesquisa foi desenvolvida por meio de uma abordagem quantitativa, bem
+como qualitativa (Ludke e André 2011), pois os dados a serem coletados serão
+predominantemente descritivos desempenhando um papel fundamental tanto no
+processo de obtenção dos dados quanto na análise dos resultados. Em Santos (2016)
+salienta-se também a escassez de estudos sobre a maneira como se articulam
+pensamento e linguagem na constituição desses sujeitos (autistas). Tal é a grande
+motivação deste trabalho e da metodologia empregada.
+Os testes foram aplicados de forma igual a todos os participantes desta pesquisa.
+Antes de começarem a utilizar o ACA, as crianças passaram por um pré-teste no
+notebook que respondiam ou apontavam questionamentos sobre as
+imagens/palavras/sílabas/letras presentes no app para verificar se elas já as conheciam
+previamente, sendo anotadas suas respostas em um questionário impresso. Também
+foram extraídas informações sobre os perfis dos usuários com os terapeutas das crianças
+ou professores da educação especial, referentes ao grau de autismo, se possuíam
+linguagem verbal e/ou oral, se relacionavam com seus pares, etc. Durante o uso do
+aplicativo foram coletadas informações sobre as dificuldades e usabilidade e após foi
+feito um pós-teste no notebook para verificar se houve ganho de vocabulário e avanços
+na alfabetização.
+Os testes foram realizados com crianças diagnosticadas com TEA tanto de uma
+escola pública como de uma clínica particular de psicologia (ambas especializadas em
+autismo) e aconteceram nas salas onde as crianças já tinham costume de realizar
+atividades educativas e contaram com um smartphone contendo o aplicativo ACA
+previamente instalado e foi utilizado um roteiro impresso para coleta de dados. O
+taanho da amoztra era de 44 indvíduos com autismo, com idade de 2 a 15 anos,
+porém apenas 28 desses possuíam requisitos mínimos para participar da pesquisa, os
+outros 16 não conseguiram ficar sentados, por exemplo, durantes os testes ou não
+respondiam às demandas. Isso foi feito de forma legal, com autorização do Comitê de
+Ética em Pesquisa em Serem Humanos da Universidade Estadual de Londrina e por
+meio do Termo de Concentimento Livre e Esclarecido dos responsáveis.
+Aprendizado gerado durante a utilização do aplicativo: a Tabela 1 conta com
+os dados quantitativos coetados durante o pré-teste e após usar o aplicativo (pós-teste),
+exibidos em Gobbo (2019). Indivíduos A’s e B’s são, respectivamente, da escola
+pública e da clínica particular. É possível ver a idade de cada participante na tabela, seu
+nível de autismo, número de acertos em seu pré e pós-teste, nos quais foram testadas 55
+imagens, 55 palavras, 63 sílabas e 24 letras do alfabeto. Alguns participantes não
+conseguiram utilizar todos os níveis do aplicativo ACA por não terem os pré-requisitos
+necessários (conhecimento prévio das letras, sílabas e palavras) ou não terem vontade de
+continuar utilizando o app. Pode-se observar na referida tabela que as medidas de pósteste foram superiores as de pré-teste e que os participantes tiveram bons resultados no
+ganho de vocabulário. Verifica-se que as crianças/adolescentes aprenderam novas
+imagens, pois aumentaram a porcentagem de acertos no pós-teste. Já com relação à
+alfabetização no ACA, não se espera que crianças de 3 a 5 anos possuam conhecimento
+de sílabas e palavras, pois geralmente tal aprendizado acontece após os 5 anos.
+Gamificação na motivação de crianças com TEA: Embora o aplicativo ACA
+1115
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+siga as peculiaridades de aprendizagem dos indivíduos com autismo, esse deve
+procurar outras formas de atrair tal público para sua utilização sem haver
+desmotivação, como aconteceu algumas vezes durante os testes. O uso de pontos,
+medalhas e troféus não foi previamente apresentado aos usuários e esperava-se que
+eles notassem esses elementos, porém, apenas 4 das 28 crianças peceberam a
+pontuação. Isso pode ter acontecido por falta do aplicativo destacá-los ou por esses
+elementos não serem ainda suficientes para motivar autistas. Uma alternativa seria
+utilizar elementos imersivos, fazendo com que os autistas se sitam dentro do jogo.
+Tabela 1 - Tabela com os dados do pré e pós-teste
+Idade Nível Imagens
+(pré)
+Imagens
+(pós)
+Letras
+(pré)
+Letras
+(pós)
+Sílabas
+(pré)
+Sílabas
+(pós)
+Palavras
+(pré)
+Palavras
+(pós)
+A1 15 Moderado 19 33 - - - - - -
+A2 15 Leve 52 54 22 22 66 66 55 55
+A3 14 Leve 52 55 22 22 63 63 - -
+A4 15 Moderado 44 52 11 11 - - - -
+A5 9 Leve 53 55 21 22 - - - -
+A6 13 Moderado 49 55 22 22 63 63 - -
+A7 12 Moderado 21 36 19 22 - - - -
+A8 8 Leve 39 46 22 22 - - - -
+B1 8 Leve 29 48 22 22 63 63 55 55
+B2 10 Leve 48 52 22 22 61 62 55 55
+B3 8 Leve 47 53 22 22 62 63 55 55
+B4 14 Leve 49 55 22 22 63 63 55 55
+B5 6 Leve 37 51 22 22 63 63 55 55
+B6 3 Leve 10 23 19 22 - - - -
+B7 8 Moderado 25 34 22 22 47 60 19 29
+B8 8 Leve 36 41 21 22 57 57 20 41
+B9 3 Leve 34 46 15 16 - - - -
+B10 10 Leve 44 55 22 22 63 63 55 55
+B11 5 Leve 44 47 21 22 - - - -
+B12 3 Leve 42 50 20 22 - - - -
+B13 3 Leve 32 44 22 22 - - - -
+B14 7 Leve 52 55 22 22 63 63 55 55
+B15 3 Leve 36 38 22 22 - - - -
+B16 3 Leve 18 25 18 20 - - - -
+B17 4 Leve 35 50 22 22 - - - -
+B18 11 Leve 40 48 22 22 - - - -
+B19 3 Leve 31 44 20 22 - - - -
+B20 4 Leve 26 55 20 21 - - - -
+ Dados de usabilidade: durante os testes com o app pôde-se observar que as
+crianças de 3 anos ou mais conseguiram entender as atividades da ferramenta. Algumas
+descobriram outras atividades, tal como clicar em uma imagem para reproduzir um som.
+1116
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Outro ponto observado durante os testes foi a falta de interesse de algumas crianças
+após certo tempo de uso do aplicativo, principalmente as de 3 a 5 anos,
+independentemente do nível do autismo, pois essas tendem a se cansar mais facilmente.
+De acordo com Kern et al. (2006), ao construir aplicativos para autistas deve-se
+ter a preocupação com as cores utilizadas no mesmo que devem ser bastante atrativas.
+Para garantir uma interface que atente à sensibilidade visual de autistas, a cor de fundo
+utilizada foi adequada para que haja uma distinção entre os itens e para que se possa
+diferenciar conteúdos e relacionar informações similares. Assim, quanto aos aspectos
+visuais do ACA, verificou-se que 85,2% das crianças optaram pelo background com o
+fundo escuro. Essa informação foi obtida de maneira simples, mostrando a interface
+com tom de azul escuro e outra com tom claro e foi pedido que as crianças escolhessem
+quais dos dois preferiam. Acredita-se que as cores na tela do celular não causem
+desconfortos visuais na maioria das crianças com autismo, porém só foram utilizadas
+cores frias nos testes. Não foi verificado o uso de cores quentes, como vermelho ou
+laranja, uma vez que alguns autistas são bem sensíveis a essas.
+Outro ponto nos aspectos visuais é a escolha por utilização de imagens que não
+contenham muitas informações. Na Figura 2 é mostrada a imagem de um quadro à
+esquerda que possui um urso, uma mesa e uma casa. Uma das crianças, ao ver a imagem
+no pré-teste, disse que aquilo era um urso e não um quadro. Então, optou-se por retirar
+as iformações impertinentes, conforme o quadro no lado direito. Deve-se lembrar que
+autistas geralmente se fixam nos detalhes, então enquanto mais clean a figura melhor.
+Figura 2 - Imagem com muitas informações à esquerda e essa alterada à direita
+Para a criação do ACA foi analisado também o software ABC Autismo (Farias,
+Silva e Cunha 2014) e percebeu-se que esse não se atentava à sesibilidade auditiva de
+crianças com autismo, possuindo vários sons altos e desnecessários que eram acionados
+quando passava de fase ou fazia uma interação errada. Isso não acontece no ACA, pois
+estímulos sonoros só vêm com as letras, sílabas e palavras, bastando clicar em cima
+dessaas e o áudio é apcionado pronunciando-as. Nas atividades da fase cinco do aplicativo,
+uma palavra é falada para que o usuário possa procurar sua escrita correspondente
+apresentando também sua imagem. Com as fases do ACA é possível auxiliar as crianças
+na aquisição de vocabulário, pois esse se relaciona à capacidade de entender o conceito
+e significado de palavras, como descrito por Nalom, Soares e Cárnio (2015). O nível de
+dificuldade aumenta e é acionado o emparelhamento multimodelo, com figuras ou
+letras/sílabas/palavras diferentes para associar com seu par correspondente.
+As legendas e o reforço sonoro no ACA puderam auxiliar no processo de
+comunicação e ganho de vocabulário dessas crianças, principalmente quando elas
+repetiam as palavras emitidas pelo aplicativo. O participante A4 mesmo sem ser pedido,
+repetia todas as palavras que ouvia. Já B6, embora não conseguisse falar perfeitamente a
+1117
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+palavra, tentava emitir o mesmo som. O participante A7 quando não conseguia ouvir a
+reprodução do som por motivos de barulho externos colocava o smartphone no ouvido.
+Os estímulos sonoros associados aos estímulos visuais ajudaram as crianças a
+compreenderem o que a imagem significava. Isso ficou claro no momento em que
+algumas crianças utilizavam o aplicativo e entoavam em tom de entendimento um “Ah,
+estômago!” ao invés de só repetir a palavra reproduzida pelo aplicativo.
+Em relação ao conhecimento prévio das imagens presentes no aplicativo foi
+possível verificar que algumas crianças não identificaram imagens de ações, como
+escovar os dentes ou mesmo brincar. Isso ocorreu em diversos testes, principalmente em
+crianças com maiores comprometimentos. Com isso ocorreu uma dificuldade de
+algumas crianças reconhecerem AVDs durante a aplicação do pré-teste. Conclui-se que,
+possivelmente, essas tenham dificuldade de reconhecer imagens contendo ações.
+O participante A6 comprova que crianças com autismo podem não responder
+bem aos meios tradicionais de educação, mas podem realizar com sucesso atividades
+nos meios digitais. Segundo a professora, esse não realiza nenhuma atividade de escrita
+ou leitura na sala de aula e apresenta comportamento agressivo quando lhe é imposto,
+porém usando o smartphone realizou todas as atividades propostas sem hesitar, reclamar
+ou ter qualquer comportamento agressivo.
+Os participantes B7 e B8 eram os participantes com mais de 8 anos que mais
+apresentavam comprometimentos de comportamento e interação, porém foram os que
+apresentaram mais ganhos em geral. Durante os testes foram presenciadas algumas
+características do TEA em vários participantes que dificultaram as coletas de dados:
+Hiperatividade ou passividade: crianças que não param sentadas foi um problema na
+coleta, principalmente as mais novas. Muitas preferiam ficar correndo ou pulando e
+essas foram excluídas da pesquisa. Em relação à passividade, tivemos apenas o caso de
+uma criança que não respondeu às instruções verbais e que também foi excluída.
+Resistência em mudar a rotina: a aplicação dos testes nessas crianças implicava em
+uma mudança brusca de rotina e isso em algumas gerava comportamentos inadequados,
+como autoagressão ou agressão a outras pessoas. Um exemplo foi um participante de 13
+anos que se irritou no começo do pré-teste. Toda hora esse fechava a tela do notebook e
+gritava. O teste foi interrompido por um profissional da psicologia, o qual acreditava
+que esse poderia agredir outra pessoa a qualquer momento.
+Agir como se estivesse surdo: não reponder às inscrições verbais foi um problema
+durante a coleta de dados. Muitas crianças autistas parecem não ouvir quando é pedido
+para realizarem algo que não é de seu interesse.
+Outra constatação no decorrer do trabalho foi fazer com que os pais entendessem
+que a utilização do aplicativo traria vantagens não apenas durante o(s) dia(s) de testes,
+mas sim deve ser utilizado diariamente pelos participantes em outros ambientes
+(casa, terapias, etc.). Como em qualquer outra forma de ensino, a aprendizagem
+acontece lentamente e de forma gradual.
+Outra característica que não dificultou a coleta de dados, mas que foi observada:
+Ausência de resposta aos métodos normais de ensino: um dos participantes de 13
+anos que não realiza atividades em sala de aula e em sua ficha estava escrito que ele era
+1118
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+não verbal, baixa interação social e não totalmente alfabetizado, porém completou todos
+os níveis do aplicativo demonstrando interesse.
+5.Conclusões
+A proposta deste artigo foi validar o aplicativo ACA com crianças/adolescente de 3 a 15
+para verificar algumas questões, como ganho de vocabulário, auxílio à alfabetização,
+gamificação e aspectos de usabilidade. O aplicativo foi eficaz em sua proposta, visto
+que todos os participantes da pesquisa tiveram um ganho de vocabulário. Em relação ao
+auxílio da alfabetização, os que conseguiram concluir 100% dos níveis, já estavam
+alfabetizados, porém acredita-se que a prática pode potencializar o entendimento dessas
+crianças em relacionar imagens com suas AVDs.
+Outro ponto de destaque foi o conjunto de atividades não realizáveis em
+smartphones, como o pré e pós-teste, que foram mais difíceis de serem feitos quando
+comparadas com o uso do aplicativo em si. Preferiram smartphone a notebook.
+A pesquisa também tentou verificar a eficácia da gamificação como instrumento
+de motivação, mas a falta de imersão nos elementos gamificados pode ter influenciado
+os resultados. Uma hipótese é que isso pode ser resolvido com a inserção de ranking
+mundial, realidade aumentada ou até mesmo desafios. Já dados de usabilidade colhidos
+poderão servir de alicerce para futuras aplicações de smartphones.
+Conclui-se que o ACA pode auxiliar a alfabetização e ganho de vocabulário de
+indivíduos com autismo, pois possui recursos para isso. Porém, esse não substitui os
+meios básicos de alfabetização, mas sim auxilia no ganho de vocabulário e deve ser
+usado sempre que possível para melhorar a eficácia. Todo esse processo é uma continua
+construção de saberes, por isso cabe a cada profissional, independente da área, ajudar da
+maneira que lhe cabe, quebrando barreiras, superando obstáculos e buscando colaborar
+para a melhoria da vida dessas pessoas.
+Referências
+Afranio Neto, Rufino, H., Nakamoto, P., Palis, R. e Beira, D. (2017) “Cotidiano: um
+software para auxiliar crianças autistas em suas atividades diárias”. XXVIII Simpósio
+Brasileiro de Informática na Educação. p.404-413.
+Bittencourt, I. e Fumes, N. (2016) “A tecnologia assistiva SCALA na promoção de
+narrativas de sujeitos com Transtorno do Espectro Autista sobre as suas experiências
+escolares e o autismo”. XXVII Simpósio Brasileiro de Informática na Educação.
+p.767-776.
+Bordini, R. A., Freitas, P. A. G., Fonseca, L. F., Nunes, A. P. A, Santiago, D. L., Otsuka,
+J. L., Beder, D. M., Santiago, G. L. A. e Oliveira, M. R. G. (2014) “Processo de
+Design de um jogo eletrônico para o aprendizado de Tecado Musical”. XIII
+Computer Games and Digital Entertainment, p.139-147.
+Britto, T. C. P. (2016) GAIA: uma proposta de guia de recomendações de acessibilidade
+web com foco em aspectos do autismo. Dissertação de Mestrado, Universidade
+Federal de São Carlos, São Carlos, SP.
+Capovilla, A. G. S. e Capovilla, F. C. (2004) Alfabetização: método fônico, Memnon.
+Coelho Neto, J., Blanco, M. B. e Silva, J. A. (2018) “Gamificação e Discalculia: uma
+revisão nos Anais do Simpósio Brasileiro de Informática da Educação”.
+1119
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+I Encontro Paranaense de Tecnologias em Educação Matemática, p.1-15.
+Farias, E. B., Silva, L. W. C. e Cunha, M. X. C. (2014). “ABC Autismo: um aplicativo
+móvel para auxiliar na alfabetização de crianças com autismo baseado no Programa
+TEACCH”. X Simpósio Brasileiro de Sistemas de Informação, p.458-469.
+Fonseca, M. E. G. e Ciola, J. C. B. (2014) Vejo e Aprendo: Fundamentos do Programa
+TEACCH: o ensino estruturado para pessoas com autismo, Book Toy.
+Galvão Filho, T. A. (2009) “A Tecnologia Assistiva: de que se trata?”. In Conexões:
+educação, comunicação, inclusão e interculturalidade, pages 207-235. Redes.
+Gobbo, M. R. M. (2019) Aplicativo ACA (Aprendendo com Comunicação Alternativa)
+para Crianças com Transtorno do Espectro Autista. Dissertação de Mestrado,
+Universidade Estadual de Londrina, Londrina, PR.
+Gomes, C. G. S. (2015) Ensino de leitura para pessoas com autismo, Appris.
+Kern, J. K., Trivedi, M. H., Garver, C. R., Grannemann, B. D., Andrews, A. A., Savla, J.
+S., Johnson, D. G., Mehta, J. A. and Schroeder, J. L. (2006) The pattern of sensory
+processing abnormalities in autism. In Autism, vol.10, n.5, pages 480-494.
+Lima, C. B. (2012) Perturbações do Espectro do Autismo: Manual Prático de
+Intervenção, Lidel.
+Ludke, M. e André, M. E. D. A. (2011). Pesquisa em educação: abordagens
+qualitativas. In Em Aberto, vol. 5, n. 31.
+Mashal, N. and Kasirer, A. (2012) Principal component analysis study of visual and
+verbal metaphoric comprehension in children with autism and learning disabilities
+In Research in developmental disabilities, vol. 33, pages 274-282.
+Moura, D., Oliveira Filho, D. L. S., Laertius, D., Silva, A. J. G., Paiva, P., Sales, T.,
+Cavalcante, R. e Queiroz, F. (2016) “TEO: Uma suı́
+te de jogos interativos para apoio
+ao tratamento de crianças com autismo”. XXVII Simpósio Brasileiro de Informática
+na Educação, p.627-636.
+Nalom, A. F. O., Soares, A. J. C. e Cárnio, M. S. (2015). A relevância do vocabulário
+receptivo na compreensão leitora. In: CoDAS, vol. 27, n. 4, pages 333-338.
+Preece, J., Rogers, Y. e Sharp, H. (2005) Design de interação, Bookman.
+Ramdoss, S., Mulloy, A., Lang, R., O’Reilly, M., Sigafoos, J., Lancioni, G., Didden, R.
+and El Zein, F. (2011) “Use of computer-based interventions to improve literacy
+skills in students with autism spectrum disorders: A systematic review”. In: Research
+in Autism Spectrum Disorders, vol. 5, n. 4, pages 1306-1318.
+Santos, E. C. (2016) Linguagem Escrita e a Criança com Autismo, Appris, 1ª Edição.
+Silva, M. G. F., Salgado, L. C. e Raposo, A. B. (2013) “Metáforas de Perspectivas
+Culturais na (re) definição de padrões de colaboração de um jogo de multi-toque para
+usuários com autismo”. In: 12th Brazilian Symposium on Human Factors in
+Computing Systems, p.112-121.
+Silva, M., Soares, A. e Benitez, P. (2017) “Ambiente Digital para Ensino e
+Acompanhamento Personalizado de Estudantes com Autismo: proposta com Uso de
+Dispositivos Móveis”. In: XXVIII Simpósio Brasileiro de Informática na Educação.
+p.1047-1056.
+Whalon, K. J. and Hart, J. E. (2011) Children with autism spectrum disorder and literacy
+instruction: An exploratory study of elementary inclusive settings. In: Remedial and
+Special Education, vol. 32, n. 3, pages 243-255.
+1120

@@ -1,0 +1,109 @@
+Uma análise de correlação entre disciplinas do ensino fundamental e o desempenho na Olimpíada Brasileira de Informática
+
+Thalia S. Santana1,Alexandre F. Lopes1, Adriano H. Braga1
+Abstract. This paper performs an analysis of the teaching-learning of Computational Thinking with scientific olympiads in computer science in classes that have been and have not been preparatory course. Furthermore, a descriptive statistic of the results obtained by the elementary school in the competition is presented and a correlation analysis was perfomed with the students’ grades in the disciplines of curricular basic education. The variables used in the research are compared with other related articles and point to the Portuguese Language discipline as the one that is most directly related to the satisfactory result in the Modality Initiation of Olimpíada Brasileira de Informática.
+
+Resumo. Este artigo realiza uma análise do ensino-aprendizagem de Pensamento Computacional por meio de olimpíadas científicas em informática em turmas que houveram e não houveram curso preparatório. Além disso, é apresentada uma estatística descritiva dos resultados obtidos pela escola na competição e efetuada uma análise de correlação com as notas dos estudantes em disciplinas da grade curricular do ensino fundamental. As variáveis utilizadas na pesquisa são comparadas com demais trabalhos relacionados e apontam a disciplina de Língua Portuguesa como a de maior relação direta com o resultado satisfatório na Modalidade Iniciação da OBI.
+
+
+1.	Introdução
+
+Com o entendimento de que boa parte das instituições mantêm-se baseadas em software e hardware,a utilização de Tecnologia da Informação e Comunicação (TIC) tornou-se vital para os ganhos de um país. Apesar da crescente demanda por tais habilidades, verifica-se que há um declínio percentual frequente de estudantes matriculados em cursos relacionados à computação, sendo que acadêmicas do sexo feminino tornam-se ainda menores (BELL et al., 2009). Estimativas brasileiras apontam que há uma escassez de profissionais de Tecnologia da Informação (TI), ao mesmo tempo que o mercado eleva sua demanda, sendo necessário cerca de 420 mil novos contratados entre 2018 e 2024 (BRASSCOM, 2019).
+
+Bell et al. (2009) ainda evidenciam que estereótipos incorretos de carreiras de computação estão distanciando estudantes de profissões que poderiam atraí-los. Inclusive, desde pequenos acabam não possuindo interesse por competências correlatas a computação, como por exemplo, a matemática. Além disso, várias discussões vêm sendo levantadas em favor do aumento da abrangência do ensino de computação, considerando-a como uma ciência de relevância (BARCELOS; SILVEIRA, 2012). A Sociedade Brasileira de Computação (SBC) também confirma ser tanto fundamental quanto estratégico ao Brasil que tais conteúdos sejam apresentados desde a educação básica, tal fato que já ocorre em diversos países, como: Alemanha, Argentina, Austrália, Coreia do Sul, dentre outros (SBC, 2017).
+
+Além disso, em uma sociedade rodeada por tecnologia computacional, defende-se a necessidade de que a educação em todos os níveis de escolaridade possibilite a compreensão da tecnologia para entender e implementar soluções por meio de recursos computacionais, e não somente utilizá-las (BARCELOS; SILVEIRA, 2013). Assim, ações que envolvam estudantes desde os primeiros níveis de ensino, podem tornar-se uma estratégia para despertá-los efetivamente para a área. A exemplo disso, a SBC chancela a Olimpíada Brasileira de Informática (OBI), que coordenada pelo Instituto de Computação da Universidade Estadual de Campinas (Unicamp), segue os parâmetros de demais olimpíadas científicas do país. A execução ocorre em prol de alavancar o interesse pela ciência da computação enquanto campo de importância na formação básica de estudantes de nível fundamental, médio e superior (OBI, 2019).
+
+A OBI divide-se em três categorias, sendo: Iniciação, Programação e Universitária. No que tange a primeira delas, a Modalidade Iniciação corresponde a uma das categorias dentro de olimpíadas científicas em informática, a única que não faz uso de computador para aplicação da avaliação e possui como público-alvo os estudantes do ensino fundamental. A modalidade é subdividida em: Nível 1, para matriculados até o 7º ano e Nível 2, para matriculados até o 9° ano. As provas são teóricas abordando questões de múltipla escolha que envolvem raciocínio lógico (SOUZA; LOPES, 2018), Pensamento Computacional (PC) (WING, 2008) e até computação desplugada (BELL et al., 2009).
+
+Desta maneira, dentro do contexto de olimpíadas de conhecimento, frequentemente trabalha-se com PC, fazendo o uso de ideias da computação para resolver problemas do cotidiano e assim, passando por uma abstração ao mundo real. Não necessariamente trata-se de solucionar qualquer problemática com auxílio de um computador, mas por meio de raciocínio lógico. Exercitar PC é valioso para todos, mesmo que não tenham interesse em computação (BELL et al., 2009). Assim, tal campo mantém-se presente em pesquisas de diversas áreas, desde economia até humanidades, influenciando de modo direto e indireto, tornando-se um desafio educacional ao ponto que se deveria aprender tal habilidade começando nos primeiros anos de vida (WING, 2008).
+
+Ademais, torna-se comum o uso de abordagens de computação desplugada para promoção de PC, visto que a mesma objetiva explorar conceitos de ciência da computação envolvendo a resolução de problemas para atingir determinada finalidade e dentre esse processo, lidar com conceitos desta ciência (BELL et al., 2009), sendo uma metodologia voltada para o ensino de computação sem a necessidade do equipamento. Por conseguinte, habilidades de resolução de problemas estimuladas podem facilmente relacionar-se com as outras disciplinas do núcleo comum. Para Barcelos e Silveira (2013), há trabalhos que identificam a correlação entre conhecimentos matemáticos oriundos do ensino básico e o futuro sucesso de estudantes em cursos de computação, principalmente em disciplinas introdutórias.
+
+Sendo assim, o presente trabalho buscou avaliar a associação entre o desempenho acadêmico de estudantes do ensino fundamental com o resultado em olimpíadas científicas em informática, mais precisamente quanto a Modalidade Iniciação da XXI OBI. Deste modo, o estudo além desta introdução, apresenta na seção 2, os trabalhos relacionados. Na seção 3, são descritos os métodos de análise, amostras selecionadas e questões de pesquisa, e a seção 4, apresenta-se e discute-se os resultados encontrados pela experimentação. Por fim, na seção 5, as conclusões e apontamentos para trabalhos futuros.
+
+
+2.	Trabalhos Relacionados
+
+Mestre et al. (2015) apontam que há um baixo quantitativo de estudos que avaliam a relação de PC a áreas de conhecimento, como a Matemática. Nesse sentido, os autores se propuseram a verificar questões de matemática do Programa Internacional de Avaliação de Estudantes (Pisa), ao ponto de compreender se as habilidades para resolução de problemas matemáticos possuíam relação com aquelas desenvolvidas com PC. Foi perceptível que as habilidades de PC são similares à dos questionamentos de matemática e suas capacidades fundamentais, com indícios que a inserção no contexto da educação básica poderá auxiliar no ensino-aprendizagem e raciocínio matemático.
+
+Oliveira, Nicoletti e Del Val Cura (2014), verificaram a correlação entre habilidades de computação e desempenho dos alunos de ensino fundamental. Foi aplicado um teste lógico com semelhanças de conceitos de teoria da computação, como o modelo da Máquina Turing. Participaram estudantes desde o 6º até o 9º ano e seu rendimento acadêmico foi obtido levando em conta a média entre as disciplinas de Matemática, Língua Portuguesa, História, Geografia e Ciências em três bimestres letivos. Por meio do teste de Pearson, foram obtidas correlações significativas e positivas fortes para 6º, 8º e 9º ano da escola analisada e para o 7º ano, correlação moderada, expressando a existência de relação entre o teste computacional e o desempenho acadêmico dos discentes.
+
+De forma similar ao estudo anterior, Rodrigues (2017) realizou um teste de proficiência com conhecimentos relativos à programação de computadores, por intermédio de avaliação referente aos anos finais de estudantes na educação básica, a fim de prover comparativos com o desempenho destes com o Exame Nacional do Ensino Médio (ENEM). Diferenciando-se pelo nível dos participantes, ao fazer uso do teste de correlação de Pearson com avaliações por disciplinas, foi verificada a existência de correlação entre o desempenho do teste de PC e o desempenho em Matemática (eixo “Matemática e suas Tecnologias”), com coeficiente r = 0,44, considerada como correlação positiva e moderada. Também foram avaliadas demais áreas de conhecimento e componentes curriculares presentes na organização curricular do ensino médio. Ademais, a pesquisa constatou que estudantes do grupo experimental com experiências referente a conteúdos de programação providas no ensino básico tiveram desempenho superior no ENEM, especialmente em “Ciências da Natureza e suas Tecnologias” e “Matemática e suas Tecnologias” (RODRIGUES; ANDRADE; CAMPOS, 2016).
+
+Este trabalho segue características dos trabalhos apresentados anteriormente, mas difere-se ao propor o ensino-aprendizagem de PC por intermédio da participação na Modalidade Iniciação da OBI, a qual possui questões que têm como base o ideal de resolução de problemas e raciocínio lógico, com interpretação textual. O estudo aqui apresentado ainda diferencia-se pelos dados de análise, ao considerar a pontuação desta competição como instrumento para avaliação de PC e correlação com disciplinas da matriz curricular do ensino fundamental.
+
+
+3.	Materiais e Métodos
+
+Para a execução deste trabalho foram realizadas análises com estudantes de três diferentes turmas (representadas por A, B e C), cursando o 9° ano do ensino fundamental regular do Colégio Estadual Câmara Filho, da cidade de Rialma-GO. Sendo assim, visando atingir os objetivos propostos pelo trabalho em questão, foram elaboradas as seguintes questões de pesquisa (QP), as quais serão respondidas no decorrer deste:
+
+●	QP1) Como dispõe-se o estudo comparativo entre a turma supervisionada (Grupo Experimental) e as demais (Grupo Controle)?
+●	QP2) Qual o rendimento em olimpíadas científicas em Informática de estudantes que competiram pela primeira vez?
+●	QP3) Qual a correlação das notas das disciplinas do núcleo comum com os resultados da OBI?
+
+Para investigação, os alunos foram classificados em dois grupos: experimental e de controle. O experimental constituiu-se de estudantes que realizaram a prova da olimpíada e tiveram curso preparatório com ênfase em PC e dedução lógica, além de responderem previamente exercícios de olimpíadas passadas (Turma A). Já o grupo controle foi formado por estudantes que não tiveram treinamento prévio e realizaram a prova da olimpíada (Turmas B e C). Em totalidade, os envolvidos nunca haviam competido nesta olimpíada científica, sendo inclusive a primeira vez que a escola teve ciência da mesma.
+
+Para os cálculos de correlação foram obtidos os dados do desempenho acadêmico individual de cada estudante do semestre letivo de 2019/1 com notas na escala de 0 a 10, em cinco das disciplinas presentes na grade curricular vigente, conforme apresentado na literatura por Oliveira, Nicoletti e Del Val Cura (2014), sendo elas: Língua Portuguesa, Matemática, Geografia, História e Ciências. Outra variável utilizada foi a pontuação obtida pelos estudantes no nível 2 da Modalidade Iniciação, primeira fase da XXI OBI. A pontuação de cada competidor é calculada pela Unicamp, instituição promotora da olimpíada, que por sua vez realiza a correção e atribuição das notas mediante os acertos dos participantes, atribuindo entre 0, nota mínima, e 15 pontos, nota máxima. Enfim, também foram utilizados os dados de classificação geral dos competidores a nível estadual e pela região Centro-Oeste, com enfoque nos sujeitos de pesquisa.
+Mediante a obtenção e análise primária dos dados, uma amostra de 45 estudantes foi considerada para esse estudo. Os dados foram tabulados e dispostos em formato CSV (Comma-separated values), posteriormente utilizou-se da linguagem de programação Python versão 3.7.3, com o auxílio das bibliotecas Pandas, Scipy, Matplotlib e Numpy, para realizar o processamento, análises estatísticas e geração das visualizações. Para a análise dos dados, como critério de exclusão, foram desconsiderados os estudantes que: i) evadiram da escola durante a execução da pesquisa, ou ii) não possuíam as notas nas disciplinas do núcleo comum, ou iii) não realizaram a prova da olimpíada. O teste de correlação de Pearson foi aplicado para examinar a relação entre o resultado da OBI e as notas das disciplinas do núcleo comum.
+
+
+4.	Resultados e Discussão
+
+Quanto à classificação dos estudantes para a fase 2 (estadual), um total de 48 competidores foram aprovados, dentro dos 176 inscritos no estado de Goiás. Destes, 23 são da instituição objeto desta pesquisa, correspondendo a 48% dos aprovados. Entre as pontuações individuais em decorrência da quantidade de acertos, a maior nota alcançada foi de 12/15, e o rendimento médio geral tratou-se de 5,6 pontos. Conforme os grupos já estabelecidos, a mediana do grupo experimental foi superior a do grupo controle, entretanto, esse grupo possuiu maior variabilidade dos dados, enquanto o grupo de controle menor discrepância entre as notas, apesar de possuir alguns outliers,conforme apresentado na Figura 1.
+Outrossim, observa-se nos resultados provindos das análises realizadas, diferentes correlações entre disciplinas da grade curricular e a pontuação alcançada pelos estudantes na olimpíada (Tabela 1). Das disciplinas citadas no trabalho como objeto de pesquisa, a que possui maior correlação é Língua Portuguesa seguida de Ciências, ambas com correlação moderada. Já Matemática, possui correlação fraca, ao deter coeficiente r = 0,35. História e Geografia, apresentam-se com o coeficiente de correlação inferior a 0,3, indicando que a correlação entre as variáveis é desprezível por tratar-se de uma correlação muito fraca, além de um valor de p (nível de significância) abaixo que 0,05 (p < 0,05), limite referência considerado para essa pesquisa.
+Deste modo, os resultados encontrados diferenciam-se aos descritos na literatura no que tange aos efeitos de Língua Portuguesa. Ao destacar-se como a disciplina com maior coeficiente de correlação (r = 0,45), o mais alto dentre os averiguados, aponta-se a influência desta em relação a pontuação na referida olimpíada científica. Contudo, Rodrigues (2017) e Rodrigues, Alves e Campos (2016) não obtiveram relações significativas, visto que o componente curricular “Linguagens, Códigos e suas Tecnologias” apresentou uma correlação positiva fraca (r = 0,12) e que conforme os autores, não foi significativo, considerando não existir evidências de correlação entre conhecimentos de programação de computadores e desempenho neste eixo curricular.
+
+Acredita-se que os índices encontrados para Língua Portuguesa sejam relevantes no contexto da OBI, visto que a prova constitui-se de elevada interpretação de texto, aptidão que combinada a lógica, auxilia na resolução das questões (SANTOS; OLIVEIRA; NETO, 2015; LOPES; SANTANA; BRAGA, 2018), principalmente tratando-se da Modalidade Iniciação em que são exercícios teóricos.
+
+Com o objetivo de compreender melhor os resultados obtidos na correlação, foram gerados gráficos de dispersão (Figura 2), que associam as notas obtidas pelos estudantes em cada matéria (eixo y) com a pontuação da OBI (eixo x), contendo as mesmas variáveis da correlação de Pearson, e assim corroboram para demonstrar a disciplina de Língua Portuguesa como a de maior associação conforme a linha de tendência linear.
+5.	Considerações Finais
+
+Quanto a QP1, comparando-se entre o grupo experimental e controle, verificou-se que a mediana das notas na OBI do grupo experimental foi mais elevada que a do grupo de controle, podendo concluir que o curso preparatório não se evidenciou como fator decisivo para o bom rendimento na olimpíada, ou seja, mesmo os estudantes que pertenciam ao grupo experimental conseguiram obter pontuações positivas na OBI. Em relação a QP2, a instituição avaliada obteve um ótimo rendimento na OBI, tendo que em sua primeira participação foi a escola com o maior número de aprovados em toda a região Centro-Oeste.
+
+Conclui-se, por meio das análises executadas que no contexto da Olimpíada Brasileira de Informática, que a disciplina de Língua Portuguesa foi a de maior correlação com o desempenho dos alunos na competição (QP3). Vale ressaltar que o modelo adotado pela olimpíada, apresenta para cada questão: cenário, regras e interrogações, de forma textual. Dessa forma, primeiramente cabe ao estudante a leitura e interpretação do texto, para assim prosseguir com a resolução da prova, habilidades essas, desenvolvidas e exigidas na disciplina de Língua Portuguesa. Portanto, se o estudante possui domínio na leitura e interpretação de texto, é provável que sua pontuação seja satisfatória, que combinado a dedução lógica, pode vir a proporcionar um bom desempenho na OBI.
+
+Para trabalhos futuros é importante validar os resultados com um maior quantitativo de amostras de estudantes e edições da olimpíada científica. Além disso, adicionalmente realizar uma análise comparativa com estudantes de escolas com diferentes perfis e fases da competição.
+
+
+6.	Referências
+
+Barcelos, T. S., & Silveira, I. F. (2012). Pensamento computacional e educação matemática: Relações para o ensino de computação na educação básica. In XX Workshop sobre Educação em Computação, Curitiba. Anais do XXXII CSBC (Vol. 2, p. 23).
+
+Barcelos, T. S., & Silveira, I. F. (2013). Relações entre o Pensamento Computacional e a Matemática através da construção de Jogos Digitais. In Anais do XII Simpósio Brasileiro de Games e Entretenimento Digital (SBGames).
+
+BRASSCOM	(2019).	Relatório	Setorial	de	TIC	2018,	https://brasscom.
+
+org.br/relatorio-setorial-de-tic-2019, Julho, 2019.
+
+Bell, T., Alexander, J., Freeman, I., & Grimley, M. (2009). Computer science unplugged: School students doing real computing without computers. The New Zealand Journal of Applied Computing and Information Technology, 13(1), 20-29.
+
+Lopes, A. F., Santana, T. S., & Braga, A. B. (2018). Uma análise da influência da aplicação de curso preparatório de olimpíadas científicas de informática com estudantes de Ensino Médio. In Fórum Goiano de Software Livre,XV FGSL.
+Mestre, P., Andrade, W., Guerrero, D., Sampaio, L., da Silva Rodrigues, R., & Costa, E. (2015). Pensamento Computacional: Um estudo empírico sobre as questões de matemática do PISA. In Anais dos Workshops do Congresso Brasileiro de Informática na Educação(Vol. 4, N°. 1, p. 1281).
+
+OBI (2019). Sobre a OBI, https://olimpiada.ic.unicamp.br/info/, Janeiro.
+
+Oliveira, O. L., Nicoletti, M. C., & Del Val Cura, L. M. (2014). Quantitative correlation between ability to compute and student performance in a primary school. In
+
+Proceedings of the 45th ACM Technical Symposium on Computer Science Education (pp. 505-510). ACM.
+
+Rodrigues, R. D. S. (2017). Um estudo sobre os efeitos do pensamento computacional na educação. Dissertação (Mestrado em Ciência da Computação) - Universidade Federal de Campina Grande, Centro de Engenharia Elétrica e Informática, 2017. 95 f.
+
+Rodrigues, R. S., Andrade, W. L., & Campos, L. M. S. (2016). Can Computational Thinking help me? A quantitative study of its effects on education. In 2016 IEEE Frontiers in Education Conference (FIE)(pp. 1-8). IEEE.
+
+Santos, E. R. S., Cristiano, F., & Neto, I. B. D. M. (2015). Raciocínio Lógico e Computação: Descobrindo Estratégias de ensino por meio da Olimpíada Brasileira de Informática. In Anais do Workshop de Informática na Escola(Vol. 21, N°. 1, p. 266).
+
+SBC (2017). Referenciais de Formação em Computação: Educação Básica, http://www.sbc.org.br/files/ComputacaoEducacaoBasica-versaofinal-julho2017.pdf, Janeiro, 2019.
+
+Souza, J. S., & Lopes, A. S. B. (2018). Estimulando o pensamento computacional e o raciocínio lógico no ensino fundamental por meio da OBI e computação desplugada. In Brazilian Symposium on Computers in Education (Simpósio Brasileiro de Informática na Educação-SBIE)(Vol. 29, Nº. 1, p. 1893).
+
+Wing,	J.	M.	(2008).	Computational	thinking	and	thinking	about	computing.
+
+Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences,366(1881), 3717-3725.
+
+
+
+
+
+
+ 

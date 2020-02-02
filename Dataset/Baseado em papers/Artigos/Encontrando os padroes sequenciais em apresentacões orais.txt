@@ -1,0 +1,417 @@
+Encontrando os padroes sequenciais em apresentac¸ ˜ oes orais ˜
+de estudantes utilizando Sequential Pattern Mining
+Felipe Vieira1
+, Cristian Cechinel1
+, Roberto Munoz2
+, Robson Lemos1
+,
+Tiago Weber1
+1Programa de Pos-Graduac¸ ´ ao em Tecnologias da Informac¸ ˜ ao e Comunicac¸ ˜ ao, ˜
+Universidade Federal de Santa Catarina, Ararangua, Brasil ´
+2Escuela de Ingenier´ıa Civil Informatica, ´
+Universidad de Valpara´ıso, Valpara´ıso, Chile
+felipe.roque@posgrad.ufsc.br, {cristian,robson,Tiago}@ufsc.br
+roberto.munoz@uv.cl
+Abstract. The present paper describes a sequential pattern mining based approach to identify the main corporal sequences in students oral presentations
+during a given course. Data from students presentations was collected through
+the use of Microsoft Kinect and Leikelen software, the total number of observations was 65. The 7 collected features were used as input information in the
+SPMF tool, allowing the identification of main sequences of presenters. Sequences with the Hands Down attribute were the most frequent in all presentations.
+It has also been found that the presentations 1 and 3 are more similar in terms
+of sequence than with the second. The evaluation of the sequences can be integrated into the tool so that the teacher can return feedback to the students about
+their postures.
+Resumo. O presente trabalho descreve uma abordagem de Minerac¸ao de ˜
+Padrao Sequencial para identificar as principais sequ ˜ encias corporais em ˆ
+apresentac¸oes orais de estudantes durante um determinado curso. Os da- ˜
+dos das apresentac¸oes dos alunos foram coletados atrav ˜ es do uso do Micro- ´
+soft Kinect e do software Leikelen, totalizando 65 observac¸oes. As 7 carac- ˜
+ter´ısticas coletadas foram utilizadas como informac¸oes de entrada na ferra- ˜
+menta SPMF, permitindo a identificac¸ao das principais sequ ˜ encias dos apre- ˆ
+sentadores. Sequencias com o atributo M ˆ aos Baixas foram as mais frequentes ˜
+em todas as apresentac¸oes. Verificou-se tamb ˜ em que as apresentac¸ ´ oes 1 e 3 s ˜ ao˜
+mais semelhantes em termos de sequencia do que com a segunda. A avaliac¸ ˆ ao˜
+das sequencias pode ser integrada na ferramenta para que o professor possa ˆ
+retornar feedback aos alunos sobre suas posturas.
+1. Introduc¸ao˜
+O desenvolvimento de habilidades de comunicac¸ao e trabalho em equipe tem sido indi- ˜
+cado por organizac¸oes profissionais e recomendac¸ ˜ oes de curr ˜ ´ıculo e ainda por relatorios ´
+para programas de graduac¸ao universit ˜ aria [Sabin et al. 2017] como expertise funda- ´
+mental para a preparac¸ao de futuros profissionais, em diferentes ˜ areas do conhecimento. ´
+Quanto as habilidades de comunicac¸ ` ao, o objetivo principal ˜ e transmitir as informac¸ ´ oes de ˜
+DOI: 10.5753/cbie.sbie.2019.1896 1896
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+forma clara e coerente para as pessoas. Bons comunicadores demonstram suas habilidades de apresentac¸ao com caracter ˜ ´ısticas verbais e nao verbais, como linguagem corporal, ˜
+contato visual com o publico ou o espac¸o que ocupam no palco [York 2013]. A linguagem ´
+corporal e uma parte importante dos processos de aprendizagem e comunicac¸ ´ ao. Al ˜ em´
+disso, posturas corporais e gestos sao usados em apresentac¸ ˜ oes orais para transmitir ideias ˜
+e mensagens [Mehrabian 2017].
+Hoje, tecnologias e sensores avanc¸ados estao dispon ˜ ´ıveis em ambientes de aprendizagem que permitem a captura de dados por meio de diferentes modalidades. De acordo
+com Ochoa [Ochoa 2017], o campo da analise de aprendizagem multimodal (MMLA) ´
+tenta incorporar diferentes fontes de dados de aprendizagem na pesquisa de analise de ´
+aprendizagem (LA), alem do tradicional arquivo de log, capturado pelos sistemas on- ´
+line. Tecnologias avanc¸adas de sensores permitem capturar dados biometricos com di- ´
+ferentes modalidades. Isso inclui artefatos de aprendizagem, olhar, posturas , ac¸oes , ˜
+expressoes faciais, fala, escrita e desenho. Esses artefatos de aprendizado s ˜ ao exemplos ˜
+de informac¸oes multimodais que foram gradualmente incorporadas a sistemas de apren- ˜
+dizado.
+Existem alguns desafios associados a combinac¸ ` ao de dados de v ˜ arias origens, re- ´
+sultando em resultados ruidosos. Problemas com dados de uma variedade de fontes e
+programas, envolvendo reconhecimento facial e de fala, geralmente tem resoluc¸ ˆ oes com- ˜
+plexas, que geralmente sao resolvidas atrav ˜ es de t ´ ecnicas de aprendizado de m ´ aquina ´
+[Ochoa et al. 2016]. Alem disso, a identificac¸ ´ ao e caracterizac¸ ˜ ao de estudantes de ˜
+graduac¸ao˜ e um ponto de partida fundamental, a fim de se obter melhores processos ´
+de ensino e aprendizagem. Na avaliac¸ao de alunos que usam t ˜ ecnicas de MMLA, ap ´ os´
+a captura de dados de um grupo de usuarios e diferentes fontes, os conjuntos de da- ´
+dos devem ser mesclados para processamento estat´ıstico ou minerac¸ao de dados, para ˜
+extrair informac¸oes razo ˜ aveis a partir dele. Assim, este trabalho procura encontrar ´
+padroes em dados sequenciais de apresentac¸ ˜ oes de estudantes. A minerac¸ ˜ ao de dados ˜
+sequenciais e a busca dos relacionamentos entre as ocorr ´ encias de eventos sequ ˆ encias ˆ
+[Zhao and Bhowmick 2003].
+O restante do artigo esta organizado da seguinte forma. Na Sec¸ ´ ao 2 s ˜ ao apresen- ˜
+tados os trabalhos relacionados com a identificac¸ao de padr ˜ oes posturais. J ˜ a na Sec¸ ´ ao 3 ˜
+e apresentada uma vis ´ ao geral da metodologia e das etapas realizadas para obtenc¸ ˜ ao dos ˜
+resultados. Na Sec¸ao 4 s ˜ ao apresentados os resultados encontrados. A Sec¸ ˜ ao 5 apresenta ˜
+as considerac¸oes finais e propostas de trabalhos futuros. ˜
+2. Trabalhos Relacionados
+A analise de aprendizado multimodal ´ e um campo relacionado ´ a LA, com ` enfase na ˆ
+analise de modalidades de comunicac¸ ´ ao complexas durante atividades de aprendizagem, ˜
+como fala, escrita e interac¸ao n ˜ ao-verbal [Scherer et al. 2012]. Embora relativamente ˜
+jovem, o MMLA e um campo ativo e uma variedade de t ´ ecnicas e aplicac¸ ´ oes tem sido ˜
+propostas nos ultimos anos. ´
+Uma abordagem usual no MMLA e a integrac¸ ´ ao de gravac¸ ˜ oes de c ˜ amera ˆ
+com outros dados, para analisar o comportamento do aluno. Por exemplo, em
+[Bidwell and Fuchs 2011] usaram uma gravac¸ao de v ˜ ´ıdeo com multiplas c ´ ameras e ˆ
+classificac¸oes de observadores para propor uma estrutura de an ˜ alise de comportamento. ´
+1897
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Seu objetivo era modelar e classificar o engajamento do aluno a partir de sequencias de ˆ
+alvos do olhar dos alunos, usando o software de rastreamento de rostos. Alem disso, um ´
+grupo de observadores especialistas classificou os comportamentos dos alunos em categorias (engajados, atenciosos ou de transic¸ao). Com essas duas entradas, um classificador de ˜
+engajamento do aluno foi criado para fornecer um relatorio ao professor. Al ´ em disso, em ´
+[Ochoa et al. 2013], as informac¸oes de v ˜ ´ıdeo, audio e trac¸o da caneta foram usadas para ´
+discriminar entre especialistas e nao especialistas em grupos de alunos que solucionam ˜
+problemas matematicos. ´
+Outra instancia de gravac¸ ˆ oes em v ˜ ´ıdeo com varias c ´ ameras que est ˆ a sendo usada ´
+em contextos de sala de aula e o trabalho [Raca and Dillenbourg 2013], em que 3 a 4 ´
+cameras foram usadas para coletar dados em uma sala de aula regular, de maneira discreta. ˆ
+Em seguida, informac¸oes de movimento do olhar e do corpo foram extra ˜ ´ıdas dos v´ıdeos
+para fornecer um relatorio ao professor. ´
+Em [Le et al. 2013], o uso de um dispositivo Kinect foi proposto como uma alternativa para resolver problemas que de outra forma seriam dif´ıceis de resolver usando
+cameras convencionais, no reconhecimento de posturas humanas. Eles usaram a ferra- ˆ
+menta de rastreamento do esqueleto fornecida pelo Kinect SDK para coletar informac¸oes ˜
+conjuntas. Com base no esqueleto rastreado, as posic¸oes das articulac¸ ˜ oes e os ˜ angulos ˆ
+foram usados como caracter´ısticas. Estes foram entao utilizados na t ˜ ecnica da m ´ aquina ´
+de vetores de suporte (SVM) para reconhecer as posturas humanas.
+Em [Echeverr´ıa et al. 2014] tambem usaram o dispositivo Kinect para detectar ´
+posturas comuns das articulac¸oes do corpo do esqueleto. Eles ent ˜ ao empregaram o C- ˜
+Means fuzzy para extrair generalizac¸oes de posturas, por pessoa, e ent ˜ ao realizaram a ˜
+clusterizac¸ao usando o algoritmo K-Means. ˜
+Em [Reilly et al. 2018], analisaram os dados do Kinect e da fala, coletados durante uma tarefa de programac¸ao de rob ˜ os. Eles mostraram a correlac¸ ˆ ao entre certos ˜
+movimentos e padroes de gestos com ganhos de aprendizagem. Eles tamb ˜ em usaram al- ´
+goritmos de agrupamento para encontrar categorias recorrentes de posic¸ao do corpo, que ˜
+foram entao usadas para analisar a quantidade de tempo que os alunos gastaram com elas ˜
+e ganhos de aprendizado.
+3. Metodologia
+3.1. Descric¸ao do caso ˜
+O contexto de aprendizado do presente estudo e o curso “ Introduc¸ ´ ao˜ a Engenharia ” `
+oferecido aos estudantes de engenharia da Universidade de Valparaiso, Chile, durante o
+ano de 2017. Durante o curso, os alunos realizaram 3 apresentac¸oes orais em grupos sobre ˜
+tres t ˆ opicos previamente definidos no curso totalizando 65 observac¸ ´ oes, sendo, 20 para a ˜
+primeira apresentac¸ao, 22 para a segunda apresentac¸ ˜ ao e 23 para a terceira. ˜
+3.2. Microsoft Kinect
+A captura de dados para este trabalho foi feita pelo Microsoft Kinect. E capaz de capturar ´
+ate 6 pessoas simultaneamente. O kinect mostrou-se eficiente na extrac¸ ´ ao dos padr ˜ oes ˜
+de postura e fala necessarios para os experimentos. Suas vantagens est ´ ao relacionadas ˜
+ao numero de sensores presentes no dispositivo. Ele cont ´ em um sensor de profundidade, ´
+1898
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+uma camera colorida e um conjunto completo de microfones que fornece recursos de ˆ
+reconhecimento de voz, captura facial e reconhecimento de movimentos em todo o corpo.
+Usamos o rastreamento do esqueleto para classificar as posic¸oes dos alunos e a ˜
+detecc¸ao de voz. Com isso, foi poss ˜ ´ıvel representar o corpo humano como um numero de ´
+articulac¸oes. Essas articulac¸ ˜ oes s ˜ ao partes do corpo: brac¸os, pescoc¸o, m ˜ aos e cabec¸a, por ˜
+exemplo, Figura 1 mostra duas pessoas e suas representac¸oes por rastreamento do esque- ˜
+leto. Essas representac¸oes de rastreamento esquel ˜ etico foram utilizadas para classificar ´
+ac¸oes pr ˜ e-definidas e treinadas e, assim, montar as bases de dados utilizadas. O tempo ´
+gasto em cada postura / ac¸ao˜ e armazenado tamb ´ em. ´
+3.3. Procedimentos e coleta de dados
+Os dados capturados correspondem a apresentac¸oes orais no curso Introduc¸ ˜ ao˜ a Enge- `
+nharia. O curso e oferecido no primeiro semestre aos alunos do curso de Engenharia ´
+Informatica (na Universidade de Valparaiso, Chile). No curso, os alunos devem realizar ´
+tres apresentac¸ ˆ oes orais avaliadas, associadas a 1) desenvolvimento web, 2) microcontro- ˜
+ladores e 3) banco de dados (com um mes entre cada apresentac¸ ˆ ao). Cada apresentac¸ ˜ ao˜
+foi realizada por grupos de 2 alunos, com um maximo de 5 minutos por grupo. Os slides ´
+do PowerPoint podem suportar todas as apresentac¸oes dos alunos. Todas as apresentac¸ ˜ oes ˜
+foram capturadas usando o software Microsoft Kinect e Leikelen. Os alunos tiveram que
+assinar um consentimento informado no in´ıcio do curso. Alem disso, este trabalho foi ´
+aprovado pelo Comite de ˆ Etica em Pesquisa com Seres Humanos da Faculdade de Medi- ´
+cina da Universidade de Valparaiso.
+3.4. Ferramenta Leikelen
+Usamos o software Leikelen para coleta e processamento de dados (veja a Figura 1).
+O software permite detectar, armazenar e visualizar as posturas corporais das pessoas
+gravadas. Leikelen tem opc¸oes para adicionar posturas personalizadas, para exportar e ˜
+importar cenas, e para adicionar um visualizador das posturas detectadas, juntamente
+com uma linha do tempo. Por fim, Leikelen tambem permite exportar os dados a serem ´
+visualizados usando outras ferramentas de minerac¸ao de dados. ˜
+Leikelen usa o MS Kinect para capturar posic¸oes do corpo e o algoritmo ADABo- ˜
+ost para classificar as posturas. O software tem 10 posturas corporais pre-definidas e va- ´
+lidadas, juntamente com outros tipos de metricas, como 1) dist ´ ancia prox ˆ emica (dist ˆ ancia ˆ
+entre duas ou mais pessoas) , 2) se a pessoa esta olhando para o p ´ ublico, 3) inclinac¸ ´ ao do ˜
+corpo e 4) se a pessoa esta falando. ´
+3.5. Caracter´ısticas coletadas
+Os dados usados no presente trabalho sao mostrados na Tabela 1. Os dados brutos s ˜ ao˜
+compostos por uma sequencia de per ˆ ´ıodos e a respectiva ac¸ao / postura do aluno, captu- ˜
+rada pelo sistema para aquele per´ıodo determinado. Por exemplo, um aluno pode passar
+um certo per´ıodo com o brac¸o explicando, em seguida, deixar os brac¸os para baixo por um
+per´ıodo muito curto de tempo e, em seguida, comec¸ar a apontar para os slides, finalmente
+retornando a posic¸ ` ao com o brac¸o explicando. Para esta sequ ˜ encia, obtemos quatro regis- ˆ
+tros compostos pelas ac¸oes / posturas capturadas (Uma M ˜ ao, M ˜ aos Baixas, Apontando e ˜
+Uma Mao), juntamente com o per ˜ ´ıodo que cada ac¸ao / postura durou. ˜
+1899
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Figura 1. Tela de aplicativo Leikelen mostrando os modelos de esqueleto de duas
+pessoas.
+Tabela 1. Descric¸ao de cada caracter´ıstica da base de dados inicial ˜
+N Caracter´ısticas Descric¸ao˜
+1 Mao na Face ˜ O apresentador tem uma mao no queixo. ˜
+2 Mao na Cabec¸a ˜ O apresentador tem uma mao na nuca. ˜
+3 Maos no Quadril ˜ O apresentador tem as maos na cintura. ˜
+4 Maos Baixas ˜ O apresentador tem as maos para baixo. ˜
+5 Uma Mao˜
+O apresentador esta explicando com uma m ´ ao˜
+para baixo e a outra dobrada em posic¸ao explicativa. ˜
+6 Maos Abertas ˜
+O apresentador esta explicando com as duas m ´ aos ˜
+(as duas maos com os bracos dobrados). ˜
+7 Apontando O apresentador esta apontando com uma m ´ aos ˜
+(brac¸o estendido horizontalmente).
+3.6. Sequential Pattern Mining
+Neste trabalho, a tecnica de ´ Sequential Pattern Mining foi utilizada. Esssa e uma fer- ´
+ramenta conhecida na area de minerac¸ ´ ao de dados. Em uma base de dados sequencial, ˜
+cada sequencia consiste em uma lista de transac¸ ˆ oes [Saraf et al. 2015]. Ent ˜ ao, o ˜ Sequential Pattern Mining trabalha para encontrar todos os padroes de sequ ˜ encias baseado no ˆ
+1900
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+suporte m´ınimo dado pelo usuario inicialmente. ´
+Para a obtenc¸ao dos resultados, foi utilizado o SPMF (Sequential Pattern Mining ˜
+Framework) [Fournier-Viger et al. 2016]. A ferramenta e uma biblioteca de c ´ odigo aberto ´
+em minerac¸ao de dados. Ela oferece mais de 120 algoritmos de minerac¸ ˜ ao implementados ˜
+em JAVA. A ferramenta tambem possui uma tela de visualizac¸ ´ ao onde n ˜ ao˜ e necess ´ ario ´
+trabalhar com a programac¸ao. ˜
+Inicialmente, os dados utilizados no trabalho eram sequencias de ˆ strings onde
+essas continham os proprios atributos. Por exemplo, uma sequ ´ encia poderia ser ˆ {Maos ˜
+Baixas, Maos Baixas ˜ , Maos Baixas ˜ }, para uma determinada observac¸ao. O software ˜
+SPMF nao aceita esse tipo de entrada para os algoritmos, devendo essa sequ ˜ encia ser ˆ
+convertida. Convertendo o atributo Maos Baixas ˜ para o numero 1 (todos os atributos ´
+foram convertidos para numeros), a sequ ´ encia que o SPMF aceita como entrada seria ˆ {1
+-1 1 -1 1 -1 -2}. O -1 indica um intervalo entre um item e outro e o -2 indica o fim da
+sequencia da observac¸ ˆ ao. ˜
+Para a obtenc¸ao dos padr ˜ oes sequenciais mais frequentes foi usado o algoritmo ˜
+prefixSpan, que esta presente no SPMF. Os par ´ ametros utilizados no algoritmo foram de ˆ
+60% de Minsup. O algoritmo prefixSpan, funciona da seguinte maneira:
+• Encontre padroes de 1-sequ ˜ encia - ˆ Percorre uma base de dados sequencial S
+uma vez encontrando todos os itens frequentes em sequencias, resultando no pre- ˆ
+fixos.
+• Dividir espac¸o de busca - O conjunto completo de padroes sequenciais pode ser ˜
+particionado baseado no prefixo derivado da primeira etapa. Todos os padroes ˜
+sequenciais sao derivados nessa etapa. ˜
+• Encontre sub conjuntos de padroes sequenciais - ˜ Os subconjuntos de padroes ˜
+sequenciais podem ser extra´ıdos atraves da construc¸ ´ ao do correspondente con- ˜
+junto de bases de dados projetadas, sendo cada delas constru´ıda recursivamente.
+4. Resultados - Avaliac¸ao das sequ ˜ encias encontradas ˆ
+Foram avaliadas as apresentac¸oes individualmente, avaliando-se o suporte (quantidade ˜
+de ocorrencia da sequ ˆ encia na apresentac¸ ˆ ao) de cada uma das sequ ˜ encias. Neste traba- ˆ
+lho decidiu-se analisar as 10 primeiras sequencias que respeitavam suporte estabelecido. ˆ
+Com essas 10 primeiras sequencias avaliadas ˆ e poss ´ ´ıvel trac¸ar um paralelo entre as tresˆ
+apresentac¸oes de modo geral. ˜
+Algumas ocorrencias s ˆ ao individuais, sendo que n ˜ ao existe um atributo subse- ˜
+quente a este. Por exemplo, temos que a sequencia (atributo) mais frequente nessa ˆ
+apresentac¸ao˜ e o atributo ´ Uma mao˜ com um suporte de 18. Esse tipo de padrao ocorre ˜
+em todas as outras tres apresentac¸ ˆ oes, sendo um comportamento esperado pois o algo- ˜
+ritmo encontra ocorrencias de Itens (atributos) e n ˆ ao necessariamente devendo conter ˜
+sequencias. Esse tipo de informac¸ ˆ ao (ocorr ˜ encias ˆ unicas) foram omitidos por n ´ ao apre- ˜
+sentarem informac¸ao que explique o comportamento sequencial desejado. ˜
+Na primeira apresentac¸ao o suporte m ˜ aximo levando em conta apenas as sequen- ´
+cias foi de 17. Alem disso, o algoritmo encontrou 202 padr ´ oes sequenciais que respei- ˜
+taram o suporte m´ınimo estabelecido. A ferramenta levou 17ms para encontrar esses
+padroes. O padr ˜ ao que mais ocorreu foi duas ocorr ˜ encias de ˆ Maos Baixas ˜ , indicando que
+1901
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+o estudante passa tempo consideravel com os brac¸os baixos, esse resultado pode ser visto ´
+na Tabela 2. Este e um padr ´ ao esperado, pois ao apresentar a pessoa pode passar algum ˜
+tempo com as maos baixas. ˜
+Na sequencia temos que o padr ˆ ao mais frequente ˜ e os estudantes apontando duas ´
+vezes seguidas, este com suporte de 17. Isso indica que o estudante esta apontando para ´
+algo (slide, por exemplo) por algum tempo. A seguir, ainda na Tabela 2, temos que a
+maioria das sequencias apresentam combinac¸ ˆ oes dos estudantes com as m ˜ aos baixas e na ˜
+posic¸ao de m ˜ aos abertas. O Item ˜ Maos Baixas ˜ seguido de Uma Mao˜ ocorre com suporte
+de 15. Isso pode estar indicando que o estudante sai de uma posic¸ao de n ˜ ao atividade para ˜
+a atividade, explicando algo com uma das maos. O comportamento geral das sequ ˜ encias ˆ
+continua semelhante para os demais padroes encontrados, sendo esses essencialmente ˜
+combinac¸oes de posic¸ ˜ oes de ˜ Maos Baixas ˜ com Maos Abertas ˜ .
+Tabela 2. 10 maiores ocorrencias de sequ ˆ encias na apresentac¸ ˆ ao 1. ˜
+Apresentac¸ao 1 ˜
+Padrao˜ Suporte
+Maos Baixas, M ˜ aos Baixas ˜ 17
+Apontando, Apontando 17
+Maos Baixas, M ˜ aos Baixas, M ˜ aos Baixas ˜ 16
+Maos Abertas, M ˜ aos Baixas ˜ 15
+Maos Baixas, M ˜ aos Abertas ˜ 15
+Maos Baixas, M ˜ aos Abertas, M ˜ aos Baixas ˜ 15
+Maos Baixas, M ˜ aos Baixas, M ˜ aos Baixas, M ˜ aos Baixas ˜ 15
+Maos Baixas, Uma M ˜ ao˜ 15
+Uma Mao, M ˜ aos Baixas, Uma M ˜ ao˜ 15
+Uma Mao, M ˜ aos Abertas ˜ 15
+Para a segunda apresentac¸ao o mesmo padr ˜ ao que era o mais frequente na pri- ˜
+meira apresentac¸ao tamb ˜ em ocorre na segunda apresentac¸ ´ ao como o mais frequente, com ˜
+um suporte de 20, a Tabela 3 apresenta esse resultado. Importante notar que o algoritmo
+encontrou apenas 24 padroes nessa apresentac¸ ˜ ao em um tempo de 13 ˜ ms. Esse numero
+baixo de padroes pode ser explicado pelo fato de o algoritmo n ˜ ao encontrar padr ˜ oes se- ˜
+quenciais que respeitem o suporte m´ınimo estabelecido. Todos os 10 padroes que mais ˜
+aconteceram nessa apresentac¸ao foram combinac¸ ˜ oes das posic¸ ˜ oes ˜ Maos Baixas ˜ e Maos ˜
+Abertas.
+Por ultimo, na terceira apresentac¸ ´ ao, o algoritmo encontrou 222 padr ˜ oes de ˜
+sequencias em um tempo de 35 ˆ ms. O padrao mais frequente nesta apresentac¸ ˜ ao passa ˜
+a ser uma sequencia das posturas de ˆ Maos Abertas ˜ com Maos Baixas ˜ , com suporte de 22,
+como mostra a Tabela 4. Diferentemente do que vinha ocorrendo, onde a sequencia de ˆ
+Maos Baixas ˜ era mais frequente. Isso pode indicar que nessa etapa das apresentac¸oes os ˜
+estudantes ja explicam mais com os duas m ´ aos, passando a interagir mais com os brac¸os ˜
+do que no inicio.
+Os padroes com os atributos ˜ Maos Baixas ˜ e Maos Abertas ˜ ocorrem de maneiras
+variadas em todas as apresentac¸oes, como pode ser visto nas tabelas 2, 3 e 4. Estes s ˜ ao˜
+os atributos que ocorrem com mais frequencia nas sequ ˆ encias de todas as apresentac¸ ˆ oes. ˜
+1902
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Tabela 3. 10 maiores ocorrencias de sequ ˆ encias na apresentac¸ ˆ ao 2. ˜
+Apresentac¸ao 2 ˜
+Padrao˜ Suporte
+Maos Baixas, M ˜ aos Baixas ˜ 20
+Maos Abertas, M ˜ aos Baixas ˜ 19
+Maos Baixas, M ˜ aos Baixas, M ˜ aos Baixas ˜ 19
+Maos Abertas, M ˜ aos Abertas ˜ 18
+Maos Abertas, M ˜ aos Abertas, M ˜ aos Abertas, M ˜ aos Abertas ˜ 17
+Maos Abertas, M ˜ aos Abertas, M ˜ aos Baixas ˜ 17
+Maos Abertas, M ˜ aos Baixas, M ˜ aos Baixas ˜ 16
+Maos Baixas, M ˜ aos Abertas, M ˜ aos Baixas, M ˜ aos Baixas ˜ 15
+Maos Abertas, M ˜ aos Abertas, M ˜ aos Baixas, M ˜ aos Baixas ˜ 15
+Maos Baixas, M ˜ aos Abertas, M ˜ aos Baixas ˜ 15
+Tabela 4. 10 maiores ocorrencias de sequ ˆ encias na apresentac¸ ˆ ao 3. ˜
+Apresentac¸ao 3 ˜
+Padrao˜ Suporte
+Maos Abertas, M ˜ aos Baixas ˜ 22
+Maos Abertas, M ˜ aos Baixas, M ˜ aos Baixas ˜ 21
+Maos Baixas, M ˜ aos Baixas ˜ 21
+Maos Abertas, M ˜ aos Abertas ˜ 20
+Maos Abertas, M ˜ aos Abertas, M ˜ aos Baixas ˜ 20
+Maos Abertas, M ˜ aos Baixas, M ˜ aos Baixas, M ˜ aos Baixas ˜ 20
+Maos Abertas, M ˜ aos Baixas ˜ 20
+Maos Baixas, M ˜ aos Abertas, M ˜ aos Baixas ˜ 20
+Maos Baixas, M ˜ aos Baixas, M ˜ aos Abertas ˜ 20
+Maos Baixas, M ˜ aos Baixas, M ˜ aos Baixas ˜ 20
+Eles podem aparecer em sequencias de varias repetic¸ ˆ oes de ˜ Maos Baixas ˜ seguidos de uma
+de Maos Abertas ˜ , por exemplo.
+Ainda para comparar melhor as tres apresentac¸ ˆ oes, s ˜ ao apresentadas sequ ˜ encias ˆ
+que respeitam o suporte m´ınimo estabelecido e ainda que ocorrem em duas ou mais
+apresentac¸oes. Dessa forma, mais padr ˜ oes que acontecem em todas as apresentac¸ ˜ oes ˜
+podem ser encontrados. A Tabela 5 apresenta 6 padroes que ocorrem em pelo menos ˜
+duas apresentac¸oes. Novamente fica evidente que os atributos ˜ Maos Baixas ˜ e Maos Aber- ˜
+tas aparecem em todas as sequencias encontradas. Esse ˆ e um comportamento facilmente ´
+explicado visto que normalmente as pessoas em uma apresentac¸ao ficam bastante tempo ˜
+com os baixos estendidos para baixo, sendo que a posic¸ao˜ Maos Abertas ˜ pode ser vista
+como uma posic¸ao de m ˜ aos intermediaria. ˜
+Primeiramente, analisando a Tabela 5, percebe-se padroes esperados nas ˜
+sequencias dos dados. Por exemplo, temos que o apresentador estava apontando (ex- ˆ
+plicando com uma das maos) e posteriormente passa a explicar com as duas m ˜ aos ( ˜ Maos ˜
+Abertas), sendo essas trocas normais em apresentac¸oes orais. Esse padr ˜ ao (sequ ˜ encia), ˆ
+ocorre para as apresentac¸oes 1 e 3, n ˜ ao sendo observado para a apresentac¸ ˜ ao 2. ˜
+1903
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Ocorrendo para a primeira apresentac¸ao e tamb ˜ em para a terceira apresentac¸ ´ ao, o ˜
+padrao com 3 ˜ Maos Baixas ˜ seguidas seguido do atributo Apontando mostra o que ocorre
+com mais frequencia na maioria das sequ ˆ encias avaliadas. A sequ ˆ encia grande de ˆ Maos ˜
+Baixas seguidos de um outro atributo. Este pode ser considerado um comportamento
+normal, onde o estudante deve passar um maior tempo com as maos baixas, visto que s ˜ ao˜
+apresentac¸oes em duplas. Um padr ˜ ao similar pode ser visto tamb ˜ em em uma sequ ´ encia ˆ
+que ocorre para todas as apresentac¸oes, 3 vezes de ˜ Maos Baixas ˜ seguidos de um Maos ˜
+Abertas.
+Uma importante diferenc¸a entre a segunda apresentac¸ao e as outras duas ˜
+apresentac¸oes (primeira e terceira) ˜ e que na segunda apresentac¸ ´ ao o algoritmo encon- ˜
+trou sequencias com apenas tr ˆ es atributos, ˆ Maos Baixas ˜ , Maos Abertas ˜ e Uma mao˜ . Na
+primeira e na terceira apresentac¸ao outros atributos tamb ˜ em apareceram nas sequ ´ encias, ˆ
+como a sequencia ˆ Maos Baixas ˜ ,Maos na Face ˜ que ocorre com suporte 12 para a primeira
+apresentac¸ao. ˜
+Tabela 5. Sequencias iguais entre apresentac¸ ˆ oes. ˜
+Padrao˜ Apresentac¸oes ˜
+Apontando, Maos abertas ˜ 1,3
+Apontando, Maos Baixas ˜ 1,3
+Apontando, Maos Baixas, M ˜ aos Abertas ˜ 1,3
+Maos Baixas, M ˜ aos Baixas, M ˜ aos Baixas, M ˜ aos Baixas, Apontando ˜ 1,3
+Maos Baixas, Apontando, M ˜ aos Baixas ˜ 1,3
+Maos Baixas, M ˜ aos Baixas, M ˜ aos Baixas, M ˜ aos Abertas ˜ 1,2,3
+5. Considerac¸oes finais ˜
+O MMLA pode ajudar na avaliac¸ao de ambientes complexos de aprendizado usando dados ˜
+de varias fontes. No presente estudo, verificamos que, como esperado, o atributo mais ´
+presente nas sequencias foi o ˆ Maos Baixas ˜ . Tambem ficou evidente que a primeira e a ´
+terceira apresentac¸oes s ˜ ao mais parecidas em termos de sequ ˜ encia do que com a segunda ˆ
+apresentac¸ao. Existem ainda muitas sequ ˜ encias envolvendo os atributos ˆ Maos Baixas ˜ e o
+atributo Maos Abertas ˜ , onde eles podem aparecer variadas vezes em sequencia. ˆ
+Para trabalhos futuros, novas comparac¸oes devem ser realizadas em diferentes ˜
+grupos de estudantes. Esses novos estudantes viriam de diferentes areas de conhecimento, ´
+como engenharia e saude. Essa distinc¸ ´ ao pode mostrar comportamentos diferentes entre ˜
+as areas do conhecimento. Ou pode revelar comportamentos semelhantes entre eles. Ali- ´
+ado a isso, tecnicas de visualizac¸ ´ ao de informac¸ ˜ ao podem ser exploradas para auxiliar na ˜
+detecc¸ao de padr ˜ oes obtidos pelos alunos, nas diferentes ˜ areas do conhecimento. Como ´
+forma de retornar o feedback dos alunos, os padroes de sequ ˜ encia podem ser integrados ˆ
+ao software para visualizac¸ao das apresentac¸ ˜ oes em tempo real. Espera-se tamb ˜ em testar ´
+outras tecnicas de ´ Sequential Pattern Mining para melhorar a avaliac¸ao do problema. ˜
+Referencias ˆ
+Bidwell, J. and Fuchs, H. (2011). Classroom analytics: Measuring student engagement
+with automated gaze tracking. Technical report, University of North Carolina at Chapel
+Hill, Department of Computer, Chapel Hill, NC.
+1904
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Echeverr´ıa, V., Avendano, A., Chiluiza, K., V ˜ asquez, A., and Ochoa, X. (2014). Pre- ´
+sentation skills estimation based on video and kinect data analysis. In Proceedings
+of the 2014 ACM Workshop on Multimodal Learning Analytics Workshop and Grand
+Challenge, MLA ’14, pages 53–60, New York, NY, USA. ACM.
+Fournier-Viger, P., Lin, J. C.-W., Gomariz, A., Gueniche, T., Soltani, A., Deng, Z., and
+Lam, H. T. (2016). The spmf open-source data mining library version 2. In Joint European conference on machine learning and knowledge discovery in databases, pages
+36–40. Springer.
+Le, T., Nguyen, M., and Nguyen, T. (2013). Human posture recognition using human
+skeleton provided by kinect. In 2013 International Conference on Computing, Management and Telecommunications (ComManTel), pages 340–345.
+Mehrabian, A. (2017). Nonverbal Communication. Routledge.
+Ochoa, X. (2017). Multimodal Learning Analytics. In Lang, C., Siemens, G., Wise,
+A. F., and Gasevic, D., editors, ˇ The Handbook of Learning Analytics, pages 129–141.
+Society for Learning Analytics Research (SoLAR), Alberta, Canada, 1 edition.
+Ochoa, X., Chiluiza, K., Mendez, G., Luzardo, G., Guam ´ an, B., and Castells, J. (2013). ´
+Expertise estimation based on simple multimodal features. In Proceedings of the 15th
+ACM on International Conference on Multimodal Interaction, ICMI ’13, pages 583–
+590, New York, NY, USA. ACM.
+Ochoa, X., Worsley, M., Weibel, N., and Oviatt, S. (2016). Multimodal learning analytics
+data challenges. In Proceedings of the Sixth International Conference on Learning
+Analytics & Knowledge - LAK16. ACM Press.
+Raca, M. and Dillenbourg, P. (2013). System for assessing classroom attention. In Proceedings of the Third International Conference on Learning Analytics and Knowledge,
+LAK ’13, pages 265–269, New York, NY, USA. ACM.
+Reilly, J., Ravenell, M., and Schneider, B. (2018). Exploring collaboration using motion
+sensors and multi-modal learning analytics. In Proceedings of the 11th International
+Conference on Educational Data Mining.
+Sabin, M., Alrumaih, H., Impagliazzo, J., Lunt, B., Zhang, M., Byers, B., Newhouse,
+W., Paterson, B., Peltsverger, S., Tang, C., et al. (2017). Curriculum guidelines for
+baccalaureate degree programs in information technology. Technical report, Technical
+Report. ACM, New York, NY, USA.
+Saraf, P., Sedamkar, R., and Rathi, S. (2015). Prefixspan algorithm for finding sequential
+pattern with various constraints. International Journal of Applied Information Systems
+(IJAIS), pages 2249–0868.
+Scherer, S., Worsley, M., and Morency, L. (2012). 1st international workshop on multimodal learning analytics. In ICMI’12 - Proceedings of the ACM International Conference
+on Multimodal Interaction.
+York, D. (2013). Investigating a Relationship between Nonverbal Communication and
+Student Learning. PhD thesis, Lindenwood University.
+Zhao, Q. and Bhowmick, S. S. (2003). Sequential pattern mining: A survey. ITechnical
+Report CAIS Nayang Technological University Singapore, 1:26.

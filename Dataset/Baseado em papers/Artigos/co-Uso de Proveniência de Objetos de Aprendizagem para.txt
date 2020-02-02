@@ -1,0 +1,541 @@
+Uso de Proveniência de Objetos de Aprendizagem para
+Identificação do Estilo Preferencial de Aprendizagem
+Thiago Nery, Gislaine Coelho, Fernanda Campos, Regina Braga,
+Victor Stroële, José Maria N. David
+Universidade Federal de Juiz de Fora
+Programa de Pós-graduação em Ciência da Computação
+Rua José Lourenço Kelmer, s/n-Campus Universitário- 36036-900-Juiz de Fora/MG
+thiago.nery, fernanda.campos, regina.braga, jose.david {@ufjf.edu.br};
+victor.stroele@ice.ufjf.br, gislainemartins1990@gmail.com
+Abstract. Data provenance allows capturing the historical documentation of
+learning objects (LO), both through their metadata and life trajectory. This
+article describes BROAD-ProvCapture architecture that is able to identify the
+student's main learning style, in a given educational situation, where the
+teacher previously selects the learning objects, capturing the sequence in a
+study section and using ontological rules to infer the features. This implicitly
+captured profile is incorporated into the recommendation system. Preliminary
+results point to the feasibility of the project.
+Resumo. A proveniência de dados permite capturar a documentação histórica
+dos objetos de aprendizagem (OA), tanto através de seus metadados quanto de
+sua trajetória de vida. Esse artigo descreve a BROAD-ProvCapture, uma
+arquitetura capaz de identificar o estilo preferencial de aprendizagem do
+aluno, numa dada situação de ensino em que o professor seleciona
+previamente os objetos, capturando a sua seqüência da sessão de estudo e
+utilizando regras ontológicas para inferir as características. Esse perfil
+capturado implicitamente é incorporado ao sistema de recomendação. Os
+resultados preliminares apontam para a viabilidade do projeto.
+1. Introdução
+Na medida em que os Sistemas de Recomendação (SR) Educacionais buscam soluções
+mais aderentes ao perfil e contexto do aluno e dos grupos de alunos, cresce o interesse
+por recursos educacionais de qualidade. Esses recursos são descritos como objetos de
+aprendizagem (OA) [Valaski, 2011] e devem prover mais interatividade e capacidade
+adaptativa às características cognitivas e progresso do aluno. A localização e a
+recuperação de OA exigem que eles tenham sido cadastrados a partir de um modelo
+robusto de metadados, capaz de descrevê-los de forma completa e correta.
+A extração do perfil e contexto do aluno é uma etapa fundamental nos SR
+[Pereira et al, 2018]. O perfil do aluno é uma representação do que se acredita saber
+sobre o conhecimento já adquirido, o progresso no conteúdo, o estilo preferido de mídia
+e outros tipos de informação. Os objetivos da aprendizagem, motivação, crenças e
+características pessoais estão muitas vezes associadas ao contexto educacional, bem
+como aos recursos tecnológicos utilizados. Este contexto é dinâmico e necessita de
+mecanismos para potencializar o reuso dos processos educacionais. O estilo de
+aprendizagem é refletido nas ações realizadas pelo aluno a partir dos estímulos
+recebidos do ambiente em que está interagindo.
+DOI: 10.5753/cbie.sbie.2019.109 109
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+No projeto BROAD a recomendação de recursos educacionais personalizados é
+feita pela aderência dos mesmos ao perfil e contexto do aluno ou grupos de alunos
+[Pereira et al, 2018] [Almeida et al., 2016] [Rezende et al. 2018] [Abdalla et al., 2017].
+Para tal, tem-se recomendado recursos disponíveis em repositórios locais e em dados
+ligados, em ambientes virtuais de aprendizagem e nas redes sociais. O professor tem
+papel central no processo de recomendação, pois parte dele a seleção para a composição
+da seqüência do conteúdo a ser disponibilizada na disciplina para os alunos.
+Analisar a utilização de uma seqüência de objetos por um aluno exige a
+identificação das escolhas feitas pelo mesmo. A proveniência dos dados [Buneman et
+al., 2001] nos fornece a documentação histórica do objeto e da seqüência dos objetos
+utilizados pelo aluno. Originalmente, os objetos de aprendizagem, através dos
+metadados, nos fornecem informações sobre a sua criação. A captura da proveniência
+do OA pode auxiliar na avaliação da qualidade em uso desse objeto, incluindo atributos
+como: adequação dos métodos e estratégias educacionais, atualização do conteúdo, e
+conformidade da mídia para apresentação do conteúdo.
+A proposta é uma evolução do modelo de recomendação utilizado no projeto
+BROAD [Rezende et al. 2018], de forma a incluir também questões relacionadas à
+proveniência dos objetos de aprendizagem. Considerando a complexidade dos Sistemas
+de Recomendação Educacionais e a necessidade de sua assertividade e aderência aos
+interesses do aluno e objetivos educacionais a serem alcançados, o modelo proposto se
+baseia nos metadados capturados no processo de interação do aluno com os objetos de
+aprendizagem previamente selecionados pelo professor.
+A questão de pesquisa que buscamos responder é: se definirmos uma
+arquitetura para modelar a proveniência prospectiva e capturar a proveniência
+retrospectiva dos objetos de aprendizagem selecionados pelo professor para uma certa
+disciplina, a mesma contribuirá para a assertividade das recomendações dos recursos
+educacionais? A solução proposta é a arquitetura BROAD-ProvCapture de captura de
+rastreabilidade da seqüência de OA executada pelo aluno (proveniência retrospectiva do
+OA), associando as estratégias de ensino definidas pelo professor e estilos de
+aprendizagem do aluno, definidos no perfil explícito e na seqüência de uso desses OA.
+O artigo está assim organizado: a seção 2 apresenta uma breve revisão da base
+teórica da proposta. A seção 3 discute os trabalhos relacionados. A seção 4 apresenta o
+BROAD-ProvCapture e sua avaliação. Na seção 5 estão as considerações finais.
+2. Pressupostos teóricos
+2.1 Proveniência de Dados
+Proveniência de dados é a descrição do histórico de um dado desde sua criação até sua
+gravação em um banco de dados, bem como os processos que o influenciaram
+[Buneman et al., 2001]. É importante principalmente quando há a necessidade de
+entender o que o influenciou, como, e qual sua origem. Podemos dividir os tipos de
+proveniência em dois tipos: retrospectiva e prospectiva. A proveniência retrospectiva
+trata dos processos que influenciaram um dado até o presente momento, e a prospectiva
+trata dos modelos utilizados para se gerar a proveniência.
+A proveniência de dados engloba diferentes domínios e aplicações, e cada uma
+tem seus requisitos. É necessário, portanto, definir os conteúdos, estruturas e atributos
+110
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+que comporão as informações a serem capturadas. O modelo PROV [Belhajjme et al.,
+2012] é uma família de especificações proposta para expressar a proveniência de
+registros, contendo descrições de entidades e atividades envolvidas em produzir,
+entregar ou enunciar um determinado objeto. Como os dados de proveniência podem ter
+diferentes perspectivas e finalidades, o modelo PROV procura acomodar todos os tipos
+de uso da proveniência, e classifica a proveniência em três tipos:
+• Centralizado em Agentes: os dados de proveniência visam especificar/registrar quem
+executou certas ações ou gerou certos objetos.
+• Centralizada em Objetos: os dados de proveniência visam especificar quais são as partes
+que compõem um objeto.
+• Centralizada em Processos: os dados de proveniência visam especificar como foram
+geradas as informações em questão.
+O modelo PROV utiliza um grafo para representar informações de
+proveniência, caracterizado por três tipos de vértices [Groth and Moreau, 2013]:
+Entidade (algo físico, digital, conceitual ou outro tipo de coisa com alguns aspectos
+fixos, podendo as entidades ser reais ou imaginárias); Atividade (algo que ocorre
+durante um período de tempo, atuando sobre/com entidades. Assim, atividades podem
+consumir, processar, modificar, realocar ou gerar entidades); e Agentes (algo que possui
+certa responsabilidade por uma atividade, pela existência de uma entidade ou pelas
+atividades de outro agente).
+No modelo PROV, existem também diversas relações de causalidade entre
+elas: used; wasGeneratedBy; wasAssociatedWith; wasAttributedTo; actedOnBehalfOf;
+wasRevisionOf; wasDerivedFrom; wasInformedBy; wasStartedBy e wasEndedBy.
+Devido à importância das informações temporais em alguns cenários o modelo
+PROV oferece a possibilidade de guardar dados relativos ao tempo das informações de
+proveniência: data e hora relativas a entidades ou atividades, informações de geração ou
+uso de entidades e informações de início e término de execução para atividades.
+A proveniência é representada por metadados [Groth and Moreau, 2013],
+porém, nem todos os metadados são necessariamente dados de proveniência. Nesse
+contexto, como as informações de proveniência podem ser obtidas de sistemas
+heterogêneos, representações diferentes e usadas por múltiplas aplicações, a
+interoperabilidade, que é sempre um requisito de um objeto de aprendizagem, é uma
+característica fundamental. Desta forma, o uso de proveniência neste contexto de
+sistemas de recomendação abre perspectivas de maior personalização.
+2.2 Perfil do aluno e estilos de aprendizagem
+Um aprendizado maior pode ocorrer quando estratégias de ensino combinam estilos de
+aprendizagem. Identificar estilos de aprendizagem não é rotular os alunos e adaptar as
+instruções para adequá-las às suas preferências, mas propor modelos de recomendação
+que sejam cada vez mais aderentes ao seu perfil e contexto. Nesse cenário a captura de
+rastreabilidade do projeto dos OA e da orquestração dos alunos no seu uso pode trazer
+contribuições. A busca pela personalização das recomendações de objetos de
+aprendizagem aderentes ao perfil e contexto do aluno e de grupos de alunos apresenta
+desafios às pesquisas da área de Sistemas de Recomendação Educacionais.
+Existem diversos modelos que descrevem classificações de um aluno e em um
+determinado estilo de aprendizagem [Zaina and Bresnann, 2012] [Buiar, et al., 2017]
+111
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+[Silva et al., 2016]. “Na personalização de recursos educacionais, algumas
+características do aluno são relevantes, como o perfil do estudante, que pode ser
+caracterizado por meio do emprego do estilo de aprendizagem que determina como o
+aluno interage com o sistema de e-learning, suas preferências, o que torna possível ao
+sistema adaptativo fornecer conteúdos relevantes para o aluno [Zaina et al. 2012].”
+Nascimento et al. (2017) mostraram como resultado de uma Revisão
+Sistemática da Literatura, que o modelo de estilo de aprendizagem mais utilizado e
+citado é o de Felder-Silverman. Este modelo destaca o emprego do LOM (Learning
+Object Metadata), como padrão de metadados e a especificação e o gerenciamento de
+metadados empregados como mecanismo de apoio para recomendação. Além disso,
+propõe quatro dimensões [Buiar et al. 2017] que serão adotadas na solução proposta.
+3. Trabalhos relacionados
+Dietze et al.(2013) apresentam o Modelo de Gerenciamento de Recursos e Metadados
+(ReM3). O modelo de informações baseia-se na arquitetura e nos padrões da Web, mais
+especificamente nos princípios do Linked Data ao gerenciar recursos junto com seus
+metadados. Permite expressar relações entre metadados e acompanhar a procedência e o
+controle de acesso. O ReM3 suporta a proveniência centrada no agente, o que significa
+que ele acompanha as informações sobre quais usuários estavam envolvidos na criação
+ou modificação de informações e a proveniência centrada no objeto, ou seja, rastrear as
+origens de um recurso ou seus metadados.
+Coccoli & Torre (2014) abordam a web semântica e educação para melhoria da
+aprendizagem. Propõem o modelo SWOT que é responsável por gerenciar conteúdos.
+Utilizam proveniência de dados para obter perfil do aluno e assim fazer recomendações
+apropriadas para cada tipo de aluno conforme seu nível de aprendizagem. Todos os
+recursos estão voltados para dados ligados.
+Destacamos em rastreabilidade de objetos de aprendizagem a pesquisa de
+[Celino and Dell'Aglio, 2011] sobre Rastreamento de Proveniência no aprendizado de
+simulação. Os autores definem a rastreabilidade em dois níveis: (i) no projeto - quando
+os cenários de aprendizagem são modelados na base de conhecimento com suas
+possíveis regras de planejamento, e (ii) nas sessões de aprendizagem - quando os
+resultados das simulações são analisados. No projeto, a proveniência pode ser usada
+para rastrear as cadeias de causa-efeito entre os possíveis eventos de simulação. As
+regras de conclusão e inferência podem ser exploradas para a verificação de
+consistência da modelagem da simulação. Após as sessões de aprendizagem, os
+registros de simulação podem ser analisados para entender e sintetizar os resultados da
+aprendizagem como as necessidades de aprendizagem, comportamentos comuns,
+procedimentos, entre outros.
+Em termos de categorização dos modelos e estilos de aprendizagem e os
+cenários que cada um deles melhor se aplica, tem-se o trabalho de [Carvalho et. al.,
+2017] que buscam melhorar os sistemas adaptativos para a educação usando uma
+ontologia sobre Objetos de Aprendizagem e os estilos dos alunos, usando o modelo de
+Felder-Silverman.
+Labib et al. (2017) apresentam uma ontologia de modelos de aprendizagem
+para melhorar o ambiente de ensino dos estudantes. Neste artigo os autores classificam
+112
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+os modelos e estilos e cruzam informações dos estilos de aprendizagem de forma a
+recomendar o conteúdo mais aderente ao perfil do aluno.
+O trabalho de Dietze et al. (2013) assim como o BROAD-ProvCapture utilizam
+proveniência de dados para obter informações em relação aos metadados, o que reforça
+o uso de proveniência retrospectiva. Assim como o BROAD-ProvCapture [Coccoli &
+Torre, 2014] abrangem também o contexto de SR. A representação de modelos e estilos
+de aprendizagem [Carvalho et. al., 2017] e [Labib et al., 2017] em ontologias, permitem
+automatizar o processo de identificação do perfil do aluno, conforme proposto na
+arquitetura BROAD-ProvCapture. A proposta neste trabalho é observar o caminho do
+aluno enquanto usa uma seqüência de OA, pré-definida pelo professor, através de uma
+arquitetura capaz de adotar técnicas e mecanismos para capturar suas preferências. Para
+tal, identificar as características marcantes de um determinado aluno, associando suas
+preferências aos estilos de aprendizagem, auxilia nas recomendações de OA que
+influenciam seu processo de aprendizagem.
+4. BROAD-ProCapture: uma arquitetura para proveniência de objetos de
+aprendizagem
+O uso de proveniência em seqüência de OA se justifica pelas seguintes características e
+possibilidades de aplicação: Confiabilidade da indicação pelo professor;
+Reprodutividade da recomendação para um conjunto de alunos com perfil semelhante;
+Definição de métodos e estratégias adequados para uso dos OA; Identificação da melhor
+forma de apresentação de conteúdos; Seleção de atividades e mídias direcionadas a cada
+estilo de aprendizagem; e Identificação de requisitos para desenvolvimento de
+aplicações educacionais semanticamente ricas.
+A proposta é fornecer ao professor a identificação automática do estilo
+preferencial de aprendizagem do aluno, em uma dada situação de ensino. Nesta
+situação, o professor seleciona, previamente, um conjunto de objetos de aprendizagem
+para compor uma seqüência de um conteúdo programático.
+O modelo PROV, voltado para questões de responsabilidades e histórico de
+dados, possui diversas relações entre os agentes e os demais tipos (atividades e
+entidades), e atende aos requisitos do projeto. Considerando ser a arquitetura proposta
+focada na captura de dados relacionados em grande parte aos metadados dos objetos de
+aprendizagem, entendemos ser esse modelo adequado. A figura 1 apresenta as duas
+etapas principais do processo de planejamento e uso das seqüências de objetos de
+aprendizagem, e a captura dos dados de proveniência.
+A rastreabilidade na arquitetura proposta se dá em dois níveis:
+• Prospectiva – obtida no nível de projeto de construção dos objetos de aprendizagem selecionados
+pelo professor, a partir de um plano didático da disciplina. Os itens serão capturados pelos
+metadados dos objetos de aprendizagem cadastrados.
+• Retrospectiva – obtida a partir da captura de proveniência da navegação do aluno na seqüência
+selecionada para a sessão de estudo.
+Considerando que na arquitetura o conteúdo da proveniência se dará pela
+captura das informações em diferentes etapas, os seguintes itens serão armazenados:
+• Responsabilidades: itens relativos ao professor e ao planejamento da sessão de estudo (curso,
+disciplina, unidade de conteúdo, lição, programa, nível educacional, área de conhecimento,
+seqüencia do conteúdo, estratégias pedagógicas, objetivos educacionais e população alvo).
+113
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+• Itens de metadados: na primeira versão serão considerados o nível de interatividade, o tipo de
+interatividade e o tipo de objeto de aprendizagem.
+• Itens de preferência: captura a seqüência percorrida pelo aluno na sessão de estudo, com o
+objetivo de identificar os objetos de aprendizagem preferenciais.
+Figura 1 – Arquitetura BROAD-ProvCapture.
+Na arquitetura a base de conhecimento é representada pelas ontologias, pelos
+itens de metadados armazenados e pelos perfis dos alunos. Essa camada apóia a
+proposta em diferentes etapas: Planejamento (elaboração do plano, busca e seleção de
+OA, seqüência de OA) e execução (seqüência de OA e identificação de preferências).
+Para a identificação dos estilos de aprendizagem do aluno através da captura
+das escolhas e uso dos objetos de aprendizagem recomendados pelos professores, o
+relacionamento entre o padrão de metadados LOM e o perfil do usuário foi construído.
+Para tanto, foi utilizada a categoria de metadados educacionais.
+O Nível de Interatividade refere-se ao grau de interatividade que caracteriza o
+objeto de aprendizagem. Refere-se ao grau em que o aluno pode influenciar os aspectos
+ou comportamentos do objeto de aprendizagem. Os que possuem o valor “ativo” para o
+campo tipo de interatividade podem ter um alto nível de interatividade (por exemplo,
+um ambiente de simulação com vários controles) ou um nível de interatividade baixo
+(por exemplo, um conjunto de instruções que solicitem uma atividade). Já os objetos
+que possuem o valor “expositivo” podem ter um nível de interatividade baixo (por
+exemplo, um texto narrativo linear) ou um nível de médio a alto (por exemplo, um
+documento de hipertexto com diversos links).
+O campo Tipo de Interatividade diz respeito ao modo predominante de
+aprendizagem suportado pelo objeto de aprendizagem. Pode possuir os valores ativo e
+expositivo. O valor ativo, ligado a uma aprendizagem “ativa” (também conhecido como
+“aprender fazendo”) é apoiado por conteúdo que induz a uma ação produtiva
+diretamente pelo aluno. Um OA ativo pede ao aluno uma entrada semanticamente
+significativa e incluem simulações, jogos, questionários e exercícios. Aprendizagem
+"expositiva" (também conhecida como “aprendizagem passiva”) ocorre quando o
+trabalho do aluno consiste principalmente em absorver o conteúdo exposto a ele
+(geralmente através de textos, imagens ou sons). No caso de um objeto de aprendizagem
+combinar os tipos de interatividade ativo e expositivo, o seu tipo é considerado misto.
+O campo Tipo de objeto de aprendizagem especifica um conjunto de objetos
+definidos como: Simulação, Exercício, Resolução de Problemas, Jogo, Vídeo,
+Hipertexto, Áudio, Imagem, Slide, Texto e Hipermídia, entre outros.
+114
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Durante a navegação em uma seqüência de OA é capturado o caminho
+selecionado pelo aluno (proveniência retrospectiva) e extraídos itens que, através de
+regras semânticas (ou ontológicas), identificam seu estilo de aprendizagem. Conforme
+especificado anteriormente, para fins deste trabalho adotamos o modelo de FelderSilverman. O estilo de aprendizagem reflete as preferências do aluno e facilita a
+recomendação dos objetos aderentes a um dos perfis. O Quadro 1 destaca algumas
+relações entre metadados LOM utilizados e as estratégias e Estilos de Aprendizagem
+que compõem as dimensões adotadas para identificação das estratégias de ensino a
+serem recomendadas como resultado dos estilos de aprendizagem identificados.
+Quadro 1 – Relação entre tipos de OA, tipo e nível de interatividade, estilo de
+aprendizagem e estratégia.
+Tipo Tipo de
+Interatividade
+Nível de
+Interatividade
+Estilo de
+Aprendizagem
+Estratégia
+Simulação/Exercício/
+Resolução de
+problemas/ Jogo
+Ativo Alto
+Muito alto
+Intuitivo
+Ativo
+Auditivo/Visual
+Ativa
+Abstrata
+Visual/Verbal
+Vídeo/Hipertexto/Áudio
+/Imagem/Slide/Texto
+Expositivo Baixo
+Muito baixo
+Sensorial
+Reflexivo
+Auditivo/Visual
+Passiva
+Concreta
+Visual/Verbal
+Hipermídia Misto Médio Intuitivo/Sensorial
+Ativo/Reflexivo
+Auditivo/Visual
+Ativa/Passiva
+Abstrata/Concreta
+Visual/Verbal
+A idéia é que a partir da execução da seqüência de objetos de aprendizagem pelo
+aluno seja identificado seu perfil e ressaltadas suas preferências, de forma que auxiliem
+na sugestão posterior de novas seqüências para aquele aluno ou grupos de alunos com
+perfis convergentes. Para tal, foram criadas algumas regras, tais como:
+tipo interatividade ativo ˄ nível interatividade alto ˅ muito alto => estilo de aprendizagem intuitivo ˄ ativo ˄ auditivo
+˅ visual
+tipo interatividade expositivo ˄ nível interatividade baixo ˅ muito baixo => estilo de aprendizagem sensorial ˄
+reflexivo ˄ auditivo ˅ visual
+tipo interatividade misto˄ nível interatividademédio => estilo de aprendizagem intuitivo ˄ ativo ˄sensorial ˄
+reflexivo ˄ auditivo ˅ visual
+estilo de aprendizagem intuitivo ˄ ativo ˄ auditivo ˅ visual => estratégia ativa ˄ abstrata ˄ visual ˅ verbal
+estilo de aprendizagem sensorial ˄ reflexivo ˄ auditivo ˅ visual => estratégia passiva ˄ concreta ˄ visual ˅ verbal.
+As regras foram usadas para inferir o nível de aderência do aluno a um
+determinado tipo de perfil e a indicação das estratégias equivalentes, em três níveis:
+High ≥ 75% dos objetos executados atendem a um estilo de aprendizagem – totalmente aderente ao perfil
+Mid ≥ 50% dos objetos executados atendem a um estilo de aprendizagem - aderente ao perfil
+Low< 50% dos objetos executados atendem a um estilo de aprendizagem – perfil não definido.
+4.1 Estudo de viabilidade
+Para avaliação da arquitetura BROAD-ProvCapture foi realizado um estudo de
+viabilidade, com a formalização do estudo de caso baseada em [Drescht et al., 2015], a
+fim de contribuir para a avaliação da questão de pesquisa formulada e verificação do
+artefato desenvolvido. A questão de pesquisa que buscamos responder é: se definirmos
+uma arquitetura de captura de proveniência, para além de detectar os metadados dos
+objetos de aprendizagem selecionados pelo professor para a sessão de estudo, definidos
+115
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+como uma seqüência recomendada
+informações sobre a navegação dessa seqüência pelo
+seqüência? A avaliação seguiu as seguintes etapas: definição, formulação do objetivo,
+planejamento, execução e observação das evidências e apresentaç
+O estudo foi realizado num
+Federal de Juiz de Fora, na disciplina
+disciplina compõe o Núcleo Básico das grades curriculares da área de Ciência da
+Computação. Foi utilizado o
+integrada como serviço. A
+indicados pelo professor, previamente cadastrados com os metadados
+sessão de estudo. A turma era composta de 78 alunos.
+Foi disponibilizada
+níveis de interação e tipos de interação
+documento PDF, uma apresentação, uma
+recursos disponibilizados para os alunos podem ser classificados como
+Figura 2 – Ambiente da disciplina com os OA
+Quadro 2 – Classificação dos Objetos de Aprendizagem disponibilizados.
+Tipo Tipo de
+Interatividade
+1 Texto
+2 Slides
+3 Vídeo
+Expositivo
+4 Jogo Ativo
+Essa seqüência, apesar de apresentada na forma de lista, permite a livre escolha
+dos alunos. A navegação de cada aluno pode indicar a sua preferência que retrata o seu
+estilo de aprendizagem. Pelas opções ofertadas temos várias possibilidades de fluxo de
+navegação, a saber:
+1. Fluxos com predominância do tipo de interatividade expositiva e nível de
+indicam que as estratégias de ensino mais aderentes ao perfil do aluno são do tipo p
+como aulas expositivas: 1,
+recomendada a ser seguida, a mesma será capaz de capturar as
+a navegação dessa seqüência pelo aluno, indicando assertividade da
+A avaliação seguiu as seguintes etapas: definição, formulação do objetivo,
+planejamento, execução e observação das evidências e apresentação dos resultados.
+O estudo foi realizado num ambiente real de aprendizagem, n
+, na disciplina Fundamentos de Sistemas de Informação
+disciplina compõe o Núcleo Básico das grades curriculares da área de Ciência da
+Foi utilizado o Ambiente Virtual Moodle e a BROADA Figura 2 apresenta o conjunto de objetos selecionados
+indicados pelo professor, previamente cadastrados com os metadados
+A turma era composta de 78 alunos.
+disponibilizada para os alunos uma seqüência de OA de diferentes tipos,
+níveis de interação e tipos de interação. Para esse estudo, o professor selecionou
+, uma apresentação, uma vídeoaula e um jogo (Figura 2).
+recursos disponibilizados para os alunos podem ser classificados como (Quadro 2)
+Ambiente da disciplina com os OA selecionados em uma sessão de estudo.
+Classificação dos Objetos de Aprendizagem disponibilizados.
+Tipo de
+Interatividade
+Nível de
+Interatividade
+Estilo de
+Aprendizagem
+Expositivo Baixo
+Muito baixo
+Sensorial
+Reflexivo
+Auditivo/Visual
+Passiva
+Concreta
+Visual/Verbal
+Alto
+Muito alto
+Intuitivo
+Ativo
+Auditivo/Visual
+Ativa
+Abstrata
+Visual/Verbal
+, apesar de apresentada na forma de lista, permite a livre escolha
+navegação de cada aluno pode indicar a sua preferência que retrata o seu
+estilo de aprendizagem. Pelas opções ofertadas temos várias possibilidades de fluxo de
+Fluxos com predominância do tipo de interatividade expositiva e nível de interatividade baixo,
+que as estratégias de ensino mais aderentes ao perfil do aluno são do tipo p
+como aulas expositivas: 1, 2, 3, e, 4; 2,1, 3, e, 4; e 1, 3, 2, e, 4.
+capaz de capturar as
+, indicando assertividade da
+A avaliação seguiu as seguintes etapas: definição, formulação do objetivo,
+ão dos resultados.
+ambiente real de aprendizagem, na Universidade
+Fundamentos de Sistemas de Informação. Essa
+disciplina compõe o Núcleo Básico das grades curriculares da área de Ciência da
+-ProvCapture foi
+apresenta o conjunto de objetos selecionados e
+indicados pelo professor, previamente cadastrados com os metadados LOM, para uma
+de OA de diferentes tipos,
+o professor selecionou um
+(Figura 2). Os quatro
+(Quadro 2).
+selecionados em uma sessão de estudo.
+Classificação dos Objetos de Aprendizagem disponibilizados.
+Estratégia
+Passiva
+Concreta
+Visual/Verbal
+Ativa
+Abstrata
+Visual/Verbal
+, apesar de apresentada na forma de lista, permite a livre escolha
+navegação de cada aluno pode indicar a sua preferência que retrata o seu
+estilo de aprendizagem. Pelas opções ofertadas temos várias possibilidades de fluxo de
+interatividade baixo,
+que as estratégias de ensino mais aderentes ao perfil do aluno são do tipo passivas,
+116
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+2. Fluxos com predominância do tipo de interatividade ativo e nível de interatividade alto, indicam
+que as estratégias de ensino mais aderentes ao perfil do aluno são do tipo ativas, como desafios,
+projetos, entre outras: 4, 2, 3, e, 1; e 4, 3, 1 e 2.
+Ao ser capturada a seqüência da sessão de estudo de um aluno, o fluxo das
+escolhas permite, através de regras ontológicas da base de conhecimento, inferir
+características desse aluno. Entretanto, as diferentes escolhas da seqüência permitiram
+identificar os métodos e as estratégias prioritárias dos alunos, as preferências dos tipos
+de objetos e principalmente dar ao professor feedback sobre o uso dos OA. Esse perfil
+capturado implicitamente dos alunos é incorporado ao sistema de recomendação.
+Os ambientes virtuais de aprendizagem, como o Moodle, adotado nesse estudo,
+em geral, possuem ferramentas que indicam o fluxo de acesso dos alunos, entretanto,
+esse relatório não retrata a navegação nos objetos de aprendizagem e sim em todas as
+opções de interação como fóruns, tarefas, etc. A vantagem de se adotar um modelo de
+proveniência é o rastro que se pode armazenar de todas as sessões de estudo do aluno.
+As evidências observadas não podem ainda ser generalizadas, mas a proveniência de
+dados, que hoje é empregada em diferentes domínios, pode ser aplicada em sistemas de
+recomendação e contribuir para o desenvolvimento de aplicações educacionais mais
+aderentes às características dos alunos.
+5. Considerações finais
+Ao capturarmos a proveniência dos OAs buscamos identificar características de
+aprendizagem e orientações de estudo que contemplem os diferentes estilos de
+aprendizagem nas recomendações aderentes ao perfil e contexto do aluno. Nessa
+pesquisa integramos a proveniência prospectiva e a retrospectiva visando abordar
+aspectos educacionais e pessoais como parte de um modelo de perfil do aluno. Para o
+perfil e contexto do aluno são necessárias a definição e a inclusão de mais itens, porém
+sendo um trabalho em andamento as restrições não inviabilizaram as avaliações iniciais.
+Podem ainda ser capturadas de forma implícita ou explícita: motivação, interesse,
+importância do objeto, utilidade para o seu processo de aprendizagem, entre outros.
+Em termos de navegação identificamos que alguns alunos reproduzem a seqüência
+sugerida pelo professor não se esforçando ou permitindo inovação. Outros questionam a
+orientação e adotam outras abordagens de navegação e exploram os novos materiais. É
+esse rastro da navegação que nos permite armazenar informações sobre as suas
+preferências. A proposta descrita neste artigo possui limitações em relação à
+generalização dos resultados, uma vez que a total implementação da solução está sendo
+feita de forma evolutiva e o estudo experimental foi feito em uma disciplina. Todavia,
+este serviu para indiciar possibilidades de melhorar a proposta da arquitetura e sua
+aplicabilidade em sistemas de recomendação educacionais.
+Agradecimentos: FAPEMIG, CNPq, UFJF e Capes pelo apoio financeiro. Aos professores e alunos que
+participaram da avaliação da proposta.
+Referências
+Abdalla, A., Ströele, V., Veiga, W., Simões, L., Campos, F., Braga, R., & David, J. M. N.
+(2017). R . ECOS – Educational Recommender Ecosystem. In IEEE/ACM Joint 5th
+International Workshop on Software Engineering for Systems-of-Systems and 11th
+Workshop on Distributed Software Development, Software Ecosystems and Systems-ofSystems, p. 48–54.
+117
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Almeida, R. F., Pereira, C. K., Campos, F. e Ströele, V. (2016). Recomendação de Recursos
+Educacionais para Grupos: buscando soluções em Redes Sociais. In Anais do XXVII
+Simpósio Brasileiro de Informática na Educação - SBIE.
+Belhajjame, K., B’Far, R., J. Cheney, S. Coppens, S. Cresswell, Y. Gil, P. Groth, G. Klyne, T.
+Lebo, J. McCusker, et al. (2013) Prov-dm: The prov data model. W3C Recommendation.
+Buiar, J. A., P., Andrey R., Oliveira, L. E. S. (2017) Identificação de Estilo de Aprendizagem:
+Um modelo de inferência automatizado baseado no perfil de personalidade identificado nos
+textos produzidos pelo aluno. Anais do XXVIII Simpósio Brasileiro de Informática na
+Educação - SBIE.
+Buneman, P., Khanna, S., Tan, W.C., (2001) Why and where: A characterization of data
+provenance. In: 8th International Conference on Database Theory, London. p. 4-6.
+Carvalho, Victor de C. de et alli. (2017) OntAES: Uma Ontologia para Sistemas Adaptativos
+Educacionais Baseada em Objetos de Aprendizagem e Estilos de Aprendizagem. Anais do
+XXVIII Simpósio Brasileiro de Informática na Educação - SBIE. 1307-1316.
+Coccoli, M., and Torre, I.. (2014) Interacting with annotated objects in a semantic web of things
+application. Journal of Visual Languages & Computing, 25(6):1012–1020.
+Dietze, S., Taibi, D., Yu, H. Q. and Dovrolis, N.. (2015) Al inked d ataset of medical
+educational resources. British Journal of Educational Technology, 46(5):1123–1129.
+Drescht, A.; Lacerda, D.P.; Antunes Junior, J.A.V. (2015). Design Science Research: método
+para avanço da ciência e tecnologia. Porto Alegre, Bookman, p 204.
+Groth, P., Moreau, L., (2013), PROV- Overview: An Overview of the PROV Family of
+Documents. Available at: <https://www.w3.org/TR/2013/NOTE-prov-overview20130430/>. Accessed on: Jan. 2018.
+Labib, A. Ezzat, José H. Canós, and M. Carmen Penadés. On the way to learning style models
+integration: a Learner's Characteristics Ontology. Computers in Human Behavior, p. 433-
+445.
+Nascimento, P., Barreto, R., Primo, T., Gusmão, T., Oliveira, E. (2017). Recomendação de
+Objetos de Aprendizagem baseada em Modelos de Estilos de Aprendizagem: Uma Revisão
+Sistemática da Literatura. In Simpósio Brasileiro de Informática na Educação-SBIE .Vol. 28,
+No. 1, p. 213.
+Pereira, C. K., Campos, F., Ströele, V., David, J. M. N. Braga, R. (2018). BROAD-RSI –
+educational recommender system using social networks interactions and linked data. Journal
+of Internet Services and Applications, v. 9, n. 1, p 7.
+Rezende, P. A., Campos, F., Stroele, V., Braga, R., & David, J. M. N. (2018) Recomendação
+Baseada no Perfil e Contexto Tecnológico do Aluno. In Simpósio Brasileiro de Informática
+na Educação-SBIE. p. 1273-1282.
+Silva, Z. C., Ferreira, L.R., Pimentel, A.R. (2016) Modelo de Apresentação Adaptativa de
+Objeto de Aprendizagem baseada em Estilos de Aprendizagem. In: V Congresso Brasileiro
+de Informática na Educação - CBIE, pp. 217-726, 2016.
+Valaski, J., Malucelli, A., Reinehr, S. (2011) Revisão dos Modelos de Estilos de Aprendizagem
+Aplicados à Adaptação e Personalização dos Materiais de Aprendizagem. In: XXII Simpósio
+Brasileiro de Informática na Educação - SBIE, Aracaju, pp. 844-847.
+Zaina, L. A. M, (2012) e-LORS: Uma Abordagem para Recomendação de Objetos de
+Aprendizagem. Revista Brasileira de Informática na Educação, Volume 20, Número 1. 4-14. 

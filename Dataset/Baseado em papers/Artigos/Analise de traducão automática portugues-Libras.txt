@@ -1,0 +1,373 @@
+Analise de traduc¸ ´ ao autom ˜ atica portugu ´ es-Libras no contexto ˆ
+do edital do Enem 2018
+Priscila R. F. Bedana1
+, Fernando A. Freitas1,2
+, Sarajane M. Peres2
+, Felipe V. Barbosa2
+1
+Instituto Federal de Sao Paulo (IFSP – Campus Campinas) ˜
+Rodovia Dom Pedro I, Km 143,6 - B. Amarais – 13.069-9010 – Campinas – SP – Brasil
+2Programa de Pos-graduac¸ ´ ao em Sistemas de Informac¸ ˜ ao – Universidade de S ˜ ao Paulo ˜
+Rua Arlindo Bettio, 1000, Ermelino Matarazzo – 03.828-000 – S ´ ao Paulo – SP ˜
+3Departamento de Lingu´ıstica – Universidade de Sao Paulo ˜
+Av. Prof. Luciano Gualberto, 403 – 05.508-010 – Sao Paulo – SP ˜
+priscilafbedana@hotmail.com, fernando.freitas@ifsp.edu.br,
+{sarajane, felipebarbosa}@usp.br
+Abstract. In this paper, automatic Portuguese-Libras translations are analyzed
+in the educational context of deaf people. The speeches in Libras, obtained in
+the translation functions, are uttered by an avatar. The communication promoted by the avatars is contrasted with translations offered by human interpreters
+and analyzed in relation to the use of Signed Portuguese and fingerspelling, and
+to the contextualization and correctness of the information being transmitted.
+The analysis revealed that the translation technology available for such communication modality still does not present maturity for using in critical contexts
+in which mistranslations can lead to losses for users, as it is the case in the
+official guidelines referring to the Brazilian National High School Examination.
+Resumo. Neste artigo, traduc¸oes portugu ˜ es-Libras s ˆ ao analisadas no contexto ˜
+educacional da pessoa surda. Os discursos em Libras obtidos na traduc¸ao˜
+automatica s ´ ao apresentados via avatares. A comunicac¸ ˜ ao promovida pe- ˜
+los avatares e contrastada com traduc¸ ´ oes oferecidas por int ˜ erpretes huma- ´
+nos, e analisada em relac¸ao ao uso de datilologia e portugu ˜ es sinalizado, e ˆ
+a contextualizac¸ ` ao e corretude da informac¸ ˜ ao transmitida. A an ˜ alise revelou ´
+que a tecnologia de traduc¸ao dispon ˜ ´ıvel para tal modalidade de comunicac¸ao˜
+nao possui maturidade para uso em contextos cr ˜ ´ıticos nos quais um equ´ıvoco
+de traduc¸ao possa levar a perdas para usu ˜ arios, como ´ e o caso nas orientac¸ ´ oes ˜
+oficiais referentes ao Exame Nacional do Ensino Medio. ´
+1. Introduc¸ao˜
+A L´ıngua Brasileira de Sinais (Libras), l´ıngua de comunicac¸ao e express ˜ ao da comuni- ˜
+dade surda no Brasil, foi reconhecida pela Lei no 10.436 de 2002 [Brasil 2002], e regulamentada pelo decreto no 5.626 de 2005 [Brasil 2005]. Em 2015, foi criada a Lei no
+13.146 [Brasil 2015], dentre outras func¸oes, para assegurar acessibilidade nos espac¸os ˜
+de informac¸ao e comunicac¸ ˜ ao do pa ˜ ´ıs. Tais espac¸os incluem o meio digital, exigindo a
+implementac¸ao de acessibilidade em ˜ websites de org ´ aos do governo e de empresas. O ˜
+atendimento ao surdo passa a ser prioritario e acess ´ ´ıvel, seja em espac¸o f´ısico ou em meio
+DOI: 10.5753/cbie.sbie.2019.1151 1151
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+digital, gerando a demanda pela presenc¸a um interprete que deve ser habilitado para a ´
+execuc¸ao da traduc¸ ˜ ao e interpretac¸ ˜ ao entre a Libras e a l ˜ ´ıngua portuguesa.
+A presenc¸a desse profissional em todos os espac¸os publicos ainda n ´ ao˜ e ple- ´
+namente viavel dos pontos de vista financeiro e de recursos humanos. Por um lado, ´
+a demanda pelo servic¸o nao apresenta recorr ˜ encia que justifique a disponibilizac¸ ˆ ao de ˜
+interpretes em tempo integral. Por outro lado, a aquisic¸ ´ ao da Libras como segunda l ˜ ´ıngua
+nao˜ e trivial, o que dificulta a contratac¸ ´ ao de pessoas com conhecimentos em Libras para ˜
+preencher as posic¸oes que atuam no atendimento ao p ˜ ublico. ´
+Um exemplo positivo da acessibilidade para surdo e o contexto do Enem - Exame ´
+Nacional do Ensino Medio. Desde 2015, o instituto respons ´ avel pelo exame, o Inep, ´
+tem dado atenc¸ao˜ a quest ` ao da acessibilidade na educac¸ ˜ ao para surdos. Gradativamente, ˜
+recursos como editais em Libras e videoprovas estao contribuindo para a equidade entre ˜
+candidatos surdos e ouvintes, sob a chancela do selo Enem em Libras1
+. Entretanto, ainda
+que de alto valor agregado, a produc¸ao˜ ad hoc de conteudo em Libras n ´ ao alcanc¸a a escala ˜
+necessaria para promover acessibilidade e a inclus ´ ao plena dos surdos, o que faz perdurar ˜
+a diferenc¸a nas condic¸oes de acesso ao conhecimento entre uma pessoa ouvinte e uma ˜
+pessoa surda, colocando o surdo em desvantagem na busca por oportunidades.
+O avanc¸o em processamento de l´ıngua natural, reconhecimento de padroes e pro- ˜
+cessamento grafico tem permitido a criac¸ ´ ao de softwares que promovem acessibilidade. ˜
+Dentre eles estao aqueles que realizam traduc¸ ˜ ao e usam avatares ˜
+2 para comunicar o discurso em l´ıngua de sinais. Tais softwares versionam l´ınguas e sao uma alternativa para ˜
+promover a acessibilidade, inclusao e interac¸ ˜ ao social [Machado et al. 2016]. Com o sur- ˜
+gimento desses softwares, assoma a preocupac¸ao com a qualidade das suas traduc¸ ˜ oes. Os ˜
+questionamentos sobre a coerencia e confiabilidade das traduc¸ ˆ oes emergem entre especi- ˜
+alistas e usuarios, e as discuss ´ oes se voltam para os impactos da qualidade do servic¸o de ˜
+traduc¸ao e que consequ ˜ encias s ˆ ao geradas na disseminac¸ ˜ ao de informac¸ ˜ ao equivocada. ˜
+Neste artigo, sao apresentados os resultados de uma an ˜ alise comparativa da qua- ´
+lidade de traduc¸ao autom ˜ atica portugu ´ es-Libras oferecida por dois softwares e por um ˆ
+interprete humano, no contexto do Edital do Enem 2018. Este artigo segue organizado ´
+em cinco sec¸oes: um breve referencial te ˜ orico para dar suporte ao entendimento da an ´ alise ´
+realizada; trabalhos correlatos para posicionamento desta iniciativa diante de outras similares; descric¸ao do m ˜ etodo e motivac¸ ´ ao para decis ˜ oes tomadas durante a elaborac¸ ˜ ao da ˜
+analise; os principais resultados e discuss ´ oes; as considerac¸ ˜ oes finais. ˜
+2. A estrutura da Libras
+A Libras e uma l ´ ´ıngua de modalidade visual-motora com gramatica pr ´ opria ´
+[de Quadros and Schmiedt 2006] reconhecida como meio legal de comunicac¸ao no Bra- ˜
+sil. Ela nao˜ e uma adaptac¸ ´ ao do portugu ˜ es. Suas caracter ˆ ´ısticas e estrutura surgiram
+naturalmente das interac¸oes entre os seus usu ˜ arios (pessoas surdas), assim como ocorreu ´
+com outras l´ınguas de sinais. Nas l´ınguas de sinais faz-se uso da articulac¸ao de sinais ˜
+formados pela combinac¸ao de cinco par ˜ ametros [Stokoe 1980, Battison 1974]: formato ˆ
+que as maos assumem durante a execuc¸ ˜ ao do sinal (configurac¸ ˜ ao de m ˜ aos); local onde o ˜
+1http://portal.inep.gov.br/educacao-basica/enem/enem-em-libras
+2Avatar e uma representac¸ ´ ao corporal de algu ˜ em no meio digital. Neste artigo, um int ´ erprete virtual. ´
+1152
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+sinal e realizado no espac¸o tridimensional (ponto de articulac¸ ´ ao); movimento realizado ˜
+pelas maos, no espac¸o tridimensional, durante a sinalizac¸ ˜ ao (movimento); direc¸ ˜ ao assu- ˜
+mida pela palma da mao na execuc¸ ˜ ao de um sinal e a direc¸ ˜ ao na que esse sinal ˜ e executado ´
+(orientac¸ao); e posic¸ ˜ ao e movimentos da cabec¸a, posic¸ ˜ ao e movimentos do corpo, olhar e ˜
+expressoes faciais (express ˜ oes n ˜ ao manuais). ˜
+Para que um discurso em l´ıngua de sinais passe a mensagem correta, o conjunto completo dos parametros formadores de um sinal e da sintaxe da l ˆ ´ıngua devem ser observados. Combinac¸oes erradas ou a aus ˜ encia de um par ˆ ametro po- ˆ
+dem mudar a coerencia do discurso ou mesmo o seu sentido. Express ˆ oes faciais, ˜
+por exemplo, assumem o papel de representar elementos morfologicos e sint ´ aticos ´
+em uma sentenc¸a [de Almeida Freitas et al. 2017]. Ignorar um parametro como esse ˆ
+pode levar a execuc¸ ` ao de uma sentenc¸a agramatical, eventualmente tornando-a ininte- ˜
+lig´ıvel [de Quadros and Karnopp 2009, Arroteia 2005].
+No contexto historico da Educac¸ ´ ao de Surdos, o portugu ˜ es sinalizado foi utilizado ˆ
+como uma ferramenta de comunicac¸ao que usava o portugu ˜ es e sinais da l ˆ ´ıngua de sinais
+de forma concomitante, na tentativa de representar as estruturas do portugues em l ˆ ´ıngua
+de sinais [de Lacerda 1998]. No portugues sinalizado, para cada palavra usada no dis- ˆ
+curso em portugues, executa-se um sinal em Libras, levando ˆ a criac¸ ` ao de uma c ˜ opia da ´
+l´ıngua oral predominante. Do ponto de vista lingu´ıstico, o uso do portugues sinalizado em ˆ
+substituic¸ao aos recursos pr ˜ oprios da l ´ ´ıngua de sinais produz um sistema de comunicac¸ao˜
+artificial que nao contempla as l ˜ ´ınguas envolvidas e pode indicar falta de dom´ınio da
+l´ıngua de sinais. A diferenc¸a estrutural entre a Libras e o portugues sinalizado pode ser ˆ
+observada na Figura 1. Nesta figura, as sentenc¸as sao transcritas em glosas ˜
+3
+.
+Figura 1. Apresentac¸ao de sentenc¸as proferidas usando portugu ˜ es sinalizado e ˆ
+Libras, com transcric¸oes representadas em glosas ˜
+3. Trabalhos correlatos
+Como na analise descrita neste artigo, as discuss ´ oes apresentadas em [Vieira et al. 2014] ˜
+e [Santos 2017] versam sobre a qualidade de softwares de traduc¸ao portugu ˜ es-Libras. No ˆ
+primeiro caso, os softwares ProDeaf e Hand Talk sao analisados em termos da aceita- ˜
+bilidade por parte de usuarios surdos e ouvintes e da qualidade da funcionalidade que ´
+sintetiza expressoes n ˜ ao manuais. Os resultados foram positivos para a aceitabilidade, ˜
+porem levantaram limitac¸ ´ oes em relac¸ ˜ ao˜ a qualidade da s ` ´ıntese e aplicac¸ao do par ˜ ametro ˆ
+referente as express ` oes faciais. O segundo caso acrescenta o aplicativo Ryben ˜ a no rol ´
+de softwares analisados e segue uma abordagem mais proxima ´ a apresentada no presente `
+artigo, porem realiza avaliac¸ ´ oes simplificadas sobre tr ˜ es pequenas sentenc¸as extra ˆ ´ıdas do
+Exame Nacional do Prolibras de 2012. Ainda que diante de uma amostra reduzida, os
+destaques dos autores foram para o uso do portugues sinalizado, traduc¸ ˆ ao incompleta e ˜
+carencia de explorac¸ ˆ ao do par ˜ ametro de express ˆ oes n ˜ ao manuais. Estudos recentes sobre ˜
+3Glosa e um recurso usado para representar a transcric¸ ´ ao de uma sentenc¸a [Mccleary et al. 2010]. ˜
+1153
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+softwares tradutores da l´ıngua oral para l´ıngua de sinais, com uso de avatares, tambem´
+e explorado no contexto internacional. Traduc¸ ´ oes da l ˜ ´ıngua oral para l´ıngua de sinais
+arabe, indiana e turca s ´ ao apresentadas em [El-Gayyar et al. 2016], [Nair et al. 2016] e ˜
+[Eryigit et al. 2016], respectivamente. Caracter ˘ ´ıstica comum a todos esses trabalhos e a ´
+constatac¸ao de que esses softwares ainda est ˜ ao em seus est ˜ agios iniciais e que testes envol- ´
+vendo usuarios da comunidade surda s ´ ao essenciais e precisam ser mais bem explorados. ˜
+4. Metodo ´
+Este estudo segue preceitos da pesquisa qualitativa, com foco em avaliar o n´ıvel de compreensao de discursos proferido em l ˜ ´ıngua de sinais. A analise utilizou a comparac¸ ´ ao de ˜
+duas fontes automatizadas de produc¸ao do discurso e uma fonte n ˜ ao automatizada. Se- ˜
+guindo o exposto em [Bryman 2012], este estudo e caracterizado como a aplicac¸ ´ ao de uma ˜
+abordagem de analise do discurso, ou seja o discurso em si ´ e o foco de investigac¸ ´ ao. O ˜
+metodo de pesquisa est ´ a instanciado na Figura 2. O contexto das traduc¸ ´ oes ˜ e um conjunto ´
+de sentenc¸as extra´ıdas do edital oficial do Exame Nacional do Ensino Medio (Enem) de ´
+2018. O conteudo deste edital est ´ a dispon ´ ´ıvel tambem em Libras, a partir da traduc¸ ´ ao re- ˜
+alizada por interpretes do N ´ ucleo de Educac¸ ´ ao Online do Instituto Nacional de Educac¸ ˜ ao˜
+de Surdos (NEO/INES) humano4
+. Essa traduc¸ao˜ e usada neste estudo como refer ´ encia, ˆ
+i.e., e assumida como uma traduc¸ ´ ao de alta compreensibilidade. As traduc¸ ˜ oes autom ˜ aticas ´
+sao fornecidas por softwares tradutores “portugu ˜ es-Libras”, identificados como Avatar 1 ˆ
+e Avatar 2 e registrados de forma escrita por meio de glosas. As sentenc¸as proferidas
+em Libras por interpretes humanos s ´ ao tamb ˜ em transformadas em glosas. Dois auto- ´
+res deste artigo, fluentes em Libras e certificados pelo MEC por meio do Exame Prolibras [de Quadros et al. 2009], foram responsaveis pelas construc¸ ´ ao das glosas. ˜
+Figura 2. Passos seguidos nas analises das traduc¸ ´ oes autom ˜ aticas ´
+A tecnologia de tradutores automaticos para a LIBRAS ´ e recente e existem poucos ´
+softwares dispon´ıveis. Dentre os softwares existentes na epoca de realizac¸ ´ ao deste estudo ˜
+(ano 2018), destacavam-se o ProDeaf e o Hand Talk (descritos na Figura 3) – soluc¸oes ˜
+nacionais gratuitas, disponibilizadas na forma de aplicativo movel e para uso na web. Em ´
+2018, essas soluc¸oes estavam em primeiro e segundo lugar em n ˜ umero de ´ downloads,
+dentro de sua categoria, nos dois principais servic¸os de distribuic¸ao de soluc¸ ˜ oes digitais ˜
+para dispositivos moveis, por este motivo, foram selecionadas para compor este estudo. ´
+4Os v´ıdeos podem ser encontrados em https://www.youtube.com/watch?v=__pk8BrTpmE
+1154
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Figura 3. Descric¸ao dos softwares que proveram as traduc¸ ˜ oes autom ˜ aticas ´
+Na literatura sobre Libras, nao existe um m ˜ etodo ou conjunto de crit ´ erios para ´
+analise de qualidade de traduc¸ ´ ao de portugu ˜ es para Libras. Desta forma, uma an ˆ alise ´
+qualitativa do discurso foi realizada para avaliar a aderencia da traduc¸ ˆ ao ao uso da Libras ˜
+ou ao uso do portugues sinalizado, o uso da datilologia, a contextualizac¸ ˆ ao adequada e a ˜
+ocorrencia de distorc¸ ˆ ao do significado. Sentenc¸as com informac¸ ˜ ao cr ˜ ´ıtica para o contexto
+de realizac¸ao do Enem foram escolhidas para an ˜ alise. Nessas sentenc¸as a precis ´ ao da ˜
+traduc¸ao˜ e essencial, j ´ a que a interpretac¸ ´ ao equivocada do discurso nelas contido poderia ˜
+gerar consequencias negativas para um aluno que pretendia realizar a prova. ˆ
+5. Resultados e discussoes ˜
+Na comparac¸ao das traduc¸ ˜ oes autom ˜ aticas com a traduc¸ ´ ao feita pelos int ˜ erpretes, diver- ´
+sas passagens do Edital do Enem 2018 foram analisadas. Esta sec¸ao destaca algumas ˜
+delas para ilustrar a complexidade envolvida no trabalho de traduc¸ao para uma l ˜ ´ıngua de
+sinais. Por simplicidade: os softwares ProDeaf e Hand Talk sao referenciados como Ava- ˜
+tar 1 e Avatar 2, respectivamente; em comentarios referentes aos dois softwares, o termo ´
+“avatares” e usado; os int ´ erpretes s ´ ao generalizados e referenciados como “int ˜ erprete”. ´
+Na Figura 4, diz respeito sobre ac¸oes necess ˜ arias para inscric¸ ´ ao no exame, acom- ˜
+panhadas dos prazos nos quais elas devem ser realizadas. O foco desta analise est ´ a na ´
+forma como os tradutores lidam com numeros. Claramente, o Avatar 1 n ´ ao foi capaz de ˜
+interpreta-los, uma vez que a maioria deles diz respeito a datas e a traduc¸ ´ ao correspon- ˜
+deu exatamente a transcric¸ ` ao dos n ˜ umeros. Esse procedimento torna a interpretac¸ ´ ao do ˜
+conteudo cansativa e confusa. O Avatar 2 criou uma traduc¸ ´ ao mais adequada, sendo capaz ˜
+de reconhecer que o enunciado se refere a datas e traduzindo os numeros referentes a me- ´
+ses. No entanto, com excec¸ao do m ˜ es “abril”, todos os demais foram traduzidos usando ˆ
+datilologia ao inves de usar o sinal apropriado em Libras. A traduc¸ ´ ao feita pelo int ˜ erprete ´
+faz uso do contexto e solicita que o surdo analise a tabela, o que facilita a transmissao˜
+do conteudo. A comparac¸ ´ ao das traduc¸ ˜ oes deixa claro que a interac¸ ˜ ao da informac¸ ˜ ao e ˜
+seu contexto representa um desafio para a automac¸ao. O conhecimento e experi ˜ encia do ˆ
+interprete foi crucial para prover uma boa traduc¸ ´ ao. ˜
+A sentenc¸a na Figura 5 informa os horarios cr ´ ´ıticos do exame. E uma informac¸ ´ ao˜
+cuja interpretac¸ao gera consequ ˜ encias importantes para os candidatos. Nesse caso, no- ˆ
+vamente, a traduc¸ao do int ˜ erprete faz uso do contexto e solicita que o surdo acompanhe ´
+o cronograma em uma tabela. Entao, a an ˜ alise se resume a comparar o desempenho dos ´
+dois avatares. As traduc¸oes foram similares, por ˜ em, o Avatar 1 n ´ ao reconheceu o conceito ˜
+1155
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Figura 4. Sentenc¸a referente a procedimentos de inscric¸ao no exame e respecti- ˜
+vas traduc¸oes. Foco para a traduc¸ ˜ ao na presenc¸ a de n ´umeros e datas ˜
+de horario, visto que inseriu a letra “H” usando datilologia, o que n ´ ao seria o esperado. ˜
+Em Libras, o conceito de horario ´ e passado usando os n ´ umeros referentes ´ a hora e o sinal `
+de “horas no relogio” realizado no brac¸o e, quando se trata de durac¸ ´ ao, usando face do ˜
+sujeito que profere o discurso. Alem disso, em ambas traduc¸ ´ oes, foi observada a inserc¸ ˜ ao˜
+de um sinal para representar o conceito “ABAIXO”. Porem, este ´ e um conceito que n ´ ao˜
+existe de forma isolada na Libras, necessitando sempre de um referencial, por exemplo,
+“MESA + ABAIXO” significando “objeto abaixo da mesa”. Quaisquer referenciais usados pelos avatares teriam sido arbitrarios representando um problema de contextualizac¸ ´ ao˜
+da informac¸ao, visto que o objeto de refer ˜ encia n ˆ ao existe na sentenc¸a em an ˜ alise. ´
+Figura 5. Sentenc¸a indicando horarios sobre a realizac¸ ´ ao do exame. Foco na ˜
+traduc¸ao na presenc¸ a de hora ˜ rios e na contextualizac¸ ´ ao da informac¸ ˜ ao˜
+Na Figura 6, a sentenc¸a informa sobre obrigatoriedades de documentac¸ao. Nesta ˜
+analise, observa-se um erro de traduc¸ ´ ao da palavra “VIA” cometido pelos avatares. Am- ˜
+bos nao foram capazes de interpretar o significado da palavra no contexto da sentenc¸a ˜
+e a traduziram como “RUA” e “AVENIDA”. A palavra “DOCUMENTO” foi equivocadamente traduzida como “CARTAO”. O final da sentenc¸a ˜ e traduzido de maneira mais ´
+adequada pelo Avatar 2. Embora a traduc¸ao dos avatares tenham apresentado problemas ˜
+por ter um carater de traduc¸ ´ ao literal, ao menos a traduc¸ ˜ ao do Avatar 2 pode ser con- ˜
+siderada suficiente. A traduc¸ao do int ˜ erprete incorpora a habilidade de interpretac¸ ´ ao do ˜
+contexto que lhe permite executar uma simplificac¸ao do conte ˜ udo. ´
+A sentenc¸a da Figura 7 diz respeito a uma regra sobre a relac¸ao entre a realizac¸ ˜ ao˜
+1156
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Figura 6. Sentenc¸ a referente a regra sobre obrigatoriedade de portar `
+documentac¸ao adequada. Foco na simplificac¸ ˜ ao (apropriada) da traduc¸ ˜ ao˜
+de inscric¸ao e os candidatos que receberam isenc¸ ˜ ao de taxa. Compreender essa regra ˜ e´
+fundamental, ja que a isenc¸ ´ ao de taxa pode induzir o candidato a achar que a inscric¸ ˜ ao˜
+nao˜ e necess ´ aria. Em termos sint ´ aticos, os avatares fizeram um uso coerente dos sinais ´
+da Libras, com pouco uso de portugues sinalizado. O avatar 2 gerou um problema na ˆ
+traduc¸ao da passagem “ser ˜ a anterior”. Ao usar os dois sinais “AVANC¸ AR/AVANTE” e ´
+“ANTES” em sequencia, ele gera uma distorc¸ ˆ ao da informac¸ ˜ ao e induz ˜ a compreens ` ao˜
+da sentenc¸a da seguinte forma: depois e antes, o participante podera solicitar a isenc¸ ´ ao˜
+da taxa de inscric¸ao˜ . Contudo, apenas o interprete fez a traduc¸ ´ ao correta da informac¸ ˜ ao˜
+cr´ıtica da sentenc¸a. A traduc¸ao do int ˜ erprete estrutura a temporalidade usada no discurso ´
+explicitamente ordenando as ac¸oes com uso do sinal “depois”, e reforc¸a a necessidade ˜
+da realizac¸ao das ac¸ ˜ oes com o sinal “precisar”. Nesse caso, a traduc¸ ˜ ao do int ˜ erprete ´
+incorpora uma explicac¸ao referente ˜ a regra presente no enunciado. Os avatares ainda n ` ao˜
+implementam esse tipo de recurso avanc¸ado de traduc¸ao. ˜
+Figura 7. Sentenc¸ a referente a regra que relaciona isenc¸ ` ao de taxa e obrigatorie- ˜
+dade de inscric¸ao no exame. Foco na precis ˜ ao da informac¸ ˜ ao transmitida ˜
+A ultima sentenc¸a diz respeito a regras de como proceder durante a realizac¸ ´ ao da ˜
+prova (Figura 8). Nesse exemplo, percebe-se que ha limitac¸ ´ oes importantes no trabalho ˜
+de traduc¸ao autom ˜ atica. Em termos de informac¸ ´ ao cr ˜ ´ıtica, e preciso informar ao candi- ´
+dato que a caneta a ser usada durante a prova deve ser “esferografica de tinta preta” e ´
+“fabricada em material transparente”. Os avatares informam corretamente sobre o tipo
+de caneta, ainda que atinjam esse objetivo por nao conhecerem a palavra esferogr ˜ afica e ´
+por isso usarem datilologia na traduc¸ao desse trecho. Entretanto, a informac¸ ˜ ao sobre o ˜
+material da caneta e distorcida na traduc¸ ´ ao do Avatar 1, que informa a possibilidade de ˜
+considerar materiais “VARIADOS”. O Avatar 2 produz uma traduc¸ao mais adequada para ˜
+essa informac¸ao. Interessante notar que o int ˜ erprete omite a necessidade de uso de caneta ´
+esferografica. Claramente, trata-se de um lapso na execuc¸ ´ ao da traduc¸ ˜ ao, pois o int ˜ erprete ´
+1157
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+teria condic¸oes de faz ˜ e-la corretamente. Ainda, ambos avatares apresentaram dificuldade ˆ
+com a palavra “FABRICADA”, sendo que o primeiro faz uso de um sinal em Libras que
+designa o substantivo “FABRICA/IND ´ USTRIA”; e o segundo usa datilologia nessa pala- ´
+vra. Na resoluc¸ao desse trecho, o int ˜ erprete altera o discurso, adequado-o ao contexto da ´
+Libras. O segundo ponto a ser discutido nessa sentenc¸a e a consequ ´ encia da quebra da re- ˆ
+gra que esta sendo informada. O Avatar 1 n ´ ao consegue produzir uma traduc¸ ˜ ao adequada. ˜
+A traduc¸ao do Avatar 2 comete um equ ˜ ´ıvoco que leva a produc¸ ` ao de uma informac¸ ˜ ao nova ˜
+e equivocada, pois ele traduz as palavras “INSTRUC¸ OES” e “PENA” como “ENSINAR” ˜
+e “CASTIGO”. Interpretando tais palavras em sequencia produz-se o resultado referente ˆ
+a “ensinar um castigo”. Tal traduc¸ao tamb ˜ em n ´ ao est ˜ a adequada ao contexto. ´
+Figura 8. Sentenc¸a referente a procedimentos de realizac¸ao da prova. Foco na ˜
+precisao da informac¸ ˜ ao transmitida e estruturas gramaticais das l´ınguas ˜
+A sentenc¸a da Figura 8 ainda ilustra questoes de estrutura gramatical. Os signifi- ˜
+cados contextuais de preposic¸oes e locuc¸ ˜ oes prepositivas, como “DE ACORDO COM”, ˜
+nao possuem correspondentes diretos em Libras. Os avatares n ˜ ao tratam essa quest ˜ ao ade- ˜
+quadamente. O Avatar 1 manteve a preposic¸ao “DE” com datilologia. Ambos os avatares ˜
+colocam o “de acordo com” na forma do verbo “COMBINAR”. Esse sentido e admiss ´ ´ıvel,
+porem, o restante do discurso n ´ ao esclarece adequadamente que “o combinado” significa ˜
+“seguir instruc¸oes”. O int ˜ erprete faz uma sentenc¸a condicional, explicando ao candidato ´
+que “SE” a regra for descumprida, nao ser ˜ a poss ´ ´ıvel realizar a leitura optica. A repetic¸ ´ ao˜
+dos sinais “COR” e “PRETA” e necess ´ aria para compor uma sentenc¸a condicional com ´
+topico. A composic¸ ´ ao da condicional “SE” e do t ˜ opico s ´ ao feitas por meio de express ˜ oes ˜
+faciais gramaticais. Alem desta passagem, express ´ oes faciais gramaticais s ˜ ao usadas na ˜
+expressao negativa “CONSEGUIR-N ˜ AO”. Nesse caso, a palavra “N ˜ AO”, que nega a ac¸ ˜ ao˜
+de “conseguir”, e expressa via uma combinac¸ ´ ao de express ˜ oes n ˜ ao manuais. ˜
+A analise conduzida neste trabalho ilustrou a complexidade da automac¸ ´ ao da ˜
+traduc¸ao portugu ˜ es-Libras. Os softwares produziram traduc¸ ˆ oes adequadas para algumas ˜
+sentenc¸as (ou trechos de sentenc¸as), entretanto apresentaram algumas inadequac¸oes: ˜
+• A datilologia foi usada de forma excessiva nas traduc¸oes autom ˜ aticas. Em ne- ´
+nhuma das sentenc¸as discutidas houve uso de datilologia pelo interprete. ´
+• O portugues sinalizado est ˆ a presente apenas nas traduc¸ ´ oes autom ˜ aticas, mostrando ´
+que a ordem gramatical da Libras nao est ˜ a sendo respeitada. ´
+1158
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+• A s´ıntese de expressoes faciais morfol ˜ ogicas e gramaticais para os avatares ´ e um ´
+requisito funcional importante neste tipo de aplicativo. Contudo, tal funcionalidade ainda nao est ˜ a sendo usada adequadamente nas traduc¸ ´ oes autom ˜ aticas. ´
+• Polissemia e um requisito fundamental para aplicativos de traduc¸ ´ ao e um problema ˜
+importante na area de processamento de l ´ ´ıngua natural. Os avatares apresentaram
+dificuldade nas situac¸oes em que palavras poliss ˜ emicas foram usadas. Soluc¸ ˆ oes j ˜ a´
+existentes para tratamento desta questao no processamento de l ˜ ´ınguas orais precisam ainda ser mapeadas para o contexto da traduc¸ao dos avatares. ˜
+• Sumarizac¸ao˜ e outro item que tem sido trabalhado no processamento autom ´ atica ´
+da l´ıngua oral, e aplicado pelo int ´ erprete na traduc¸ ´ ao l ˜ ´ıngua oral-l´ıngua de sinais,
+mas cujo uso nao foi observado no contexto dos softwares analisados. ˜
+6. Considerac¸oes Finais ˜
+Da analise descrita neste artigo, conclui-se que, apesar do potencial de impacto social que ´
+os softwares analisados (e similares) possuem, e prudente n ´ ao utiliz ˜ a-los como mediado- ´
+res oficiais de comunicac¸ao. Em suas atuais condic¸ ˜ oes, eles podem transmitir mensagens ˜
+inadequadas e prejudicar usuarios surdos, potencializando a sua condic¸ ´ ao de exclus ˜ ao em ˜
+contextos nos quais a precisao na comunicac¸ ˜ ao˜ e crucial, como ´ e o caso do contexto do ´
+edital do Enem, que ilustra este trabalho. A aplicabilidade da tecnologia desses softwares
+vai alem da func¸ ´ ao de traduc¸ ˜ ao. Etapas necess ˜ arias para o processamento autom ´ atico da ´
+l´ıngua de sinais servem como ferramentas simplificadas para suporte ao aprendizado de
+l´ınguas de sinais [Bouzid et al. 2016, Madeo et al. 2010]. A qualidade grafica dos ava- ´
+tares pode ser usada em aplicac¸oes que recebem um discurso j ˜ a em l ´ ´ıngua de sinais
+como entrada e o proferem via avatares. Este e o caso de uma aplicac¸ ´ ao alem ˜ a que ˜
+usa essa ferramenta para implementar uma comunicac¸ao precisa e inclusiva em locais ˜
+publicos [Ebling and Glauert 2016]. A acelerac¸ ´ ao da melhoria da traduc¸ ˜ ao autom ˜ atica ´
+portugues-Libras est ˆ a atrelada ´ a integrac¸ ` ao de aspectos de lingu ˜ ´ıstica teorica e aplicada ´
+contextualizada em l´ıngua de sinais, da lingu´ıstica computacional considerando avanc¸os
+que ja s ´ ao realidade para o caso as l ˜ ´ınguas orais, da computac¸ao gr ˜ afica e do estudo da ´
+interface homem-maquina para otimizac¸ ´ ao de requisitos n ˜ ao funcionais como usabilidade ˜
+e eficiencia. Seguindo esta linha de trabalho, ˆ e poss ´ ´ıvel vislumbrar um cenario otimista ´
+para a promoc¸ao da acessibilidade e inclus ˜ ao das pessoas surdas. ˜
+Referencias ˆ
+Arroteia, J. (2005). O papel da marcac¸ao n ˜ ao-manual nas sentenc¸as negativas em L ˜ ´ıngua
+de Sinais Brasileira (LSB). PhD thesis.
+Battison, R. (1974). Phonological deletion in american sign language. Sign Language
+Studies, 5(1974):1–14.
+Bouzid, Y., Khenissi, M. A., Essalmi, F., and Jemni, M. (2016). Using educational games for sign language learning-a signwriting learning game: Case study. Journal of
+Educational Technology & Society, 19(1):129–141.
+Brasil (2002). Lei no 10.436, de 24 de abril de 2002. dispoe sobre a l ˜ ´ıngua brasileira de
+sinais-libras e da outras provid ´ encias. ˆ Diario Oficial da Uni ´ ao˜ .
+Brasil (2005). Decreto no 5.626 de 22 de dezembro de 2005. regulamenta a lei no10.
+Diario Oficial da Uni ´ ao˜ , 436.
+1159
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Brasil (2015). Lei no 13.146, de 6 de julho de 2015. institui a lei brasileira de inclusao da ˜
+pessoa com deficiencia (estatuto da pessoa com defici ˆ encia). ˆ Diario Oficial da Uni ´ ao˜ .
+Bryman, A. (2012). Social Research Methdos. Oxford University Press, 4th edition.
+de Almeida Freitas, F., Peres, S. M., Lima, C. A. M., and Barbosa, F. V. (2017). Grammatical facial expression recognition in sign language discourse: a study at the syntax
+level. Information Systems Frontiers, 19(6):1243–1259.
+de Lacerda, C. B. (1998). Um pouco da historia das diferentes abordagens na educac¸ ´ ao˜
+dos surdos. Centro de Estudos Educac¸ao e Sociedade. ˜
+de Quadros, R. M. and Karnopp, L. B. (2009). L´ıngua de sinais brasileira: estudos
+lingu´ısticos. Artmed Editora.
+de Quadros, R. M. and Schmiedt, M. L. (2006). Ideias para ensinar portugues para ˆ
+alunos surdos.
+de Quadros, R. M., Szeremeta, J., Costa, E., Ferraro, M. L., Furtado, O., and Silva, J. C.
+(2009). Exame Prolibras.
+Ebling, S. and Glauert, J. (2016). Building a swiss german sign language avatar with
+jasigning and evaluating it among the deaf community. Universal Access in the Information Society, 15(4):577–587.
+El-Gayyar, M. M., Ibrahim, A. S., and Wahed, M. (2016). Translation from arabic speech
+to arabic sign language based on cloud computing. Egyptian Informatics Journal,
+17(3):295–303.
+Eryigit, C., K ˘ ose, H., Kelepir, M., and Eryi ¨ git, G. (2016). Building machine-readable ˘
+knowledge representations for turkish sign language generation. Knowledge-Based
+Systems, 108:179–194.
+Machado, M. C., Gomes, C. A. D., dos Santos, G. G. L., de Sousa, L. D., and Cancela,
+L. B. (2016). Inclusao social de deficientes auditivos por meio de tecnologias assistivas. ˜
+In Anais do Encontro Virtual de Documentac¸ao em Software Livre e Congr. Intern. de ˜
+Linguagem e Tecnologia Online, volume 6, pages 1–6.
+Madeo, R. C. B., Peres, S. M., B´ıscaro, H. H., Dias, D. B., and Boscarioli, C. (2010).
+A committee machine implementing the pattern recognition module for fingerspelling
+applications. In Symp. on Applied Computing, pages 954–958.
+Mccleary, L., Viotti, E., and de Arantes Leite, T. (2010). Descric¸ao das l ˜ ´ınguas sinalizadas: a questao da transcric¸ ˜ ao dos dados. ˜ ALFA: Revista de Lingu´ıstica, 54(1):265–289.
+Nair, M. S., Nimitha, A., and Idicula, S. M. (2016). Conversion of malayalam text to
+indian sign language using synthetic animation. In 2016 Int. Conf. on Next Generation
+Intelligent Systems (ICNGIS), pages 1–4. IEEE.
+Santos, R. G. (2017). Aplicativos de libras, problema ou soluc¸ao? ˜ ARTEFACTUM -
+Revista de Estudos em Linguagens e Tecnologia, 14(1).
+Stokoe, W. C. (1980). Sign language structure. Annual Rev. of Anthropol., 9(1):365–390.
+Vieira, M. C., Correa, Y., Santarosa, L. M. C., and Biazus, M. C. V. (2014). An ˆ alise de ´
+expressoes n ˜ ao-manuais em avatares tradutores de l ˜ ´ıngua portuguesa para Libras. In
+Nuevas Ideas en Informatica Educativa ´ , volume 10, pages 172–183

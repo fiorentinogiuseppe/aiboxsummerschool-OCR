@@ -1,0 +1,391 @@
+Revisao por Pares na Aprendizagem de Modelagem de ˜
+Sistemas: concepc¸ao de uma ferramenta de suporte ˜
+Romualdo Azevedo, Patricia Chourio, Alberto Castro, Bruno Gadelha
+1
+Instituto de Computac¸ao – Universidade Federal do Amazonas (UFAM) ˜
+69.080 – 900 – Manaus – AM – Brasil
+{romualdo.costa, ppcp, alberto, bruno}@icomp.ufam.edu.br
+Abstract. The adoption of collaborative learning techniques for software engineering education provides the opportunity for discussing software modeling
+issues considering multiple points of view. As a consequence, students are expected to develop better models for software problems. To do so, it is necessary
+to develop or adapt tools that support teachers and students when adopting this
+approach. This paper describes a study on the use of the Collaborative Learning Peer Review technique in a System Modeling courses. As a result, we have
+a set of requirements for a tool to support this technique for teaching modeling
+software with UML (Unified Modeling Language).
+Resumo. A aprendizagem colaborativa para o ensino de modelagem de sistemas oportuniza a discussao sobre a resoluc¸ ˜ ao de problemas baseados em ˜
+multiplos pontos de vista. Como consequ ´ encia espera-se que os estudantes de- ˆ
+senvolvam melhores modelos para tratar problemas de software. Para tanto e´
+necessario desenvolver ou adaptar ferramentas que ajudem professores e alu- ´
+nos durante a adoc¸ao de tal abordagem. Este artigo descreve um estudo sobre ˜
+o uso da tecnica de aprendizagem colaborativa Revis ´ ao por Pares em aulas de ˜
+modelagem de software. Como resultado, apresenta-se um conjunto de requisitos para a construc¸ao de uma ferramenta que d ˜ e suporte a t ˆ ecnica de Revis ´ ao˜
+por Pares no ensino de modelagem de sistemas com UML (Unified Modeling
+Language).
+1. Introduc¸ao˜
+Modelagem de sistemas e uma tarefa n ´ ao trivial onde alunos de Engenharia de Software ˜
+enfrentam muitas dificuldades durante o processo de aprendizagem. No meio academico ˆ
+e comum que alunos aprendam a modelar sistemas utilizando diagramas da ´ Unified Modeling Language (UML) por serem muito utilizados na industria. No entanto, ´ e frequente ´
+que os estudantes demonstrem dificuldades em compreender a sintaxe e a semantica de ˆ
+tais diagramas [Ma 2017]. Neste contexto, a interac¸ao entre pessoas possibilita que os ˜
+membros do grupo identifiquem inconsistencias e falhas em seu racioc ˆ ´ınio ao se depararem com outros pontos de vistas e entendimentos [Quarto et al. 2017].
+Nesse cenario, o uso de t ´ ecnicas de aprendizagem colaborativa pode diminuir as ´
+dificuldades durante o aprendizado de modelagem com UML, pois desenvolvem diversas
+habilidades de cr´ıtica e autocr´ıtica. Uma das tecnicas de aprendizagem colaborativas ´ e a ´
+Revisao por Pares [Jenal et al. 2012] na qual os alunos realizam uma atividade e revisam ˜
+as atividades dos colegas, levando a melhores respostas as atividades solicitadas. O uso `
+DOI: 10.5753/cbie.sbie.2019.1975 1975
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+da Revisao por Pares no ensino de modelagem de sistemas pode proporcionar diferentes ˜
+visoes sobre o problema, resultando em modelos de software melhores e melhoria nas ˜
+habilidades dos alunos em lidar com diferentes pontos de vista [Barkley et al. 2014].
+Assim, este artigo apresenta um estudo que visa verificar como a tecnica de Re- ´
+visao por Pares pode auxiliar no processo de aprendizagem de modelagem de sistemas ˜
+utilizando UML. Para tanto, a tecnica foi aplicada em duas turmas do curso de Engenha- ´
+ria de Software da Universidade Federal do Amazonas, com alunos do primeiro e quinto
+per´ıodos, com e sem o apoio de ferramenta de suporte. Como resultado, este artigo discute
+a viabilidade sobre o uso da tecnica em disciplinas de modelagem de software e apresenta ´
+um conjunto de requisitos, bem como um prototipo de ferramenta de Revis ´ ao por Pares ˜
+para modelos de software.
+Este artigo esta organizado da seguinte forma: a Sec¸ ´ ao 2 apresenta os trabalhos ˜
+relacionados; na Sec¸ao 3 ˜ e apresentada a metodologia utilizada na pesquisa; a Sec¸ ´ ao 4 ˜
+apresenta a pesquisa exploratoria realizada; na Sec¸ ´ ao 5 ˜ e descrito o processo de elicitac¸ ´ ao˜
+de requisitos utilizado; a Sec¸ao 6 apresenta os resultados da pesquisa que consistem em ˜
+um conjunto de requisitos e o prototipo de uma ferramenta para a aplicac¸ ´ ao da Revis ˜ ao por ˜
+Pares em turmas de modelagem de software; e na Sec¸ao 7, as conclus ˜ oes s ˜ ao apresentadas. ˜
+2. Trabalhos Relacionados
+Em [Bruning 2016], o autor relata que desenvolvedores precisam trabalhar em conjunto
+para criar uma soluc¸ao que atenda as necessidades do cliente. Desta forma, ˜ e descrito o ´
+desenvolvimento de uma ferramenta de suporte a modelagem colaborativa para os diagramas de classes da UML. Como resultado, sao apresentados testes funcionais e validac¸ ˜ ao˜
+da ferramenta por poss´ıveis usuarios. ´
+[Neto et al. 2004] apresentam uma analise de requisitos da Revis ´ ao por Pares na ˜
+aprendizagem buscando identificar e documentar as principais caracter´ısticas necessarias ´
+para construir um software para aprendizagem colaborativa. Os requisitos foram elicitados utilizando os diagramas de casos de uso UML e por meio da aplicac¸ao de um processo ˜
+de desenvolvimento de software. A principal contribuic¸ao deste trabalho est ˜ a no levan- ´
+tamento, documentac¸ao e apresentac¸ ˜ ao dos requisitos de software para apoiar a Revis ˜ ao˜
+por Pares na aprendizagem.
+Em [Junior et al. 2016] e relatada a construc¸ ´ ao de um sistema de suporte para ˜
+Revisao por Pares. Para elicitar os requisitos do sistema o autor utilizou t ˜ ecnicas de entre- ´
+vista, prototipac¸ao e an ˜ alise de sistemas correlatos. Como resultado foram apresentados ´
+os requisitos do sistema, o feedback dos testes realizados e o resultado final do sistema
+que permitia a Revisao por Pares. ˜
+Diferente dos trabalhos apresentados, este relato apresenta um estudo sobre a viabilidade de uso da Revisao por Pares na aprendizagem de modelagem de sistemas com ˜
+UML e propoe um conjunto de requisitos para uma ferramenta de suporte. O traba- ˜
+lho de [Bruning 2016] aborda uma ferramenta de modelagem colaborativa, porem, sem ´
+vies educacional. Esta pesquisa vai ao encontro dos trabalhos de [Neto et al. 2004] e ´
+[Junior et al. 2016], que apresentam abordagens complementares similares a esta.
+1976
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+3. Metodologia
+A pesquisa iniciou-se por uma revisao da literatura com o objetivo de verificar como ˜
+tecnicas de aprendizagem colaborativa podem ser incorporadas ao ensino de Engenharia ´
+de Software, mais especificamente no que diz respeito a modelagem de sistemas. Assim, `
+verificou-se a possibilidade de investigar a adoc¸ao da Revis ˜ ao por Pares nesse contexto. ˜
+Para tanto, fez-se necessario observar sua aplicabilidade em sala de aula. Dessa forma, ´
+realizou-se uma pesquisa exploratoria que se dividiu em: (a) an ´ alise em sala de aula e ´
+(b) analise utilizando o ambiente ´ Moodle como intermediador. A partir dos resultados da
+pesquisa exploratoria, realizou-se um levantamento de requisitos para uma ferramenta de ´
+suporte por meio das tecnicas de: (i) ´ Brainstorm; (ii) Entrevista e, (iii) Prototipac¸ao, que ˜
+resultou-se em um prototipo para uma ferramenta de aplicac¸ ´ ao da Revis ˜ ao por Pares em ˜
+aulas de modelagem de sistemas.
+Pesquisa Exploratoria ´ : realizada com o objetivo de verificar a adequac¸ao da ˜
+Revisao por Pares na aprendizagem de modelagem de sistemas, consistiu em duas etapas: ˜
+(a) analise em sala de aula: referente ´ a aplicac¸ ` ao da revis ˜ ao por pares em sala de aula, sem ˜
+aux´ılio tecnologico, e; (b) an ´ alise utilizando o ´ Moodle: referente a aplicac¸ ` ao da Revis ˜ ao˜
+por Pares utilizando o recurso “Laboratorio de Avaliac¸ ´ ao” disponibilizado na plataforma ˜
+Moodle.
+Brainstorm: foi realizado para coletar as ideias que os participantes da pesquisa
+exploratoria tiveram sobre os requisitos para uma ferramenta de apoio ´ a aplicac¸ ` ao da ˜
+tecnica. Os participantes falavam em voz alta o que acreditavam ser requisitos e, ao ´
+fim da listagem, cada ponto foi discutido verificando sua viabilidade e necessidade na
+ferramenta.
+Entrevista: a entrevista ocorreu em forma de focus group para coletar a opiniao˜
+dos alunos sobre a tecnica de Revis ´ ao por Pares e o funcionamento do recurso “Labo- ˜
+ratorio de Avaliac¸ ´ ao” do ˜ Moodle. Os alunos listavam as vantagens e desvantagens sobre
+a tecnica e eram estimulados a comentar sobre elas enquanto eram filmados (com seus ´
+consentimentos) pelo moderador.
+Prototipac¸ao˜ : foi realizada para validar os requisitos elicitados e verificar como
+os requisitos seriam implementados na ferramenta.
+4. Pesquisa Exploratoria ´
+A pesquisa exploratoria foi realizada em turmas de duas disciplinas do curso de Engenha- ´
+ria de Software na Universidade Federal do Amazonas, a saber: Fundamentos de Engenharia de Software (FES), ofertada a alunos do primeiro per´ıodo, onde contou-se com a
+participac¸ao de 49 alunos, e; Engenharia de Requisitos e An ˜ alise de Sistemas (ERAS), ´
+que consiste em uma disciplina do quinto per´ıodo e contou com a participac¸ao de 11 ˜
+alunos. As duas disciplinas eram ministradas pelo mesmo professor.
+Assim, para a conduc¸ao da pesquisa, o professor explicou seus objetivos, bem ˜
+como a dinamica da t ˆ ecnica de Revis ´ ao por Pares. Em seguida, foi disponibilizado um ˜
+Termo de Consentimento Livre e Esclarecido que foi assinado por todos os participantes.
+Durante a aplicac¸ao da t ˜ ecnica, foram utilizados diagramas de casos de uso (UC) e dia- ´
+gramas de classes (DC) por representarem as visoes mais comuns da UML como a vis ˜ ao˜
+funcional (diagrama de casos de uso) e a visao estrutural (diagrama de classes), al ˜ em de ´
+1977
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+serem os mais utilizados na industria de software [Silva et al. 2018]. ´
+No total, houve tres aplicac¸ ˆ oes da t ˜ ecnica Revis ´ ao por Pares nesta pesquisa explo- ˜
+ratoria. A primeira com a participac¸ ´ ao das duas turmas, FES e ERAS, ocorreu em sala ˜
+de aula e utilizou-se o diagrama de Casos de Uso. Na primeira aplicac¸ao, utilizou-se um ˜
+checklist como Peer Review Information de modo a auxilia-los durante a correc¸ ´ ao dos di- ˜
+agramas, ja que os alunos n ´ ao tinham experi ˜ encia no desenvolvimento de Casos de Uso. ˆ
+A segunda aplicac¸ao ocorreu com aux ˜ ´ılio de mediac¸ao tecnol ˜ ogica atrav ´ es do recurso ´
+“Laboratorio de Avaliac¸ ´ ao” dispon ˜ ´ıvel no Moodle.
+Esta segunda aplicac¸ao ocorreu somente com a turma de ERAS. Para a terceira ˜
+aplicac¸ao da t ˜ ecnica foi utilizado o diagrama de Classes. Esta t ´ ecnica foi aplicada somente ´
+em sala de aula e somente na turma de ERAS. A turma de FES nao participou desta ˜
+rodada pois a ementa da disciplina nao cobria tal assunto. Neste terceiro momento n ˜ ao˜
+foi utilizado checklist. A Tabela 1 sumariza todas essas informac¸oes: ˜
+Tabela 1. Revisao por Pares nas turmas de Engenharia de Software ˜
+Item Fundamentos de Engenharia
+de Software
+Engenharia de Requisitos
+e Analise de Sistemas ´
+Quantidade de Alunos 49 11
+Diagrama Utilizado UC UC e DC
+Revisao por Pares ˜ UC com checklist UC com e sem checklist e
+DC sem checklist
+Elicitac¸ao˜ Brainstorm Entrevista
+Mediac¸ao Tecnol ˜ ogica ´ Nao˜ Sim (Moodle)
+A subsec¸ao a seguir detalha como ocorreu a conduc¸ ˜ ao das aplicac¸ ˜ oes da Revis ˜ ao˜
+por Pares em sala de aula.
+4.1. Analise em Sala de Aula ´
+A analise em ambiente real ou an ´ alise em sala de aula foi realizada em duas turmas. Um ´
+dos pesquisadores explicou como funcionava a tecnica, descrevendo-a e tirando d ´ uvidas ´
+sobre seu funcionamento. Os alunos dispuseram de 15 minutos para elaborar o diagrama e
+10 minutos para realizar a revisao no diagrama dos colegas. Ent ˜ ao, os alunos dispuseram ˜
+de mais 15 minutos para realizar as correc¸oes sugeridas. Apesar do n ˜ ´ıvel dos alunos serem
+diferentes o enunciado utilizado para a pesquisa foi o mesmo nas duas turmas. Tratava-se
+da elaborac¸ao de um diagrama de casos de uso de acordo com uma pequena descric¸ ˜ ao de ˜
+um cenario. Como na turma de FES os alunos n ´ ao tinham conhecimento sobre diagramas ˜
+da UML, os pesquisadores decidiram que eles participassem de apenas uma das rodadas
+de Revisao por Pares. Os alunos da turma de ERAS participaram da Revis ˜ ao por Pares ˜
+em casos de uso em duas rodadas, na primeira utilizando um checklist como peer review
+information e na segunda sem o checklist pois tinham conhecimento previo necess ´ ario ´
+por ja estarem no quinto per ´ ´ıodo e familiarizados com o diagrama.
+Os passos de aplicac¸ao da t ˜ ecnica foram os mesmos para os dois diagramas. No ´
+entanto, o tempo para resoluc¸ao foi maior para o diagrama de classes pois o professor ˜
+da disciplina o considerava mais trabalhoso. Apos as rodadas de Revis ´ ao por Pares uti- ˜
+lizando os diagramas de casos de uso, foi disponibilizado aos alunos um questionario ´
+1978
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+online para a avaliac¸ao da qualidade da t ˜ ecnica de aprendizagem colaborativa de Revis ´ ao˜
+por Pares. Durante o questionario os alunos responderam sobre as suas experi ´ encias ao ˆ
+utilizar a tecnica de aprendizagem colaborativa e suas percepc¸ ´ oes sobre a aprendizagem. ˜
+Os participantes avaliaram vinte itens sobre a aplicac¸ao da t ˜ ecnica de Revis ´ ao por Pares. ˜
+O grau de concordancia para mensurac¸ ˆ ao dos dados utilizado foi o da escala de ˜ Likert,
+sendo 1 para Discordo Totalmente e 5 para Concordo Totalmente. No questionario, as pri- ´
+meiras perguntas, de 1 a 8, diziam respeito a percepc¸ ` ao da aprendizagem, j ˜ a as perguntas ´
+seguintes, de 9 a 13, eram sobre aspectos colaborativos, as perguntas finais, de 14 a 20,
+eram referentes a facilidade e utilidade de uso da t ` ecnica. Os resultados s ´ ao apresentados ˜
+na Figura 1:
+Figura 1. Analise das respostas do question ´ ario ´
+Diante do grafico apresentado na Figura 1 ´ e poss ´ ´ıvel perceber que a tecnica forc¸ou ´
+os alunos a pensar sobre o problema a ser resolvido e que contribuiu para a aprendizagem
+sobre os diagramas modelados. No entanto, poucos alunos responderam que a tecnica eli- ´
+1979
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+minou suas duvidas sobre a concepc¸ ´ ao dos modelos. Isto se d ˜ a porque a t ´ ecnica realmente ´
+nao ensina os modelos, a t ˜ ecnica visa a colaborac¸ ´ ao dos alunos perante o aprendizado. A ˜
+maioria dos alunos relatou que preferiria aprender com outra forma de ensino ao inves de ´
+utilizar a Revisao por Pares. Neste caso, pensa-se que os alunos ainda est ˜ ao acomoda- ˜
+dos diante dos metodos tradicionais de ensino, onde somente o professor fala e o aluno ´
+ouve, e quando se deparam com uma tecnica de colaborac¸ ´ ao como esta eles t ˜ em que se ˆ
+desvencilhar de sua zona de conforto. Entretanto, a maioria dos alunos relatou que seguir
+as diretrizes da tecnica foi f ´ acil, se divertiram durante a utilizac¸ ´ ao da t ˜ ecnica e o uso da ´
+tecnica mostrou-se adequado para a utilizac¸ ´ ao nesta disciplina. Conclui-se que a Revis ˜ ao˜
+por Pares e um m ´ etodo adequado para ser utilizado durante o aprendizado de modela- ´
+gem de sistemas ja que possibilita aos alunos uma nova forma de desenvolver soluc¸ ´ oes e ˜
+aprendam a fazer cr´ıticas e autocr´ıticas.
+4.2. Analise Utilizando o Moodle ´
+Esta etapa da pesquisa exploratoria buscou verificar como o componente de Revis ´ ao por ˜
+Pares do Moodle funcionava, obtendo ideias para construir uma ferramenta de revisao˜
+por pares para o aprendizado de diagramas UML. As etapas de aplicac¸ao da t ˜ ecnica no ´
+Moodle foram as mesmas cumpridas na sala de aula. No entanto, apenas a turma de ERAS
+do quinto per´ıodo participou. Os alunos deveriam submeter seus diagramas de casos de
+uso no Moodle e em seguida os alunos revisavam os diagramas da UML de seus colegas.
+Para esta etapa cada aluno deveria avaliar dois diagramas de outros dois colegas. E,
+por fim, adaptavam seus diagramas de acordo com as observac¸oes feitas pelos revisores. ˜
+No total houve 13 submissoes de diagramas. Com a aplicac¸ ˜ ao da t ˜ ecnica foi poss ´ ´ıvel
+observar algumas limitac¸oes existentes no componente atual que serviram de base para a ˜
+elaborac¸ao do conjunto de requisitos apresentados neste trabalho. ˜
+As limitac¸oes do encontradas no ˜ Moodle foram: nao retornar as anotac¸ ˜ oes feitas ˜
+pelos revisores aos pares; nao poder fazer anotac¸ ˜ oes no pr ˜ oprio diagrama; n ´ ao poder colo- ˜
+car um checklist como peer review information; nao poder colocar uma escala de “sim” e ˜
+“nao” e n ˜ ao se aplica para cada do ˜ peer review information; nao poder enviar a vers ˜ ao cor- ˜
+rigida como versao final; n ˜ ao permitir a anonimidade do autor do diagrama; n ˜ ao permitir ˜
+a opc¸ao “n ˜ ao se aplica” para um item do ˜ peer review information, e; nao permitir mais ˜
+de uma rodada de revisao. As limitac¸ ˜ oes do ˜ Moodle em relac¸ao a aplicac¸ ˜ ao da t ˜ ecnica de ´
+Revisao por Pares foram fatores preponderantes para a elicitac¸ ˜ ao de requisitos. Na sec¸ ˜ ao˜
+a seguir e apresentado o processo de elicitac¸ ´ ao de requisitos e o conjunto mencionado. ˜
+5. Processo de Elicitac¸ao de Requisitos de Ferramenta para Revis ˜ ao por ˜
+Pares
+Verificada a adequac¸ao da t ˜ ecnica de Revis ´ ao por Pares na aprendizagem de modelagem ˜
+de sistemas e, a partir da analise do recurso “Laborat ´ orio de Avaliac¸ ´ ao” disponibilizado ˜
+no Moodle, observou-se uma serie de oportunidades para o desenvolvimento de uma fer- ´
+ramenta para suporte a t ` ecnica em aulas de modelagem de sistemas. Para tanto, fez-se ´
+necessaria a aplicac¸ ´ ao de algumas t ˜ ecnicas de elicitac¸ ´ ao de requisitos que est ˜ ao detalha- ˜
+das a seguir.
+5.1. Brainstorm e Entrevista
+Apos a observac¸ ´ ao da t ˜ ecnica por meio da pesquisa explorat ´ oria, verificando sua viabi- ´
+lidade de aplicac¸ao em sala de aula e tamb ˜ em as limitac¸ ´ oes do ˜ plugin do Moodle foi
+1980
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+realizado com a turma de FES um Brainstorm e com a turma de ERAS uma entrevista em
+formato de Focus Group.
+As tecnicas de entrevista em grupo mais comuns s ´ ao a modalidade focal, de ˜
+brainstorm ou chuva de ideias, a nominal e a de projec¸ao [Minayo and Costa 2018]. Por ˜
+esse motivo, o brainstorm foi utilizado como tecnica de elicitac¸ ´ ao de requisitos nesta pes- ˜
+quisa. No Brainstorm os pesquisadores perguntaram aos participantes quais os pontos positivos e negativos de terem utilizado a tecnica. Ap ´ os isso, foi perguntado que ideias eles ´
+teriam para construir um software para a tecnica de aprendizagem colaborativa utilizada ´
+na disciplina. Os alunos foram bastante participativos, eles falavam o que acreditavam ser
+necessario e os itens eram anotados no quadro branco. Ao final, cada item foi discutido ´
+com a propria turma, verificando o que era ou n ´ ao requisito para o sistema. ˜
+Ja o ´ Focus Group se constitui num tipo de entrevista com um pequeno numero ´
+de pessoas. O termo focal assinala que se trata de um encontro para aprofundamento em algum tema (o foco), para o qual a lente do pesquisador esta apontada ´
+[Minayo and Costa 2018]. Por se tratar de um numero menor de alunos na turma de ´
+ERAS, optou-se por utilizar o Focus Group para elicitar os requisitos com eles. Apos´
+o consentimento, os alunos foram filmados por duas cameras enquanto participavam da ˆ
+dinamica. O quadro foi dividido em vantagens e desvantagens enquanto para cada aluno ˆ
+foi entregue um bloquinho de post-its. O moderador comec¸ou a dinamica relembrando a ˆ
+tecnica e perguntando o que haviam achado dela. ´
+Em seguida, um tempo foi disponibilizado para que cada aluno anotasse as vantagens e desvantagens de ter utilizado a tecnica. Ao terminar, os alunos liam em voz alta ´
+suas vantagens e desvantagens e colavam o post-it no quadro branco. Com isto, terminou a fase de elicitac¸ao dos requisitos para uma ferramenta de Revis ˜ ao por Pares para ˜
+aprendizagem colaborativa de diagramas UML. Na sec¸ao a seguir, s ˜ ao apresentados os ˜
+resultados do processo de elicitac¸ao de requisitos, que remete ao conjunto de requisitos ˜
+para a ferramenta de Revisao por Pares e uma prototipac¸ ˜ ao concebida a partir do conjunto ˜
+apresentado.
+6. Resultados
+O principal resultado desta pesquisa, contendo os requisitos funcionais, para um sistema
+que de suporte a Revis ˆ ao por Pares de diagramas UML foi reunido ap ˜ os a aplicac¸ ´ ao das ˜
+tecnicas de elicitac¸ ´ ao apresentadas. Com os requisitos j ˜ a definidos ´ e poss ´ ´ıvel discutir para
+qual plataforma desenvolver a ferramenta e quais tecnologias utilizar durante o desenvolvimento. Pensando nisso, foi desenvolvido um prototipo de acordo com os requisitos ´
+elicitados. Para o mediador, e interessante a configurac¸ ´ ao de fase da ferramenta, para que ˜
+o mesmo possa configurar as definic¸oes do laborat ˜ orio como nome e descric¸ ´ ao, e tamb ˜ em´
+cadastrar instruc¸oes para o envio como n ˜ umero de anexo e tamanho m ´ aximo de ´ upload.
+Os requisitos elicitados nesta pesquisa estao descritos na Tabela 2 que est ˜ a orga- ´
+nizada em tres colunas a saber: a primeira representa o ID do requisito, a outra representa ˆ
+os requisitos e a terceira representa a origem do requisito. A coluna origem, da tabela,
+foi usada para mostrar qual ou quais os processos de elicitac¸ao resultou/resultaram no ˜
+determinado requisito. Para facilitar a leitura da tabela foram utilizadas abreviaturas para
+representar as tecnicas, conforme segue: PE - Pesquisa Explorat ´ oria, B - Brainstorm, E - ´
+Entrevista e ASC - Analise de Sistemas Correlatos. ´
+1981
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Tabela 2. Requisitos resultantes do processo de elicitac¸ao. ˜
+ID REQUISITOS ORIGEM
+1
+Possibilitar ao mediador que possa distribuir os trabalhos aos
+revisores [ASC]
+2 Possibilitar ao mediador o cadastro de um peer review information [PE]
+3 Possibilitar quantas rodadas de peer review sejam necessarias ´ [B, E]
+4
+Possibilitar ao mediador o cadastro ou nao da anonimidade dos ˜
+autores e revisores durante o processo de revisao˜
+[PE, B,
+E, ASC]
+5 Possibilitar ao mediador o cadastro de texto base sobre a atividade [ASC]
+6
+Classificar o tipo do diagrama (casos de uso, classes, sequencia e ˆ
+etc.) [PE, ASC]
+7
+Possibilitar ao mediador o cadastro de instruc¸oes para o envio e ˜
+avaliac¸ao˜
+[PE, ASC]
+8
+Possibilitar ao mediador o cadastro de configurac¸ao˜
+de notas (para avaliac¸ao e aprovac¸ ˜ ao) ˜
+[PE, ASC]
+9 Possibilitar que o autor realize upload do arquivo para a revisao˜ [B]
+10 Possibilitar ao autor a visualizac¸ao do ˜ feedback dado pelo revisor [B]
+11 Possibilitar que o autor possa valiar o revisor (por estrelas) [B]
+12 Possibilitar que o sistema possa distribuir os trabalhos aos revisores [ASC]
+13 Possibilitar que o revisor possa realizar a revisao de mais de um ˜
+diagrama [E]
+14 Possibilitar que o revisor possa realizar o upload de um arquivo
+revisado [B, E]
+15 Possibilitar que o revisor possa escrever sim, nao ou n ˜ ao se aplica ˜
+para cada item do peer review caso esteja usando os checklists [E, ASC]
+16 Possibilitar comentario do revisor referente a cada item avaliado ´ [PE, E]
+17 Possibilitar que o revisor envie questionamentos ao autor do
+diagrama [E, ASC]
+18 Cadastrar usuario (autor/revisor e mediador) ´
+[B, E,
+ASC]
+19 Possibilitar um sistema de ranking (melhor resposta) [B]
+20 Garantir a nao-avaliac¸ ˜ ao˜ [B, ASC]
+Diante disso, apresenta-se na Figura 2 a tela de submissao do diagrama para Re- ˜
+visao por Pares. Esta tela possibilita que o aluno veja as definic¸ ˜ oes da atividade bem como ˜
+informac¸oes sobre o envio (submiss ˜ ao), instruc¸ ˜ oes e exemplos. O aluno pode, ainda, rea- ˜
+lizar o upload de sua resposta a atividade, que consiste em um arquivo contendo a imagem `
+do diagrama desenvolvido. Esta tela consiste na principal funcionalidade do ponto de vista
+do autor do diagrama. Apos o ´ upload do arquivo, o autor pode salvar o seu diagrama e
+submete-lo para a revis ˆ ao. No menu ˜ e poss ´ ´ıvel selecionar a fase em que a Revisao por ˜
+Pares se encontra. As fases previstas consistem em: submissao, revis ˜ ao e ˜ feedback. Na
+fase “submissao”, os alunos verificam a atividade a ser realizada e fazem a submiss ˜ ao de ˜
+suas respostas. Na fase “revisao”, os alunos tornam-se revisores dos trabalhos submeti- ˜
+dos por seus colegas e realizam a avaliac¸ao destes. Por fim, na fase “ ˜ feedback”, os alunos
+verificam as avaliac¸oes de seus trabalhos, realizam as devidas correc¸ ˜ oes e os submete ˜
+1982
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+como versao final. Os usu ˜ arios da ferramenta contam ainda com uma opc¸ ´ ao chamada ˜
+“Information”que tem como objetivo dar suporte a quem tiver d ` uvidas no uso da mesma. ´
+Figura 2. Tela onde o aluno deve responder a atividade para o professor
+A Figura 3 mostra a tela do revisor. Nesta tela, o aluno torna-se revisor dos trabalhos dos colegas e pode visualizar as informac¸oes sobre o laborat ˜ orio e sobre como dever ´ a´
+realizar a revisao dos trabalhos. H ˜ a, tamb ´ em, a opc¸ ´ ao de anexar um documento adicional ˜
+sobre o diagrama revisado. No exemplo do prototipo o diagrama ´ e anexado de forma ´
+analoga ´ a submiss ` ao da tarefa conforme dito anteriormente. A ferramenta possibilita, ˜
+ainda, a edic¸ao do diagrama e de coment ˜ arios acerca da atividade revisada. ´
+Figura 3. Tela onde o participante pode realizar a revisao do diagrama ˜
+Existem diversos trabalhos sobre Revisao por Pares, inclusive apresentando ferra- ˜
+mentas, mas com este prototipo, foi poss ´ ´ıvel verificar a visao geral do autor, do revisor e ˜
+do mediador de uma revisao focando em modelagem de diagramas com UML. Al ˜ em de ´
+permitir a coleta de dados basicos para implementac¸ ´ ao de uma ferramenta de Revis ˜ ao por ˜
+Pares, disseminando ideias de como distribuir as necessidades da tecnica em uma ferra- ´
+menta, sendo muito util para validar os requisitos elicitados e saber como eles poder ´ ao˜
+ser dispostos no sistema.
+1983
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+7. Conclusao˜
+Este trabalho teve como objetivo verificar a viabilidade da tecnica de Revis ´ ao por Pares ˜
+durante o aprendizado de modelagem de sistemas. Para isso, a tecnica foi aplicada em ´
+tres rodadas nas disciplinas do curso de Engenharia de Software e ent ˆ ao os participan- ˜
+tes responderam a um questionario sobre a sua experi ´ encia. Apesar de alguns alunos ˆ
+relatarem que preferem outros metodos de ensino, outros responderam que a t ´ ecnica foi ´
+eficiente durante a aprendizagem e contribuiu para melhor compreensao do tema de es- ˜
+tudo. Com a viabilidade da tecnica, foi poss ´ ´ıvel elicitar os requisitos para uma ferramenta
+que mediasse a Revisao por Pares, para ser utilizada durante o aprendizado de diagramas ˜
+UML. As tecnicas utilizadas com os alunos para elicitac¸ ´ ao foram ˜ Brainstorm e Entrevista.
+No entanto, utilizou-se tambem Pesquisa Explorat ´ oria e An ´ alise de Sistemas Correlatos ´
+(considerando a aplicac¸ao da Revis ˜ ao por Pares em uma das turmas utilizando o Moodle). ˜
+Diante dos requisitos, foi poss´ıvel conceber um prototipo para a ferramenta em quest ´ ao. ˜
+A etapa de prototipac¸ao teve como objetivo validar os requisitos existentes por meio de ˜
+uma visao inicial da ferramenta. Os pr ˜ oximos passos desta pesquisa tratam da utilizac¸ ´ ao˜
+em cenario real da ferramenta, verificando sua adequac¸ ´ ao considerando pontos de vista ˜
+tanto dos alunos quanto dos professores de disciplinas de modelagem de software.
+Referencias ˆ
+Barkley, E. F., Cross, K. P., and Major, C. H. (2014). Collaborative learning techniques:
+A handbook for college faculty. John Wiley & Sons.
+Bruning, E. (2016). Uma ferramenta de modelagem colaborativa de diagramas de classes.
+Jenal, S., Willamowius Vituri, D., Machado Eza´ıas, G., Almeida da Silva, L., and Larcher Caliri, M. H. (2012). O processo de revisao por pares: uma revis ˜ ao integrativa de ˜
+literatura. Acta Paulista de Enfermagem, 25(5).
+Junior, K., Sussumo, A., Roque, I., Pra, D., and Vinicius, W. J. (2016). Coavalieitor: ´
+sistema de suporte para avaliac¸ao por pares. ˜
+Ma, Z. (2017). An approach to improve the quality of object-oriented models from novice
+modelers through project practice. Frontiers of Computer Science, 11(3):485–498.
+Minayo, M. C. d. S. and Costa, A. P. (2018). Fundamentos teoricos das t ´ ecnicas de ´
+investigac¸ao qualitativa. ˜
+Neto, C., Sampaio, A., et al. (2004). An ´ alise de requisitos da revis ´ ao pelos pares na ˜
+aprendizagem. Dissertac¸ao (Dissertac¸ ˜ ao em Engenharia de Produc¸ ˜ ao) ˜ .
+Quarto, C. C., Bercht, M., Nascimento, E., Veras, N., de Sousa Moraes, D., Busson,
+A., and Silva, F. (2017). Hermes: Um sistema de apoio a formac¸ ` ao de grupos em ˜
+ambientes de aprendizagem colaborativa. In Brazilian Symposium on Computers in
+Education (Simposio Brasileiro de Inform ´ atica na Educac¸ ´ ao-SBIE) ˜ , volume 28, page
+1697.
+Silva, W., Gadelha, B., Steinmacher, I., and Conte, T. (2018). What are the differences
+between group and individual modeling when learning uml? In Proceedings of the
+XXXII Brazilian Symposium on Software Engineering, pages 308–317. ACM.

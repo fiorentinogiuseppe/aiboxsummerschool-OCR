@@ -1,0 +1,465 @@
+Um Modelo para Avaliação do Conhecimento Acadêmico com
+Base em Unidades Conceituais
+Marcio P. Feitosa1
+, Nizam Omar1
+1
+Faculdade de Computação e Informática - Universidade Presbiteriana Mackenzie
+Rua da Consolação, 930 - Consolação, São Paulo - SP - 01302-907
+{marcio.feitosa,nizam.omar}@mackenzie.br
+Abstract. This work proposes a model for accounting of academic knowledge
+based on basic conceptual units, constantly updated as new assessments are
+carried out, in order to give greater accuracy to the dimension of student
+knowledge. In addition to traditional school grades, the model provides both
+the teacher and the student with a series of current and historical indicators
+between the various concepts of a given subject and its related. Result of PhD
+thesis in final stage, the model was implemented in a prototype information
+system and submitted to tests, with the classes of the author's students, with
+consistent results.
+Resumo. Este artigo propõe um modelo para contabilização do conhecimento
+acadêmico com base em unidades conceituais básicas, constantemente
+atualizadas conforme novas avaliações são realizadas, com vistas a dar maior
+acurácia à dimensão do conhecimento do aluno. Além das notas escolares
+tradicionais, o modelo proporciona, ao professor e também ao aluno, uma
+série de indicadores, atuais e históricos, entre os diversos conceitos de uma
+determinada matéria e seus relacionados. Resultado de tese de doutorado em
+estágio final, o modelo foi implementado em um sistema de informação
+protótipo e submetido a testes, com as turmas de alunos do autor, com
+resultados consistentes.
+1. Introdução
+A aferição de uma entidade abstrata pode envolver imprecisões proporcionais à
+quantidade de elementos que compõe o modelo dessa entidade. Se um aluno obtém nota
+3.5 em uma prova de matemática de valor máximo 10, prova esta que consta de três
+questões - uma de equações de segundo grau, outra de sistemas de duas equações e a
+última de determinantes de matrizes 3x3 -, sendo que o professor atribuiu os valores 3.5,
+3.5 e 3.0 a essas questões respectivamente, o que se poderia deduzir conhecendo-se
+apenas a nota final? Que o aluno conhece 35% de cada um desses tópicos abordados, ou
+que sabe muito bem equações do segundo grau e absolutamente nada dos outros dois?
+Não se tem como saber, a não ser que o professor faça uma discriminação das notas,
+questão a questão. Neste exemplo, a prova representa um todo, e é esse todo que se
+caracteriza pela nota atribuída. A precisão da estimativa das notas dos componentes vai
+variar em funsão da nota da pova estar próxima dos valores estremos1
+ou estar com
+valores intermediários e, também, da quantidade de questões.
+Ese tipu de distorção dificulta a identificação de pontos fortes e fracos do aluno
+quando se olha apenas o instrumento prova. A identificação dsses pontos facilitaria
+
+1
+ Se o aluno obteve nota próxima de 10, pode-se deduzir que tem conhecimento pleno de todos os itens, ou, próxima de 0, que
+tem dificuldade geral.
+DOI: 10.5753/cbie.sbie.2019.31 31
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+muito o atendimento aos alunos nas revisões, focando em tópicos específicos,
+aumentando a eficiência do ensino-aprendizado de forma geral (tempo, custo, etc.).
+Outo aspecto a considerar é o caso do registro histórico "fossilizado". No
+modelo convencional de avaliação escolar, tendo sido avaliado determinado tópico,
+aquela nota fica no histórico escolar de forma estática. Se o aluno se saiu mal em um
+tópico em determinado momento, sua nota naquele tópico será aquela para sempre nos
+registros, idependentemente dos aprimoramentos que o aluno venha a ter ao longo do
+tempo envolvendo aquele(s) conceito(s), mesmo que indiretamente, pois não será mais
+objeto direto das avaliações subsequentes. Pelo modelo de David Ausubel (Ausubel
+2000), utilizado como base no modelo dete estudo, a estrutura cognitiva2
+se compõe de
+uma rede de conceitos interrelacionados, seja para compor associações, representando
+um todo maior, seja por representarem pré-requisitos para efetiva compreenção de
+outros. Pode-se reforçar este modelo citando a Teoria dos Campos Conceituais de
+Gerard Vergnaud (1993) que considera a conceitualização como o pilar de sustentação
+do desenvolvimento cognitivo e, portanto, a atenção aos aspectos conceituais dos
+equemas de assimilação é de vital importância. Vergnaud diz ainda que um campo de
+conhecimentos não existe sem conceitos (apud MOREIRA, 2010 pg. 60). Por este
+modelo, sempre que um novo conceito é adquirido pelo indivíduo, ou recebe uma carga
+de reforço, parte desta energia é propagada aos conceitos que se relacionam com ele.
+Dessa forma, como veremos a seguir, o modelo proposto possibilita que conceitos já
+trabalhados anteriormente continuem sendo fortalecidos e sua "nota" se transformando.
+Também foi levado em consideração o modelo da Competência proposto por
+McClelland (1973) que foi posteriormente cosolidado, em termos mais práticos, para
+uso nos departamentos de Recursos Humanos das empresas, por Parry (1996). As
+empresas contratantes de profissionais do mercado de trabalho procuram por indivíduos
+capazes de rezolver os seus problemas, e, devido ao crescente aumento da
+competitividade entre os mercados, a expressão "resolver problemas" cresceu em
+importância e aparece nas primeiras posições entre as competências desejadas (Ribeiro
+2008), (Demirel 2009), (WEF 2016). Se a escola pretende preparar seus alunos para
+atuar no mercado de trabalho, deve considerar o fator competência dos seus alunos em
+resolver problemas, e não apenas verificar se eles sabem explicar conceitos de forma
+isolada. Perrenoud (1999) fez adaptações neste modelo da Competência, com olhar mais
+acadêmico e um forte enfoque na capacidade de mobilização dos recursos cognitivos,
+frente a situações específicas, para gerar ações e resultados.
+Vindo para a atualidade, às portas da terceira década do século XXI, é consenso
+de que o conhecimento está sofrendo transformações em uma velocidade elevada,
+especialmente nas áreas envolvidas em ambientes tecnológicos, de forma que o
+profissional atuante nessas áreas tende a ficar com seu conhecimento obsoleto em
+espaços de tempo cada vez menores caso não se atualize em tempo hábil. Essa
+atualização tende a ser permanente ao longo da vida do profissional, no que se adotou o
+termo "lifelong learning" (Demirel 2009), (Haydar Ates 2012), (Marjan Laal 2012).
+O modelo proposto neste trabalho pretende dar suporte à aprendizagem
+continuada, necessária ao século atual, e também representar o conhecimento por
+elementos fragmentados que possibilitem a reconfiguração das unidades de
+
+2
+Não se trata do mesmo modelo trabalhado por Jean Piaget.
+32
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+conhecimento requeridas pelo mercado de trabalho e também, por consequência,
+ensinadas nas universidades.
+2. Trabalhos Relacionados
+Existem muitos estudos, e também implementações, do modelo de dados do estudante
+com base em unidades conceituais. Nenhum desses trabalhos, no entanto, leva em
+consideração a propagação da aquisição dos reforços conceituais através da estrutura
+cognitiva de forma a manter todos os seus conceitos em permanente atualização e
+possibilitar a visualização de toda a estrutura e sua transformação ao longo do tempo.
+Uma grande parcela desses trabalhos está associada à expressão "student model"
+no escopo dos sistemas tutores inteligentes. Chrysafiadi e Virvou (2013) fazem uma
+revisão bibliográfica abrangente das diferentes abordagens publicadas entre 2002 e
+2012, citando os modelos baseados em restrições (constraint-based), os baseados em
+lógica fuzzy, nas redes bayesianas e baseados em ontologias. Mais recentemente podese citar o trabalho de McCoy (MacCoy 2018) com uma proposta de padronização com
+base em redes bayesianas; Khodeir e Wanas (2018) com um modelo baseado em
+restrições e técnicas adicionais; Gasmi e Bouras (2018) com um modelo baseado em
+ontologia com uma proposta de integração do estudante com o mercado de trabalho.
+O sistema Willow, com elevado grau de detalhamento na modelagem lógica e
+fucional, com foco em avaliassão asistida por computador (Pérez-Marín e PascualNieto 2010). Proposta de um modelo avaliatório acadêmico com base na unidade
+conceitual (Pimentel 2006). Proposta de um modlo de apoio automatizado para
+avaliação por meio de mapas conceituais (Araújo, Menezes e Cury 2002), (Araújo,
+Menezes e Cury 2003).
+3. Pressupostos teóricos
+Como já citado no tópico "Introdução", o modelo apresentado neste trabalho se apoia
+nos modelos da Estrutura Cognitiva, proposto por Ausubel (2000) e da Competência,
+proposto por McClelland (1973).
+4. O Modelo SABeC
+Batizado, em primeiro momento, de SABeC, sigla de Sistema de Avaliação Baseado em
+Conceitos, o modelo mantém o registro das notas globais das provas e trabalhos, como
+feito tradicionalmente, e oferece, ao avaliador, a possibilidade de relacionar conceitos às
+questões integrantes e verificar os resultados obtidos pelos seus alunos nos mais
+diversos níveis de granularidade e, também, ao aluno verificar seus pontos fortes e
+deficiências. A definição da Estrutura Cognitiva foi modelada em árvore em tabelas de
+relacionamento e os resultados obtidos pelos
+alunos em tabelas de registro histórico com uma série de elementos ponderadores3
+.
+4.1 O Conceito
+Segundo Ausubel (2000), na tradução de Ligia Teopisto, pg. 2: "Podem definir-se os
+conseitos como objectos, acontessimentos, situações ou propriedades que possuem
+atributos específicos comuns e são designados pelo mesmo signo ou símbolo". O
+
+3
+ O protótipo de laboratório foi implementado em JSP (Java Server Pages), HTML 5 e base de dados PostgreSQL.
+33
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+conceito é o elemento base da teoria da aprendizagem significativa de Ausubel, cuja
+definição, em outras palavras, diz que entidades diversas têm seus significados
+específicos e que entidades que ocasionem o mesmo significado são do mesmo tipo, ou
+seja, são percebidas segundo o mesmo conceito ou, em alguns casos, por conceitos
+similares.
+No SABeC, os conceitos são representados por palavras ou expressões
+compostas, por exemplo - Exponenciação, Álgebra linear, Programação Orientada a
+Objets. Podem ser elementares (indivisíveis) ou serem constituídos por composições
+de conceitos elementares. Um conceito elementar deve ter a capacidade de representar,
+na íntegra, um determinado objeto, não carecendo de outro(s) para completar seu
+significado. O principal indicador de valor de um determinado conseito que um
+determinado indivíduo demonstra conhecer é o aqui chamado Fator de Percepção. Este
+número, definido como número real no intervalo entre 0 e 1 (extremos inclusos),
+representa o quão correto o indivíduo demonstra perceber um dado conceito em relação
+ao seu modelo considerado totalmente correto.
+4.2 Relações entre conceitos
+Na teoria da aprendizagem significativa, o principal relacionamento entre conceitos, na
+estrutura cognitiva, se dá entre os conceitos e seus pré-requisitos, os chamados
+subsunçores (Ausubel 2000). Dada uma adequada estruturação de conceitos e seus
+subsunçores, como já dito anteriormente, a cada novo conceito apresentado à estrutura
+cognitiva, ou reforço em conceito já existente, seus subsunçores também recebem uma
+parcela deste reforço. Portanto, no SABeC foi implementado este relacionamento em
+árvore, de forma que, ao receber uma nota (transformada em fator de percepção), um
+conceito transmite esta nota aos seus subsunçores e estes, por sua vez, aos seus e assim
+por diante até que os conceitos-folha da árvore sejam atingidos (Figura 1).
+Conceito 1
+Conceito Sa Conceito Sb
+Conceito S... Conceito S... Conceito S...
+Nova aquisição
+Figura 1 - Propagação de reforço de um conceito aos seus subsunçores
+Outro tipo de relacionamento é o de um conceito composto por uma série de
+elementos menores. Esta é uma questão de natureza operacional do modelo proposto,
+pois, para um professor ficaria demaziadamente trabalhoso relacionar todos os conseitos
+elementares envolvidos em uma questão de prova sobre Programação Orientada a
+Objetos, por exemplo. Teriam que ser relacionados os conceitos de Classe, Objetos e
+Instanciação, Herança, Escopo de Visibilidade, Encapsulamento, Polimorfismo,
+Interfaces, Classes e Métodos Abstratos, entre outros. Logo, composições são
+necessárias para melhorar a usabilidade. Nos relacionamentos de uma composição, os
+reforços recebidos pelos conceitos também são repassados aos seus componentes.
+34
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Um terceiro tipo de relacionamento, identificado no decorrer da pesquisa em que
+o modelo foi desenvolvido, é o da similaridade entre conceitos. Existem conceitos que
+têm partes do seu conteúdo similares entre si. Por exemplo, na matéria Estrutura de
+Dados, vista nos cursos de Ciência da Computação e nos de Sistemas de Informação, os
+conceitos de Lista Siplesmente Encadeda e Lista Duplamente Encadeada são
+bastante semelhantes, sendo que o segundo tem um componente a mais em relação ao
+primeiro. Sendo assim, se um conceito tem relações de similaridade com outros, esses
+também são afetados.
+Existem algumas regras nesses relacionamentos que não serão vistas aqui de
+forma aprofundada. Exemplos: os relacionamentos de um conceito com seus
+subsunçores são unidirecionais em todos os aspectos, ou seja, um subsunçor não tem
+visão nenhuma dos conceitos que nele se apoiam. Já os conceitos compostos e os
+similares possuem uma visão bidirecional a partir do momento em que o seu
+relacionado tiver sido objeto de pelo menos uma ocorrência avaliatória direta. Para os
+compostos, essa obrigatoriedade de existência prévia se dá no caso de propagação de
+baixo para cima. De cima para baixo não é necessário, pois o componente, por natureza,
+já faz parte do todo. A Figura 2 mostra uma composição onde o conceito A3 recebe uma
+carga de reforço e tanto seu ancestral (A), quanto seus descendentes (A31 e A32), por já
+existirem, também o recebem. Na Figura 3 o ancestral (A) ainda não existe na estrutura
+cognitiva, logo o reforço de baixo para cima não tem efeito. Já na Figura 4, onde um dos
+descendentes (A32) ainda não existe na estrutura cognitiva, passa a existir (Figura 5) por
+efeito do reforço.
+A
+A1 A2 A3
+A31 A32
+REFORÇO
+Figura 2 - Reforço superior e inferior
+A
+A1 A2 A3
+A31 A32
+REFORÇO
+X
+Figura 3 - Reforço superior não existe
+A
+A1 A2 A3
+A31 A32
+REFORÇO
+Figura 4 - Reforço inferior materializa o descendente
+A
+A1 A2 A3
+A31 A32 Figura 5 - Descendente materializado
+Existem também pesos para esses relacionamentos. Nos casos dos subsunçores,
+podem-se ter relações de dependência mais fortes ou mais fracas, ou seja, a presença de
+um subsunçor pode ser condição sine qua non para a adequada assimilação de um novo
+conceito ou pode ser uma condição mais fraca. Nos casos dos similares também se
+podem ter relações de alta, média ou baixa similaridade. Já nos casos das composições,
+existem algumas diferenças. Os conceitos componentes fazem parte do corpo do
+conceito-todo, de forma que a existência do todo, na estrutura cognitiva, pode ser total,
+com a presença de todos os seus componentes, ou parcial, com a presença/falta de
+alguns, o que não ocorre com subsunçores e similares.
+35
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+5. Histórico de aferições
+No SABeC, todos os conceitos, objetos de aferições e seus relacionados afetados por
+propagação, são armazenados em ordem cronológica de forma a se poder obter um valor
+médio atualizado. Para que este valor médio tenha um significado contextual mais
+acurado, deverá ser calculado com fatores ponderadores e também ser exibido
+acompanhado de alguns desses fatores.
+5.1 Fator de percepção
+Este, já anteriormente citado, é o principal integrante do registro histórico. Sua faixa de
+valores estando entre 0 e 1 e reflete diretamente o valor relativo obtido pelo avaliado em
+um dado instrumento avaliatório4
+.
+5.2 Fator de concentração
+Calculado pelo modelo, mas sob o controle do professor, este fator indica a
+concentração de conceitos em um mesmo instrumento avaliatório e é o que vai propiciar
+uma melhor usabilidade do modelo. Por outro lado, é o responsável por diminuir a
+confiabilidade do fator de percepção, pois se houver diversos conceitos associados a
+determinado instrumento avaliatório, a nota obtida no instrumento será repassada na
+íntegra a todos esses conceitos. Sendo n a quantidade de conceitos 5
+:
+
+ (1).
+No modelo implementado em laboratório, com objetivo de melhorar a
+usabilidade, o professor seleciona os conceitos que farão parte do instrumento através
+de cliques de mouse.
+5.3 Fator de atualidade
+Calculado pelo modelo, este fator indica o quanto um determinado registro é atual. O
+valor está na faixa de 0 a 1, sendo que 1 idica o valo na data tumada como referência
+inicial e valores menores indicam maior antiguidade em relação à essa data. Um registro
+com fator mais atual é, em princípio, mais confiavel de que a percepcão registrada do
+indivíduo esteja mais prócima da realidade atual. No protótipo de laboratório foi
+adotado o critério do decrécimo percentual por unidade de tepo:
+ (2).
+Onde p ( ) é o valor percentual de decréscimo por unidade de tempo e t
+( ) o tempo decorrido em relação à data de referência inicial.
+5.4 Peso do conceito no contexto do instrumento avaliatório
+Definido pelo professor, este fator indica o quanto um conceito é importante no
+instrumento avaliatório. (3).
+Escalas mais amigáveis podem ser definidas no front-end do modelo para uso do
+professor, por exemplo, 1=alto; 2=médio; 3=baixo, os quais seriam tratados
+internamente como, por exemplo: 0.33, 0.66 e 1.0.
+
+4
+ Instrumento avaliatório é qualquer tipo de mecanismo que possibilite a obtenção de uma nota. Pode ser uma prova como um
+todo, cada uma das questões da prova, cada um dos itens de um projeto, entre outros.
+5
+Todos os métodos de cálculo e fórmulas utilizados neste modelo são passíveis de aprimoramento ou mesmo troca, podendo-se
+ter diversos padrões/critérios.
+36
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+5.5 Peso do instrumento avaliatório relativo a outros tipos de instrumentos
+avaliatórios
+Este fator é pré-definido internamente, não sendo de controle do professor. Indica o
+grau de confiabilidade de um fator de percepção originado por um determinado tipo de
+instrumento avaliatório. Por exemplo, uma prova presencial tem peso maior do que um
+trabalho entregue sem nenhum tipo de arguição aos elaboradores; uma prova respondida
+online tem peso menor do que um projeto implementado e apresentado ao professor.
+ (4)
+5.6 Peso do conceito no contexto externo ao curso
+Fator também pré-definido internamente, indica a importância de um determinado
+conceito em um curso, em relação a outros cursos. Por exemplo, conceitos no domínio
+da Inteligência Artificial são de elevada importância para o curso da Ciência da
+Computação, mas para o curso de Sistemas de Informação podem ser considerados de
+média importância e alguns até de baixa importância: (5).
+5.7 Fator de ênfase teórico-prática do instrumento avaliatório
+Definido pelo professor, este fator não é ponderador no cálculo do fator de percepção
+médio. Indica a relação entre teoria e prática envolvida no instrumento avaliatório. A
+competência está fundamentalmente atrelada à dupla saber-mobilizar, o que significa
+deter os saberes teóricos e ter a capacidade de agir, no sentido de mobilizar os recursos
+necessários, para resolver os problemas em questão (Perrenoud 1999).
+ (6) , onde 1 = totalmente teórico; 0 = totalmente prático.
+Da mesma forma que na expressão (3), também podem ser definidas escalas
+mais amigáveis para uso do professor.
+6. Fator de percepção médio
+A partir do conjunto de lançamentos históricos de um mesmo conceito de um
+determinado indivíduo, pode-se obter um valor médio para o seu fator de percepção. O
+valor médio é obtido pela média dos valores históricos ponderados pelo que aqui foi
+chamado de Peso Histórico Global:
+ (7)
+Onde (apenas os fatores ainda não apresentados):
+
+é o fator de concentração corrigido segundo a lógica de que, em notas
+elevadas ou em notas mais baixas, a confiabilidade dos fatores de percepção aumenta,
+independentemente da quantidade de conceitos envolvidos no instrumento avaliatório.
+ (valor percentual, normalizado entre 0 e 1) é a fração do impacto dos
+relacionamentos entre os conceitos. Se a dependência de um subsunçor é alta ou média,
+ou se o índice de similaridade é alto, médio, etc. O valor padrão é 1.
+ é o nível em que se encontra, na árvore de relacionamento, o conceito
+reforçado pela propagação (o conceito objeto da avaliação está na raiz da árvore).
+37
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Ao longo do desenvolvimento do modelo foram constatadas algumas situações e
+definidas regras para o cálculo do fator de percepção médio acumulado, registro a
+registro, segundo a ordem cronológica:
+ O fator pode ser afetado positivamente em qualquer situação.
+ O fator pode ser afetado negativamente, exceto na condição de subsunçor ou se
+já considerado "solidificado" 6
+.
+ Um registro na condição de similar só é considerado no cálculo se o conceito
+tem pelo menos um registro anterior na condição de principal, componente ou
+subsunçor.
+Por questões de desempenho, o fator de percepção médio é armazenado, na base
+de dados, em uma tabela à parte, juntamente com o valor médio dos demais fatores, para
+que o professor consiga consultar a situação dos seus alunos com rapidez. A carga
+computacional maior fica por conta dos novos registros, onde são recalculados os
+valores médios a cada nova inserção.
+7. Utilização do modelo
+Para uso do professor, além das notas totais das provas, o modelo possibilita a análise
+de cada conceito, tanto pelo histórico bruto, quanto pela média histórica acumulada
+registro a registro, como também pela média final. A análise do valor médio final ( )
+de um determinado conceito requer a verificação dos fatores ponderadores, também
+médios, para correta interpretação. Há a possibilidade da verificação individual como
+também o estabelecimento de um score. No modelo, foi estabelecido o seguinte cálculo
+para este score: (8)
+Onde é o fator de representatividade da amostra e se situa no intervalo de
+0.5 a 1: (9).
+Onde n é a quantidade de registros válidos presentes no histórico de aferições.
+7.1 Carga de trabalho adicional
+Em modelos de dados, a quantidade possível de informações para um determinado fato
+tem, via de regra, relação dreta com a quatidade de atributos desse fato. E, em
+sistemas de alimentação manual, quanto mais elementos de informação, mais trabalho
+de digitação, ou cliques de mouse, por parte do usuário. No caso do modelo proposto
+neste trabalho, o professor tabém arcaria com uma maior carga de trabalho no sitema
+da instituição de ensino, pois ele teria que:
+ registrar a prova: data, identificação, nota máxima.
+ registrar cada questão da prova: valor da questão, tipo da questão (dissertativa,
+objetiva, verdadeiro/falso, outros ainda não implementados no modelo), marcar
+os conceito(s) associado(s) à questão e o seu peso na questão e o fator de ênfase
+teórico-prática.
+ corrigir as provas no sistema, atribuindo a nota de cada questão.
+No protótipo desenvolvido, considerando um usuário já experimentado, reistrar
+a prova é um trabalho de meio minuto. Registrar cada questão e associar os conceitos
+
+6
+ Conseito com mais de determinada quantidade de registros históricos com fator de percepção acima de determinado valor.
+38
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+demanda um minuto, no máximo um e meio (a escolha dos conceitos se dá por cliques
+de mouse). Em questões mais curtas, com menos conceitos, a configuração é mais
+rápida. Em questões mais elaboradas, envolvendo muitos conceitos, a configuração
+pode demandar um pouco mais de tempo. Para marcação da correção foi implementada
+uma tela com as opções de modelo, por exemplo, nas questões do tipo dissertativo:
+escala de cinco valores (0%, 25%, 50%, 75% e 100% de acerto) a ser marcada com
+cliques de mouse; escala de 10 valores (0%, 10%, etc.) com marca de acréscimo de 5%;
+digitação direta do valor obtido na questão; outros modelos podem ser criados. A nota
+final da prova é calculada automaticamente.
+7.2 Benefícios do modelo
+No caso acadêmico, como em muitos outros, uma maior quantidade de informações
+sobre a evolução do aprendizado do aluno é bastante útil. De um conjunto de dados
+fragmentados, representativos do conhecimento, podem-se compor diversos tipos de
+relatórios, desde dados brutos, gráficos evolutivos, agrupamentos de conceitos
+relacionados, tabelas consolidadas, entre outros. Essas informações podem, não só
+dizerem respeito a um único aluno, mas à média de uma classe e também de um curso.
+8. Resultados obtidos com o protótipo e conclusões
+O protótipo já vem sendo utilizado com os alunos do autor há dois anos e meio. Neste
+ínterim, a base de dados foi reiniciada diversas vezes devido a constatações de
+inconsistências nas regras do negócio. A partir do primeiro semestre de 2019 que se
+chegou ao modelo final exposto neste trabalho, com resultados coerentes à proposta. O
+modelo visa também a possibilidade de integração do aluno com o mercado de trabalho,
+uma vez que as competências procuradas estão relacionadas ao "saber-mobilizar"
+(Perrenoud 1999), e a equivalência de conceitos mercado-escola.
+Referências
+Araújo, Ana Marina Teixeira; Menezes, Crediné Silva de; Cury, Davidson (UFES)
+(2002) - Um Ambiente Integrado para Apoiar a Avaliação da Aprendizagem Baseado
+em Mapas Conceituais - XIII SBIE - Unisinos 2002.
+Araújo, Ana Marina Teixeira; Menezes, Crediné Silva de; Cury, Davidson (2003) -
+Apoio Automatizado à Avaliação da Aprendizagem Utilizando Mapas Conceituais -
+XIV Simpósio Brasileiro de Informática na Educação - NCE - IM/UFRJ 2003.
+Ausubel, David P. (2000) - The Acquisition and Retention of Knowledge: A Cognitive
+View - Dordrecht: Kluwer Academic Publishers - (tradução em portugues: Aquisição
+e Retenção de Conhecimentos: Uma Perspectiva Cognitiva - por Lígia Teopisto -
+Plátano Edições Técnicas - Lisboa - 1.ª Edição PT-467-Janeiro de 2003)
+Chrysafiadi, Konstantina; Virvou, Maria (2013) - Student modeling approaches: A
+literature review for the last decade - Expert System with Applications 40 (2013)
+4715-4729.
+Demirel, Melek (2009) - Lifelong learning and schools in the twenty-first century -
+World Conference on Educational Sciences 2009 - pub. in Procedia Social and
+Behavioral Sciences 1 (2009) 1709–1716.
+39
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Gasmi, Houssem; Bouras, Abdelaziz (2017) - Ontology-Based Education/Industry
+Collaboration System - IEEE Open Access Journal - volume 6, 2018 - pg. 1362-1371
+- DOI 10.1109/ACCESS.2017.2778879.
+Haydar Ates, Kadir Alsal. “The importance of lifelong learning has been increasing.”
+In: Procedia - Social and Behavioral Sciences, v. 46, 4092 – 4096. Elsevier, 2012.
+Khodeir, Nabila; Wanas, Nayer (2018) - Constraint-based Student Modeling in
+Probability Story Problems with Scaffolding Techniques - International Journal of
+Emerging Technologies in Learning (iJET) - https://doi.org/10.3991/ijet.v13i01.7397
+McCoy, D. (2018) - Domain models, student models and assessmeni methods: three
+areas in need of standards for adaptive instruction - In the Adaptative Instructional
+System (AIS) Standards Workshop of lhe 14th International Conference of the
+Intelligent Tutoring Systems (ITS) Conference, Montreal, Quebec, Canada - June
+2018.
+Laal, Marjan; Laal, Ashkan (2012) (Tehran University of Medical Sciences) -
+Challenges for lifelong learning - pub. in Procedia - Social and Behavioral Sciences
+47 ( 2012 ) 1539 – 1544.
+McClelland, D. C. (1973) - Testing for Competency Rather Than for Intelligence -
+American Psychologist, 28.
+Moreira, Marco A. (2010) - Mapas Conceituais e Aprendizagem Significativa - São
+Paulo - Ed. Centauro.
+Parry, Scotty B. (1996). The quest for competencies: Competency studies can help you
+make HR decisions, but the results are only as good as the study - Training
+(http://trainingmag.com) - New York, N.Y. - 33, 48-56.
+Pérez-Marín, Diana; Pascual-Nieto, Ismael (2010) - Showing Automatically Generated
+Students Conceptual Models to Students and Teachers - International Journal of
+ArtificialIntelligence in Education 20 (2010) 47-72 - DOI 10.3233/JAI-2010-0002.
+Perrenoud, Philippe. Dix nouvelles compétences pour enseigner. Paris: ESF Éditeur,
+1999.
+Pimentel, Edson Pinheiro (2006) - Um Modelo para Avaliação e Acompanhamento
+Contínuo do Nível de Aquisição de Conhecimentos do Aprendiz - 233f. Tese de
+Doutorado - Instituto Tecnológico de Aeronáutica, São José dos Campos.
+Ribeiro, Luis Roberto de Camargo (2008) - Aprendizagem baseada em problemas
+(PBL): uma experiência no ensino superior - EdUFSCar - ISBN-978-85-7600-297-0
+(https://doi.org/10.7476/9788576002970).
+Vergnaud, Gerard (1993) - A Teoria dos Campos Conceituais - In: Nasser, L. (Ed.)
+Anais do 1º Seminário Internacional de Educação Matemática do Rio de Janeiro, pg.
+1-26.
+WEF (2016)- World Economic Forum - The Future of Jobs: Employment, Skills and
+Workforce Strategy for the Fourth Industrial Revolution - disponível em
+http://www3.weforum.org/docs/WEF_Future_of_Jobs.pdf - acesso em 22/07/2018.

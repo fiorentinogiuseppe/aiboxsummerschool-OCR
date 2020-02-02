@@ -1,0 +1,463 @@
+Utilizac¸ao de Algoritmos Gen ˜ eticos no Processo de Formac¸ ´ ao˜
+de Equipes Heterogeneas em Turmas Universit ˆ arias ´
+Yuri Kelvin N. Silva1
+, Fabr´ıcio V. A. Guerra2
+, Flavius L. Gorgonio ˆ
+2
+1Departamento de Informatica e Matem ´ atica Aplicada (DIMAp) ´
+Universidade Federal do Rio Grande do Norte (UFRN)
+Av. Sen. Salgado Filho, 300 – 59.078-970 – Natal – RN – Brasil
+2Departamento de Computac¸ao e Tecnologia (DCT) ˜
+Universidade Federal do Rio Grande do Norte (UFRN)
+Rua Joaquim Gregorio, 296 – 59.300-000 – Caic ´ o – RN – Brasil ´
+{yuriikeelvin, fabricio10}@gmail.com, flavius@dct.ufrn.br
+Abstract. The allocation of students into teams is one of the strategies used
+in Education in order to favor collaborative learning through the exchange of
+knowledge between individuals. However, the proccess of assigning students to
+heterogeneous teams is still a problem related to this approach, given the number of possible combinations. This work proposes a solution based on genetic
+algorithms to optimize the process of formation of heterogeneous teams in a
+university environment. The carried out experiments demonstrated that the proposed strategy was able to maximize the heterogeneity in teams more effectively
+than traditional methods commonly used for this activity.
+Resumo. A alocac¸ao de alunos em equipes ˜ e uma das formas utilizadas na ´
+Educac¸ao para favorecer a aprendizagem colaborativa atrav ˜ es da troca de co- ´
+nhecimentos entre indiv´ıduos. Entretanto, realizar a distribuic¸ao dos alunos em ˜
+equipes heterogeneas ainda ˆ e um problema relacionado a essa abordagem, dada ´
+a quantidade de combinac¸oes poss ˜ ´ıveis. Este trabalho propoe uma soluc¸ ˜ ao ba- ˜
+seada em algoritmos geneticos para otimizar o processo de formac¸ ´ ao de equipes ˜
+heterogeneas em ambiente universit ˆ ario. Os experimentos realizados demons- ´
+tram que a estrategia proposta foi capaz de maximizar a heterogeneidade nas ´
+equipes de forma mais eficaz que os metodos tradicionais comumente utilizados ´
+para essa atividade.
+1. Introduc¸ao˜
+Nos dias atuais, e imprescind ´ ´ıvel a utilizac¸ao de equipes para a realizac¸ ˜ ao e soluc¸ ˜ ao de ˜
+tarefas, atividades e problemas. Nenhum indiv´ıduo e capaz de atuar como uma unidade ´
+isolada, de ter acesso a todas as informac¸oes, bem como, possuir tempo e habilidades ˜
+cognitivas necessarias para realizar tarefas mais complexas [Cooke et al. 2013]. Apesar ´
+do ambiente ser o mesmo para todos os membros de uma equipe, suas perspectivas sao˜
+heterogeneas, isto ˆ e, cada indiv ´ ´ıduo possui conhecimentos e habilidades distintos, tornando imposs´ıvel para qualquer um assumir todas as perspectivas e possuir consciencia ˆ
+completa da tarefa ou situac¸ao. ˜
+Nesse contexto, o aprendizado de forma colaborativa, a partir da interac¸ao dos alu- ˜
+nos em equipes heterogeneas, ˆ e visto como um processo de construc¸ ´ ao do conhecimento ˜
+DOI: 10.5753/cbie.sbie.2019.1866 1866
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+decorrente da participac¸ao, do envolvimento e da contribuic¸ ˜ ao ativa dos alunos na apren- ˜
+dizagem uns dos outros [Torres and Amaral 2011]. Segundo [Maldonado Perez 2007], o ´
+emprego da aprendizagem colaborativa no ambito acad ˆ emico facilita o interc ˆ ambio de ˆ
+conhecimentos e habilidades entre os alunos, permitindo o conflito de diferentes pontos
+de vista e opinioes e auxiliando na revalorizac¸ ˜ ao das perspectivas pr ˜ oprias. ´
+Metodologias tradicionalmente utilizadas para distribuic¸ao de alunos em equipes ˜
+baseiam-se principalmente em duas abordagens: i) distribuic¸ao rand ˜ omica, conduzida de ˆ
+forma aleatoria pelo professor; e ii) distribuic¸ ´ ao por afinidade, conduzida normalmente ˜
+pelos proprios alunos que escolhem seus pares para compor as equipes. Na primeira ´
+abordagem, dado o fator aleatoriedade e o grande numero de poss ´ ´ıveis combinac¸oes, n ˜ ao˜
+ha nenhuma garantia de que as equipes formadas sejam igualmente heterog ´ eneas. Na ˆ
+segunda abordagem ha um complicador adicional, uma vez que a maioria dos alunos ´
+escolhe seus pares baseados nas similaridades entre si, prejudicando ainda mais a heterogeneidade.
+Apesar dos benef´ıcios inerentes a aprendizagem colaborativa em equipes hete- `
+rogeneas, a complexidade em distribuir manualmente os alunos em equipes ideais (ou ˆ
+proximas ao ideal, maximizando-se as diferenc¸as) torna-se um impedimento ´ a utilizac¸ ` ao˜
+dessa estrategia, dado o grande n ´ umero de possibilidades de combinar os alunos em dife- ´
+rentes equipes, que cresce de forma exponencial a medida em que aumenta o n ` umero de ´
+alunos nas turmas [Silva et al. 2012]. Todavia, algoritmos aproximativos apresentam-se
+como uma abordagem comumente utilizada na soluc¸ao tarefas complexas e humanamente ˜
+arduas, minimizando a vasta quantidade de combinac¸ ´ oes em meio aos estados poss ˜ ´ıveis
+no espac¸o de busca e sendo capazes de obter, em tempo habil, uma soluc¸ ´ ao aceit ˜ avel ao ´
+problema [Blum and Roli 2003].
+A partir dessas considerac¸oes, este artigo enderec¸a o seguinte problema de pes- ˜
+quisa: e poss ´ ´ıvel otimizar o processo de formac¸ao de equipes atrav ˜ es do uso de algoritmos ´
+evolucionarios, de modo a potencializar a heterogeneidade entre os integrantes de cada ´
+equipe? Nesse sentido, propoe-se a aplicac¸ ˜ ao de um algoritmo gen ˜ etico para otimizar ´
+o processo de formac¸ao de equipes heterog ˜ eneas em turmas universit ˆ arias. O algoritmo ´
+agrupa e realoca os indiv´ıduos entre equipes atraves de uma m ´ etrica de mensurac¸ ´ ao da he- ˜
+terogeneidade que baseia-se no desempenho academico. O objetivo ˆ e maximizar a hetero- ´
+geneidade de conhecimentos entre os indiv´ıduos da equipe. A proposta e validada a partir ´
+da comparac¸ao dos resultados com outros m ˜ etodos tradicionais de formac¸ ´ ao de equipes, ˜
+como a escolha aleatoria e a escolha por afinidades (de acordo com as prefer ´ encias dos ˆ
+proprios alunos). ´
+As sec¸oes seguintes deste artigo estruturam-se como segue: a sec¸ ˜ ao 2 exp ˜ oe uma ˜
+revisao da literatura de algoritmos gen ˜ eticos para a formac¸ ´ ao de equipes; a sec¸ ˜ ao 3 des- ˜
+creve a soluc¸ao proposta frente ao problema da formac¸ ˜ ao de equipes heterog ˜ eneas; os ˆ
+experimentos efetuados e a validac¸ao da proposta est ˜ ao discutidos na sec¸ ˜ ao 4; por fim, as ˜
+considerac¸oes finais e trabalhos futuros est ˜ ao presentes na sec¸ ˜ ao 5. ˜
+2. Revisao da Literatura ˜
+Os algoritmos geneticos (AGs) s ´ ao uma t ˜ ecnica potencial de otimizac¸ ´ ao aplicada nas ˜
+mais diversas areas do conhecimento humano, inclusive na Educac¸ ´ ao. Nessa perspectiva, ˜
+[Moreno et al. 2012] propuseram um metodo baseado em uma abordagem de AG para ob- ´
+1867
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+ter equipes inter-homogeneas e intra-heterog ˆ eneas. O m ˆ etodo permite a considerac¸ ´ ao de ˜
+diversas caracter´ısticas estudantis e e validado por meio da comparac¸ ´ ao com a estrat ˜ egia ´
+de agrupamento aleatorio e agrupamento auto-organizado. ´
+Em [Chen and Yang 2014], os autores utilizaram dois metodos para agrupar alu- ´
+nos em favor da aprendizagem colaborativa. Primeiramente, um algoritmo de agrupamento foi aplicado sobre um conjunto de dados dos alunos objetivando dividi-los em
+diferentes equipes com caracter´ısticas semelhantes. Em seguida, um AG foi aplicado
+para dividir as equipes de acordo com os conhecimentos dos alunos. Os resultados foram prop´ıcios ao objetivo proposto, alcanc¸ando a divisao autom ˜ atica das equipes e en- ´
+contrando, de forma aproximada, as equipes de aprendizagem colaborativa, validando a
+proposta por meio de simulac¸oes. ˜
+[Cen et al. 2015] utilizaram um AG para maximizar o desempenho medio espe- ´
+rado do trabalho em equipe ou a melhoria media alcanc¸ada por um aluno como resultado ´
+da aprendizagem em equipe. A abordagem proposta baseia-se na otimizac¸ao global para ˜
+identificar a otima alocac¸ ´ ao dos alunos nas equipes a fim de satisfazer um dos crit ˜ erios. ´
+Os resultados nao s ˜ o ajudaram a compreender os fatores significativos que influenciam ´
+o desempenho de equipes em aprendizagem colaborativa como tambem forneceram es- ´
+trategias pr ´ aticas sobre a composic¸ ´ ao ideal das equipes para atividades em aprendizagem ˜
+colaborativa.
+[Lin et al. 2016] aplicaram um AG, em conjunto com uma tecnica de prefer ´ encia, ˆ
+para facilitar a otimizac¸ao dos agrupamentos para um sistema de suporte a grupos baseado ˜
+na web, a fim de ajudar os educadores na formac¸ao de equipes inter-homog ˜ eneas e intra- ˆ
+heterogeneas. Os experimentos mostraram que a proposta possui resultados relevantes ˆ
+em relac¸ao ao m ˜ etodo aleat ´ orio e ao m ´ etodo utilizado em [Moreno et al. 2012]. ´
+Em [Zheng et al. 2016], uma abordagem h´ıbrida baseada em AGs e otimizac¸ao˜
+por enxame de part´ıculas foi utilizada para a formac¸ao de equipes heterog ˜ eneas na apren- ˆ
+dizagem colaborativa com base nas caracter´ısticas dos alunos. Para validar o metodo ´
+proposto, uma serie de experimentos foram realizados a partir de oito conjuntos de da- ´
+dos com diferentes n´ıveis de complexidade. A abordagem proposta foi comparada com
+o metodo exaustivo e o m ´ etodo rand ´ omico, obtendo melhor desempenho e alcanc¸ando ˆ
+soluc¸oes de alta qualidade em um tempo de execuc¸ ˜ ao aceit ˜ avel. ´
+Em um trabalho recente desenvolvido por [Balieiro et al. 2017], os autores apresentaram uma abordagem baseada em AG para formac¸ao de grupos de estudos em ambi- ˜
+entes virtuais de aprendizagem. O esquema proposto considerou informac¸oes pertinentes ˜
+aos alunos para a realizac¸ao dos agrupamentos. Apesar de objetivarem a homogeneidade, ˜
+os resultados foram significativos em relac¸ao ao m ˜ etodo aleat ´ orio. ´
+Sendo assim, diante dos trabalhos apresentados, verifica-se que os AGs tem sido ˆ
+adotados como uma tecnica potencial para o problema de formac¸ ´ ao de equipes. O pre- ˜
+sente trabalho distingue-se dos demais por seguir o contexto de pesquisa descrito em
+[Silva et al. 2012], uma abordagem que nao utiliza AGs, mas que considera exclusiva- ˜
+mente o fator heterogeneo nas equipes, visto que essa caracter ˆ ´ıstica tende a agrupar os
+alunos de modo a contribuir significativamente para a aprendizagem por meio da troca de
+conhecimentos distintos, alem de ter um direcionamento pr ´ atico para viv ´ encias reais no ˆ
+ambito do ensino superior. ˆ
+1868
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+3. Soluc¸ao Proposta ˜
+A soluc¸ao proposta para otimizar o processo de formac¸ ˜ ao de equipes heterog ˜ eneas tem ˆ
+por fundamento os AGs, que podem ser compreendidos como uma tecnica computacio- ´
+nal inspirada no processo da evoluc¸ao biol ˜ ogica por meio da sobreviv ´ encia dos indiv ˆ ´ıduos
+mais adaptados, sendo descoberto como um metodo aproximativo ´ util para a otimizac¸ ´ ao˜
+de problemas [Holland 1992]. A ideia basica dos AGs ´ e encontrar a soluc¸ ´ ao˜ otima (ou ´
+uma soluc¸ao quase ˜ otima) em um conjunto de soluc¸ ´ oes candidatas, utilizando dos opera- ˜
+dores geneticos de selec¸ ´ ao, recombinac¸ ˜ ao e mutac¸ ˜ ao nas populac¸ ˜ oes, avaliando cada nova ˜
+populac¸ao (cromossomos) gerada de modo que tais soluc¸ ˜ oes estejam convergindo para o ˜
+objetivo desejado. Assim, a ideia da soluc¸ao proposta, em si, ˜ e a de implementar um AG ´
+para a formac¸ao de equipes heterog ˜ eneas, testando a heterogeneidade das equipes por ele ˆ
+formadas em contraposic¸ao˜ a heterogeneidade de equipes formadas a partir de t ` ecnicas ´
+tradicionalmente adotadas em sala de aula.
+Perante esses aspectos, o AG proposto objetiva alocar alunos com diferentes perfis academicos em um mesmo agrupamento, favorecendo a heterogeneidade (Figura 1). ˆ
+Inicialmente, um conjunto de soluc¸oes vi ˜ aveis ao problema ´ e obtido atrav ´ es permutac¸ ´ oes ˜
+aleatorias de alunos da turma sobre a qual ser ´ ao efetuados os agrupamentos, caracteri- ˜
+zando assim os cromossomos iniciais do AG. Ao longo das gerac¸oes, os cromossomos ˜
+sao avaliados e submetidos ˜ a selec¸ ` ao, recombinac¸ ˜ ao e mutac¸ ˜ ao. A expectativa ˜ e de que, ´
+ao final do processo, um cromossomo possua uma distribuic¸ao de alunos em equipes que ˜
+maximiza a heterogeneidade entre eles. Vale salientar que, por tratar-se de um metodo ´
+de soluc¸ao aproximada e, possivelmente, o n ˜ umero de alunos de cada perfil n ´ ao ser o ˜
+mesmo, a configurac¸ao das equipes propostas pelo AG pode conter indiv ˜ ´ıduos de perfis
+semelhantes em um mesmo agrupamento, ainda que a heterogeneidade seja garantida.
+A B
+C
+Algoritmo
+Genético
+A A B
+A B C
+B C C
+A A C
+A B B C
+Figura 1. Ilustrac¸ao da proposta do trabalho ˜
+3.1. Estrutura e Caracterizac¸ao do Cromossomo ˜
+A representac¸ao cromossomial adotada neste trabalho baseia-se em um vetor de n ˜ umeros ´
+inteiros que retratam o ´ındice de cada aluno no conjunto original de dados (Figura 2).
+Cada gene x pertencente a um cromossomo y refere-se ao ´ındice do vetor de notas do
+respectivo aluno x. Cada vetor de notas possui um tamanho p que corresponde a quanti- `
+dade de disciplinas. O tamanho dos cromossomos varia de acordo com a quantidade n de
+alunos alocados em uma turma.
+3.2. Operadores Geneticos ´
+O processo de execuc¸ao do AG fundamenta-se na progressiva utilizac¸ ˜ ao dos operadores ˜
+de selec¸ao, cruzamento e mutac¸ ˜ ao em prol da melhoria das soluc¸ ˜ oes. A etapa de selec¸ ˜ ao˜
+1869
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+10 46 27 32 13 25 ... 6
+ 1 2 3 4 5 6 … n
+Cromossomo:
+10
+Posição de indexação para a obtenção
+do vetor de notas do aluno 10
+Notas do aluno 10: 9.3 6.8 7.4 8.1 3.2 4.9 ... 8.0
+ 1 2 3 4 5 6 … p
+Figura 2. Estrutura do cromossomo
+e respons ´ avel pela escolha dos pares de cromossomos que ir ´ ao ser recombinados a fim de ˜
+gerar os filhos da nova gerac¸ao. Para tal, utilizou-se o m ˜ etodo da roleta, sendo esta uma ´
+tecnica usualmente empregada nos AGs [Coley 1999]. O m ´ etodo consiste em fornecer ´
+probabilidades de selec¸ao com base no ˜ fitness do cromossomo. Assim, cromossomos com
+melhor valor de fitness tendem a ser selecionados com maior frequencia, aumentando as ˆ
+chances de transferencia dos melhores genes e aprimoramento do c ˆ odigo gen ´ etico nas ´
+proximas gerac¸ ´ oes. ˜
+A etapa seguinte a selec¸ ` ao˜ e dada pelo cruzamento dos cromossomos pais que ´
+foram selecionados na etapa anterior. Com o proposito de preservar boas distribuic¸ ´ oes ˜
+de alunos em equipes, um operador de cruzamento e proposto (Figura 3). A partir dos ´
+cromossomos pais (Figura 3a), o operador atua selecionando r equipes do pai 1, r < n
+onde n e o n ´ umero total de equipes, para compor as equipes do filho, mantendo-as nas ´
+respectivas posic¸oes do cromossomo (Figura 3b). As equipes remanescentes s ˜ ao escolhi- ˜
+das a partir do pai 2. Para os casos em que ha repetic¸ ´ ao de indiv ˜ ´ıduos na estrutura do
+cromossomo do filho, tais indiv´ıduos sao substitu ˜ ´ıdos aleatoriamente por outros que nao˜
+estejam, obrigatoriamente, na composic¸ao das equipes advindas do pai ˜ 1.
+Pai 1: 8 1 4 2 6 3 7 5 9 Pai 2: 5 9 2 1 5 3 6 4 7
+Equipe 1 Equipe 2 Equipe 3 Equipe 1 Equipe 2 Equipe 3
+Filho: 5 9 2 2 6 3 6 4 7
+Equipe 1
+(Pai 2)
+Equipe 2
+(Pai 1)
+Equipe 3
+(Pai 2)
+Filho: 5 9 8 2 6 3 1 4 7
+Equipe 1 Equipe 2 Equipe 3
+(A)
+(B) (C)
+Figura 3. Exemplo do operador de cruzamento
+[Mitchell 1998] destaca que o cruzamento e o principal mecanismo de inovac¸ ´ ao˜
+e variac¸ao nos AGs, entretanto, apenas sua utilizac¸ ˜ ao poder ˜ a convergir os pontos para ´
+soluc¸oes situadas em m ˜ aximos locais. Para isso, o operador de mutac¸ ´ ao atua como deslo- ˜
+cador dos pontos no espac¸o de maneira que as buscas sejam realizadas em outros locais.
+No esquema proposto (Figura 4), dois indiv´ıduos sao selecionados aleatoriamente desde ˜
+que pertenc¸am a equipes distintas (Figura 4a). Em seguida, uma permutac¸ao˜ e realizada ´
+(Figura 4b) de modo que novas composic¸oes de equipes sejam obtidas, tornando poss ˜ ´ıvel
+atingir configurac¸oes de equipes que maximizem a heterogeneidade. ˜
+1870
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Filho: 5 9 8 2 6 3 1 4 7
+Equipe 1 Equipe 2 Equipe 3
+Filho: 5 9 1 2 6 3 8 4 7
+Equipe 1 Equipe 2 Equipe 3
+(A) (B)
+Figura 4. Exemplo do operador de mutac¸ao˜
+3.3. Func¸ao de Avaliac¸ ˜ ao˜
+Nos AGs, a determinac¸ao da qualidade de uma soluc¸ ˜ ao˜ e efetuada pela func¸ ´ ao de ˜
+avaliac¸ao. Uma vez que o problema ˜ e definido, a func¸ ´ ao de avaliac¸ ˜ ao ser ˜ a res- ´
+ponsavel por avaliar e indicar o qu ´ ao adequada est ˜ a a soluc¸ ´ ao ao problema. Para o ˜
+AG proposto, a func¸ao de avaliac¸ ˜ ao˜ e dada por um ´ ´ındice de validac¸ao para men- ˜
+surar a dissimilaridade entre os indiv´ıduos de um agrupamento. Assim como em
+[Silva et al. 2012], adotou-se o ´ındice Davies-Bouldin (DB) por sua viabilidade, simplicidade e eficacia ao c ´ alculo da heterogeneidade dos agrupamentos. Uma explicac¸ ´ ao˜
+mais detalhada acerca do procedimento de calculo do ´ ´ındice DB pode ser encontrada em
+[Bandyopadhyay and Maulik 2002].
+Isto posto, o processo de aplicac¸ao do DB ˜ e descrito a seguir. Cada cromossomo ´
+possui uma divisao de equipes de uma turma tal que cada equipe ˜ e composta por ´ k alunos.
+Para os casos em que a quantidade de alunos na turma nao admite uma divis ˜ ao exata de ˜
+equipes de tamanho k, os alunos remanescentes sao distribu ˜ ´ıdos aleatoriamente nas equipes ja constitu ´ ´ıdas. O fator que define a dissimilaridade entre os alunos no calculo do DB ´ e´
+o desempenho academico nos componentes curriculares obrigat ˆ orios cursados, sendo esta ´
+uma das formas mais comuns de agrupar alunos em equipes [Macintyre and Ireson 2002].
+Portanto, o objetivo do AG proposto foi maximizar o resultado do ´ındice DB, tal que este
+representasse o maior valor de heterogeneidade obtido em uma soluc¸ao. A Figura 5 apre- ˜
+senta um exemplo do calculo do DB para uma distribuic¸ ´ ao de equipes. ˜
+Cromossomo: 10 17 18 15 7 1 14 16 4 8 3 13 5 11 9 12 2 6
+Geração das equipes de tamanho k = 3
+10 17 18
+15 7 1
+14 16 4
+8 3 13
+5 11 9
+12 2 6
+Equipe 1:
+Equipe 2:
+ 1 2 3
+Equipe 3:
+Equipe 4:
+Equipe 5:
+Equipe 6:
+Aplicação do índice DB
+DB = 2,981
+Figura 5. Ilustrac¸ao da avaliac¸ ˜ ao de um cromossomo ˜
+4. Metodologia
+A metodologia adotada neste trabalho foi validar a soluc¸ao proposta atrav ˜ es de um ex- ´
+perimento cient´ıfico que permitisse a comparac¸ao do desempenho (em termos de hetero- ˜
+geneidade) do AG proposto em face as propostas tradicionais. A vari ` avel-dependente do ´
+experimento foi o ´ındice DB, medido sobre as equipes formadas, como expressao de sua ˜
+heterogeneidade. A ideia foi observar, inicialmente, se o AG apresentava resultados positivos em relac¸ao˜ as demais propostas sobre as amostras utilizadas nos experimentos para, `
+1871
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+em caso afirmativo, verificar, atraves de testes estat ´ ´ısticos inferenciais, se esses resultados
+positivos observados se sustentavam para alem das amostras. ´
+O experimento para a avaliac¸ao da proposta teve como amostra dados de estu- ˜
+dantes do curso de Bacharelado em Sistemas de Informac¸ao da Universidade Federal do ˜
+Rio Grande do Norte. Os dados coletados correspondem as notas dos estudantes e foram `
+obtidos a partir de uma base de dados envolvendo um total de 7 turmas (de 2009 a 2015),
+35 componentes curriculares (disciplinas) e 128 estudantes.
+4.1. Pre-processamento dos Dados ´
+A etapa de pre-processamento foi necess ´ aria para o tratamento de valores faltosos nos ´
+dados coletados. Para os casos de reaproveitamento de disciplinas em outras instituic¸oes, ˜
+os dados foram preenchidos por meio do calculo do valor m ´ edio das notas dos demais ´
+alunos, sendo esta uma pratica empregada e aceita para tal circunst ´ ancia [Larose 2014]. ˆ
+Para os casos em que o aluno realizou o trancamento ou cancelamento da disciplina,
+ou sequer cursou a mesma, atribui-se o valor 0 para a nota do respectivo componente
+curricular. Esta metrica visa o preenchimento dos valores faltosos sem que afetem nos ´
+resultados dos experimentos.
+4.2. Parametros de Configurac¸ ˆ ao do Algoritmo ˜
+Durante o processo de execuc¸ao dos experimentos, alguns par ˜ ametros de configurac¸ ˆ ao˜
+do AG foram fixados para a obtenc¸ao dos resultados. A justificativa para a escolha desta ˜
+condic¸ao decorre devido ao escopo do trabalho limitar-se em uma an ˜ alise comparativa de ´
+metodos de agrupamentos para a formac¸ ´ ao de equipes. Logo, apesar da natureza dos AGs ˜
+fundamentar-se na combinac¸ao de diferentes fatores para buscar uma melhor configurac¸ ˜ ao˜
+das soluc¸oes, n ˜ ao coube a este trabalho analisar quais par ˜ ametros desempenhariam me- ˆ
+lhores resultados para tal ocasiao. Tendo em vista esses aspectos, os par ˜ ametros definidos ˆ
+para o AG estao presentes na Tabela 1. ˜
+[Mitchell 1998] apresenta que estes valores definidos para o numero de gerac¸ ´ oes, ˜
+o tamanho da populac¸ao e as taxas de cruzamento e mutac¸ ˜ ao s ˜ ao costumeiramente ado- ˜
+tados para problemas que envolvem AGs. O numero estipulado para a quantidade de ´
+alunos por equipe e um valor m ´ edio comumente utilizado pelos docentes para a formac¸ ´ ao˜
+de equipes nas turmas da instituic¸ao considerada. ˜ E importante destacar que os n ´ umero de ´
+gerac¸oes do AG foi adotado tamb ˜ em como a quantidade de iterac¸ ´ oes da escolha aleat ˜ oria. ´
+Tabela 1. Parametros adotados nos experimentos do AG ˆ
+Parametro ˆ Valor
+Numero de gerac¸ ´ oes ˜ 100
+Tamanho da populac¸ao˜ 100
+Probabilidade de cruzamento 0.9 (90%)
+Probabilidade de mutac¸ao˜ 0.1 (10%)
+Quantidade de alunos por equipe 3
+4.3. Resultados e Validac¸ao da Proposta ˜
+As Tabelas 2, 3 e 4 apresentam os resultados obtidos pelas estrategias por escolha m ´ utua, ´
+escolha aleatoria e o AG proposto, respectivamente. Para a escolha aleat ´ oria e o AG ´
+1872
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+estao dispostos o maior e menor valor de heterogeneidade atingidos, bem como a m ˜ edia, ´
+considerando 30 execuc¸oes de cada abordagem em cada turma. A configurac¸ ˜ ao de equipes ˜
+da estrategia por escolha m ´ utua foi obtida mediante solicitac¸ ´ ao aos alunos para realizarem ˜
+os agrupamentos levando em conta a afinidade entre os mesmos, logo, as equipes nao˜
+sofrem modificac¸oes e o resultado do DB ˜ e´ unico para cada turma. ´
+Em uma analise geral, os resultados evidenciam que a estrat ´ egia por escolha ´
+mutua, abordagem usualmente empregada para a formac¸ ´ ao de equipes em prol da apren- ˜
+dizagem, trata-se da alternativa de pior desempenho, tendo seus resultados inferiores e
+superados ate mesmo por uma abordagem totalmente aleat ´ oria de escolha dos alunos. ´
+Por outro lado, o AG proposto apresenta-se como o metodo mais prop ´ ´ıcio a formac¸ ` ao de ˜
+equipes heterogeneas, alcanc¸ando distribuic¸ ˆ ao de equipes que maximizam a heterogenei- ˜
+dade quando comparadas com as abordagens tradicionais, ainda que o metodo aleat ´ orio ´
+encontre soluc¸oes de valor igual ou superior ao AG em certas ocasi ˜ oes. ˜
+Tabela 2. Resultados da estrategia por escolha m ´utua ´
+Turma Resultado
+2009 1.58
+2010 2.10
+2011 1.31
+2012 2.00
+2013 0.93
+2014 1.57
+2015 1.06
+Tabela 3. Resultados da estrategia por escolha aleat ´ oria ´
+Resultado
+Turma Maior Menor Media ´
+2009 2.15 1.78 1.99
+2010 2.71 2.23 2.43
+2011 2.71 2.16 2.46
+2012 5.13 3.81 4.27
+2013 1.99 1.55 1.89
+2014 2.80 2.29 2.46
+2015 2.47 2.15 2.29
+Tabela 4. Resultados do Algoritmo Genetico ´
+Resultado
+Turma Maior Menor Media ´
+2009 2.26 1.93 2.05
+2010 2.92 2.38 2.64
+2011 2.75 2.36 2.53
+2012 5.03 4.00 4.52
+2013 1.99 1.59 1.97
+2014 2.90 2.35 2.60
+2015 2.62 2.21 2.39
+Todavia, ainda que os resultados do AG proposto tenham se sobressa´ıdo as demais `
+abordagens, tal aspecto nao garante que, de fato, o mesmo possua efeito significativo ˜
+1873
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+na heterogeneidade das equipes em comparac¸ao˜ a escolha m ` utua e aleat ´ oria. Para isso, ´
+tornou-se necessaria a utilizac¸ ´ ao de testes estat ˜ ´ısticos a fim de analisar a influencia do ˆ
+AG para com a formac¸ao de equipes heterog ˜ eneas, assim verificando se esta abordagem ˆ
+produz impacto significativo na maximizac¸ao da heterogeneidade das equipes em turmas ˜
+universitarias. ´
+Dessa forma, a Tabela 5 retrata o resultado da Analise de Vari ´ ancia (ANOVA) ˆ
+acerca dos resultados das estrategias. Conforme observado, o valor de ´ Fcalc e superior ao ´
+Ftab e, consequentemente, e v´ alido afirmar que as estrat ´ egias possuem diferenc¸a estat ´ ´ıstica
+em seus resultados. Portanto, a hipotese que o AG proposto ´ e superior ´ as estrat ` egias ´
+tradicionais e reafirmada em termos estat ´ ´ısticos, apresentando-se como um metodo eficaz ´
+para a formac¸ao de equipes de modo a garantir a heterogeneidade nos agrupamentos. ˜
+Tabela 5. Resultados do teste ANOVA
+Alfa 0,05
+Grupos Contagem Soma Media Vari ´ ancia ˆ
+Escolha mutua 7 10,55 1,51 0,20 ´
+Escolha aleatoria 7 17,79 2,54 0,63 ´
+Algoritmo Genetico 7 18,7 2,67 0,73 ´
+Origem de
+variac¸oes ˜
+Soma de
+quadrados
+Graus de
+liberdade
+Quadrados
+medios ´
+Fcalc Valor p Ftab
+Entre grupos 5,70 2 2,85 5,47 0,01 3,55
+Dentro dos grupos 9,38 18 0,52
+Total 15,08 20
+5. Conclusoes e Trabalhos Futuros ˜
+Os resultados deste estudo demonstraram que os metodos comumente empregados para ´
+a realizac¸ao de agrupamentos de alunos no ˜ ambito acad ˆ emico n ˆ ao favorecem, em grande ˜
+parte dos casos, a heterogeneidade das equipes. O agrupamento por afinidade preserva
+equipes de carater homog ´ eneo e impossibilita a obtenc¸ ˆ ao de uma configurac¸ ˜ ao que per- ˜
+mita diversificar os alunos. Por outro lado, a estrategia aleat ´ oria ´ e incapaz de abranger o ´
+conjunto de combinac¸oes poss ˜ ´ıveis e encontrar uma configurac¸ao˜ otima de equipes que ´
+maximize a heterogeneidade. Um esquema baseado em algoritmos geneticos ´ e proposto ´
+e validado atraves de experimentos com dados reais e testes estat ´ ´ısticos, destacando-se
+como o metodo mais eficaz para a garantia de dissimilaridade entre alunos em equipes. ´
+Como trabalhos futuros, destacam-se a analise de diferentes par ´ ametros no AG ˆ
+que possam proporcionar soluc¸oes de maior qualidade, a considerac¸ ˜ ao de outros atribu- ˜
+tos para a realizac¸ao dos agrupamentos, como dados socioecon ˜ omicos e perfil emocio- ˆ
+nal, podendo garantir uma maior heterogeneidade nas equipes, alem do estudo de outras ´
+abordagens meta-heur´ısticas que possam contribuir significativamente para o problema
+abordado.
+Referencias ˆ
+Balieiro, A., Melo, I., Araujo, D., Neto, S., Galdino, E., and Gomes, A. (2017). Uma ´
+abordagem baseada em algoritmo genetico para formac¸ ´ ao de grupos de estudos em am- ˜
+bientes virtuais de aprendizagem. In Simposio Brasileiro de Inform ´ atica na Educac¸ ´ ao- ˜
+SBIE, pages 1287–1296.
+1874
+Anais do XXX Simpósio Brasileiro de Informática na Educação (SBIE 2019)
+VIII Congresso Brasileiro de Informática na Educação (CBIE 2019)
+Bandyopadhyay, S. and Maulik, U. (2002). Genetic clustering for automatic evolution
+of clusters and application to image classification. Pattern Recognition, 35(6):1197 –
+1208.
+Blum, C. and Roli, A. (2003). Metaheuristics in combinatorial optimization: Overview
+and conceptual comparison. ACM computing surveys (CSUR), 35(3):268–308.
+Cen, L., Ruta, D., Powell, L., and Ng, J. (2015). Interaction driven composition of student
+groups for optimal groupwork learning performance. In Proceedings of the 2015 IEEE
+Frontiers in Education Conference (FIE), pages 1–6, Washington, DC, USA. IEEE
+Computer Society.
+Chen, L. and Yang, Q. H. (2014). A group division method based on collaborative learning
+elements. In The 26th Chinese Control and Decision Conference (2014 CCDC), pages
+1701–1705.
+Coley, D. A. (1999). An introduction to genetic algorithms for scientists and engineers.
+World Scientific Publishing Co Inc.
+Cooke, N. J., Gorman, J. C., Myers, C. W., and Duran, J. L. (2013). Interactive team
+cognition. Cognitive Science, 37(2):255–285.
+Holland, J. H. (1992). Adaptation in Natural and Artificial Systems: An Introductory
+Analysis with Applications to Biology, Control and Artificial Intelligence. MIT Press,
+Cambridge, MA, USA.
+Larose, D. T. (2014). Discovering knowledge in data: an introduction to data mining.
+John Wiley & Sons.
+Lin, Y. S., Chang, Y. C., and Chu, C. P. (2016). Novel approach to facilitating tradeoff
+multi-objective grouping optimization. IEEE Transactions on Learning Technologies,
+9(2):107–119.
+Macintyre, H. and Ireson, J. (2002). Within-class ability grouping: Placement of pupils
+in groups and self-concept. British Educational Research Journal, 28(2):249–263.
+Maldonado Perez, M. (2007). El trabajo colaborativo en el aula universitaria. ´ Laurus,
+13(23).
+Mitchell, M. (1998). An introduction to genetic algorithms. MIT press.
+Moreno, J., Ovalle, D. A., and Vicari, R. M. (2012). A genetic algorithm approach for
+group formation in collaborative learning considering multiple student characteristics.
+Computers & Education, 58(1):560 – 569.
+Silva, H. M., Silva, C. A., and Gorgonio, F. L. (2012). A self–organizing map based ˆ
+strategy for heterogeneous teaming. In Johnsson, M., editor, Applications of SelfOrganizing Maps, chapter 05. InTech, Rijeka.
+Torres, T. Z. and Amaral, S. F. d. (2011). Aprendizagem colaborativa e web 2.0: proposta
+de modelo de organizac¸ao de conte ˜ udos interativos. ´ Educac¸ao Tem ˜ atica Digital ´ , 12:49.
+Zheng, Y., Liu, Y., Lu, W., and Li, C. (2016). A hybrid pso-ga method for composing
+heterogeneous groups in collaborative learning. In 2016 11th International Conference
+on Computer Science Education (ICCSE), pages 160–164.
