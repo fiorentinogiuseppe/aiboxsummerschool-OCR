@@ -7,7 +7,7 @@ certifi==2019.11.28
 cffi==1.13.2
 cryptography==2.8
 cycler==0.10.0
-Django==3.0.3
+django>=3.0.7
 environ==1.0
 idna==2.8
 joblib==0.14.1
