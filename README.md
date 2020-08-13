@@ -1,2 +1,2 @@
-# Welcome to Group 3 project!
+# Welcome to G3's project!
 ## [AiBox](https://aiboxlab.org/) Summer School 
