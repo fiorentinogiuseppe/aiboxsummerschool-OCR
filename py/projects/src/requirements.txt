@@ -5,7 +5,7 @@ billiard==3.6.0.0
 celery==4.3.0
 certifi==2019.11.28
 cffi==1.13.2
-cryptography==2.8
+cryptography==3.2
 cycler==0.10.0
 django>=3.0.7
 environ==1.0
